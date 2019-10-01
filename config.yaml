@@ -1,0 +1,8 @@
+title: "American Religious Ecologies"
+baseURL: "http://religiousecologies.org/"
+
+permalinks:
+  blog: "/:section/:slug/"
+  page: "/:slug/"
+
+taxonomies: false
