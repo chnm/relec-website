@@ -86,7 +86,23 @@ header h1 {
 // -- Footer
 
 .footer {
-  margin-top: 3 * $global-margin;
+  margin: (3 * $global-margin) 0;
+}
+
+.footer .logos {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .logos img {
+  width: 200px;
+  height: auto;
+  margin: 0 $global-margin;
+  
+  &.gmu-logo {
+      width: 80px;
+      margin-top: (-1 * $global-margin);
+  }
 }
 
 // -- Home
