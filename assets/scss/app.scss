@@ -88,6 +88,11 @@ header h1 {
   text-transform: capitalize;
 }
 
+figcaption {
+  font-size: .875 * $global-font-size;
+  margin-top: .5 * $global-margin;
+}
+
 // -- Footer
 
 footer {
@@ -147,21 +152,60 @@ footer .logos img {
 #home-accordion .accordion-content {
   background-color: transparent;
   border: 0;
-  font-size: 1.25 * $global-font-size;
   overflow: hidden;
   border-bottom: 1px solid $medium-gray;
+  
+  @include breakpoint(medium up) {
+    font-size: 1.25 * $global-font-size;
+  }
 }
 
 #home-accordion .is-active .accordion-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;    
+  @include breakpoint(medium up) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;    
+  }
 }
 
 #home-accordion .home-text {
-  max-width: 60%;
+  @include breakpoint(medium up) {
+    max-width: 60%;  
+  }
+}
+
+#home-accordion img {
+  border: 1px solid $medium-gray;
+  padding: $global-padding;
+  background-color: #fff;
+  
+  @include breakpoint(small down) {
+    padding: (.5 * $global-padding);
+  }
+}
+
+#home-accordion .float-left {
+  margin: (.5 * $global-margin) (2 *$global-margin) (2 * $global-margin) 0;
+  
+  @include breakpoint(small down) {
+    margin: (.5 * $global-margin) $global-margin 0 0;
+  }
 }
 
 #home-accordion .float-right {
   order: 2;
+  margin: (.5 * $global-margin) 0 (2 * $global-margin) (2 * $global-margin);
+  
+  @include breakpoint(small down) {
+    margin: (.5 * $global-margin) 0 0 $global-margin;
+  }
+}
+
+#home-accordion .landscape {
+  margin-bottom: $global-margin;
+}
+
+#home-accordion .portrait {
+  max-width: 50%;
+  height: auto;
 }
