@@ -65,6 +65,32 @@
 
 // Theme styles
 
+
+// -- Global
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  text-transform: lowercase;
+}
+
+// -- Header
+
+header h1 {
+  text-transform: capitalize;
+}
+
+// -- Footer
+
+.footer {
+  margin-top: 3 * $global-margin;
+}
+
+// -- Home
+
 #home-accordion {
   background-color: transparent;
 }
@@ -113,8 +139,4 @@
 
 #home-accordion .float-right {
   order: 2;
-}
-
-.footer {
-  margin-top: 3 * $global-margin;
 }
