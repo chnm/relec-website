@@ -79,22 +79,29 @@ h6 {
 
 // -- Header
 
+header {
+  border-bottom: 1px solid $medium-gray;
+  padding: 0 0 $global-padding;
+}
+
 header h1 {
   text-transform: capitalize;
 }
 
 // -- Footer
 
-.footer {
-  margin: (3 * $global-margin) 0;
+footer {
+  margin: $global-margin 0;
+  padding: (2 * $global-padding) 0;
+  border-top: 1px solid $medium-gray;
 }
 
-.footer .logos {
+footer .logos {
   display: flex;
   justify-content: center;
 }
 
-.footer .logos img {
+footer .logos img {
   width: 200px;
   height: auto;
   margin: 0 $global-margin;
@@ -109,6 +116,8 @@ header h1 {
 
 #home-accordion {
   background-color: transparent;
+  border-top: 1px solid $medium-gray;
+  margin: -1px 0 (calc(#{-1 * $global-margin} - 1px));
 }
 
 #home-accordion h2 {
@@ -140,6 +149,7 @@ header h1 {
   border: 0;
   font-size: 1.25 * $global-font-size;
   overflow: hidden;
+  border-bottom: 1px solid $medium-gray;
 }
 
 #home-accordion .is-active .accordion-content {
@@ -147,7 +157,6 @@ header h1 {
   align-items: center;
   justify-content: space-between;    
 }
-
 
 #home-accordion .home-text {
   max-width: 60%;
