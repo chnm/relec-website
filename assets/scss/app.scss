@@ -161,7 +161,7 @@ footer .logos img {
 }
 
 #home-accordion .is-active .accordion-content {
-  @include breakpoint(medium up) {
+  @include breakpoint(large up) {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;    
@@ -169,7 +169,7 @@ footer .logos img {
 }
 
 #home-accordion .home-text {
-  @include breakpoint(medium up) {
+  @include breakpoint(large up) {
     max-width: 60%;  
   }
 }
