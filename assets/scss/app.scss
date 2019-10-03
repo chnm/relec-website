@@ -86,6 +86,11 @@ header {
 
 header h1 {
   text-transform: capitalize;
+  
+  img {
+    max-width: 700px;
+    height: auto;
+  }
 }
 
 figcaption {
