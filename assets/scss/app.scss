@@ -156,12 +156,14 @@ footer .logos img {
   overflow: hidden;
   border-bottom: 1px solid $medium-gray;
   
-  @include breakpoint(medium up) {
+  @include breakpoint(large up) {
     font-size: 1.25 * $global-font-size;
   }
 }
 
 #home-accordion .is-active .accordion-content {
+  display: block;
+
   @include breakpoint(large up) {
     display: flex;
     align-items: flex-start;
@@ -171,7 +173,7 @@ footer .logos img {
 
 #home-accordion .home-text {
   @include breakpoint(large up) {
-    max-width: 60%;  
+    max-width: 50%;  
   }
 }
 
@@ -203,7 +205,17 @@ footer .logos img {
 }
 
 #home-accordion .landscape {
-  margin-bottom: $global-margin;
+  margin-bottom: 0;
+  
+  @include breakpoint(medium down) {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  @include breakpoint(small down) {
+    max-width: none;
+    float: none !important;
+  }
 }
 
 #home-accordion .portrait {
