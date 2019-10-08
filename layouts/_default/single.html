@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div class="grid-x grid-x-padding">
+        <div class="medium-9 cell" id="content">
+        <h2>{{.Title}}</h2>
+        {{with .Params.author}}
+            <em>{{.}}</em>
+        {{end}}
+        {{with .Params.date}}
+            <em>{{.Format "2006-01-02"}}</em>
+        {{end}}
+        {{.Content}}
+        </div>
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

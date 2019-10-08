@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div class="grid-x grid-x-padding">
+        <div class="medium-9 cell" id="content">
+        {{.Content}}
+        {{ range .Pages }}
+        <div class="grid-x grid-margin-x">
+            <div class="medium-12 cell">
+            <h3><a href="{{.URL}}">{{.Title}}</a></h3>
+            <p><em>{{.Params.author}} | {{.Date.Format "2006-01-02"}}</em></p>
+            <p>{{.Params.abstract}}</p>
+            </div>
+        </div>
+        {{end}}
+        </div>
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
