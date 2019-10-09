@@ -100,6 +100,11 @@ header {
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 2 * $global-margin;
+  
+  @include breakpoint(small down) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 header h1 {
@@ -107,15 +112,36 @@ header h1 {
   min-width: 75%;
   margin-bottom: 0;
   
+  @include breakpoint(small down) {
+    width: 100%;
+    margin: (.5 * $global-margin) 0 0;
+    
+  }
+  
   img {
     max-width: 700px;
     height: auto;
     box-shadow: none;
+    
+    @include breakpoint(small down) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }
 
 header nav {
   font-family: $secondary-header-font-family;
+  
+  @include breakpoint(small down) {
+    width: 100%;
+  }
+  
+  ul {
+    @include breakpoint(small down) {
+      justify-content : center;
+    }    
+  }
 }
 
 figure {
@@ -133,6 +159,10 @@ footer {
   margin: (2 * $global-margin) 0 $global-margin;
   padding: (2 * $global-padding) 0;
   border-top: 1px solid $medium-gray;
+  
+  @include breakpoint(small down) {
+    margin-top: 0;
+  }
 }
 
 footer .logos {
@@ -159,6 +189,10 @@ footer .logos img {
   background-color: transparent;
   border-top: 1px solid $medium-gray;
   margin: calc(#{-2   * $global-margin} - 1px) 0;
+  
+  @include breakpoint(small down) {
+      margin: -1px 0;
+  }
 }
 
 #home-accordion a,
@@ -252,6 +286,12 @@ footer .logos img {
 
 // -- Blog
 
+.posts {
+  @include breakpoint(small down) {
+    margin: (-1 * $global-margin) 0;
+  }
+}
+
 .post {
   margin: $global-margin 0;
   border-bottom: 1px solid $medium-gray;
@@ -261,30 +301,31 @@ footer .logos img {
     border-bottom-color: transparent;
   }
   
-  h3 a,
-  h3 a:active {
+  h2 a,
+  h2 a:active {
     text-decoration: none;
   }
 }
 
 .post-meta {
   text-align: right;
-  margin-top: .5 * $global-margin;
+  margin-top: $global-margin;
   font-family: $header-font-family;
   text-transform: lowercase;
   color: $dark-gray;
+  
+  @include breakpoint(small down) {
+    text-align: left;
+    margin: 0;
+  }
 }
 
 .post-meta {
   @extend .h5;
 }
 
-.post-abstract h3 {
+.post-abstract h2 {
   margin-bottom: 0;
-}
-
-.post-content {
-  margin-top: (-.5 * $global-margin);
 }
 
 .author {
