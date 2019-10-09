@@ -3,19 +3,23 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}
-        <div class="grid-x grid-x-padding">
-        <div class="medium-9 cell" id="content">
         {{.Content}}
+        <div id="content" class="posts">
         {{ range .Pages }}
-        <div class="grid-x grid-margin-x">
-            <div class="medium-12 cell">
-            <h3><a href="{{.URL}}">{{.Title}}</a></h3>
-            <p><em>{{.Params.author}} | {{.Date.Format "2006-01-02"}}</em></p>
-            <p>{{.Params.abstract}}</p>
+        <div class="grid-x grid-padding-x post">
+            <div class="medium-2 cell post-meta">
+                <div class="date">{{.Date.Format "2006 Jan 2"}}</div>
+            </div>
+            <div class="medium-7 cell post-abstract">
+                <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+                <div class="author">{{.Params.author}}</div>
+                <p>{{.Params.abstract}}</p>
+            </div>
+            <div class="medium-3 cell post-thumbnail">
+                <img src="{{.Params.image}}" alt="{{.Params.imagealt}}">
             </div>
         </div>
         {{end}}
-        </div>
         </div>
         {{- partial "footer.html" . -}}
     </body>

@@ -65,6 +65,7 @@
 
 // Theme styles
 
+$secondary-header-font-family: "Cormorant", serif;
 
 // -- Global
 
@@ -77,20 +78,48 @@ h6 {
   text-transform: lowercase;
 }
 
+body {    
+  @include breakpoint(large up) {
+    font-size: 1.25 * $global-font-size;
+  }
+}
+
+img {
+  border: 1px solid $primary-color;
+  box-shadow: 5px 5px 0 $primary-color;
+  margin-bottom: .5 * $global-margin;
+}
+
 // -- Header
 
 header {
   border-bottom: 1px solid $medium-gray;
   padding: 0 0 $global-padding;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2 * $global-margin;
 }
 
 header h1 {
   text-transform: capitalize;
+  min-width: 75%;
+  margin-bottom: 0;
   
   img {
     max-width: 700px;
     height: auto;
+    box-shadow: none;
   }
+}
+
+header nav {
+  font-family: $secondary-header-font-family;
+}
+
+figure {
+  margin: (2 * $global-margin) 0;
 }
 
 figcaption {
@@ -101,7 +130,7 @@ figcaption {
 // -- Footer
 
 footer {
-  margin: $global-margin 0;
+  margin: (2 * $global-margin) 0 $global-margin;
   padding: (2 * $global-padding) 0;
   border-top: 1px solid $medium-gray;
 }
@@ -115,6 +144,8 @@ footer .logos img {
   width: 200px;
   height: auto;
   margin: $global-margin (2 * $global-margin) 0 0;
+  box-shadow: none;
+  border: 0;
   
   &.gmu-logo {
       width: 80px;
@@ -127,7 +158,12 @@ footer .logos img {
 #home-accordion {
   background-color: transparent;
   border-top: 1px solid $medium-gray;
-  margin: -1px 0 (calc(#{-1 * $global-margin} - 1px));
+  margin: calc(#{-2   * $global-margin} - 1px) 0;
+}
+
+#home-accordion a,
+#home-accordion a:hover {
+  text-decoration: none;
 }
 
 #home-accordion h2 {
@@ -160,10 +196,6 @@ footer .logos img {
   border: 0;
   overflow: hidden;
   border-bottom: 1px solid $medium-gray;
-  
-  @include breakpoint(large up) {
-    font-size: 1.25 * $global-font-size;
-  }
 }
 
 #home-accordion .is-active .accordion-content {
@@ -179,16 +211,6 @@ footer .logos img {
 #home-accordion .home-text {
   @include breakpoint(large up) {
     max-width: 50%;  
-  }
-}
-
-#home-accordion img {
-  border: 1px solid $medium-gray;
-  padding: $global-padding;
-  background-color: #fff;
-  
-  @include breakpoint(small down) {
-    padding: (.5 * $global-padding);
   }
 }
 
@@ -226,4 +248,45 @@ footer .logos img {
 #home-accordion .portrait {
   max-width: 50%;
   height: auto;
+}
+
+// -- Blog
+
+.post {
+  margin: $global-margin 0;
+  border-bottom: 1px solid $medium-gray;
+  padding: $global-padding 0;
+  
+  &:last-child {
+    border-bottom-color: transparent;
+  }
+  
+  h3 a,
+  h3 a:active {
+    text-decoration: none;
+  }
+}
+
+.post-meta {
+  text-align: right;
+  margin-top: .5 * $global-margin;
+  font-family: $header-font-family;
+  color: $dark-gray;
+}
+
+.post-meta {
+  @extend .h5;
+}
+
+.post-abstract h3 {
+  margin-bottom: 0;
+}
+
+.post-content {
+  margin-top: (-.5 * $global-margin);
+}
+
+.author {
+  margin-bottom: $global-margin;
+  font-family: $header-font-family;
 }

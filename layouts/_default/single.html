@@ -3,14 +3,16 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}
-        <div class="grid-x grid-x-padding">
-        <div class="medium-9 cell" id="content">
+        <div id="content" class="grid-x grid-padding-x post">
+        <div class="medium-2 cell post-meta">
+        {{with .Params.date}}
+            <div class="date">{{.Format "2006 Jan 2"}}</div>
+        {{end}}
+        </div>
+        <div class="medium-8 cell post-content">
         <h2>{{.Title}}</h2>
         {{with .Params.author}}
-            <em>{{.}}</em>
-        {{end}}
-        {{with .Params.date}}
-            <em>{{.Format "2006-01-02"}}</em>
+            <div class="author">{{.}}</div>
         {{end}}
         {{.Content}}
         </div>

@@ -3,6 +3,8 @@ title: "RRCHNM to Digitize the 1926 Census of Religious Bodies"
 author: Lincoln Mullen
 date: 2019-05-20
 draft: false
+image: "/blog-img/schedule-from-candler-nc.png"
+imagealt: "A schedule from the 1926 Census"
 ---
 
 The Roy Rosenzweig Center for History and New Media is pleased to announce that it has received a three-year grant from the [National Endowment for the Humanities](https://www.neh.gov) to support *American Religious Ecologies*. The generous funding comes from the Humanities Collections and Reference Resources program within the NEH's Division of Preservation and Access.
