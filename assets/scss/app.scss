@@ -271,6 +271,7 @@ footer .logos img {
   text-align: right;
   margin-top: .5 * $global-margin;
   font-family: $header-font-family;
+  text-transform: lowercase;
   color: $dark-gray;
 }
 
@@ -289,4 +290,5 @@ footer .logos img {
 .author {
   margin-bottom: $global-margin;
   font-family: $header-font-family;
+  text-transform: lowercase;
 }
