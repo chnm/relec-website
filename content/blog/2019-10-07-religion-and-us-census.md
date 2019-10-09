@@ -3,7 +3,7 @@ title: "Religion and the U.S. Census"
 author: John Turner
 date: 2019-10-07
 draft: false
-abstract: For a century, however, the Census Bureau collected a tremendous amount of information about religion in the United States. The Bureau's efforts began with the 1850 decennial census, when it gathered data about number of churches by denomination, the value of their church edifices, and the number of individuals those churches could accommodate. The Bureau listed nineteen denominations (from "Baptist" to "Universalist"); it subsumed smaller groups into categories labeled "Free," "Union," and "Minor Sects."
+abstract: "For a century, the Census Bureau collected information about religion in the United States. Here is how the Bureau's efforts began with the 1850 decennial census, how it expanded to the Censuses of Religious Bodies, and why the religion censuses eventually came to an end in the middle of the twentieth century." 
 image: "/blog-img/census-bureau-employees.jpg"
 imagealt: "Census Bureau employees"
 ---
