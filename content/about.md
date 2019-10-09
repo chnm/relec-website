@@ -5,9 +5,9 @@ slug: about
 
 *American Religious Ecologies* is a project of the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) that is creating new datasets, maps and visualizations for the history of American religion. With the [generous support](https://securegrants.neh.gov/publicquery/main.aspx?f=1&gn=PW-264050-19) of the National Endowment for the Humanities, we are currently digitizing the 1926 U.S. Census of Religious Bodies, which has individual schedules for approximately 232,000 congregations. We are also investigating denominational records and other sources of data.
 
-If you use this project, we would be grateful if you would cite it. Here is a suggested citation.
+If you use this project, we would be grateful if you would cite it. Here is a suggested citation:
 
-*American Religious Ecologies*, Roy Rosenzweig Center for History and New Media, George Mason University (2018--): http://religiousecologies.org.
+> *American Religious Ecologies*, Roy Rosenzweig Center for History and New Media, George Mason University (2018--): http://religiousecologies.org.
 
 ## Contributors
 
@@ -17,13 +17,15 @@ Jordan Bratt, graduate research assistant
 
 Brandan Buck, graduate research assistant for spatial data
 
-Abderraouf Deghdegh, undergraduate research assistanth
+Abderraouf Deghdegh, undergraduate research assistant
 
-Reagan Emmerling, undergraduate research assistantg
+Reagan Emmerling, undergraduate research assistant
 
-Kaila Etienne-Best, undergraduate research assistantt
+Kaila Etienne-Best, undergraduate research assistant
 
-Imran Haq, undergraduate research assistantq
+Imran Haq, undergraduate research assistant
+
+William Keeler, undergraduate intern
 
 Paige Leddy, undergraduate research assistant
 
