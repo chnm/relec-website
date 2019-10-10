@@ -6,3 +6,4 @@ permalinks:
   page: "/:slug/"
 
 taxonomies: false
+pluralizelisttitles: false
