@@ -99,9 +99,11 @@ header {
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+  margin-top: 2 * $global-margin;
   margin-bottom: 2 * $global-margin;
   
   @include breakpoint(small down) {
+    margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
   }
