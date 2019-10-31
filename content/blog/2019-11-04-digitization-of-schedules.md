@@ -20,4 +20,4 @@ Work on the project got underway in the summer of 2019. First, we created an inv
 
 Finally, we have started creating metadata to accompany each schedule. By associating the image of each schedule with machine-readable text that describes the schedule (such as the denomination name and the county and state where the congregation is located), we can make our digitized schedules searchable by place (e.g., find all the schedules for congregations in Fairfax County, VA) and denomination (e.g., find all the schedules for congregations that are a part of the Advent Christian Church).
 
-By the end of the project, we will know exactly how much of the collection is extant, and we will make available the collection in its entirety as a free, open-source resources for researchers, church members, and religious history enthusiasts around the world.
+By the end of the project, we will know exactly how much of the collection is extant, and we will make available the collection in its entirety as a free, open-source resource for researchers, church members, and religious history enthusiasts around the world.
