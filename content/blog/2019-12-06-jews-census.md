@@ -1,7 +1,7 @@
 ---
 title: "American Jews and the U.S. Census of Religious Bodies"
 author: John Turner
-date: 2019-12-05
+date: 2019-12-06
 draft: false
 abstract: "The U.S. Census Bureau struggled to decide how to count Jewish Americans, experimenting with several methods of enumerating synagogue membership. Beginning in 1926, the Bureau outsourced the task to the American Jewish Committee, which reported estimates of the entire Jewish population of places rather than the membership of synagoguges and other Jewish organizations." 
 image: "/blog-img/temple-beth-el-nyc.jpg"
