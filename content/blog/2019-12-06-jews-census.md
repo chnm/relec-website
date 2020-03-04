@@ -16,7 +16,7 @@ From the outset of the Religious Bodies censuses, the fact that different denomi
 
 In 1890, the Bureau had differentiated between Reform and Orthodox congregations. Again, different standards of membership presented a challenge. According to Uriah Engelman, Orthodox synagogues had relatively fewer full members and more seat holders. When the Bureau began conducting the decennial Religious Bodies census in 1906, it dropped the distinction between Jew and Orthodox.  A census that differentiated among myriad Baptist groups now simply counted Jewish congregations and their members or seat holders. 
 
-{{< figure src="/blog-img/hebrew-schedule.jpg" caption="The Hebrew-language congregational schedule prepared by the Bureau." alt="National Archives" >}}
+{{< figure src="/blog-img/hebrew-schedule.jpg" caption="Figure 1. The Hebrew-language congregational schedule prepared by the Bureau." alt="National Archives" >}}
 
 The Bureau, and those organizations that advised it, struggled with the question of how to enumerate Jewish members. In 1906, the first Religious Bodies census counted as Jewish members only (male) heads of families. In 1916, there was considerable confusion. Some Jewish organizations enumerated heads of families, while others counted seat holders (those who paid for seats but did not have voting privileges). Either of these methods produced statistics that undercounted Jewish participation in religious congregations.
 
