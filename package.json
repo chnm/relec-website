@@ -1,19 +1,14 @@
 {
-  "name": "foundation-sites-template",
-  "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
-  "main": "gulpfile.js",
+  "name": "American Religious Ecologies website",
+  "version": "0.0.1",
+  "description": "Website and visualizations for the American Religious Ecologies project at RRCHNM.",
   "scripts": {
     "start": "gulp",
     "build": "gulp sass"
   },
-  "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
-  },
+  "author": "Roy Rosenzweig Center for History and New Media",
   "dependencies": {
+    "d3": "^5.15.0",
     "foundation-sites": "^6.5.1",
     "jquery": "^3.4.1",
     "motion-ui": "~2.0.0",
@@ -25,11 +20,24 @@
     "gulp": "^4.0.0",
     "gulp-load-plugins": "^2.0.1",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "snowpack": "^1.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "https://github.com/religious-ecologies/website.git"
   },
-  "private": true
+  "private": true,
+  "snowpack": {
+    "webDependencies": [
+      "d3"
+    ],
+    "installOptions": {
+      "dest": "./static/js/",
+      "clean": false,
+      "optimize": true,
+      "babel": false,
+      "sourceMap": true
+    }
+  }
 }

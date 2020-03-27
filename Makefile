@@ -1,7 +1,7 @@
 preview :
 	hugo serve --buildDrafts --buildFuture --disableFastRender
 
-build :
+build : viz-dependencies
 	hugo --cleanDestinationDir --minify
 
 deploy : build
@@ -9,4 +9,7 @@ deploy : build
 		--checksum -avz --no-perms \
 		public/ athena:/websites/releco/www/ | egrep -v '^\.'
 
-.PHONY : preview build deploy
+viz-dependencies : 
+	npx snowpack
+
+.PHONY : preview build deploy viz-dependencies
