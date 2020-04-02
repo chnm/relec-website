@@ -1,3 +1,27 @@
-svg {
-    border: 1px solid gray;
+.country {
+    fill: rgba(204, 230, 255, 0.4);
+    stroke: lightgray;
+    stroke-width: 1;
 }
+
+.diocese {
+    fill: purple;
+    fill-opacity: 0.5;
+    stroke: purple;
+    stroke-width: 1;
+}
+
+.metropolitan {
+    fill: red;
+    fill-opacity: 0.5;
+    stroke: red;
+    stroke-width: 1;
+}
+
+rect {
+    fill: gray;
+}
+
+.active {
+    fill: red;
+    }
