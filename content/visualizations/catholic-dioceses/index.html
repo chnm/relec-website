@@ -4,8 +4,25 @@ date: 2020-03-25
 updated: 2020-03-26
 abstract: A map of Roman Catholic dioceses in North America
 script: viz/catholic-dioceses.js
+css: viz/catholic-dioceses.css
 ---
 
-<p>HTML placeholders for the visualization go here.</p>
+<p>This is a map of Roman Catholic dioceses in North America, from the establishment of the first diocese in 1511 to the present.</p>
 
-<div id="placeholder"></div>
+<div class="grid-x grid-padding-x">
+  <div class="cell medium-12">
+    <svg id="map" width="100%"></svg>
+  </div>
+</div>
+
+<div class="grid-x grid-padding-x">
+  <div id="controls" class="cell medium-6">
+    1511 <input type="range" id="year" name="year" min=1511 max=2020 step=1> 2020
+    <label for="year">Year</label>
+    <p><small>Some instructions on how to use the map.</small></p>
+  </div>
+  <div class="cell medium-6 ">
+    <svg id="barchart" width="100%"></svg></div>
+</div>
+
+<p>There will be lots more text.</p>
