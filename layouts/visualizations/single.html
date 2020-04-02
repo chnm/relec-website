@@ -5,18 +5,18 @@
 <body>
   {{- partial "header.html" . -}}
   <div id="content" class="grid-x grid-padding-x post">
-    <div class="medium-2 cell post-meta">
+    <div class="row cell medium-10 medium-offset-1 post-content">
+      <h2>{{.Title}}</h2>
       {{with .Params.date}}
       <div class="date">{{.Format "2 Jan 2006"}}</div>
       {{end}}
-    </div>
-    <div class="medium-8 cell post-content">
-      <h2>{{.Title}}</h2>
+
       {{.Content}}
 
       {{ $script := resources.Get .Params.script | resources.Minify | resources.Fingerprint }}
       <script type="module" src="{{ $script.Permalink }}"></script>
-
+      {{ $css := resources.Get .Params.css | resources.Minify | resources.Fingerprint }}
+      <link rel="stylesheet" href="{{ $css.Permalink }}">
     </div>
   </div>
   {{- partial "footer.html" . -}}
