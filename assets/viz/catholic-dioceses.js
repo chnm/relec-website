@@ -13,19 +13,17 @@ function getDecade(year) {
 
 class Visualization {
 
-  constructor(id, data, margin) {
+  constructor(id, data, dim, margin) {
     this.data = data
     this.margin = margin
 
     // Select the SVG, figure out the correct height, and use the
     // viewBox property to make it scale responsively.
     this.svg = d3.select(id)
-    this.aspect = 1.618034
-    this.width = this.svg.node().clientWidth
-    this.height = this.width / this.aspect
+    this.width = dim.width
+    this.height = dim.height
     this.svg
       .attr("viewBox", `0 0 ${this.width} ${this.height}`)
-      .attr("preserveAspectRatio", "xMidYMid meet")
     this.viz = this.svg
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`)
@@ -34,9 +32,9 @@ class Visualization {
 }
 
 class DiocesesMap extends Visualization {
-  constructor(id, data) {
+  constructor(id, data, dim) {
     const margin = { top: 20, right: 20, bottom: 20, left: 20 }
-    super(id, data, margin)
+    super(id, data, dim, margin)
     this.year = d3.select("#year").node().valueAsNumber
     this.projection = d3.geoAlbers()
       .translate([this.width / 2, this.height / 2 + 25])
@@ -104,9 +102,9 @@ class DiocesesMap extends Visualization {
 
 class DiocesesBarChart extends Visualization {
 
-  constructor(id, data) {
+  constructor(id, data, dim) {
     const margin = { top: 20, right: 40, bottom: 40, left: 20 }
-    super(id, data, margin)
+    super(id, data, dim, margin)
     this.year = d3.select("#year").node().valueAsNumber
     this.xScale = d3.scaleBand()
       .domain(d3.range(this.data.diocesesByDecade.length))
@@ -173,9 +171,9 @@ urls.forEach(url => promises.push(d3.json(url)))
 Promise.all(promises)
   .then(function (data) {
     const mapData = { dioceses: data[0], northamerica: data[2] }
-    const map = new DiocesesMap("#map", mapData)
+    const map = new DiocesesMap("#map", mapData, { width: 800, height: 600 })
     const chartData = { diocesesByDecade: data[1] }
-    const chart = new DiocesesBarChart("#barchart", chartData)
+    const chart = new DiocesesBarChart("#barchart", chartData, { width: 400, height: 200 })
     map.render()
     chart.render()
 
