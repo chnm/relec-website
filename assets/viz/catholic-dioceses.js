@@ -1,8 +1,14 @@
 import * as d3 from "/js/d3.js";
 
+// Take in an ISO-8601 string and return just the year as an integer
 function getYear(dateString) {
-  const [year, month, day] = dateString.split("-");
+  const year = dateString.split("-");
   return parseInt(year, 10);
+}
+
+// Take in a year and get back the decade.
+function getDecade(year) {
+  return Math.trunc(year / 10) * 10;
 }
 
 class Visualization {
@@ -99,12 +105,58 @@ class DiocesesMap extends Visualization {
 class DiocesesBarChart extends Visualization {
 
   constructor(id, data) {
-    const margin = { top: 20, right: 20, bottom: 20, left: 20 }
+    const margin = { top: 20, right: 40, bottom: 40, left: 20 }
     super(id, data, margin)
+    this.year = d3.select("#year").node().valueAsNumber
+    this.xScale = d3.scaleBand()
+      .domain(d3.range(this.data.diocesesByDecade.length))
+      .range([this.margin.left, this.width - this.margin.right])
+      .padding(0.1)
+    this.xAxis = d3.axisBottom()
+      .scale(this.xScale)
+      .tickValues(this.xScale.domain().filter((d, i) => !((i + 1) % 10)))
+      .tickFormat(i => this.data.diocesesByDecade[i].decade)
+    this.yScale = d3.scaleLinear(
+      [0, d3.max(this.data.diocesesByDecade, d => d.count)],
+      [this.height - this.margin.bottom - this.margin.top, 0])
+    this.yAxis = d3.axisRight()
+      .scale(this.yScale)
+      .ticks(10);
   }
 
   render() {
-    this.svg.append("text").attr("x", 10).attr("y", 30).text("Chart")
+    this.viz
+      .append("g")
+      .attr("class", "x axis")
+      .attr("transform", `translate(0,${this.height - this.margin.bottom - this.margin.top})`)
+      .call(this.xAxis)
+    this.viz
+      .append("g")
+      .attr("class", "y axis")
+      .attr("transform", `translate(${this.width - this.margin.right},0)`)
+      .call(this.yAxis)
+
+    this.viz
+      .selectAll("rect")
+      .data(this.data.diocesesByDecade)
+      .enter()
+      .append("rect")
+      .attr("x", (d, i) => this.xScale(i))
+      .attr("y", d => this.yScale(d.count))
+      .attr("width", this.xScale.bandwidth())
+      .attr("height", d => this.yScale(0) - this.yScale(d.count))
+
+    // Draw the stuff that gets updated
+    this.update(this.year)
+  }
+
+  update(year) {
+    this.viz
+      .selectAll("rect")
+      .data(this.data.diocesesByDecade)
+      .classed("active", false)
+      .filter(d => d.decade === getDecade(year))
+      .classed("active", true);
   }
 }
 
@@ -129,10 +181,9 @@ Promise.all(promises)
 
     // Listen for changes to the slider
     d3.select("#year").on("input", function () {
-      map.update(this.valueAsNumber);
-      // TODO chart.update()
+      const year = this.valueAsNumber
+      map.update(year);
+      chart.update(year)
     });
 
   });
-
-
