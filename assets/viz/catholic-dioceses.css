@@ -20,6 +20,13 @@
     stroke-opacity: 1;
 }
 
+.nonlatin {
+    fill-opacity: 0.75;
+    stroke: black;
+    stroke-width: 1;
+    stroke-opacity: 1;
+}
+
 rect {
     fill: gray;
 }
