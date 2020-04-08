@@ -22,8 +22,10 @@ class Visualization {
     this.svg = d3.select(id)
     this.width = dim.width
     this.height = dim.height
+    let outerWidth = this.width + this.margin.left + this.margin.right
+    let outerHeight = this.height + this.margin.top + this.margin.bottom
     this.svg
-      .attr("viewBox", `0 0 ${this.width} ${this.height}`)
+      .attr("viewBox", `0 0 ${outerWidth} ${outerHeight}`)
     this.viz = this.svg
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`)
@@ -33,12 +35,12 @@ class Visualization {
 
 class DiocesesMap extends Visualization {
   constructor(id, data, dim) {
-    const margin = { top: 20, right: 20, bottom: 20, left: 20 }
+    const margin = { top: 10, right: 10, bottom: 10, left: 10 }
     super(id, data, dim, margin)
     this.year = d3.select("#year").node().valueAsNumber
     this.projection = d3.geoAlbers()
-      .translate([this.width / 2, this.height / 2 + 25])
-      .scale(430);
+      .translate([this.width / 2, this.height / 2 + 40])
+      .scale(550);
     this.path = d3.geoPath().projection(this.projection);
   }
 
@@ -103,12 +105,12 @@ class DiocesesMap extends Visualization {
 class DiocesesBarChart extends Visualization {
 
   constructor(id, data, dim) {
-    const margin = { top: 20, right: 40, bottom: 40, left: 20 }
+    const margin = { top: 10, right: 40, bottom: 40, left: 10 }
     super(id, data, dim, margin)
     this.year = d3.select("#year").node().valueAsNumber
     this.xScale = d3.scaleBand()
       .domain(d3.range(this.data.diocesesByDecade.length))
-      .range([this.margin.left, this.width - this.margin.right])
+      .range([0, this.width])
       .padding(0.1)
     this.xAxis = d3.axisBottom()
       .scale(this.xScale)
@@ -116,7 +118,7 @@ class DiocesesBarChart extends Visualization {
       .tickFormat(i => this.data.diocesesByDecade[i].decade)
     this.yScale = d3.scaleLinear(
       [0, d3.max(this.data.diocesesByDecade, d => d.count)],
-      [this.height - this.margin.bottom - this.margin.top, 0])
+      [this.height, 0])
     this.yAxis = d3.axisRight()
       .scale(this.yScale)
       .ticks(10);
@@ -126,12 +128,12 @@ class DiocesesBarChart extends Visualization {
     this.viz
       .append("g")
       .attr("class", "x axis")
-      .attr("transform", `translate(0,${this.height - this.margin.bottom - this.margin.top})`)
+      .attr("transform", `translate(0,${this.height})`)
       .call(this.xAxis)
     this.viz
       .append("g")
       .attr("class", "y axis")
-      .attr("transform", `translate(${this.width - this.margin.right},0)`)
+      .attr("transform", `translate(${this.width},0)`)
       .call(this.yAxis)
 
     this.viz
@@ -170,16 +172,23 @@ urls.forEach(url => promises.push(d3.json(url)))
 // Once all the data is loaded, initialize and render the visualizations
 Promise.all(promises)
   .then(function (data) {
-    const mapData = { dioceses: data[0], northamerica: data[2] }
-    const map = new DiocesesMap("#map", mapData, { width: 800, height: 600 })
-    const chartData = { diocesesByDecade: data[1] }
-    const chart = new DiocesesBarChart("#barchart", chartData, { width: 400, height: 200 })
+
+    const map = new DiocesesMap(
+      "#map",
+      { dioceses: data[0], northamerica: data[2] },
+      { width: 1000, height: 600 }
+    )
+    const chart = new DiocesesBarChart(
+      "#barchart",
+      { diocesesByDecade: data[1] },
+      { width: 400, height: 200 }
+    )
     map.render()
     chart.render()
 
     // Listen for changes to the slider
     d3.select("#year").on("input", function () {
-      const year = this.valueAsNumber
+      let year = this.valueAsNumber
       map.update(year);
       chart.update(year)
     });
