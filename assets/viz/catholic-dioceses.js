@@ -104,11 +104,9 @@ class DiocesesMap extends Visualization {
     this.year = year;
     this.label.text(this.year);
 
-    const data = this.currentDioceses();
-
     this.viz
       .selectAll("circle:not(.legend)")
-      .data(data, d => d.city + d.state + d.country)
+      .data(this.currentDioceses())
       .join(
         enter => enter
           .append("circle")
@@ -132,6 +130,65 @@ class DiocesesMap extends Visualization {
   // Return the class for the type of diocese
   dioceseType(dateMetropolitan, year) {
     return getYear(dateMetropolitan) <= year ? "metropolitan" : "diocese";
+  }
+
+}
+
+class DiocesesRiteMap extends Visualization {
+
+  constructor(id, data, dim) {
+    const margin = { top: 10, right: 10, bottom: 10, left: 10 };
+    super(id, data, dim, margin);
+    this.colorScale = d3.scaleOrdinal(d3.schemeSet1);
+    this.projection = d3.geoAlbers()
+      .translate([this.width / 2 + 40, this.height / 2])
+      .scale(1000);
+    this.path = d3.geoPath().projection(this.projection);
+  }
+
+  render() {
+    this.viz
+      .selectAll("path")
+      .data(this.data.northamerica.features)
+      .enter()
+      .append("path")
+      .attr("d", this.path)
+      .attr("class", "country");
+
+    this.viz
+      .selectAll("circle:not(.legend)")
+      .data(this.currentDioceses())
+      .join("circle")
+      .attr("cx", d => this.projection([d.lon, d.lat])[0])
+      .attr("cy", d => this.projection([d.lon, d.lat])[1])
+      .attr("r", 5)
+      .style("fill", d => this.colorScale(d.rite))
+      .classed("nonlatin", true);
+
+    const legend = this.viz
+      .append("g")
+      .attr("transform", "translate(0,10)");
+
+    const rites = this.colorScale.domain();
+    for (let i = 0; i < rites.length; i++) {
+      legend.append("circle")
+        .attr("cx", 0)
+        .attr("cy", 25 * i)
+        .attr("r", 5)
+        .style("fill", this.colorScale(rites[i]))
+        .classed("nonlatin", true)
+        .classed("legend", true);
+      legend
+        .append("text")
+        .attr("x", 10)
+        .attr("y", 5 + 25 * i)
+        .text(rites[i] + " Rite");
+    }
+
+  }
+
+  currentDioceses() {
+    return this.data.dioceses.filter(d => d.rite != "Latin");
   }
 
 }
@@ -218,23 +275,32 @@ urls.forEach(url => promises.push(d3.json(url)));
 Promise.all(promises)
   .then(function (data) {
 
-    const map = new DiocesesMap(
-      "#map",
+    const chronoMap = new DiocesesMap(
+      "#chrono-map",
       { dioceses: data[0], northamerica: data[2] },
       { width: 1000, height: 600 }
     );
+    chronoMap.render();
+
     const chart = new DiocesesBarChart(
       "#barchart",
       { diocesesByDecade: data[1] },
       { width: 400, height: 200 }
     );
-    map.render();
     chart.render();
+
+    const riteMap = new DiocesesRiteMap(
+      "#rite-map",
+      { dioceses: data[0], northamerica: data[2] },
+      { width: 1000, height: 600 }
+    );
+    riteMap.render();
+
 
     // Listen for changes to the slider
     d3.select("#year").on("input", function () {
       const year = this.valueAsNumber;
-      map.update(year);
+      chronoMap.update(year);
       chart.update(year);
     });
 
