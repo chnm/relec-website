@@ -24,8 +24,9 @@ class Visualization {
     this.height = dim.height;
     const outerWidth = this.width + this.margin.left + this.margin.right;
     const outerHeight = this.height + this.margin.top + this.margin.bottom;
-    this.svg
-      .attr("viewBox", `0 0 ${outerWidth} ${outerHeight}`);
+    this.svg.attr("viewBox", `0 0 ${outerWidth} ${outerHeight}`);
+
+    // The viz is the usable part of the plot, excluding the margins
     this.viz = this.svg
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -34,16 +35,20 @@ class Visualization {
 }
 
 class DiocesesMap extends Visualization {
+
   constructor(id, data, dim) {
     const margin = { top: 10, right: 10, bottom: 10, left: 10 };
+
     super(id, data, dim, margin);
+
     this.year = d3.select("#year").node().valueAsNumber;
     this.projection = d3.geoAlbers()
-      .translate([this.width / 2, this.height / 2 + 40])
-      .scale(550);
+      .translate([this.width / 2 + 40, this.height / 2 + 40])
+      .scale(500);
     this.path = d3.geoPath().projection(this.projection);
   }
 
+  // Draw the unchanging parts of the visualization
   render() {
     // Label for the year
     this.label = this.viz
@@ -53,6 +58,34 @@ class DiocesesMap extends Visualization {
       .attr("font-size", 48)
       .attr("alignment-baseline", "top");
 
+    // Legend for the types of dioceses
+    const legend = this.viz
+      .append("g")
+      .attr("transform", "translate(8,50)");
+    legend.append("circle")
+      .attr("cx", 0)
+      .attr("cy", 0)
+      .attr("r", 3)
+      .attr("class", "diocese")
+      .classed("legend", true);
+    legend
+      .append("text")
+      .attr("x", 10)
+      .attr("y", 5)
+      .text("Diocese");
+    legend
+      .append("circle")
+      .attr("cx", 0)
+      .attr("cy", 25)
+      .attr("r", 3)
+      .attr("class", "metropolitan")
+      .classed("legend", true);
+    legend
+      .append("text")
+      .attr("x", 10)
+      .attr("y", 30)
+      .text("Archdiocese");
+
     this.viz
       .selectAll("path")
       .data(this.data.northamerica.features)
@@ -61,11 +94,12 @@ class DiocesesMap extends Visualization {
       .attr("d", this.path)
       .attr("class", "country");
 
-    // Draw the stuff that gets updated
+    // On first render, draw the stuff that gets updated
     this.update(this.year);
 
   }
 
+  // Draw the stuff that gets updated
   update(year) {
     this.year = year;
     this.label.text(this.year);
@@ -73,31 +107,31 @@ class DiocesesMap extends Visualization {
     const data = this.currentDioceses();
 
     this.viz
-      .selectAll("circle")
-      .data(data)
-      .enter()
-      .append("circle")
-      .attr("cx", d => this.projection([d.lon, d.lat])[0])
-      .attr("cy", d => this.projection([d.lon, d.lat])[1])
-      .attr("r", "3px")
-      .attr("class", function (d) {
-        if (d.date_metropolitan !== "" && getYear(d.date_metropolitan) <= this.year) {
-          return "metropolitan";
-        } else {
-          return "diocese";
-        }
-      });
-
-    this.viz
-      .selectAll("circle")
-      .data(data)
-      .exit()
-      .remove();
+      .selectAll("circle:not(.legend)")
+      .data(data, d => d.city + d.state + d.country)
+      .join(
+        enter => enter
+          .append("circle")
+          .attr("cx", d => this.projection([d.lon, d.lat])[0])
+          .attr("cy", d => this.projection([d.lon, d.lat])[1])
+          .attr("r", "3px")
+          .attr("class", d => this.dioceseType(d.date_metropolitan, year)),
+        update => update
+          .attr("class", d => this.dioceseType(d.date_metropolitan, year)),
+        exit => exit
+          .remove()
+      );
 
   }
 
+  // Filter the data down to the dioceses that should be displayed in a year
   currentDioceses() {
     return this.data.dioceses.filter(d => getYear(d.date_erected) <= this.year);
+  }
+
+  // Return the class for the type of diocese
+  dioceseType(dateMetropolitan, year) {
+    return getYear(dateMetropolitan) <= year ? "metropolitan" : "diocese";
   }
 
 }
@@ -155,7 +189,7 @@ class DiocesesBarChart extends Visualization {
       .attr("width", this.xScale.bandwidth())
       .attr("height", d => this.yScale(0) - this.yScale(d.count));
 
-    // Draw the stuff that gets updated
+    // On first render, draw the stuff that gets updated
     this.update(this.year);
   }
 
