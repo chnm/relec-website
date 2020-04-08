@@ -120,6 +120,27 @@ class DiocesesMap extends Visualization {
           .remove()
       );
 
+    const tooltip = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("visibility", "hidden");
+
+    this.viz
+      .selectAll("circle")
+      .on("mouseover", function (d) {
+        const text =
+          `Diocese of ${d.city} in ${d.state}<br/>` +
+          `Founded ${getYear(d.date_erected)}`;
+        tooltip.html(text);
+        tooltip.style("visibility", "visible");
+      })
+      .on("mousemove", function () {
+        return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
+      })
+      .on("mouseout", function () {
+        return tooltip.style("visibility", "hidden");
+      });
+
   }
 
   // Filter the data down to the dioceses that should be displayed in a year
@@ -184,6 +205,26 @@ class DiocesesRiteMap extends Visualization {
         .attr("y", 5 + 25 * i)
         .text(rites[i] + " Rite");
     }
+
+    const tooltip = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("visibility", "hidden")
+      .text("I'm a circle!");
+
+    this.viz
+      .selectAll("circle")
+      .on("mouseover", function (d) {
+        const text = `Diocese of ${d.city} in ${d.state}<br/>${d.rite} Rite`;
+        tooltip.html(text);
+        tooltip.style("visibility", "visible");
+      })
+      .on("mousemove", function () {
+        return tooltip.style("top", (d3.event.pageY - 10) + "px").style("left", (d3.event.pageX + 10) + "px");
+      })
+      .on("mouseout", function () {
+        return tooltip.style("visibility", "hidden");
+      });
 
   }
 
