@@ -11,13 +11,13 @@ css: viz/catholic-dioceses.css
 
 <div class="grid-x grid-padding-x">
   <div class="cell medium-12">
-    <svg id="map" width="100%"></svg>
+    <svg id="chrono-map" width="100%"></svg>
   </div>
 </div>
 
 <div class="grid-x grid-padding-x">
   <div id="controls" class="cell medium-6">
-    1511 <input type="range" id="year" name="year" min=1511 max=2020 step=1 value=1511> 2020
+    1511 <input type="range" id="year" name="year" min=1511 max=2011 step=1 value=1511> 2011
     <label for="year">Year</label>
     <p>Some instructions on how to use the map. Moving the slider changes the year displayed on the map. The chart shows the number of dioceses founded per decade.</p>
   </div>
@@ -26,3 +26,11 @@ css: viz/catholic-dioceses.css
 </div>
 
 <p>There will be lots more interpretative text.</p>
+
+<p>Here is a map of non-Latin Rite dioceses.</p>
+
+<div class="grid-x grid-padding-x">
+  <div class="cell medium-12">
+    <svg id="rite-map" width="100%"></svg>
+  </div>
+</div>
