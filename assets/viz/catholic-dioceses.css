@@ -6,16 +6,18 @@
 
 .diocese {
     fill: purple;
-    fill-opacity: 0.5;
+    fill-opacity: 0.25;
     stroke: purple;
     stroke-width: 1;
+    stroke-opacity: 1;
 }
 
 .metropolitan {
     fill: red;
-    fill-opacity: 0.5;
+    fill-opacity: 0.25;
     stroke: red;
     stroke-width: 1;
+    stroke-opacity: 1;
 }
 
 rect {
