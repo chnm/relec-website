@@ -335,3 +335,29 @@ footer .logos img {
   font-family: $header-font-family;
   text-transform: lowercase;
 }
+
+// -- Visualization
+
+.visualization .grid-container {
+  @extend .fluid;
+}
+
+.visualization header {
+  margin: 0 0 $global-margin;
+  padding: 0 0 (.25 * $global-padding);
+  align-items: center;
+}
+
+.visualization header h1 a {
+  display: flex;
+}
+
+.visualization header h1 img {
+  max-height: 1rem;
+  width: auto;
+  margin: 0;
+}
+
+.visualization header nav {
+  font-size: .875 * $global-font-size;
+}

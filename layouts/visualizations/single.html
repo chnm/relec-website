@@ -2,14 +2,11 @@
 <html lang="en">
 {{- partial "head.html" . -}}
 
-<body>
+<body class="visualization">
   {{- partial "header.html" . -}}
   <div id="content" class="grid-x grid-padding-x post">
-    <div class="row cell medium-10 medium-offset-1 post-content">
+    <div class="row cell post-content">
       <h2>{{.Title}}</h2>
-      {{with .Params.date}}
-      <div class="date">{{.Format "2 Jan 2006"}}</div>
-      {{end}}
 
       {{.Content}}
 
