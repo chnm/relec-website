@@ -1,4 +1,5 @@
-import * as d3 from "/js/d3.js";
+import * as d3 from "d3";
+import './style.css';
 
 // Take in an ISO-8601 string and return just the year as an integer
 function getYear(dateString) {

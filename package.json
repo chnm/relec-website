@@ -1,43 +1,30 @@
 {
   "name": "relec-website",
+  "private": true,
   "version": "0.0.1",
   "description": "Website and visualizations for the American Religious Ecologies project at RRCHNM.",
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp sass"
-  },
   "author": "Roy Rosenzweig Center for History and New Media",
   "dependencies": {
-    "d3": "^5.15.0",
-    "foundation-sites": "^6.5.1",
+    "d3": "^5.16.0",
+    "foundation-sites": "^6.6.2",
     "jquery": "^3.4.1",
     "motion-ui": "~2.0.0",
     "what-input": "^5.1.2"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
+    "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.7",
+    "css-loader": "^3.5.3",
     "gulp": "^4.0.0",
-    "gulp-load-plugins": "^2.0.1",
+    "gulp-load-plugins": "^2.0.3",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
-    "snowpack": "^1.6.0"
+    "style-loader": "^1.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/religious-ecologies/website.git"
-  },
-  "private": true,
-  "snowpack": {
-    "webDependencies": [
-      "d3"
-    ],
-    "installOptions": {
-      "dest": "./static/js/",
-      "clean": false,
-      "optimize": true,
-      "babel": false,
-      "sourceMap": true
-    }
   }
 }
