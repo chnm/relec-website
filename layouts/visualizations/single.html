@@ -13,10 +13,8 @@
 
       {{.Content}}
 
-      {{ $script := resources.Get .Params.script | resources.Minify | resources.Fingerprint }}
+      {{ $script := resources.Get .Params.script | resources.Fingerprint }}
       <script type="module" src="{{ $script.Permalink }}"></script>
-      {{ $css := resources.Get .Params.css | resources.Minify | resources.Fingerprint }}
-      <link rel="stylesheet" href="{{ $css.Permalink }}">
     </div>
   </div>
   {{- partial "footer.html" . -}}

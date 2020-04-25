@@ -4,5 +4,4 @@ public/*
 hugo.exe
 website.code-workspace
 .vscode/tasks.json
-.eslintrc.js
-.eslintrc.json
+assets/viz/
