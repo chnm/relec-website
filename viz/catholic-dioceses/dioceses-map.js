@@ -1,10 +1,10 @@
 import * as d3 from 'd3';
 import Visualization from '../common/visualization';
-import { getYear } from '../common/helpers';
 
 // Return the class for the type of diocese
-function dioceseType(dateMetropolitan, year) {
-  return getYear(dateMetropolitan) <= year ? 'metropolitan' : 'diocese';
+function dioceseType(yearMetropolitan, year) {
+  if (yearMetropolitan === null) return 'diocese';
+  return yearMetropolitan <= year ? 'metropolitan' : 'diocese';
 }
 
 export default class DiocesesMap extends Visualization {
@@ -86,9 +86,9 @@ export default class DiocesesMap extends Visualization {
           .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
           .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
           .attr('r', '3px')
-          .attr('class', (d) => dioceseType(d.date_metropolitan, year)),
+          .attr('class', (d) => dioceseType(d.year_metropolitan, year)),
         (update) => update
-          .attr('class', (d) => dioceseType(d.date_metropolitan, year)),
+          .attr('class', (d) => dioceseType(d.year_metropolitan, year)),
         (exit) => exit
           .remove(),
       );
@@ -102,7 +102,7 @@ export default class DiocesesMap extends Visualization {
       .selectAll('circle')
       .on('mouseover', (d) => {
         const text = `Diocese of ${d.city} in ${d.state}<br/>`
-          + `Founded ${getYear(d.date_erected)}`;
+          + `Founded ${d.year_erected}`;
         tooltip.html(text);
         tooltip.style('visibility', 'visible');
       })
@@ -112,6 +112,6 @@ export default class DiocesesMap extends Visualization {
 
   // Filter the data down to the dioceses that should be displayed in a year
   currentDioceses() {
-    return this.data.dioceses.filter((d) => getYear(d.date_erected) <= this.year);
+    return this.data.dioceses.filter((d) => d.year_erected <= this.year);
   }
 }
