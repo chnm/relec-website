@@ -1,6 +1,10 @@
 import * as d3 from 'd3';
 import Visualization from '../common/visualization';
-import { getDecade } from '../common/helpers';
+
+// Take in a year and get back the decade.
+function getDecade(year) {
+  return Math.trunc(year / 10) * 10;
+}
 
 export default class DiocesesBarChart extends Visualization {
   constructor(id, data, dim) {

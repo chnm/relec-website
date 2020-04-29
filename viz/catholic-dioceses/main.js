@@ -6,9 +6,9 @@ import DiocesesBarChart from './dioceses-bar-chart';
 
 // Load the data
 const urls = [
-  '/visualizations/catholic-dioceses/catholic-dioceses.json',
+  'https://data.chnm.org/catholic-dioceses/',
   '/visualizations/catholic-dioceses/dioceses-by-decade.json',
-  '/visualizations/catholic-dioceses/north-america.json',
+  'https://data.chnm.org/ne/northamerica/',
 ];
 const promises = [];
 urls.forEach((url) => promises.push(d3.json(url)));
