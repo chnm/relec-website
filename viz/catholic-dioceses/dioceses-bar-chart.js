@@ -22,7 +22,7 @@ export default class DiocesesBarChart extends Visualization {
       .tickValues(this.xScale.domain().filter((d, i) => !((i + 1) % 5)))
       .tickFormat((i) => this.data.diocesesByDecade[i].decade);
     this.yScale = d3.scaleLinear(
-      [0, d3.max(this.data.diocesesByDecade, (d) => d.count)],
+      [0, d3.max(this.data.diocesesByDecade, (d) => d.n)],
       [this.height, 0],
     );
     this.yAxis = d3.axisRight()
@@ -56,9 +56,9 @@ export default class DiocesesBarChart extends Visualization {
       .enter()
       .append('rect')
       .attr('x', (d, i) => this.xScale(i))
-      .attr('y', (d) => this.yScale(d.count))
+      .attr('y', (d) => this.yScale(d.n))
       .attr('width', this.xScale.bandwidth())
-      .attr('height', (d) => this.yScale(0) - this.yScale(d.count));
+      .attr('height', (d) => this.yScale(0) - this.yScale(d.n));
 
     // On first render, draw the stuff that gets updated
     this.update(this.year);
