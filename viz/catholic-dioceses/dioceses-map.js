@@ -28,24 +28,25 @@ export default class DiocesesMap extends Visualization {
     this.label = this.viz
       .append('text')
       .text(this.year)
-      .attr('y', 24)
+      .attr('y', this.height - 25)
       .attr('font-size', 48)
       .attr('alignment-baseline', 'top');
 
     // Legend for the types of dioceses
     const legend = this.viz
       .append('g')
-      .attr('transform', 'translate(8,50)');
+      .attr('transform', 'translate(120,470)');
     legend.append('circle')
       .attr('cx', 0)
-      .attr('cy', 0)
+      .attr('cy', 5)
       .attr('r', 3)
       .attr('class', 'diocese')
       .classed('legend', true);
     legend
       .append('text')
       .attr('x', 10)
-      .attr('y', 5)
+      .attr('y', 10)
+      .attr('font-size', 16)
       .text('Diocese');
     legend
       .append('circle')
@@ -58,6 +59,7 @@ export default class DiocesesMap extends Visualization {
       .append('text')
       .attr('x', 10)
       .attr('y', 30)
+      .attr('font-size', 16)
       .text('Archdiocese');
 
     this.viz
