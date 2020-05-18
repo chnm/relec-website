@@ -49,3 +49,7 @@ rect {
     z-index: 300;
     visibility: hidden;
     }
+
+input[type=range] {
+    width: 100%;
+}
