@@ -19,7 +19,7 @@ Promise.all(promises)
     const chronoMap = new DiocesesMap(
       '#chrono-map',
       { dioceses: data[0], northamerica: data[2] },
-      { width: 1000, height: 600 },
+      { width: 1000, height: 525 },
     );
     chronoMap.render();
 
