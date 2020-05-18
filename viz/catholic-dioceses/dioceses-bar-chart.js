@@ -9,7 +9,7 @@ function getDecade(year) {
 export default class DiocesesBarChart extends Visualization {
   constructor(id, data, dim) {
     const margin = {
-      top: 10, right: 40, bottom: 40, left: 10,
+      top: 0, right: 40, bottom: 40, left: 10,
     };
     super(id, data, dim, margin);
     this.year = d3.select('#year').node().valueAsNumber;
@@ -19,7 +19,7 @@ export default class DiocesesBarChart extends Visualization {
       .padding(0.1);
     this.xAxis = d3.axisBottom()
       .scale(this.xScale)
-      .tickValues(this.xScale.domain().filter((d, i) => !((i + 1) % 5)))
+      .tickValues(this.xScale.domain().filter((d, i) => !((i + 0) % 5)))
       .tickFormat((i) => this.data.diocesesByDecade[i].decade);
     this.yScale = d3.scaleLinear(
       [0, d3.max(this.data.diocesesByDecade, (d) => d.n)],
@@ -33,21 +33,15 @@ export default class DiocesesBarChart extends Visualization {
   // Draw the unchanging parts of the visualization
   render() {
     this.viz
-      .append('text')
-      .attr('x', 0)
-      .attr('y', 30)
-      .text('Dioceses erected per decade');
-
-    this.viz
       .append('g')
       .attr('class', 'x axis')
-      .attr('transform', `translate(0,${this.height + 1})`)
+      .attr('transform', `translate(0,${this.height})`)
       .call(this.xAxis);
 
     this.viz
       .append('g')
       .attr('class', 'y axis')
-      .attr('transform', `translate(${this.width + 1},0)`)
+      .attr('transform', `translate(${this.width},0)`)
       .call(this.yAxis);
 
     this.viz
