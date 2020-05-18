@@ -70,6 +70,12 @@ export default class DiocesesMap extends Visualization {
       .attr('d', this.path)
       .attr('class', 'country');
 
+    this.tooltip = d3.select('body').append('div')
+      .attr('class', 'tooltip')
+      .attr('id', 'dioceses-map-tooltip')
+      .style('position', 'absolute')
+      .style('visibility', 'hidden');
+
     // On first render, draw the stuff that gets updated
     this.update(this.year);
   }
@@ -95,21 +101,16 @@ export default class DiocesesMap extends Visualization {
           .remove(),
       );
 
-    const tooltip = d3.select('body').append('div')
-      .attr('class', 'tooltip')
-      .style('position', 'absolute')
-      .style('visibility', 'hidden');
-
     this.viz
       .selectAll('circle')
       .on('mouseover', (d) => {
         const text = `Diocese of ${d.city} in ${d.state}<br/>`
           + `Founded ${d.year_erected}`;
-        tooltip.html(text);
-        tooltip.style('visibility', 'visible');
+        this.tooltip.html(text);
+        this.tooltip.style('visibility', 'visible');
       })
-      .on('mousemove', () => tooltip.style('top', `${d3.event.pageY - 10}px`).style('left', `${d3.event.pageX + 10}px`))
-      .on('mouseout', () => tooltip.style('visibility', 'hidden'));
+      .on('mousemove', () => this.tooltip.style('top', `${d3.event.pageY - 10}px`).style('left', `${d3.event.pageX + 10}px`))
+      .on('mouseout', () => this.tooltip.style('visibility', 'hidden'));
   }
 
   // Filter the data down to the dioceses that should be displayed in a year

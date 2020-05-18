@@ -51,23 +51,24 @@ export default class DiocesesRiteMap extends Visualization {
         .attr('x', 10)
         .attr('y', 5 + 25 * i)
         .text(`${rites[i]} Rite`);
-    }
 
-    const tooltip = d3.select('body').append('div')
-      .attr('class', 'tooltip')
-      .style('position', 'absolute')
-      .style('visibility', 'hidden')
-      .text("I'm a circle!");
+      this.tooltip = d3.select('body').append('div')
+        .attr('class', 'tooltip')
+        .attr('id', 'dioceses-rite-map-tooltip')
+        .style('position', 'absolute')
+        .style('visibility', 'hidden')
+        .text('');
+    }
 
     this.viz
       .selectAll('circle')
       .on('mouseover', (d) => {
         const text = `Diocese of ${d.city} in ${d.state}<br/>${d.rite} Rite`;
-        tooltip.html(text);
-        tooltip.style('visibility', 'visible');
+        this.tooltip.html(text);
+        this.tooltip.style('visibility', 'visible');
       })
-      .on('mousemove', () => tooltip.style('top', `${d3.event.pageY - 10}px`).style('left', `${d3.event.pageX + 10}px`))
-      .on('mouseout', () => tooltip.style('visibility', 'hidden'));
+      .on('mousemove', () => this.tooltip.style('top', `${d3.event.pageY - 10}px`).style('left', `${d3.event.pageX + 10}px`))
+      .on('mouseout', () => this.tooltip.style('visibility', 'hidden'));
   }
 
   currentDioceses() {
