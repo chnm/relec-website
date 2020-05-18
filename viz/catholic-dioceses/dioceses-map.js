@@ -17,8 +17,8 @@ export default class DiocesesMap extends Visualization {
 
     this.year = d3.select('#year').node().valueAsNumber;
     this.projection = d3.geoAlbers()
-      .translate([this.width / 2 + 40, this.height / 2 + 40])
-      .scale(500);
+      .translate([this.width / 2 + 60, this.height / 2 + 40])
+      .scale(550);
     this.path = d3.geoPath().projection(this.projection);
   }
 
