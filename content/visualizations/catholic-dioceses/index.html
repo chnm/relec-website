@@ -11,19 +11,21 @@ layout: visualization
 <p>This is a map of Roman Catholic dioceses in North America, from the establishment of the first diocese in 1511 to the present.</p>
 
 <div class="grid-x grid-padding-x">
-  <div class="cell medium-12">
+  <div class="cell medium-12 xlarge-9">
     <svg id="chrono-map" width="100%"></svg>
   </div>
-</div>
-
-<div class="grid-x grid-padding-x">
-  <div id="controls" class="cell medium-6">
-    1511 <input type="range" id="year" name="year" min=1511 max=2020 step=1 value=1800> 2020
-    <label for="year">Year</label>
-    <p>Some instructions on how to use the map. Moving the slider changes the year displayed on the map. The chart shows the number of dioceses founded per decade.</p>
+  <div id="controls" class="cell medium-12 xlarge-3">
+    <div class="grid-x grid-padding-x">
+      <div class="cell medium-6 xlarge-12">
+        1511 <input type="range" id="year" name="year" min=1511 max=2020 step=1 value=1800> 2020
+        <label for="year">Year</label>
+        <p>Some instructions on how to use the map. Moving the slider changes the year displayed on the map. The chart shows the number of dioceses founded per decade.</p>
+      </div>
+      <div class="cell medium-6 xlarge-12">
+        <svg id="barchart" width="100%"></svg>
+      </div>
+    </div>
   </div>
-  <div class="cell medium-6 ">
-    <svg id="barchart" width="100%"></svg></div>
 </div>
 
 <p>There will be lots more interpretative text.</p>
@@ -31,7 +33,7 @@ layout: visualization
 <p>Here is a map of non-Latin Rite dioceses.</p>
 
 <div class="grid-x grid-padding-x">
-  <div class="cell medium-12">
+  <div class="cell large-12">
     <svg id="rite-map" width="100%"></svg>
   </div>
 </div>
