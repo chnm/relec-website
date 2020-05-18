@@ -43,6 +43,5 @@ Promise.all(promises)
       const year = this.valueAsNumber;
       chronoMap.update(year);
       chart.update(year);
-      d3.select('#year-label').text(year);
     });
   });
