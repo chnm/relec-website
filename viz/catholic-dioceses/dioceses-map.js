@@ -85,9 +85,14 @@ export default class DiocesesMap extends Visualization {
     this.year = year;
     this.label.text(this.year);
 
+    // Provide object key for data joining
+    function key(d) {
+      return d.city + d.state;
+    }
+
     this.viz
       .selectAll('circle:not(.legend)')
-      .data(this.currentDioceses())
+      .data(this.currentDioceses(), key)
       .join(
         (enter) => enter
           .append('circle')
@@ -115,6 +120,7 @@ export default class DiocesesMap extends Visualization {
 
   // Filter the data down to the dioceses that should be displayed in a year
   currentDioceses() {
-    return this.data.dioceses.filter((d) => d.year_erected <= this.year);
+    return this.data.dioceses.filter((d) => d.year_erected <= this.year
+      && (d.year_destroyed === null || this.year <= d.year_destroyed));
   }
 }
