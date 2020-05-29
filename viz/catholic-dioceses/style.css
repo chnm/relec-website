@@ -1,14 +1,12 @@
 .country {
     fill: rgba(204, 230, 255, 0.4);
     stroke: lightgray;
-    stroke-width: 1;
 }
 
 .diocese {
     fill: purple;
     fill-opacity: 0.25;
     stroke: purple;
-    stroke-width: 1;
     stroke-opacity: 1;
 }
 
@@ -16,7 +14,6 @@
     fill: red;
     fill-opacity: 0.25;
     stroke: red;
-    stroke-width: 1;
     stroke-opacity: 1;
 }
 
