@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import Visualization from '../common/visualization';
+import { xml } from 'd3';
 
 // Return the class for the type of diocese
 function dioceseType(yearMetropolitan, year) {
@@ -20,6 +21,45 @@ export default class DiocesesMap extends Visualization {
       .translate([this.width / 2 + 60, this.height / 2 + 40])
       .scale(550);
     this.path = d3.geoPath().projection(this.projection);
+
+    // Keep track of which element is centered
+    this.centered = null;
+
+    this.zoom = (d) => {
+      console.log(d);
+      let x;
+      let y;
+      let k;
+      let kScale;
+      if (d && this.centered !== d) {
+        const coords = this.projection([d.lon, d.lat]);
+        [x, y] = coords;
+        k = 7;
+        kScale = 4;
+        this.centered = d;
+      } else {
+        x = this.width / 2 - 10;
+        y = this.height / 2 - 10;
+        k = 1;
+        kScale = 1;
+        this.centered = null;
+      }
+      this.viz
+        .transition()
+        .duration(500)
+        .attr('transform', `translate(${this.width / 2},${this.height / 2})scale(${k}) translate(${-x},${-y})`);
+
+      this.viz.selectAll('circle')
+        .transition()
+        .duration(300)
+        .attr('r', `${3 / kScale}px`)
+        .style('stroke-width', `${1 / kScale}px`);
+
+      this.viz.selectAll('.country')
+        .transition()
+        .duration(300)
+        .style('stroke-width', `${1 / k}px`);
+    };
   }
 
   // Draw the unchanging parts of the visualization
@@ -76,6 +116,13 @@ export default class DiocesesMap extends Visualization {
       .style('position', 'absolute')
       .style('visibility', 'hidden');
 
+    this.viz
+      .append('rect')
+      .attr('class', 'overlay')
+      .attr('width', this.width)
+      .attr('height', this.height)
+      .on('click', this.zoom);
+
     // On first render, draw the stuff that gets updated
     this.update(this.year);
   }
@@ -109,13 +156,14 @@ export default class DiocesesMap extends Visualization {
     this.viz
       .selectAll('circle')
       .on('mouseover', (d) => {
-        const text = `Diocese of ${d.city} in ${d.state}<br/>`
+        const text = `Diocese of ${d.city} in ${d.state} < br /> `
           + `Founded ${d.year_erected}`;
         this.tooltip.html(text);
         this.tooltip.style('visibility', 'visible');
       })
       .on('mousemove', () => this.tooltip.style('top', `${d3.event.pageY - 10}px`).style('left', `${d3.event.pageX + 10}px`))
-      .on('mouseout', () => this.tooltip.style('visibility', 'hidden'));
+      .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
+      .on('click', this.zoom);
   }
 
   // Filter the data down to the dioceses that should be displayed in a year

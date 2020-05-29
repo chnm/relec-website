@@ -53,3 +53,8 @@ rect {
 input[type=range] {
     width: 100%;
 }
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
