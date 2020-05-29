@@ -170,6 +170,7 @@ export default class DiocesesMap extends Visualization {
   // Filter the data down to the dioceses that should be displayed in a year
   currentDioceses() {
     return this.data.dioceses.filter((d) => d.year_erected <= this.year
-      && (d.year_destroyed === null || this.year <= d.year_destroyed));
+      && (d.year_destroyed === null || this.year <= d.year_destroyed)
+      && d.rite === 'Latin');
   }
 }
