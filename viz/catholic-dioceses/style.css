@@ -33,16 +33,16 @@ rect {
     }
 
 .tooltip {
-    background: rgba(69,77,93,.9);
-    border-radius: .1rem;
+    background: rgba(101, 104, 109, 0.9);
+    border-radius: .2rem;
     color: #fff;
-    display: block;
-    font-size: 11px;
-    max-width: 320px;
+    display: inline-block;
+    font-size: 12px;
+    max-width: 400px;
     padding: .2rem .4rem;
     position: absolute;
     text-overflow: ellipsis;
-    white-space: pre;
+    white-space: nowrap;
     z-index: 300;
     visibility: hidden;
     }

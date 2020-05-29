@@ -51,14 +51,13 @@ export default class DiocesesRiteMap extends Visualization {
         .attr('x', 10)
         .attr('y', 5 + 25 * i)
         .text(`${rites[i]} Rite`);
-
-      this.tooltip = d3.select('body').append('div')
-        .attr('class', 'tooltip')
-        .attr('id', 'dioceses-rite-map-tooltip')
-        .style('position', 'absolute')
-        .style('visibility', 'hidden')
-        .text('');
     }
+
+    this.tooltip = d3.select('body').append('div')
+      .attr('class', 'tooltip')
+      .attr('id', 'dioceses-rite-map-tooltip')
+      .style('position', 'absolute')
+      .style('visibility', 'hidden');
 
     this.viz
       .selectAll('circle')

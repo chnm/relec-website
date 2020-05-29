@@ -62,6 +62,25 @@ export default class DiocesesMap extends Visualization {
         .duration(500)
         .style('stroke-width', `${1 / k}px`);
     };
+
+    this.tooltipRender = (d) => {
+      const countries = {
+        BMU: 'Bermuda',
+        CAN: 'Canada',
+        CUB: 'Cuba',
+        DOM: 'Dominican Republic',
+        HTI: 'Haiti',
+        JAM: 'Jamaica',
+        MEX: 'Mexico',
+        USA: 'United States',
+      };
+      const country = countries[d.country];
+      const text = `Diocese of ${d.city}<br/>`
+        + `${d.state}, ${country}<br/>`
+        + `Founded ${d.year_erected}`;
+      this.tooltip.html(text);
+      this.tooltip.style('visibility', 'visible');
+    };
   }
 
   // Draw the unchanging parts of the visualization
@@ -153,13 +172,20 @@ export default class DiocesesMap extends Visualization {
 
     this.viz
       .selectAll('circle')
-      .on('mouseover', (d) => {
-        const text = `Diocese of ${d.city} in ${d.state} < br /> `
-          + `Founded ${d.year_erected}`;
-        this.tooltip.html(text);
-        this.tooltip.style('visibility', 'visible');
+      .on('mouseover', this.tooltipRender)
+      .on('mousemove', () => {
+        // Show the tooltip to the right of the mouse, unless we are
+        // on the rightmost 25% of the browser.
+        if (d3.event.clientX / this.width >= 0.75) {
+          this.tooltip
+            .style('top', `${d3.event.pageY - 10}px`)
+            .style('left', `${d3.event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+        } else {
+          this.tooltip
+            .style('top', `${d3.event.pageY - 10}px`)
+            .style('left', `${d3.event.pageX + 10}px`);
+        }
       })
-      .on('mousemove', () => this.tooltip.style('top', `${d3.event.pageY - 10}px`).style('left', `${d3.event.pageX + 10}px`))
       .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
       .on('click', this.zoom);
   }
