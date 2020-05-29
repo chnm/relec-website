@@ -25,39 +25,39 @@ export default class DiocesesMap extends Visualization {
     // Keep track of which element is centered
     this.centered = null;
 
+    // Keep track of how much to scale things based on zoom
+    this.kScale = 1;
+
     this.zoom = (d) => {
-      console.log(d);
       let x;
       let y;
       let k;
-      let kScale;
       if (d && this.centered !== d) {
         const coords = this.projection([d.lon, d.lat]);
         [x, y] = coords;
-        k = 7;
-        kScale = 4;
+        k = 10;
+        this.kScale = 8;
         this.centered = d;
       } else {
         x = this.width / 2 - 10;
         y = this.height / 2 - 10;
         k = 1;
-        kScale = 1;
+        this.kScale = 1;
         this.centered = null;
       }
+
       this.viz
         .transition()
-        .duration(500)
+        .duration(750)
         .attr('transform', `translate(${this.width / 2},${this.height / 2})scale(${k}) translate(${-x},${-y})`);
-
       this.viz.selectAll('circle')
         .transition()
-        .duration(300)
-        .attr('r', `${3 / kScale}px`)
-        .style('stroke-width', `${1 / kScale}px`);
-
+        .duration(750)
+        .attr('r', `${3 / this.kScale}px`)
+        .style('stroke-width', `${1 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
-        .duration(300)
+        .duration(750)
         .style('stroke-width', `${1 / k}px`);
     };
   }
@@ -79,7 +79,7 @@ export default class DiocesesMap extends Visualization {
     legend.append('circle')
       .attr('cx', 0)
       .attr('cy', 5)
-      .attr('r', 3)
+      .attr('r', 3 / this.kScale)
       .attr('class', 'diocese')
       .classed('legend', true);
     legend
@@ -92,7 +92,7 @@ export default class DiocesesMap extends Visualization {
       .append('circle')
       .attr('cx', 0)
       .attr('cy', 25)
-      .attr('r', 3)
+      .attr('r', 3 / this.kScale)
       .attr('class', 'metropolitan')
       .classed('legend', true);
     legend
@@ -145,7 +145,8 @@ export default class DiocesesMap extends Visualization {
           .append('circle')
           .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
           .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-          .attr('r', '3px')
+          .attr('r', 3 / this.kScale)
+          .style('stroke-width', 1 / this.kScale)
           .attr('class', (d) => dioceseType(d.year_metropolitan, year)),
         (update) => update
           .attr('class', (d) => dioceseType(d.year_metropolitan, year)),
