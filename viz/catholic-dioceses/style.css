@@ -1,6 +1,6 @@
 .country {
-    fill: rgba(204, 230, 255, 0.4);
-    stroke: lightgray;
+    fill: rgba(212, 234, 254, 0.3);
+    stroke: rgb(200, 200, 200);
 }
 
 .diocese {
