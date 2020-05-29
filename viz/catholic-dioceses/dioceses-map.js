@@ -21,6 +21,9 @@ export default class DiocesesMap extends Visualization {
       .scale(550);
     this.path = d3.geoPath().projection(this.projection);
 
+    // Provide object key for data joining
+    this.key = (d) => d.city + d.state;
+
     // Keep track of which element is centered
     this.centered = null;
 
@@ -131,14 +134,9 @@ export default class DiocesesMap extends Visualization {
     this.year = year;
     this.label.text(this.year);
 
-    // Provide object key for data joining
-    function key(d) {
-      return d.city + d.state;
-    }
-
     this.viz
       .selectAll('circle:not(.legend)')
-      .data(this.currentDioceses(), key)
+      .data(this.currentDioceses(), this.key)
       .join(
         (enter) => enter
           .append('circle')
