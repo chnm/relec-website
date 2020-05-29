@@ -1,6 +1,5 @@
 import * as d3 from 'd3';
 import Visualization from '../common/visualization';
-import { xml } from 'd3';
 
 // Return the class for the type of diocese
 function dioceseType(yearMetropolitan, year) {
