@@ -47,16 +47,16 @@ export default class DiocesesMap extends Visualization {
 
       this.viz
         .transition()
-        .duration(750)
+        .duration(500)
         .attr('transform', `translate(${this.width / 2},${this.height / 2})scale(${k}) translate(${-x},${-y})`);
       this.viz.selectAll('circle')
         .transition()
-        .duration(750)
+        .duration(500)
         .attr('r', `${3 / this.kScale}px`)
         .style('stroke-width', `${1 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
-        .duration(750)
+        .duration(500)
         .style('stroke-width', `${1 / k}px`);
     };
   }
