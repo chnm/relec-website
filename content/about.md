@@ -23,7 +23,13 @@ Reagan Emmerling, undergraduate research assistant
 
 Kaila Etienne-Best, undergraduate research assistant
 
+Alexis Frambes, research associate
+
 Imran Haq, undergraduate research assistant
+
+Julia Hoffer, grants administrator, RRCHNM
+
+God's Will Katchoua, systems administrator, RRCHNM
 
 William Keeler, undergraduate intern
 
