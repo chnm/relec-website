@@ -51,6 +51,8 @@ Nayomi Santos, undergraduate research assistants
 
 Ava Smigliani, undergraduate research assistant
 
+Kris Stinson, graduate research assistant
+
 Greta Swain, project manager and graduate research assistant
 
 John Turner, co--project director
