@@ -37,7 +37,6 @@ Promise.all(promises)
     );
     riteMap.render();
 
-
     // Listen for changes to the slider
     d3.select('#year').on('input', function updateViz() {
       const year = this.valueAsNumber;
