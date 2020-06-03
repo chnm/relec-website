@@ -11,6 +11,8 @@ If you use this project, we would be grateful if you would cite it. Here is a su
 
 ## Contributors
 
+Nirajan Adhikari, undergraduate research assistant
+
 Ken Albers, software developer, RRCHNM
 
 Jordan Bratt, graduate research assistant
@@ -22,6 +24,8 @@ Abderraouf Deghdegh, undergraduate research assistant
 Reagan Emmerling, undergraduate research assistant
 
 Kaila Etienne-Best, undergraduate research assistant
+
+Thana Fazelyar, undergraduate research assistant
 
 Alexis Frambes, research associate
 
