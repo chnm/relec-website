@@ -90,6 +90,20 @@ img {
   margin-bottom: .5 * $global-margin;
 }
 
+.card {
+  background-color: transparent;
+  border: 0;
+  
+  a.image-link {
+    margin-bottom: $global-margin;
+    display: block;
+  }
+  
+  a.image-link img {
+    border: 1px solid $primary-color;
+  }
+}
+
 // -- Header
 
 header {
@@ -111,7 +125,7 @@ header {
 
 header h1 {
   text-transform: capitalize;
-  min-width: 75%;
+  min-width: 60%;
   margin-bottom: 0;
   
   @include breakpoint(small down) {
