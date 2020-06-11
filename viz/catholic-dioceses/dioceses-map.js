@@ -75,7 +75,9 @@ export default class DiocesesMap extends Visualization {
         USA: 'United States',
       };
       const country = countries[d.country];
-      const text = `Diocese of ${d.city}<br/>`
+      const type = dioceseType(d.year_metropolitan, this.year);
+      const label = type === 'metropolitan' ? 'Archdiocese' : 'Diocese';
+      const text = `${label} of ${d.city}<br/>`
         + `${d.state}, ${country}<br/>`
         + `Founded ${d.year_erected}`;
       this.tooltip.html(text);
