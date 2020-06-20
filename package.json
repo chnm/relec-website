@@ -7,7 +7,7 @@
   "dependencies": {
     "d3": "^5.16.0",
     "foundation-sites": "^6.6.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "motion-ui": "~2.0.0",
     "what-input": "^5.1.2"
   },
