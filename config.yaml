@@ -7,3 +7,8 @@ permalinks:
 
 taxonomies: false
 pluralizelisttitles: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

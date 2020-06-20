@@ -48,10 +48,7 @@ thumbdesc: "A screenshot showing the distribution of dioceses in North America."
 
 <div class="grid-x grid-padding-x">
   <div class="cell medium-10 xlarge-9">
-    <h4>
-      Non&ndash;Latin Rite Dioceses in the Roman Catholic Church (Present Day)
-    </h4>
-
+    <h4>Non&ndash;Latin Rite Dioceses in the Roman Catholic Church (Present Day)</h4>
     <svg id="rite-map" width="100%"></svg>
   </div>
 </div>
