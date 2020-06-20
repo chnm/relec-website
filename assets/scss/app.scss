@@ -375,3 +375,18 @@ footer .logos img {
 .visualization header nav {
   font-size: .875 * $global-font-size;
 }
+
+.visualization .post-content p {
+  max-width: 800px;
+}
+
+// -- Footnotes
+a.footnote-ref,
+a.footnote-backref {
+  text-decoration: none;
+
+}
+
+.visualization .footnotes hr {
+  display: none;
+}
