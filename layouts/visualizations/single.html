@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-{{- partial "head.html" . -}}
+  {{- partial "head.html" . -}}
 
-<body class="visualization">
-  {{- partial "header.html" . -}}
-  <div id="content" class="grid-x grid-padding-x post">
-    <div class="row cell post-content">
-      <h2>{{.Title}}</h2>
+  <body class="visualization">
+    {{- partial "header.html" . -}}
+    <div id="content" class="grid-x grid-padding-x post">
+      <div class="row cell post-content">
+        <h2>{{.Title}}</h2>
+        <p class="abstract">{{ .Params.abstract }}</p>
 
-      {{.Content}}
+        {{.Content}} 
 
-      {{ $script := resources.Get .Params.script | resources.Fingerprint }}
-      <script type="module" src="{{ $script.Permalink }}"></script>
+        {{ $script := resources.Get .Params.script | resources.Fingerprint }}
+        <script type="module" src="{{ $script.Permalink }}"></script>
+      </div>
     </div>
-  </div>
-  {{- partial "footer.html" . -}}
-</body>
-
+    {{- partial "footer.html" . -}}
+  </body>
 </html>

@@ -380,11 +380,14 @@ footer .logos img {
   max-width: 800px;
 }
 
+.visualization .abstract {
+  font-style: italic;
+}
+
 // -- Footnotes
 a.footnote-ref,
 a.footnote-backref {
   text-decoration: none;
-
 }
 
 .visualization .footnotes hr {
