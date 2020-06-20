@@ -393,3 +393,9 @@ a.footnote-backref {
 .visualization .footnotes hr {
   display: none;
 }
+
+blockquote p a {
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: none;
+}
