@@ -23,12 +23,10 @@ The interactive map below shows the development of Roman Catholic dioceses in No
         <label for="year" class="float-right">2020</label>
         <input type="range" id="year" name="year" min="1511" max="2020" step="1" value="1800" />
         <p class="instructions">
-          <small><strong>How to use this visualization:</strong> Adjust the slider
-            to control the year displayed in the map. Hover over points on the
-            map to see details about each diocese or archdiocese. Click on a
-            diocese to zoom into that region; click anywhere else to zoom back
-            out. The bar chart also displays the number of dioceses established
-            in your selected decade.</small>
+          <small><strong>How to use this visualization:</strong> Adjust the slider to control the year displayed in the map. Hover over points on the map to see details about each diocese or archdiocese. Click on a diocese to zoom into that region; click anywhere else to zoom back out. The bar chart also displays the number of dioceses established in your selected decade.</small>
+        </p>
+        <p class="instructions">
+          <small>See below for a <a href="#rite-map-container">map of non–Latin Rite Dioceses</a>.</small>
         </p>
       </div>
       <div class="cell medium-6 xlarge-6">
@@ -63,9 +61,9 @@ The second major period of growth happened during the reforms of the Roman Catho
 
 The difference between extensive and intensive growth is an important concept for understanding religious ecologies. A diocese established in response to a growing but spreading population has a different relationship to its environment and to the rest of the institutional church than dioceses that are established in a place where the growth is intensive. As for the flip side of growth, there has been relatively little retrenchment of dioceses: only a handful have been suppressed over the past five centuries. But in the twenty-first century, the number of ex-Catholics has grown enormously due to the clerical sex abuse scandal, and next to no new dioceses have been established in North America.
 
-<div class="grid-x grid-padding-x">
+<div class="grid-x grid-padding-x" id="rite-map-container">
   <div class="cell medium-10 xlarge-9">
-    <h4>Non&ndash;Latin Rite Dioceses in the Roman Catholic Church (Present Day)</h4>
+    <h4>Non&ndash;Latin Rite Dioceses in North America (Present Day)</h4>
     <svg id="rite-map" width="100%"></svg>
   </div>
 </div>
