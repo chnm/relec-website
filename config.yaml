@@ -1,5 +1,5 @@
 title: "American Religious Ecologies"
-baseURL: "http://religiousecologies.org/"
+baseURL: "https://religiousecologies.org/"
 
 permalinks:
   blog: "/:section/:slug/"
@@ -7,3 +7,8 @@ permalinks:
 
 taxonomies: false
 pluralizelisttitles: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
