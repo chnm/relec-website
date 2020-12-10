@@ -380,12 +380,24 @@ footer .logos img {
   font-size: .875 * $global-font-size;
 }
 
-.visualization .post-content p {
+.visualization .post-content > *:not(div) {
   max-width: 800px;
+  margin: 1rem auto;
 }
 
 .visualization .abstract {
   font-style: italic;
+}
+
+.viz-block {
+  margin-top: 2 * $global-margin;
+  margin-bottom: 2 * $global-margin;
+}
+
+.viz-block h3,
+.viz-block h4 {
+  text-align: center;
+  margin: 1rem 0;
 }
 
 // -- Footnotes

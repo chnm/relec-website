@@ -11,12 +11,12 @@ thumbdesc: "A screenshot showing the distribution of dioceses in North America."
 
 The interactive map below shows the development of Roman Catholic dioceses in North America from the establishment of the first dioceses in 1511 until the present. Included are dioceses located in the current boundaries of Canada, the United States, Mexico, Cuba, the Dominican Republic, Haiti, and the Bahamas. A diocese is the main administrative unit of the Roman Catholic church, in which a bishop presides over the churches within his territory. An archdiocese is likewise presided over by an archbishop, and most archdioceses are metropolitan sees that govern several other dioceses.
 
-<div class="grid-x grid-padding-x">
-  <div class="cell medium-12 xlarge-10">
-    <h4>Latin Rite Roman Catholic dioceses and archdioceses by year</h4>
+<div class="viz-block grid-x grid-padding-x">
+  <div class="cell medium-12 xlarge-10 large-offset-1">
+    <h3>Latin Rite Roman Catholic dioceses and archdioceses by year</h3>
     <svg id="chrono-map" width="100%"></svg>
   </div>
-  <div id="controls" class="cell medium-12 xlarge-10">
+  <div id="controls" class="cell medium-12 xlarge-10 large-offset-1">
     <div class="grid-x grid-padding-x">
       <div class="cell medium-6 xlarge-6">
         <label for="year" class="float-left">1511</label>
@@ -30,7 +30,7 @@ The interactive map below shows the development of Roman Catholic dioceses in No
         </p>
       </div>
       <div class="cell medium-6 xlarge-6">
-        <h4>Dioceses established per decade</h4>
+        <h3>Dioceses established per decade</h3>
         <svg id="barchart" width="100%"></svg>
       </div>
     </div>
@@ -61,9 +61,9 @@ The second major period of growth happened during the reforms of the Roman Catho
 
 The difference between extensive and intensive growth is an important concept for understanding religious ecologies. A diocese established in response to a growing but spreading population has a different relationship to its environment and to the rest of the institutional church than dioceses that are established in a place where the growth is intensive. As for the flip side of growth, there has been relatively little retrenchment of dioceses: only a handful have been suppressed over the past five centuries. But in the twenty-first century, the number of ex-Catholics has grown enormously due to the clerical sex abuse scandal, and next to no new dioceses have been established in North America.
 
-<div class="grid-x grid-padding-x" id="rite-map-container">
-  <div class="cell medium-10 xlarge-9">
-    <h4>Non&ndash;Latin Rite Dioceses in North America (Present Day)</h4>
+<div class="viz-block grid-x grid-padding-x" id="rite-map-container">
+  <div class="cell medium-10 xlarge-8 medium-offset-1 xlarge-offset-2">
+    <h3>Non&ndash;Latin Rite Dioceses in North America (Present Day)</h3>
     <svg id="rite-map" width="100%"></svg>
   </div>
 </div>
