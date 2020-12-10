@@ -69,6 +69,10 @@ $secondary-header-font-family: "Cormorant", serif;
 
 // -- Global
 
+:focus {
+  outline: 3px solid lightblue;
+}
+
 h1, 
 h2, 
 h3, 
