@@ -415,6 +415,15 @@ a.footnote-backref {
   display: none;
 }
 
+blockquote,
+blockquote p {
+  color: black;
+}
+
+blockquote {
+  margin: (2 * $global-margin) 0;
+}
+
 blockquote p a {
   word-wrap: break-word;
   word-break: break-word;
