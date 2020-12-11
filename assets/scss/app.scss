@@ -205,6 +205,11 @@ footer .logos img {
 
 // -- Home
 
+#home-accordion .button {
+  font-size: $global-font-size;
+  text-align: left;
+}
+
 #home-accordion {
   background-color: transparent;
   border-top: 1px solid $medium-gray;
