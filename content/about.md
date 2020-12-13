@@ -13,6 +13,8 @@ If you use this project, we would be grateful if you would cite it. Here is a su
 
 Nirajan Adhikari, undergraduate research assistant
 
+Ida Akiwumi, UX researcher, RRCHNM
+
 Ken Albers, software developer, RRCHNM
 
 Jordan Bratt, graduate research assistant
@@ -28,6 +30,8 @@ Kaila Etienne-Best, undergraduate research assistant
 Thana Fazelyar, undergraduate research assistant
 
 Alexis Frambes, research associate
+
+Danielle Gaita, undergraduate research assistant
 
 Imran Haq, undergraduate research assistant
 
