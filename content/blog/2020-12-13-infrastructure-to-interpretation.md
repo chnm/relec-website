@@ -1,5 +1,5 @@
 ---
-title: "From infrastructure to interpretation in the digital history of American religion"
+title: "Video: From infrastructure to interpretation in the digital history of American religion"
 author: Lincoln Mullen
 date: 2020-12-11
 draft: false
