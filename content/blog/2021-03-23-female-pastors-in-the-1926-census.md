@@ -3,7 +3,7 @@ title: "Female Pastors in the 1926 Census Schedules"
 author: Caroline Greer
 date: 2021-03-31
 draft: false
-abstract: "A number of female pastors appear in the 1926 U.S. Census of Religious Bodies. This post seeks to explore these women and the questions we can ask and answer about women in the census.  
+abstract: "A number of female pastors appear in the 1926 U.S. Census of Religious Bodies. This post seeks to explore these women and the questions we can ask and answer about women in the census."
 image: "/blog-img/sexratio1926.jpeg"
 imagealt: "A Schedule from the Lawrence Street Primitive Methodist Church in Lowell, Massachusetts, where Alice Haine pastored."
 ---
