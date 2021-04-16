@@ -1,18 +1,18 @@
 ---
 title: "Deploying DataScribe to Create A New Dataset for American Religion"
 author: Greta Swain
-date: 2021-04-15
+date: 2021-04-16
 draft: false
-abstract: American Religious Ecologies is testing a new transcription module called Datascribe.
-image: "/blog-img/dashboard.png"
+abstract: American Religious Ecologies is using a new transcription module called DataScribe to create datasets from the Census of Religious Bodies.
+image: "/blog-img/datascribe-dashboard.png"
 imagealt: "The Datascribe dashboard when the user first logs in."
 ---
 
-At the heart of the American Religious Ecologies project are currently two endeavors: (1) photographing and making available approximately 232,000 schedules from the 1926 Census of Religious Bodies, and (2) creating spatially-linked datasets that can tell us about America’s religious life in the early twentieth century. However, there is a big difference between simply presenting digitized sources online and generating a dataset that can be computationally analyzed and visualized. With 40,000 schedules now digitized and available on our website, we’ve been thinking a lot about how to transform our digitized sources into a dataset, and how to utilize DataScribe—the newest transcription software from the Roy Rosenzweig Center for History and New Media (RRCHNM)—to facilitate this process. 
+At the heart of the American Religious Ecologies project are currently two endeavors: (1) photographing and making available approximately 232,000 schedules from the 1926 Census of Religious Bodies, and (2) creating spatially-linked datasets that can tell us about America’s religious life in the early twentieth century. However, there is a big difference between simply presenting digitized sources online and generating a dataset that can be computationally analyzed and visualized. With 40,000 schedules now digitized and available on our website, we’ve been thinking a lot about how to transform our digitized sources into a dataset, and how to utilize [DataScribe](https://datascribe.tech)---the newest transcription software from the Roy Rosenzweig Center for History and New Media (RRCHNM)---to facilitate this process. 
 
 The process of transforming historical sources into a dataset is often two-fold. First one must transcribe text or numbers from the document, or in this case, type a copy of the text and numbers into the computer, so that they become machine-readable. Second, one must organize and give structure to this text in order to transform it into data. Documents that are filled out by humans—like our 1926 census schedules—naturally have small variations in them. For example, one congregation might use text to record that they have “one” church building, while another might represent this data with a numeral “1” instead. When looking at a single document, these variations are not significant. But when you want to analyze or visualize thousands of the documents by looking at a single variable—say number of church buildings—these variations become more problematic.
 
-{{< figure src="/blog-img/one_1_datascribe.png" caption="Figure 1. Side by side images of "one" being written out on the form and "1" being entered in the form to show the different way data was written on the schedules." >}}
+{{< figure src="/blog-img/one_1_datascribe.png" caption="Figure 1. Side by side images of \"one\" being written out on the form and \"1\" being entered in the form to show the different way data was written on the schedules." >}}
 
 For many years, historians have been interested in sources—like the 1926 census schedules we are digitizing—which contain quantitative information or statistics. To record these details and make use of them, scholars utilized software (or even just spreadsheets) that only really helped with the first part of the transformation process—transcription. Nevertheless, over the past eighteen months a team at RRCHNM has been hard at work to create DataScribe, a new transcription software developed specifically to help transform historical sources with quantitative information into datasets. 
 
@@ -22,7 +22,7 @@ So what is so great about DataScribe, and why are we thrilled to be one of the f
 
 {{< figure src="/blog-img/COGIC_Chicago.jpeg" caption="Figure 2. An example of a schedule from the Census. This schedule is from a Church of God in Christ located in Chicago, Illinois." >}}
 
-The main historical sources we are currently using are schedules from the 1926 Census of Religious Bodies. These single-page documents contain a form (to be filled out by a single congregation) that asks a number of questions about a congregation’s membership, leadership, building, finances, and educational programs.<Note 1> This means that each schedule contains a great deal of quantitative information that can be recorded and organized by fields—generally one for each question on the schedule. DataScribe was specifically designed for this type of project—to record quantitative information from sources like the 1926 Census of Religious Bodies and help scholars transform that information into datasets for analysis and visualization. American Religious Ecologies is just one example of the many kinds of digital humanities projects that are transcribing structured data.
+The main historical sources we are currently using are schedules from the 1926 Census of Religious Bodies. These single-page documents contain a form (to be filled out by a single congregation) that asks a number of questions about a congregation’s membership, leadership, building, finances, and educational programs. (See our earlier post about [what you can learn](https://religiousecologies.org/blog/what-can-you-learn-from-a-census-schedule/) from a Religious Bodies census schedule.) This means that each schedule contains a great deal of quantitative information that can be recorded and organized by fields—generally one for each question on the schedule. DataScribe was specifically designed for this type of project—to record quantitative information from sources like the 1926 Census of Religious Bodies and help scholars transform that information into datasets for analysis and visualization. American Religious Ecologies is just one example of the many kinds of digital humanities projects that are transcribing structured data.
 
 **DataScribe helps us transcribe our data in a structured way.**
 
@@ -48,7 +48,3 @@ DataScribe helps teams of transcribers and reviewers collaborate on the transcri
 Our website for the 1926 Census of Religious Bodies, where users can already freely browse 40,000+ digitized documents, was built using the content management system Omeka S. Since DataScribe is built on the same platform, we can easily synchronize data across modules. Eventually the datasets we have created using DataScribe will also be freely available on our website. 
 
 As is evident from the points above, DataScribe has already and will continue to be a critical part of the American Religious Ecologies project’s efforts to increase the structure, accuracy, and usability of the datasets this project is creating for the study of American religion.
-
-**Notes**
-
-[^1]: See our earlier post about what you can learn from a Religious Bodies census schedule. <https://religiousecologies.org/blog/what-can-you-learn-from-a-census-schedule/>
