@@ -1,5 +1,5 @@
 ---
-title: "Deploying DataScribe to Create A New Dataset for American Religion"
+title: "Deploying DataScribe to Create a New Dataset for American Religious History"
 author: Greta Swain
 date: 2021-04-16
 draft: false
