@@ -1,0 +1,17 @@
+<!-- Twitter card -->
+{{ if eq .Type "blog" }}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@chnm" />
+<meta name="twitter:creator" content="@chnm" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Params.abstract }}" />
+<meta name="twitter:image" content="{{ .Params.image }}" />
+{{ end }}
+{{ if eq .Type "visualizations" }}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@chnm" />
+<meta name="twitter:creator" content="@chnm" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Params.abstract }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL}}img/viz/{{ .Params.thumbnail }}" />
+{{ end }}
