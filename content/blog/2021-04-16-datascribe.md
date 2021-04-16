@@ -20,9 +20,9 @@ So what is so great about DataScribe, and why are we thrilled to be one of the f
 
 **DataScribe is well-suited to our sources and project goals.**
 
-{{< figure src="/blog-img/COGIC_Chicago.jpeg" caption="Figure 2. An example of a schedule from the Census. This schedule is from a Church of God in Christ located in Chicago, Illinois." >}}
-
 The main historical sources we are currently using are schedules from the 1926 Census of Religious Bodies. These single-page documents contain a form (to be filled out by a single congregation) that asks a number of questions about a congregation’s membership, leadership, building, finances, and educational programs. (See our earlier post about [what you can learn](https://religiousecologies.org/blog/what-can-you-learn-from-a-census-schedule/) from a Religious Bodies census schedule.) This means that each schedule contains a great deal of quantitative information that can be recorded and organized by fields—generally one for each question on the schedule. DataScribe was specifically designed for this type of project—to record quantitative information from sources like the 1926 Census of Religious Bodies and help scholars transform that information into datasets for analysis and visualization. American Religious Ecologies is just one example of the many kinds of digital humanities projects that are transcribing structured data.
+
+{{< figure src="/blog-img/COGIC_Chicago.jpeg" caption="Figure 2. An example of a schedule from the Census. This schedule is from a Church of God in Christ located in Chicago, Illinois." >}}
 
 **DataScribe helps us transcribe our data in a structured way.**
 
@@ -30,18 +30,19 @@ DataScribe lets us both transcribe and standardize our data—in effect allowing
 
 However, DataScribe allows us to build our own transcription form. In this form, we can include instructions that will be shown in the transcription interface, dictate what type of data is acceptable, and in some cases, offer concrete choices to transcribers. For example, we can pre-determine that membership statistics should be entered as numbers and disallow any other type of input for those fields. Or, we can create a categorical variable by having transcribers pick “Urban” or “Rural” with radio buttons instead of entering “U” or “R” in a text box. These options help us standardize our data, keep transcription errors to a minimum, and make each field easier to analyze or visualize. 
 
+{{< figure src="/blog-img/form_builder_datascribe.png" caption="Figure 3. Screenshot from Datascribe of the form builder for transcribing. " >}}
 
 **DataScribe helps us create a spatially linked dataset that can be easily mapped.**
 
 One of the key pieces of information included on each schedule is the location of the congregation. This is recorded on the schedule in three fields: State, County, and City, town, village or township. This is inherently spatial data. But by simply transcribing the text, there is no connection between the place name and its geospatial location. Using DataScribe we have created what we call a “Populated Place” field, which draws on a spatial dataset of almost 200,000 U.S. place names. The “Populated Place” field lets the transcriber choose the congregation’s location from a series of dropdown menus. However, when DataScribe saves this input, it does not just record the text of that place name; instead it records a six-digit spatial code that helps link that place to specific latitude and longitude coordinates. This makes it possible to digitally map the locations of these congregations.
 
-{{< figure src="/blog-img/form_builder_datascribe.png" caption="Figure 3. Screenshot from Datascribe of the form builder for transcribing. " >}}
+{{< figure src="/blog-img/populated_place_select.jpeg" caption="Figure 4. An image of the populated place dropdown box used for transcription in Datascribe." >}}
 
 **DataScribe’s interface allows for collaboration and management of the transcription process.**
 
-{{< figure src="/blog-img/populated_place_select.jpeg" caption="Figure 4. An image of the populated place dropdown box used for transcription in Datascribe." >}}
-
 DataScribe helps teams of transcribers and reviewers collaborate on the transcription process, and lets project managers keep track of the progress. For our project, transcribers see a schedule side-by-side with our transcription form. They can also see items that are assigned to them, have the ability to flag items with fields that seem out of the ordinary, or leave comments for the reviewers. Reviews can then see submitted transcriptions along with their flags and comments, and decide to respond to them or simply update the transcription. Finally, DataScribe lets managers assign items to particular transcribers or reviews, and keep track of the status of the transcriptions. All of these features have allowed the large American Religious Ecologies project team to collaborate on and communicate about the transcription process asynchronously, directly in the DataScribe interface. 
+
+{{< figure src="/blog-img/datascribe-interface.png" caption="Figure 5. The DataScribe transcription interface is where transcribers do most of their work." >}}
 
 **DataScribe, built in Omeka S, fits seamlessly with our existing online system.**
 
