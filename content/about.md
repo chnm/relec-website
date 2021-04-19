@@ -41,6 +41,8 @@ God's Will Katchoua, systems administrator, RRCHNM
 
 William Keeler, undergraduate intern
 
+Hibba Khan, undergraduate research assistant
+
 Paige Leddy, undergraduate research assistant
 
 Jannelle Legg, graduate research assistant
@@ -64,6 +66,8 @@ Kris Stinson, graduate research assistant
 Greta Swain, project manager and graduate research assistant
 
 John Turner, co--project director
+
+Stephanie Vu, undergraduate research assistant
 
 ## Advisory board
 
