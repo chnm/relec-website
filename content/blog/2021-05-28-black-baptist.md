@@ -62,4 +62,4 @@ Categorizing and counting religion are not simple matters. When it came to Afric
 
 [^5]: *Religious Bodies: 1926*, 2:82.
 
-[^6]: 1916, 129.
+[^6]: *Religious Bodies: 1916* (Washington: Government Printing Office, 1920), 129.
