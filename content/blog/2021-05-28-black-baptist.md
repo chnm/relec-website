@@ -34,7 +34,7 @@ To summarize so far, unlike “Presbyterian Church U.S.A.” or “Southern Bapt
 
 Although the Bureau described African American churches in ways that were both racist and not fully accurate, there were some pragmatic reasons for the Negro Baptist designation. As a general rule, Baptist churches were hard to count and categorize. See, for instance, this schedule from the Piney Grove Baptist Church in Sandy Springs, South Carolina (figure 1). 
 
-{{< figure src="/blog-img/jt-blog-image-1.png" caption="Figure 1. Schedule from the Piney Grove Baptist Church in Sandy Springs, South Carolina." >}}
+{{< figure src="/blog-img/jt-blog-image-2.png" caption="Figure 1. Schedule from the Piney Grove Baptist Church in Sandy Springs, South Carolina." >}}
 
 As was common, the congregation identified its denomination simply as “Baptist” and its division as the “Rocky River Baptist Association.” For many congregations, the link to state and regional conventions and associations mattered more than a connection to any national movement. In its published report on the 1916 Religious Bodies census, the Bureau stated that “special effort was made to secure complete lists of Negro churches, which were difficult to obtain, on account of the lack of any inclusive ecclesiastical organization.”[^6]
 
@@ -42,7 +42,7 @@ In our examination of the individual Negro Baptist schedules, we have uncovered 
 
 See, for example, this schedule from St. John’s Baptist Church in Woburn, Massachusetts, founded in 1886 and [still active today.](https://sjbc.info/church-history/)  Initially, the Bureau categorized the congregation as belonging to the Northern Baptist Convention. Either Northern Baptist or Bureau officials, however, wrote “Colored” at the top of the schedule, and Bureau officials recategorized it as “Negro Baptist.”
 
-{{< figure src="/blog-img/jt-blog-image-2.png" caption="Figure 2. Schedule from St. John's Baptist Church in Woburn, Massachusetts. The Bureau wrote 'Colored' at the top of the schedule." >}}
+{{< figure src="/blog-img/jt-blog-image-1.png" caption="Figure 2. Schedule from St. John's Baptist Church in Woburn, Massachusetts. The Bureau wrote 'Colored' at the top of the schedule." >}}
 
 Once we have all of the Negro Baptist schedules digitized and processed, it might be possible for us to reverse engineer the Bureau’s work, at least in terms of separating the congregations into their National Baptist, Northern Baptist, and Lott-Carey affiliations. 
 
