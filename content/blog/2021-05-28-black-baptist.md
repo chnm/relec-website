@@ -1,9 +1,9 @@
 ---
-title: " 'Negro Baptists' in the U.S. Census of Religious Bodies"
+title: "“Negro Baptists” in the U.S. Census of Religious Bodies"
 author: John Turner 
 date: 2021-05-28
 draft: true
-abstract: The 1926 U.S. Census of Religious Bodies added 'Negro Baptist' to the denomination list it used, despite it not being a name used by any African American Baptist congregation. Here we explore why this categorization was used.
+abstract: The 1926 U.S. Census of Religious Bodies added “Negro Baptist” to the denomination list it used, despite it not being a name used by any African American Baptist congregation. Here we explore why this categorization was used.
 image: "/blog-img/jt-blog-image-2.png"
 imagealt: "Schedule from St. John's Baptist Church in Woburn, Massachusetts. The Bureau wrote 'Colored' at the top of the schedule."
 ---
@@ -32,7 +32,7 @@ One other issue added to the complexity of the “Negro Baptist” designation. 
 
 To summarize so far, unlike “Presbyterian Church U.S.A.” or “Southern Baptist Convention,” the term Negro Baptist in the 1926 U.S. Census of Religious Bodies does not signify an actual denomination, convention, or church. Rather, it’s a quasi-denominational term that the Census Bureau found useful to bring together a large number of African American Baptist congregations. 
 
-Although the Bureau described African American churches in ways that were both racist and not fully accurate, there were some pragmatic reasons for the Negro Baptist designation. As a general rule, Baptist churches were hard to count and categorize. See, for instance, this schedule from the Piney Grove Baptist Church in Sandy Springs, South Carolina. 
+Although the Bureau described African American churches in ways that were both racist and not fully accurate, there were some pragmatic reasons for the Negro Baptist designation. As a general rule, Baptist churches were hard to count and categorize. See, for instance, this schedule from the Piney Grove Baptist Church in Sandy Springs, South Carolina (figure 1). 
 
 {{< figure src="/blog-img/jt-blog-image-1.png" caption="Figure 1. Schedule from the Piney Grove Baptist Church in Sandy Springs, South Carolina." >}}
 
