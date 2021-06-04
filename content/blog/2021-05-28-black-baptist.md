@@ -4,7 +4,7 @@ author: John Turner
 date: 2021-05-28
 draft: false
 abstract: The 1926 U.S. Census of Religious Bodies added “Negro Baptist” to the denomination list it used, despite it not being a name used by any African American Baptist congregation. Here we explore why this categorization was used.
-image: "/blog-img/jt-blog-image-2.png"
+image: "/blog-img/jt-blog-image-1.png"
 imagealt: "Schedule from St. John's Baptist Church in Woburn, Massachusetts. The Bureau wrote 'Colored' at the top of the schedule."
 ---
 
