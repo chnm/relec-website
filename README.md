@@ -10,9 +10,9 @@ It also uses Node/npm for JavaScript dependencies. You will need to have those i
 
 Then run `npm install` in order to install the dependencies.
 
-## Webpack and visualizations
+## Bundling and visualizations
 
-Each visualization for the site gets its own directory in `viz/`. All assets related to a visualization should go in there, including CSS. There should be a single JavaScript entry point, usually named `main.js` for each visualization. Those entry points should be added to the `webpack.config.js` file. 
+Hugo handles bundling and minification of JavaScript and CSS. Each visualization for the site gets its own directory in `assets/viz/`. All assets related to a visualization should go in there, including CSS. There should be a single JavaScript entry point, usually named `main.js` for each visualization. Those entry points should be added to the YAML header of an individual visualization's page (for example, `script: viz/catholic-dioceses/main.js`).
 
 The visualizations will be compiled as a part of the build steps defined in the `Makefile`.
 
@@ -22,4 +22,8 @@ The `Makefile` contains rules for previewing, building, and deploying the site.
 
 To preview the site locally, including draft and future content, run `make preview`. 
 
-To build for production, run `make build` and to deploy run `make deploy`.
+To build for production, run `make build` (which will compile and minify the site) and to deploy run `make deploy`.
+
+## Design
+
+The `gulpfile` compiles SCSS and CSS sources from Node, as well as the project's own customizations, into a single `app.css` file used site-wide for the design. This is placed under the `static/css` directory.

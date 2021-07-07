@@ -11,7 +11,10 @@
 
         {{.Content}} 
 
-        {{ $script := resources.Get .Params.script | resources.Fingerprint }}
+        {{ $cssStyle := resources.Get .Params.styles | resources.Minify | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $cssStyle.Permalink }}">
+
+        {{ $script := resources.Get .Params.script | js.Build (dict "minify" true) | resources.Fingerprint }}
         <script type="module" src="{{ $script.Permalink }}"></script>
       </div>
     </div>
