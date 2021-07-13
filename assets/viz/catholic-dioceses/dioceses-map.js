@@ -30,7 +30,7 @@ export default class DiocesesMap extends Visualization {
     // Keep track of how much to scale things based on zoom
     this.kScale = 1;
 
-    this.zoom = (e, d) => {
+    this.zoom = (d) => {
       let x;
       let y;
       let k;
@@ -63,9 +63,7 @@ export default class DiocesesMap extends Visualization {
         .style('stroke-width', `${1 / k}px`);
     };
 
-    // tooltipRender is a function for the mouseover call below using the 
-    // v6.0 change of .('mouseover', (event, datum) => {...})
-    this.tooltipRender = (e, d) => {
+    this.tooltipRender = (d) => {
       const countries = {
         BMU: 'Bermuda',
         CAN: 'Canada',
@@ -77,8 +75,6 @@ export default class DiocesesMap extends Visualization {
         USA: 'United States',
       };
       const country = countries[d.country];
-      console.log("countries", d);
-
       const type = dioceseType(d.year_metropolitan, this.year);
       const label = type === 'metropolitan' ? 'Archdiocese' : 'Diocese';
       const text = `${label} of ${d.city}<br/>`
@@ -182,14 +178,14 @@ export default class DiocesesMap extends Visualization {
       .on('mousemove', () => {
         // Show the tooltip to the right of the mouse, unless we are
         // on the rightmost 25% of the browser.
-        if (event.clientX / this.width >= 0.75) {
+        if (d3.event.clientX / this.width >= 0.75) {
           this.tooltip
-            .style('top', `${event.pageY - 10}px`)
-            .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+            .style('top', `${d3.event.pageY - 10}px`)
+            .style('left', `${d3.event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
         } else {
           this.tooltip
-            .style('top', `${event.pageY - 10}px`)
-            .style('left', `${event.pageX + 10}px`);
+            .style('top', `${d3.event.pageY - 10}px`)
+            .style('left', `${d3.event.pageX + 10}px`);
         }
       })
       .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
