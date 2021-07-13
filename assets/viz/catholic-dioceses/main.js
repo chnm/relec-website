@@ -1,5 +1,4 @@
 import * as d3 from 'd3';
-import './style.css';
 import DiocesesMap from './dioceses-map';
 import DiocesesRiteMap from './dioceses-rite-map';
 import DiocesesBarChart from './dioceses-bar-chart';
@@ -21,7 +20,7 @@ Promise.all(promises)
       { dioceses: data[0], northamerica: data[2] },
       { width: 1000, height: 525 },
     );
-    chronoMap.render();
+    chronoMap.render();  
 
     const chart = new DiocesesBarChart(
       '#barchart',

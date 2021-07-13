@@ -3,7 +3,8 @@ title: "Roman Catholic Dioceses in North America"
 date: 2020-06-20
 updated: 2020-06-20
 abstract: "How mapping Roman Catholic dioceses illustrates key concepts of religious ecologies at a continental scale."
-script: viz/catholic-dioceses.js
+script: viz/catholic-dioceses/main.js
+styles: viz/catholic-dioceses/style.css
 layout: visualization
 thumbnail: dioceses.png
 thumbdesc: "A screenshot showing the distribution of dioceses in North America."
