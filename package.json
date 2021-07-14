@@ -5,24 +5,24 @@
   "description": "Website and visualizations for the American Religious Ecologies project at RRCHNM.",
   "author": "Roy Rosenzweig Center for History and New Media",
   "dependencies": {
-    "d3": "^5.16.0",
-    "foundation-sites": "^6.6.2",
-    "jquery": "^3.4.1",
-    "motion-ui": "~2.0.0",
-    "what-input": "^5.1.2"
+    "d3": "^7.0.0",
+    "foundation-sites": "^6.6.3",
+    "jquery": "^3.6.0",
+    "motion-ui": "~2.0.3",
+    "what-input": "^5.2.10"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "browser-sync": "^2.26.7",
-    "css-loader": "^3.5.3",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "gulp": "^4.0.0",
-    "gulp-load-plugins": "^2.0.3",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.1",
-    "style-loader": "^1.2.0"
+    "autoprefixer": "^10.3.1",
+    "browser-sync": "^2.27.4",
+    "css-loader": "^5.2.7",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "style-loader": "^3.1.0"
   },
   "repository": {
     "type": "git",

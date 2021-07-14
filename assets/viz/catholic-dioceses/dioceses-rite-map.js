@@ -132,7 +132,7 @@ export default class DiocesesRiteMap extends Visualization {
 
     this.viz
       .selectAll('circle')
-      .on('mouseover', (d) => {
+      .on('mouseover', (e, d) => {
         let prefix = 'Diocese of ';
         if (d.city.includes('Eparchy')) {
           prefix = '';
@@ -144,14 +144,14 @@ export default class DiocesesRiteMap extends Visualization {
       .on('mousemove', () => {
         // Show the tooltip to the right of the mouse, unless we are
         // on the rightmost 25% of the browser.
-        if (d3.event.clientX / this.width >= 0.75) {
+        if (event.clientX / this.width >= 0.75) {
           this.tooltip
-            .style('top', `${d3.event.pageY - 10}px`)
-            .style('left', `${d3.event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+            .style('top', `${event.pageY - 10}px`)
+            .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
         } else {
           this.tooltip
-            .style('top', `${d3.event.pageY - 10}px`)
-            .style('left', `${d3.event.pageX + 10}px`);
+            .style('top', `${event.pageY - 10}px`)
+            .style('left', `${event.pageX + 10}px`);
         }
       })
       .on('mouseout', () => this.tooltip.style('visibility', 'hidden'));
