@@ -30,7 +30,9 @@ export default class DiocesesMap extends Visualization {
     // Keep track of how much to scale things based on zoom
     this.kScale = 1;
 
-    this.zoom = (d) => {
+    // The zoom function is called below in update() to handle zooming in and out on points
+    // using the updated zoom(event, datum) => {...} changes in D3 v6+.
+    this.zoom = (e, d) => {
       let x;
       let y;
       let k;
@@ -63,7 +65,9 @@ export default class DiocesesMap extends Visualization {
         .style('stroke-width', `${1 / k}px`);
     };
 
-    this.tooltipRender = (d) => {
+    // The tooltipRender function is called below in update() to handle mouseover events 
+    // on map points using the updated mouseover(event, datum => {...}) changes in D3 v6+.
+    this.tooltipRender = (e, d) => {
       const countries = {
         BMU: 'Bermuda',
         CAN: 'Canada',
@@ -178,14 +182,14 @@ export default class DiocesesMap extends Visualization {
       .on('mousemove', () => {
         // Show the tooltip to the right of the mouse, unless we are
         // on the rightmost 25% of the browser.
-        if (d3.event.clientX / this.width >= 0.75) {
+        if (event.clientX / this.width >= 0.75) {
           this.tooltip
-            .style('top', `${d3.event.pageY - 10}px`)
-            .style('left', `${d3.event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+            .style('top', `${event.pageY - 10}px`)
+            .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
         } else {
           this.tooltip
-            .style('top', `${d3.event.pageY - 10}px`)
-            .style('left', `${d3.event.pageX + 10}px`);
+            .style('top', `${event.pageY - 10}px`)
+            .style('left', `${event.pageX + 10}px`);
         }
       })
       .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
