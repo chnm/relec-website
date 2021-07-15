@@ -1,5 +1,9 @@
 {
   "author": "Roy Rosenzweig Center for History and New Media",
+  "name": "relec-website",
+  "private": true,
+  "version": "0.0.2",
+  "description": "Website and visualizations for the American Religious Ecologies project at RRCHNM.",
   "comments": {
     "dependencies": {
       "d3": "project",
