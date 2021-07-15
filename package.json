@@ -1,16 +1,39 @@
 {
-  "name": "relec-website",
-  "private": true,
-  "version": "0.0.1",
-  "description": "Website and visualizations for the American Religious Ecologies project at RRCHNM.",
   "author": "Roy Rosenzweig Center for History and New Media",
+  "comments": {
+    "dependencies": {
+      "d3": "project",
+      "foundation-sites": "project",
+      "jquery": "project",
+      "motion-ui": "project",
+      "postcss": "project",
+      "postcss-cli": "project",
+      "what-input": "project"
+    },
+    "devDependencies": {
+      "autoprefixer": "project",
+      "browser-sync": "project",
+      "css-loader": "project",
+      "eslint": "project",
+      "eslint-config-airbnb-base": "project",
+      "eslint-plugin-import": "project",
+      "gulp": "project",
+      "gulp-load-plugins": "project",
+      "gulp-postcss": "project",
+      "gulp-sass": "project",
+      "style-loader": "project"
+    }
+  },
   "dependencies": {
     "d3": "^7.0.0",
     "foundation-sites": "^6.6.3",
     "jquery": "^3.6.0",
     "motion-ui": "~2.0.3",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
     "what-input": "^5.2.10"
   },
+  "description": "Website and visualizations for the American Religious Ecologies project at RRCHNM.",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "browser-sync": "^2.27.4",
@@ -24,8 +47,11 @@
     "gulp-sass": "^5.0.0",
     "style-loader": "^3.1.0"
   },
+  "name": "relec-website",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/religious-ecologies/website.git"
-  }
+  },
+  "version": "0.0.2"
 }
