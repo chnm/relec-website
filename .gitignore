@@ -4,4 +4,4 @@ public/*
 hugo.exe
 website.code-workspace
 .vscode/tasks.json
-jsconfig.json
+resources/_gen

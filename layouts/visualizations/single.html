@@ -12,10 +12,10 @@
         {{.Content}} 
 
         {{ $cssStyle := resources.Get .Params.styles | resources.Minify | resources.Fingerprint }}
-        <link rel="stylesheet" href="{{ $cssStyle.Permalink }}">
+        <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
 
         {{ $script := resources.Get .Params.script | js.Build (dict "minify" true "target" "es2020") | resources.Fingerprint }}
-        <script type="module" src="{{ $script.Permalink }}"></script>
+        <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
       </div>
     </div>
     {{- partial "footer.html" . -}}
