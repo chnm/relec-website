@@ -16,6 +16,7 @@ The interactive map below shows something awesome...
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <div class="row">
         <div class="columns small-6">
+            <div class="large-7 cell" id="state-dropdown"></div>
             <div class="large-7 cell" id="year-dropdown"></div>
             <div class="large-7 cell"id="denomination-dropdown"></div>
             <div class="large-7 cell" id="count-dropdown"></div>

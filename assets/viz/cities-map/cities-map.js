@@ -83,12 +83,26 @@ export default class DenominationsMap extends Visualization {
 
   // Draw the unchanging parts of the visualization
   render() {
+    // The code below sets up the dropdown and filtering for the map views. The views
+    // currently include: state, year, denomination, and type of count. The first set
+    // of variables reads in data to group and sort unique keys from the API. Then,
+    // those are passed along to the dropdown and filters are then applied.
     const yearSelect = [1906, 1926, 1932, 1936];
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
     const denominationType = ['All', 'Anglican', 'Lutheran', '...', '...', '...'];
+    const stateSelect = d3.groupSort(this.data.dioceses, (d) => d.state, (d) => d.state);
+
+    d3.select('#state-dropdown')
+      .append("label").text('Select a State')
+      .append("select")
+      .selectAll("option")
+      .data(stateSelect)
+      .enter().append("option")
+      .attr("value", (d) => d)
+      .text((d) => d);
 
     d3.select('#year-dropdown')
-      .append("label").text("Select a Year")
+      .append("label").text('Select a Year')
       .append("select")
       .selectAll("option")
       .data(yearSelect)
@@ -97,7 +111,7 @@ export default class DenominationsMap extends Visualization {
       .text((d) => d);
 
     d3.select('#denomination-dropdown')
-      .append("label").text("Select a Denomination")
+      .append("label").text('Select a Denomination')
       .append("select")
       .selectAll("option")
       .data(denominationType)
@@ -106,7 +120,7 @@ export default class DenominationsMap extends Visualization {
       .text((d) => d);
 
     d3.select('#count-dropdown')
-      .append("label").text("Select a Count")
+      .append("label").text('Select a Count')
       .append("select")
       .selectAll("option")
       .data(countType)
