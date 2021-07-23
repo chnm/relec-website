@@ -83,10 +83,12 @@ export default class DenominationsMap extends Visualization {
 
   // Draw the unchanging parts of the visualization
   render() {
-    // The code below sets up the dropdown and filtering for the map views. The views
+    // The code below sets up the dropdowns for the map views. The views
     // currently include: state, year, denomination, and type of count. The first set
     // of variables reads in data to group and sort unique keys from the API. Then,
     // those are passed along to the dropdown and filters are then applied.
+    //
+    // Filtering of this data happens below in the update() function.
     const yearSelect = [1906, 1926, 1932, 1936];
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
     const denominationType = ['All', 'Anglican', 'Lutheran', '...', '...', '...'];

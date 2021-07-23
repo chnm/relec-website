@@ -15,11 +15,18 @@ The interactive map below shows something awesome...
 <div class="viz-block grid-x grid-padding-x">
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <div class="row">
-        <div class="columns small-6">
-            <div class="large-7 cell" id="state-dropdown"></div>
-            <div class="large-7 cell" id="year-dropdown"></div>
-            <div class="large-7 cell"id="denomination-dropdown"></div>
-            <div class="large-7 cell" id="count-dropdown"></div>
+        <div class="columns small-12 medium-6">
+            <div id="state-dropdown"></div>
+        </div>
+        <div class="columns small-12 medium-6">
+            <div id="year-dropdown"></div>
+        </div>
+        <div class="columns small-12 medium-6">
+            <div id="denomination-dropdown"></div>
+        </div>
+        <div class="columns small-12 medium-6">
+            <div id="count-dropdown"></div>
+        </div>
         </div>
     </div>
   </div>
