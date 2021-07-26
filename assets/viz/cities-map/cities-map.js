@@ -84,14 +84,16 @@ export default class DenominationsMap extends Visualization {
   // Draw the unchanging parts of the visualization
   render() {
     // The code below sets up the dropdowns for the map views. The views
-    // currently include: state, year, denomination, and type of count. The first set
+    // currently include: year, denomination, and type of count. The first set
     // of variables reads in data to group and sort unique keys from the API. Then,
-    // those are passed along to the dropdown and filters are then applied.
+    // those are passed along to the dropdown and filters are then applied based on
+    // the selections made in the dropdown.
     //
     // Filtering of this data happens below in the update() function.
     const yearSelect = [1906, 1926, 1932, 1936];
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
     const denominationType = ['All', 'Anglican', 'Lutheran', '...', '...', '...'];
+    // stateSelect is for testing purposes only and will be removed in prod
     const stateSelect = d3.groupSort(this.data.dioceses, (d) => d.state, (d) => d.state);
 
     d3.select('#state-dropdown')

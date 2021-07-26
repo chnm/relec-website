@@ -14,7 +14,7 @@ The interactive map below shows something awesome...
 
 <div class="viz-block grid-x grid-padding-x">
   <div class="cell medium-12 xlarge-10 large-offset-1">
-    <div class="row">
+    <div class="row menu">
         <div class="columns small-12 medium-6">
             <div id="state-dropdown"></div>
         </div>
@@ -30,7 +30,7 @@ The interactive map below shows something awesome...
     </div>
   </div>
   <div class="cell medium-12 xlarge-10 large-offset-1">
-    <h3>Cities map by year</h3>
+    <h3>Denominations map for <span class="filter-year-selection"></span></h3>
     <svg id="chrono-map" width="100%"></svg>
   </div>
   <div id="controls" class="cell medium-12 xlarge-10 large-offset-1">

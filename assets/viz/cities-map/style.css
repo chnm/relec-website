@@ -67,3 +67,8 @@ input[type=range] {
 .instructions {
     line-height: 1.3rem;
 }
+
+/* Alignment and padding for the vis filters */
+.row.menu > div {
+    padding-right: 4px;
+  }
