@@ -9,6 +9,58 @@ export default class DenominationsMap extends Visualization {
 
     super(id, data, dim, margin);
 
+    // The code below sets up the dropdowns for the map views. The views
+    // currently include: year, denomination, and type of count. The first set
+    // of variables reads in data to group and sort unique keys from the API. Then,
+    // those are passed along to the dropdown and filters are then applied based on
+    // the selections made in the dropdown.
+    //
+    // Filtering of this data happens below in the update() function.
+    const yearSelect = [1906, 1926, 1932, 1936];
+    const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
+    const denominationType = ['All', 'Anglican', 'Lutheran', '...', '...', '...'];
+    // stateSelect is for testing purposes only and will be removed in prod
+    const stateSelect = d3.groupSort(this.data.dioceses, (d) => d.state, (d) => d.state);
+
+    d3.select('#state-dropdown')
+      .append("label").text('Select a State')
+      .append("select")
+      .selectAll("option")
+      .data(stateSelect)
+      .enter().append("option")
+      .attr("value", (d) => d)
+      .text((d) => d);
+
+    d3.select('#year')
+      .append("label").text('Select a Year')
+      .append("select")
+      .attr("id", "year_selection")
+      .selectAll("option")
+      .data(yearSelect)
+      .enter().append("option")
+      .attr("value", (d) => d)
+      .text((d) => d)
+      .property("selected", (d) => d === 1926); // Set our default year to display
+
+    d3.select('#denomination-dropdown')
+      .append("label").text('Select a Denomination')
+      .append("select")
+      .selectAll("option")
+      .data(denominationType)
+      .enter().append("option")
+      .attr("value", (d) => d)
+      .text((d) => d);
+
+    d3.select('#count-dropdown')
+      .append("label").text('Select a Count')
+      .append("select")
+      .selectAll("option")
+      .data(countType)
+      .enter().append("option")
+      .attr("value", (d) => d)
+      .text((d) => d);
+
+    // The following handles year data and zoom behavior.
     this.year = d3.select('#year').node().valueAsNumber;
     this.projection = d3.geoAlbers()
       .translate([this.width / 2 + 60, this.height / 2 + 40])
@@ -83,55 +135,6 @@ export default class DenominationsMap extends Visualization {
 
   // Draw the unchanging parts of the visualization
   render() {
-    // The code below sets up the dropdowns for the map views. The views
-    // currently include: year, denomination, and type of count. The first set
-    // of variables reads in data to group and sort unique keys from the API. Then,
-    // those are passed along to the dropdown and filters are then applied based on
-    // the selections made in the dropdown.
-    //
-    // Filtering of this data happens below in the update() function.
-    const yearSelect = [1906, 1926, 1932, 1936];
-    const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
-    const denominationType = ['All', 'Anglican', 'Lutheran', '...', '...', '...'];
-    // stateSelect is for testing purposes only and will be removed in prod
-    const stateSelect = d3.groupSort(this.data.dioceses, (d) => d.state, (d) => d.state);
-
-    d3.select('#state-dropdown')
-      .append("label").text('Select a State')
-      .append("select")
-      .selectAll("option")
-      .data(stateSelect)
-      .enter().append("option")
-      .attr("value", (d) => d)
-      .text((d) => d);
-
-    d3.select('#year-dropdown')
-      .append("label").text('Select a Year')
-      .append("select")
-      .selectAll("option")
-      .data(yearSelect)
-      .enter().append("option")
-      .attr("value", (d) => d)
-      .text((d) => d);
-
-    d3.select('#denomination-dropdown')
-      .append("label").text('Select a Denomination')
-      .append("select")
-      .selectAll("option")
-      .data(denominationType)
-      .enter().append("option")
-      .attr("value", (d) => d)
-      .text((d) => d);
-
-    d3.select('#count-dropdown')
-      .append("label").text('Select a Count')
-      .append("select")
-      .selectAll("option")
-      .data(countType)
-      .enter().append("option")
-      .attr("value", (d) => d)
-      .text((d) => d);
-
     // Label for the year
     this.label = this.viz
       .append('text')
@@ -141,34 +144,34 @@ export default class DenominationsMap extends Visualization {
       .attr('alignment-baseline', 'top');
 
     // Legend for the types of dioceses
-    const legend = this.viz
-      .append('g')
-      .attr('transform', 'translate(120,470)');
-    legend.append('circle')
-      .attr('cx', 0)
-      .attr('cy', 5)
-      .attr('r', 3 / this.kScale)
-      .attr('class', 'diocese')
-      .classed('legend', true);
-    legend
-      .append('text')
-      .attr('x', 10)
-      .attr('y', 10)
-      .attr('font-size', 16)
-      .text('Diocese');
-    legend
-      .append('circle')
-      .attr('cx', 0)
-      .attr('cy', 25)
-      .attr('r', 3 / this.kScale)
-      .attr('class', 'metropolitan')
-      .classed('legend', true);
-    legend
-      .append('text')
-      .attr('x', 10)
-      .attr('y', 30)
-      .attr('font-size', 16)
-      .text('Archdiocese');
+    // const legend = this.viz
+    //   .append('g')
+    //   .attr('transform', 'translate(120,470)');
+    // legend.append('circle')
+    //   .attr('cx', 0)
+    //   .attr('cy', 5)
+    //   .attr('r', 3 / this.kScale)
+    //   .attr('class', 'diocese')
+    //   .classed('legend', true);
+    // legend
+    //   .append('text')
+    //   .attr('x', 10)
+    //   .attr('y', 10)
+    //   .attr('font-size', 16)
+    //   .text('Diocese');
+    // legend
+    //   .append('circle')
+    //   .attr('cx', 0)
+    //   .attr('cy', 25)
+    //   .attr('r', 3 / this.kScale)
+    //   .attr('class', 'metropolitan')
+    //   .classed('legend', true);
+    // legend
+    //   .append('text')
+    //   .attr('x', 10)
+    //   .attr('y', 30)
+    //   .attr('font-size', 16)
+    //   .text('Archdiocese');
 
     this.viz
       .selectAll('path')
@@ -202,7 +205,7 @@ export default class DenominationsMap extends Visualization {
 
     this.viz
       .selectAll('circle:not(.legend)')
-      .data(this.currentDioceses(), this.key)
+      .data(this.currentSelectedYear(), this.key)
       .join(
         (enter) => enter
           .append('circle')
@@ -238,9 +241,7 @@ export default class DenominationsMap extends Visualization {
   }
 
   // Filter the data down to the dioceses that should be displayed in a year
-  currentDioceses() {
-    return this.data.dioceses.filter((d) => d.year_erected <= this.year
-      && (d.year_destroyed === null || this.year <= d.year_destroyed)
-      && d.rite === 'Latin');
+  currentSelectedYear() {
+    return this.data.dioceses.filter((d) => d.year_erected === this.year);
   }
 }
