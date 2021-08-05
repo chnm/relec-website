@@ -24,7 +24,7 @@ Promise.all(promises)
       // let year = d3.select('#year option:checked').text();
       // year = parseInt(year);
       let year = d3.select('#year option:checked').text();
-      year = parseInt(year);
+      year = parseInt(year, 10);
       citiesMap.update(year);
       console.log("updated!", year);
     });

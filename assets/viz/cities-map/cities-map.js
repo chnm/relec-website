@@ -40,7 +40,7 @@ export default class DenominationsMap extends Visualization {
       .enter().append("option")
       .attr("value", (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 1926); // Set our default year to display
+      .property("selected", (d) => d === 1936); // default year
 
     d3.select('#denomination-dropdown')
       .append("label").text('Select a Denomination')
@@ -61,7 +61,7 @@ export default class DenominationsMap extends Visualization {
       .text((d) => d);
 
     // The following handles year data and zoom behavior.
-    this.year = d3.select('#year').node().valueAsNumber;
+    this.year = d3.select('#year').node().value = 1936; // default selected year -- probably a better way to handle this
     this.projection = d3.geoAlbers()
       .translate([this.width / 2 + 60, this.height / 2 + 40])
       .scale(550);
@@ -136,12 +136,12 @@ export default class DenominationsMap extends Visualization {
   // Draw the unchanging parts of the visualization
   render() {
     // Label for the year
-    this.label = this.viz
-      .append('text')
-      .text(this.year)
-      .attr('y', this.height - 25)
-      .attr('font-size', 48)
-      .attr('alignment-baseline', 'top');
+    // this.label = this.viz
+    //   .append('text')
+    //   .text(this.year)
+    //   .attr('y', this.height - 25)
+    //   .attr('font-size', 48)
+    //   .attr('alignment-baseline', 'top');
 
     // Legend for the types of dioceses
     // const legend = this.viz
@@ -201,7 +201,7 @@ export default class DenominationsMap extends Visualization {
   // Draw the stuff that gets updated
   update(year) {
     this.year = year;
-    this.label.text(this.year);
+    // this.label.text(this.year);
 
     this.viz
       .selectAll('circle:not(.legend)')
