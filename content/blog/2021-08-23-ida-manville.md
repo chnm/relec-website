@@ -12,7 +12,7 @@ imagealt: A black and white portrait of Reverend Ida Manville, a white woman. Sh
 
 Willow Grove is an Adventist Christian Church located in Mount Liberty, Ohio. In 1926, the church had sixty-two members, with thirty-four women and twenty-eight men, aligning with the general trend in the 1926 census (and a current trend) of more women than men sitting in the pews come Sunday morning. The church owned one building, spent a modest amount on expenditures, none for benevolences or charity, and operated a Sunday school with thirty students. 
 
-So far, nothing stands out in this schedule as a surprising statistic regarding Willow Grove. However, the name of the pastor listed on number 25 in the form is Mrs. Ida Manville. Her name, plus the title of Mrs. in front, clearly indicates that the pastor was a woman - a married woman.
+So far, nothing stands out in this schedule as a surprising statistic regarding Willow Grove. However, the name of the pastor listed on number 25 in the form is "Mrs. Ida Manville." Her name, plus the title of 'Mrs.' in front, clearly indicates that the pastor was a woman - a married woman.
 
 {{< figure src="/blog-img/idamanvillehead.jpeg" caption="Figure 2. Photo of Ida Manville. Courtesy of Diane Naca." >}}
 
