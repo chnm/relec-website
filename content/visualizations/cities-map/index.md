@@ -1,7 +1,7 @@
 ---
 title: "City Denominations Map"
 date: 2021-07-19
-updated: 2021-07-19
+updated: 2021-08-09
 abstract: "Here is our abstract..."
 script: viz/cities-map/main.js
 styles: viz/cities-map/style.css
@@ -36,11 +36,8 @@ The interactive map below shows something awesome...
   <div id="controls" class="cell medium-12 xlarge-10 large-offset-1">
     <div class="grid-x grid-padding-x">
       <div class="cell medium-6 xlarge-6">
-        <!-- <label for="year" class="float-left">1511</label> -->
-        <!-- <label for="year" class="float-right">2020</label> -->
-        <!-- <input type="range" id="year" name="year" min="1511" max="2020" step="1" value="1800" /> -->
         <p class="instructions">
-          <small><strong>How to use this visualization:</strong> Adjust the slider to control the year displayed in the map. Hover over points on the map to see details about each diocese or archdiocese. Click on a diocese to zoom into that region; click anywhere else to zoom back out. The bar chart also displays the number of dioceses established in your selected decade.</small>
+          <small><strong>How to use this visualization:</strong> Adjust the filters to control the data displayed in the map. Hover over points on the map to see details about each location. Click on a point to zoom into that region; click anywhere else to zoom back out.</small>
         </p>
       </div>
     </div>

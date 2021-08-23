@@ -3,7 +3,7 @@ import DenominationsMap from './cities-map';
 
 // Load the data
 const urls = [
-  'https://data.chnm.org/catholic-dioceses/',
+  'https://data.chnm.org/catholic-dioceses/', // change with new endpoint 
   'https://data.chnm.org/ne/northamerica/'
 ];
 const promises = [];
@@ -26,6 +26,5 @@ Promise.all(promises)
       let year = d3.select('#year option:checked').text();
       year = parseInt(year, 10);
       citiesMap.update(year);
-      console.log("updated!", year);
     });
   });
