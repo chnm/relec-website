@@ -39,4 +39,4 @@ With the name of the female preacher included in the schedule, we see the possib
 
 [^7]: "Ohio, County Death Records, 1840-2001," database with images, FamilySearch (https://familysearch.org/ark:/61903/1:1:F6LZ-HZN : 1 March 2021), Ida C Manville, 08 Dec 1958; citing Death, Mount Vernon, Mount Vernon City, Knox, Ohio, United States, source ID 303, County courthouses, Ohio; FHL microfilm 2,318,778.
 
-[^8]: Special thanks to Diane Naca for allowing me to use these photos for this post. 
+[^8]: Special thanks to Diane Naca for allowing me to use these photos for this post. A link to the images and the FindAGrave page for Ida Manville is [here](https://www.findagrave.com/memorial/55735480/ida-c-manville)
