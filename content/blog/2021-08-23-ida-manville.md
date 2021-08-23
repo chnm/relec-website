@@ -1,5 +1,5 @@
 ---
-title: Schedule Spotlight: Reverend Ida Bedell Manville
+title: Schedule Spotlight - Reverend Ida Bedell Manville
 author: Caroline Greer
 date: 2021-08-23
 draft: true
