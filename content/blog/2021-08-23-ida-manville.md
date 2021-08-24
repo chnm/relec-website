@@ -2,7 +2,7 @@
 title: "Schedule Spotlight: Reverend Ida Bedell Manville"
 author: Caroline Greer
 date: 2021-08-24
-draft: true
+draft: false
 abstract: "The schedule for Willow Grove Adventist Church in Mt. Liberty, Ohio
 listed the pastor as “Mrs. Ida Manville.” Using census records and other online
 sources, we've found out more about her life and family."
