@@ -1,6 +1,6 @@
 preview :
 	@echo "Serving the preview site with Hugo ..."
-	hugo serve --buildDrafts --buildFuture --disableFastRender 
+	hugo serve -e development --buildDrafts --buildFuture --disableFastRender 
 
 build :
 	@echo "\nBuilding the site with Hugo ..."
