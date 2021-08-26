@@ -18,9 +18,8 @@ export default class DenominationsMap extends Visualization {
     // Filtering of this data happens below in the update() function.
     const yearSelect = [1906, 1926, 1932, 1936];
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
-    const denominationType = ['All', 'Anglican', 'Lutheran', '...', '...', '...'];
-    // stateSelect is for testing purposes only and will be removed in prod
-    const stateSelect = d3.groupSort(this.data.dioceses, (d) => d.state, (d) => d.state);
+    const denominationType = d3.groupSort(this.data.denominationFamilies['family_relec'], (d) => d.name, (d) => d.name);
+    const stateSelect = d3.groupSort(this.data.cityMembership, (d) => d.state, (d) => d.state);
 
     d3.select('#state-dropdown')
       .append("label").text('Select a State')
@@ -40,7 +39,7 @@ export default class DenominationsMap extends Visualization {
       .enter().append("option")
       .attr("value", (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 1936); // default year
+      .property("selected", (d) => d === 1926); // default year
 
     d3.select('#denomination-dropdown')
       .append("label").text('Select a Denomination')
@@ -61,7 +60,7 @@ export default class DenominationsMap extends Visualization {
       .text((d) => d);
 
     // The following handles year data and zoom behavior.
-    this.year = d3.select('#year').node().value = 1936; // default selected year -- probably a better way to handle this
+    this.year = d3.select('#year').node().value = 1926; // default selected year -- probably a better way to handle this
     this.projection = d3.geoAlbers()
       .translate([this.width / 2 + 60, this.height / 2 + 40])
       .scale(550);
@@ -123,11 +122,11 @@ export default class DenominationsMap extends Visualization {
         USA: 'United States',
       };
       const country = countries[d.country];
-      const type = dioceseType(d.year_metropolitan, this.year);
+      const type = dioceseType(d.year, this.year);
       const label = type === 'metropolitan' ? 'Archdiocese' : 'Diocese';
       const text = `${label} of ${d.city}<br/>`
         + `${d.state}, ${country}<br/>`
-        + `Founded ${d.year_erected}`;
+        + `Founded ${d.year}`;
       this.tooltip.html(text);
       this.tooltip.style('visibility', 'visible');
     };
@@ -242,6 +241,6 @@ export default class DenominationsMap extends Visualization {
 
   // Filter the data down to the dioceses that should be displayed in a year
   currentSelectedYear() {
-    return this.data.dioceses.filter((d) => d.year_erected === this.year);
+    return this.data.denominations.filter((d) => d.year === this.year);
   }
 }

@@ -3,7 +3,9 @@ import DenominationsMap from './cities-map';
 
 // Load the data
 const urls = [
-  'https://data.chnm.org/catholic-dioceses/', // change with new endpoint 
+  'http://localhost:8090/relcensus/denomination-families',
+  'http://localhost:8090/relcensus/denominations',
+  'http://localhost:8090/relcensus/city-total-membership?year=1926',
   'https://data.chnm.org/ne/northamerica/'
 ];
 const promises = [];
@@ -14,15 +16,17 @@ Promise.all(promises)
   .then((data) => {
     const citiesMap = new DenominationsMap(
       '#chrono-map',
-      { dioceses: data[0], northamerica: data[1] },
+      { denominationFamilies: data[0],
+        denominations: data[1],
+        cityMembership: data[2],
+        northamerica: data[3]
+      },
       { width: 1000, height: 525 },
     );
     citiesMap.render();
 
     // Listen for changes to the filter options
     d3.select('#year').on('change', () => {
-      // let year = d3.select('#year option:checked').text();
-      // year = parseInt(year);
       let year = d3.select('#year option:checked').text();
       year = parseInt(year, 10);
       citiesMap.update(year);
