@@ -74,6 +74,7 @@ export default class DenominationsMap extends Visualization {
 
     // Keep track of how much to scale things based on zoom
     this.kScale = 1;
+    this.radiusScale = 0.2;
 
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
@@ -86,12 +87,14 @@ export default class DenominationsMap extends Visualization {
         [x, y] = coords;
         k = 10;
         this.kScale = 8;
+        this.radiusScale = 0.05;
         this.centered = d;
       } else {
         x = this.width / 2 - 10;
         y = this.height / 2 - 10;
         k = 1;
         this.kScale = 1;
+        this.radiusScale = 0.2;
         this.centered = null;
       }
 
@@ -102,7 +105,7 @@ export default class DenominationsMap extends Visualization {
       this.viz.selectAll('circle')
         .transition()
         .duration(500)
-        .attr('r', `${3 / this.kScale}px`)
+        .attr('r', (d) => d.denominations * this.radiusScale)
         .style('stroke-width', `${1 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
@@ -111,22 +114,10 @@ export default class DenominationsMap extends Visualization {
     };
 
     this.tooltipRender = (e, d) => {
-      const countries = {
-        BMU: 'Bermuda',
-        CAN: 'Canada',
-        CUB: 'Cuba',
-        DOM: 'Dominican Republic',
-        HTI: 'Haiti',
-        JAM: 'Jamaica',
-        MEX: 'Mexico',
-        USA: 'United States',
-      };
-      const country = countries[d.country];
-      const type = dioceseType(d.year, this.year);
-      const label = type === 'metropolitan' ? 'Archdiocese' : 'Diocese';
-      const text = `${label} of ${d.city}<br/>`
-        + `${d.state}, ${country}<br/>`
-        + `Founded ${d.year}`;
+      const text = `Denomination count for ${d.city}, ${d.state} in ${d.year}<br/>`
+        + `Denominations: ${d.denominations}<br/>`
+        + `Churches: ${d.churches}<br/>`
+        + `City population: ${d.population_1926}`;
       this.tooltip.html(text);
       this.tooltip.style('visibility', 'visible');
     };
@@ -134,44 +125,6 @@ export default class DenominationsMap extends Visualization {
 
   // Draw the unchanging parts of the visualization
   render() {
-    // Label for the year
-    // this.label = this.viz
-    //   .append('text')
-    //   .text(this.year)
-    //   .attr('y', this.height - 25)
-    //   .attr('font-size', 48)
-    //   .attr('alignment-baseline', 'top');
-
-    // Legend for the types of dioceses
-    // const legend = this.viz
-    //   .append('g')
-    //   .attr('transform', 'translate(120,470)');
-    // legend.append('circle')
-    //   .attr('cx', 0)
-    //   .attr('cy', 5)
-    //   .attr('r', 3 / this.kScale)
-    //   .attr('class', 'diocese')
-    //   .classed('legend', true);
-    // legend
-    //   .append('text')
-    //   .attr('x', 10)
-    //   .attr('y', 10)
-    //   .attr('font-size', 16)
-    //   .text('Diocese');
-    // legend
-    //   .append('circle')
-    //   .attr('cx', 0)
-    //   .attr('cy', 25)
-    //   .attr('r', 3 / this.kScale)
-    //   .attr('class', 'metropolitan')
-    //   .classed('legend', true);
-    // legend
-    //   .append('text')
-    //   .attr('x', 10)
-    //   .attr('y', 30)
-    //   .attr('font-size', 16)
-    //   .text('Archdiocese');
-
     this.viz
       .selectAll('path')
       .data(this.data.northamerica.features)
@@ -200,7 +153,6 @@ export default class DenominationsMap extends Visualization {
   // Draw the stuff that gets updated
   update(year) {
     this.year = year;
-    // this.label.text(this.year);
 
     this.viz
       .selectAll('circle:not(.legend)')
@@ -210,7 +162,7 @@ export default class DenominationsMap extends Visualization {
           .append('circle')
           .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
           .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-          .attr('r', 3 / this.kScale)
+          .attr('r', (d) => d.denominations * this.radiusScale)
           .style('stroke-width', 1 / this.kScale)
           .attr('class', 'point'),
         (update) => update
@@ -221,26 +173,36 @@ export default class DenominationsMap extends Visualization {
 
     this.viz
       .selectAll('circle')
-      // .on('mouseover', this.tooltipRender)
-      // .on('mousemove', () => {
-      //   // Show the tooltip to the right of the mouse, unless we are
-      //   // on the rightmost 25% of the browser.
-      //   if (event.clientX / this.width >= 0.75) {
-      //     this.tooltip
-      //       .style('top', `${event.pageY - 10}px`)
-      //       .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
-      //   } else {
-      //     this.tooltip
-      //       .style('top', `${event.pageY - 10}px`)
-      //       .style('left', `${event.pageX + 10}px`);
-      //   }
-      // })
-      // .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
+      .on('mouseover', this.tooltipRender)
+      .on('mousemove', () => {
+        // Show the tooltip to the right of the mouse, unless we are
+        // on the rightmost 25% of the browser.
+        if (event.clientX / this.width >= 0.75) {
+          this.tooltip
+            .style('top', `${event.pageY - 10}px`)
+            .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+        } else {
+          this.tooltip
+            .style('top', `${event.pageY - 10}px`)
+            .style('left', `${event.pageX + 10}px`);
+        }
+      })
+      .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
       .on('click', this.zoom);
   }
 
   // Filter the data down to the dioceses that should be displayed in a year
   currentSelectedYear() {
-    return this.data.denominations.filter((d) => d.year === this.year);
+    return this.data.cityMembership.filter((d) => d.year === this.year);
+  }
+
+  // D3js this function is used for adjusting the radius of points by using
+  // the square root of the number of denominations.
+  // This is used in the update() function above.
+  // eslint-disable-next-line class-methods-use-this
+  radius(d) {
+    return d3.scaleSqrt(d)
+            .domain([0, d3.max((d) => d)])
+            .range([0, 40]);
   }
 }
