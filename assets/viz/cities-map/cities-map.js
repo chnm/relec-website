@@ -57,7 +57,8 @@ export default class DenominationsMap extends Visualization {
       .data(countType)
       .enter().append("option")
       .attr("value", (d) => d)
-      .text((d) => d);
+      .text((d) => d)
+      .property("selected", (d) => d === 'Total membership'); // default count
 
     // The following handles year data and zoom behavior.
     this.year = d3.select('#year').node().value = 1926; // default selected year -- probably a better way to handle this
@@ -194,15 +195,5 @@ export default class DenominationsMap extends Visualization {
   // Filter the data down to the dioceses that should be displayed in a year
   currentSelectedYear() {
     return this.data.cityMembership.filter((d) => d.year === this.year);
-  }
-
-  // D3js this function is used for adjusting the radius of points by using
-  // the square root of the number of denominations.
-  // This is used in the update() function above.
-  // eslint-disable-next-line class-methods-use-this
-  radius(d) {
-    return d3.scaleSqrt(d)
-            .domain([0, d3.max((d) => d)])
-            .range([0, 40]);
   }
 }
