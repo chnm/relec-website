@@ -115,10 +115,11 @@ export default class DenominationsMap extends Visualization {
     };
 
     this.tooltipRender = (e, d) => {
-      const text = `Denomination count for ${d.city}, ${d.state} in ${d.year}<br/>`
-        + `Denominations: ${d.denominations}<br/>`
-        + `Churches: ${d.churches}<br/>`
-        + `City population: ${d.population_1926}`;
+      // We use JS native .toLocalString() to display thousands separator based on user's locale
+      const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
+        + `Denominations: ${d.denominations.toLocaleString()}<br/>`
+        + `Churches: ${d.churches.toLocaleString()}<br/>`
+        + `City population: ${d.population_1926.toLocaleString()}`;
       this.tooltip.html(text);
       this.tooltip.style('visibility', 'visible');
     };
@@ -147,17 +148,19 @@ export default class DenominationsMap extends Visualization {
       .attr('height', this.height)
       .on('click', this.zoom);
 
-    // On first render, draw the stuff that gets updated
-    this.update(this.year);
+    // On first render, draw the default filter selections
+    this.update(this.year, this.denominations, this.state);
   }
 
   // Draw the stuff that gets updated
-  update(year) {
+  update(year, denomination, state) {
     this.year = year;
+    this.denominations = denomination;
+    this.state = state;
 
     this.viz
       .selectAll('circle:not(.legend)')
-      .data(this.currentSelectedYear(), this.key)
+      .data(this.updateFilterSelections(), this.key)
       .join(
         (enter) => enter
           .append('circle')
@@ -193,7 +196,29 @@ export default class DenominationsMap extends Visualization {
   }
 
   // Filter the data down to the dioceses that should be displayed in a year
-  currentSelectedYear() {
-    return this.data.cityMembership.filter((d) => d.year === this.year);
+  // currentSelectedYear() {
+  //   return this.data.cityMembership.filter((d) => d.year === this.year);
+  // }
+
+  // This function returns a set of data based on the dropdown selections.
+  // The data returned includes the state, year, denomination, and count type.
+  // The data is then used to update the visualization.
+  updateFilterSelections() {
+    const year = this.data.cityMembership.filter((d) => d.year === this.year);
+    const state = this.data.cityMembership.filter((d) => d.state === this.state);
+    const denomination = this.data.denominations.filter((d) => d.denominations === this.denomination);
+
+    console.log(year, denomination, state);
+
+    // Filter the data down to the cities that should be displayed in a year
+    return year;
   }
+
+  // currentSelectedState() {
+  //   return this.data.cityMembership.filter((d) => d.state === this.selectedState);
+  // }
+
+  // currentSelectedCountType() {
+  //   return this.data.cityMembership.filter((d) => d.count_type === this.selectedCountType);
+  // }
 }
