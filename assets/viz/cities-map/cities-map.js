@@ -18,17 +18,13 @@ export default class DenominationsMap extends Visualization {
     // Filtering of this data happens below in the update() function.
     const yearSelect = [1906, 1916, 1926, 1936];
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
-    const denominationType = d3.groupSort(this.data.denominationFamilies['family_relec'], (d) => d.name, (d) => d.name);
-    const stateSelect = d3.groupSort(this.data.cityMembership, (d) => d.state, (d) => d.state);
 
-    d3.select('#state-dropdown')
-      .append("label").text('Select a State')
-      .append("select")
-      .selectAll("option")
-      .data(stateSelect)
-      .enter().append("option")
-      .attr("value", (d) => d)
-      .text((d) => d);
+    // Fetch the list of denominations from the API, and use groupSort to organize them.
+    const denominationType = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
+
+    // We use the spread operator to create an array that includes an
+    // "All" option and appends the data from the API.
+    const denominationSelection = ['All', ...denominationType];
 
     d3.select('#year')
       .append("label").text('Select a Year')
@@ -39,16 +35,17 @@ export default class DenominationsMap extends Visualization {
       .enter().append("option")
       .attr("value", (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 1926); // default year
+      .property("selected", (d) => d === 1926); // default year -- TODO: should this be an index instead?
 
     d3.select('#denomination-dropdown')
       .append("label").text('Select a Denomination')
       .append("select")
       .selectAll("option")
-      .data(denominationType)
+      .data(denominationSelection)
       .enter().append("option")
       .attr("value", (d) => d)
-      .text((d) => d);
+      .text((d) => d)
+      .property("selected", (d) => d === 'All'); // default denomination
 
     d3.select('#count-dropdown')
       .append("label").text('Select a Count')
@@ -151,14 +148,13 @@ export default class DenominationsMap extends Visualization {
       .on('click', this.zoom);
 
     // On first render, draw the default filter selections
-    this.update(this.year, this.denominations, this.state);
+    this.update(this.year, this.denominations);
   }
 
   // Draw the stuff that gets updated
-  update(year, denomination, state) {
+  update(year, denomination) {
     this.year = year;
     this.denominations = denomination;
-    this.state = state;
 
     this.viz
       .selectAll('circle:not(.legend)')
@@ -197,30 +193,16 @@ export default class DenominationsMap extends Visualization {
       .on('click', this.zoom);
   }
 
-  // Filter the data down to the dioceses that should be displayed in a year
-  // currentSelectedYear() {
-  //   return this.data.cityMembership.filter((d) => d.year === this.year);
-  // }
-
   // This function returns a set of data based on the dropdown selections.
   // The data returned includes the state, year, denomination, and count type.
   // The data is then used to update the visualization.
   updateFilterSelections() {
     const year = this.data.cityMembership.filter((d) => d.year === this.year);
-    const state = this.data.cityMembership.filter((d) => d.state === this.state);
     const denomination = this.data.denominations.filter((d) => d.members_total === this.members_total);
 
-    console.log(year, denomination, state);
+    console.log(year, denomination);
 
     // Filter the data down to the cities that should be displayed in a year
     return year;
   }
-
-  // currentSelectedState() {
-  //   return this.data.cityMembership.filter((d) => d.state === this.selectedState);
-  // }
-
-  // currentSelectedCountType() {
-  //   return this.data.cityMembership.filter((d) => d.count_type === this.selectedCountType);
-  // }
 }

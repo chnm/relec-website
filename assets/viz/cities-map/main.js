@@ -29,12 +29,11 @@ Promise.all(promises)
     // Listen for changes to the filter options and return them to update() and re-render the map.
     d3.select('#year').on('change', () => {
       let year = d3.select('#year option:checked').text();
-      const state = d3.select('#state-dropdown option:checked').text();
       const denomination = d3.select('#denomination-dropdown option:checked').text();
 
       // Convert year from string to number
       year = parseInt(year, 10);
 
-      citiesMap.update(year, denomination, state);
+      citiesMap.update(year, denomination);
     });
   });
