@@ -16,7 +16,7 @@ export default class DenominationsMap extends Visualization {
     // the selections made in the dropdown.
     //
     // Filtering of this data happens below in the update() function.
-    const yearSelect = [1906, 1926, 1932, 1936];
+    const yearSelect = [1906, 1916, 1926, 1936];
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
     const denominationType = d3.groupSort(this.data.denominationFamilies['family_relec'], (d) => d.name, (d) => d.name);
     const stateSelect = d3.groupSort(this.data.cityMembership, (d) => d.state, (d) => d.state);
@@ -58,7 +58,7 @@ export default class DenominationsMap extends Visualization {
       .enter().append("option")
       .attr("value", (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 'Total membership'); // default count
+      .property("selected", (d) => d === 'Total churches'); // default count
 
     // The following handles year data and zoom behavior.
     this.year = d3.select('#year').node().value = 1926; // default selected year -- probably a better way to handle this
@@ -75,7 +75,11 @@ export default class DenominationsMap extends Visualization {
 
     // Keep track of how much to scale things based on zoom
     this.kScale = 1;
-    this.radiusScale = 0.2;
+
+    // Handle point radius scaling
+    this.populationRadiusScale = d3.scaleSqrt()
+      .domain([0, 100000])
+      .range([0, 100]);
 
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
@@ -88,14 +92,12 @@ export default class DenominationsMap extends Visualization {
         [x, y] = coords;
         k = 10;
         this.kScale = 8;
-        this.radiusScale = 0.05;
         this.centered = d;
       } else {
         x = this.width / 2 - 10;
         y = this.height / 2 - 10;
         k = 1;
         this.kScale = 1;
-        this.radiusScale = 0.2;
         this.centered = null;
       }
 
@@ -106,12 +108,12 @@ export default class DenominationsMap extends Visualization {
       this.viz.selectAll('circle')
         .transition()
         .duration(500)
-        .attr('r', (d) => d.denominations * this.radiusScale)
-        .style('stroke-width', `${1 / this.kScale}px`);
+        .attr('r', (d) => this.populationRadiusScale(d.churches))
+        .style('stroke-width', `${this.populationRadiusScale(1) / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
         .duration(500)
-        .style('stroke-width', `${1 / k}px`);
+        .style('stroke-width', `${this.populationRadiusScale(1) / k}px`);
     };
 
     this.tooltipRender = (e, d) => {
@@ -166,8 +168,8 @@ export default class DenominationsMap extends Visualization {
           .append('circle')
           .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
           .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-          .attr('r', (d) => d.denominations * this.radiusScale)
-          .style('stroke-width', 1 / this.kScale)
+          .attr('r', (d) => this.populationRadiusScale(d.churches))
+          .style('stroke-width', this.populationRadiusScale(1))
           .attr('class', 'point'),
         (update) => update
           .attr('class', 'point'),
@@ -206,7 +208,7 @@ export default class DenominationsMap extends Visualization {
   updateFilterSelections() {
     const year = this.data.cityMembership.filter((d) => d.year === this.year);
     const state = this.data.cityMembership.filter((d) => d.state === this.state);
-    const denomination = this.data.denominations.filter((d) => d.denominations === this.denomination);
+    const denomination = this.data.denominations.filter((d) => d.members_total === this.members_total);
 
     console.log(year, denomination, state);
 
