@@ -45,17 +45,18 @@ export default class DenominationsMap extends Visualization {
       .enter().append("option")
       .attr("value", (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 'All'); // default denomination
+      .property('selected', (d) => d === 'All'); // default denomination
 
     d3.select('#count-dropdown')
-      .append("label").text('Select a Count')
-      .append("select")
-      .selectAll("option")
+      .append('label').text('Select a Count')
+      .append('select')
+      .selectAll('option')
       .data(countType)
-      .enter().append("option")
-      .attr("value", (d) => d)
+      .enter()
+      .append('option')
+      .attr('value', (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 'Total churches'); // default count
+      .property('selected', (d) => d === 'Total churches'); // default count
 
     // The following handles year data and zoom behavior.
     this.year = d3.select('#year').node().value = 1926; // default selected year -- probably a better way to handle this
@@ -135,7 +136,7 @@ export default class DenominationsMap extends Visualization {
       .attr('class', 'country');
 
     this.viz
-      .selectAll('path')
+      .selectAll(null)
       .data(this.data.states.features)
       .enter().append('path')
       .attr('d', this.path)
