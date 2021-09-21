@@ -112,6 +112,10 @@ export default class DenominationsMap extends Visualization {
         .transition()
         .duration(500)
         .style('stroke-width', `${this.populationRadiusScale(1) / k}px`);
+      this.viz.selectAll('.states')
+        .transition()
+        .duration(500)
+        .style('stroke-width', `${this.populationRadiusScale(1) / k}px`);
     };
 
     this.tooltipRender = (e, d) => {
