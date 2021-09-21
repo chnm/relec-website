@@ -3,6 +3,11 @@
     stroke: rgb(200, 200, 200);
 }
 
+.states {
+    fill: transparent;
+    stroke: rgb(200, 200, 200);
+}
+
 .diocese {
     fill: purple;
     fill-opacity: 0.25;

@@ -61,7 +61,7 @@ export default class DenominationsMap extends Visualization {
     this.year = d3.select('#year').node().value = 1926; // default selected year -- probably a better way to handle this
     this.projection = d3.geoAlbers()
       .translate([this.width / 2 + 60, this.height / 2 + 40])
-      .scale(550);
+      .scale(1000);
     this.path = d3.geoPath().projection(this.projection);
 
     // Provide object key for data joining
@@ -134,6 +134,13 @@ export default class DenominationsMap extends Visualization {
       .attr('d', this.path)
       .attr('class', 'country');
 
+    this.viz
+      .selectAll('path')
+      .data(this.data.states.features)
+      .enter().append('path')
+      .attr('d', this.path)
+      .attr('class', 'states');
+
     this.tooltip = d3.select('body').append('div')
       .attr('class', 'tooltip')
       .attr('id', 'dioceses-map-tooltip')
@@ -193,14 +200,52 @@ export default class DenominationsMap extends Visualization {
       .on('click', this.zoom);
   }
 
-  // This function returns a set of data based on the dropdown selections.
-  // The data returned includes the state, year, denomination, and count type.
+  // Update the filter selections based on the current year and denomination selections
+  updateSelections() {
+    const output = [];
+    // eslint-disable-next-line no-restricted-syntax
+    for (const d of this.data.denominations) {
+      if (d.year === this.year && this.denominations.includes(d.denomination)) {
+        output.push(d);
+      }
+    }
+    console.log(output);
+
+    return output;
+  }
+
+
   // The data is then used to update the visualization.
   updateFilterSelections() {
     const year = this.data.cityMembership.filter((d) => d.year === this.year);
     const denomination = this.data.denominations.filter((d) => d.members_total === this.members_total);
 
-    console.log(year, denomination);
+    const output = [];
+    for (let i = 0; i < year.length; i += 1) {
+      for (let j = 0; j < denomination.length; j += 1) {
+        const denom = denomination[j];
+        const denomYear = year[i];
+        // const denomYearCity = denomYear.cityMembership.filter((d) => d.denomination === denom.denomination);
+        
+        
+        // for (let k = 0; k < denomYearCity.length; k += 1) {
+          // const denomYearCityDenom = denomYearCity[k];
+          // output.push({
+            // state: denomYearCityDenom.state,
+        //     city: denomYearCityDenom.city,
+        //     year: denomYearCityDenom.year,
+        //     denomination: denomYearCityDenom.denomination,
+        //     members_total: denomYearCityDenom.members_total,
+        //     churches: denomYearCityDenom.churches,
+        //     population_1926: denomYearCityDenom.population_1926,
+        //     lon: denomYearCityDenom.lon,
+        //     lat: denomYearCityDenom.lat,
+          // });
+        // }
+      }
+    }
+
+    // console.log(output);
 
     // Filter the data down to the cities that should be displayed in a year
     return year;
