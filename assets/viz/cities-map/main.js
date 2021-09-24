@@ -3,7 +3,6 @@ import DenominationsMap from './cities-map';
 
 // Load the data
 const urls = [
-  'http://localhost:8090/relcensus/denomination-families',
   'http://localhost:8090/relcensus/denominations',
   'http://localhost:8090/relcensus/city-total-membership?year=1926',
   'http://localhost:8090/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church',
@@ -19,20 +18,19 @@ Promise.all(promises)
     const citiesMap = new DenominationsMap(
       '#chrono-map',
       {
-        denominationFamilies: data[0],
-        denominations: data[1],
-        cityMembership: data[2],
-        denominationFilter: data[3],
-        northamerica: data[4],
-        states: data[5],
+        denominations: data[0],
+        cityMembership: data[1],
+        denominationFilter: data[2],
+        northamerica: data[3],
+        states: data[4],
       },
       { width: 1000, height: 525 },
     );
     citiesMap.render();
 
     // Listen for changes to the filter options and return them to update() and re-render the map.
-    d3.select('#year').on('change', () => {
-      let year = d3.select('#year option:checked').text();
+    d3.selectAll('.filterSelection').on('change', () => {
+      let year = d3.select('#year-dropdown option:checked').text();
       const denomination = d3.select('#denomination-dropdown option:checked').text();
 
       // Convert year from string to number

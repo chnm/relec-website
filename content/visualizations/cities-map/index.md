@@ -16,14 +16,14 @@ The interactive map below shows something awesome...
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <div class="row menu">
         <div class="columns small-12 medium-6">
-            <div id="year" name="year"></div>
+            <div id="year-dropdown" class="filterSelection" name="year"></div>
         </div>
         <div class="columns small-12 medium-6">
-            <div id="denomination-dropdown"></div>
+            <div id="denomination-dropdown" class="filterSelection"></div>
         </div>
-        <div class="columns small-12 medium-6">
+        <!-- <div class="columns small-12 medium-6">
             <div id="count-dropdown"></div>
-        </div>
+        </div> -->
     </div>
   </div>
   <div class="cell medium-12 xlarge-10 large-offset-1">
