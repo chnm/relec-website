@@ -12,23 +12,6 @@ const urls = [
 const promises = [];
 urls.forEach((url) => promises.push(d3.json(url)));
 
-// Update the Promise URL when the user changes the year
-const yearSelect = document.getElementById('year-dropdown');
-yearSelect.addEventListener('change', () => {
-  const year = yearSelect.value;
-  const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=Protestant+Episcopal+Church`;
-  promises[2] = d3.json(url);
-});
-
-// Update the Promise URL when the user changes the year or the denomination
-const denominationSelect = document.getElementById('denomination-dropdown');
-denominationSelect.addEventListener('change', () => {
-  const year = yearSelect.value;
-  const denomination = denominationSelect.value;
-  const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
-  promises[2] = d3.json(url);
-});
-
 // Once all the data is loaded, initialize and render the visualizations
 Promise.all(promises)
   .then((data) => {
@@ -57,5 +40,5 @@ Promise.all(promises)
     });
   })
   .catch((e) => {
-    console.log(`There has been a problem with your fetch operation: ${e.message}`);
+    console.error(`There has been a problem with your fetch operation: ${e.message}`);
   });

@@ -10,7 +10,7 @@ export default class DenominationsMap extends Visualization {
     super(id, data, dim, margin);
 
     // The code below sets up the dropdowns for the map views. The views
-    // currently include: year, denomination, and type of count. The first set
+    // currently include: year and denomination. The first set
     // of variables reads in data to group and sort unique keys from the API. Then,
     // those are passed along to the dropdown and filters are then applied based on
     // the selections made in the dropdown.
@@ -20,32 +20,34 @@ export default class DenominationsMap extends Visualization {
     const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
 
     // Fetch the list of denominations from the API, and use groupSort to organize them.
-    const denominationType = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
+    const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
 
     // We use the spread operator to create an array that includes an
     // "All" option and appends the data from the API.
     const denominationSelection = ['All', ...denominationType];
 
-    d3.select('#year')
-      .append("label").text('Select a Year')
-      .append("select")
-      .attr("id", "year_selection")
-      .selectAll("option")
+    d3.select('#year-dropdown')
+      .append('label').text('Select a Year')
+      .append('select')
+      .attr('id', 'year_selection')
+      .selectAll('option')
       .data(yearSelect)
-      .enter().append("option")
-      .attr("value", (d) => d)
+      .enter()
+      .append('option')
+      .attr('value', (d) => d)
       .text((d) => d)
-      .property("selected", (d) => d === 1926); // default year -- TODO: should this be an index instead?
+      .property('selected', (d) => d === 1926); // default year -- TODO: should this be an index instead?
 
     d3.select('#denomination-dropdown')
-      .append("label").text('Select a Denomination')
-      .append("select")
-      .selectAll("option")
+      .append('label').text('Select a Denomination')
+      .append('select')
+      .selectAll('option')
       .data(denominationSelection)
-      .enter().append("option")
-      .attr("value", (d) => d)
+      .enter()
+      .append('option')
+      .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 'All'); // default denomination
+      .property('selected', (d) => d === 'Protestant Episcopal Church'); // default denomination
 
     d3.select('#count-dropdown')
       .append('label').text('Select a Count')
@@ -59,7 +61,7 @@ export default class DenominationsMap extends Visualization {
       .property('selected', (d) => d === 'Total churches'); // default count
 
     // The following handles year data and zoom behavior.
-    this.year = d3.select('#year').node().value = 1926; // default selected year -- probably a better way to handle this
+    this.year = d3.select('#year-dropdown').node().value = 1926; // default selected year -- probably a better way to handle this
     this.projection = d3.geoAlbers()
       .translate([this.width / 2 + 60, this.height / 2 + 40])
       .scale(1000);
@@ -166,11 +168,11 @@ export default class DenominationsMap extends Visualization {
   // Draw the stuff that gets updated
   update(year, denomination) {
     this.year = year;
-    this.denominations = denomination;
+    this.denomination = denomination;
 
     this.viz
       .selectAll('circle:not(.legend)')
-      .data(this.updateFilterSelections(), this.key)
+      .data(this.updateFilterSelections(year, denomination), this.key)
       .join(
         (enter) => enter
           .append('circle')
@@ -205,54 +207,20 @@ export default class DenominationsMap extends Visualization {
       .on('click', this.zoom);
   }
 
-  // Update the filter selections based on the current year and denomination selections
-  updateSelections() {
-    const output = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const d of this.data.denominations) {
-      if (d.year === this.year && this.denominations.includes(d.denomination)) {
-        output.push(d);
-      }
-    }
-    console.log(output);
-
-    return output;
-  }
-
-
-  // The data is then used to update the visualization.
-  updateFilterSelections() {
-    const year = this.data.cityMembership.filter((d) => d.year === this.year);
-    const denomination = this.data.denominations.filter((d) => d.members_total === this.members_total);
-
-    const output = [];
-    for (let i = 0; i < year.length; i += 1) {
-      for (let j = 0; j < denomination.length; j += 1) {
-        const denom = denomination[j];
-        const denomYear = year[i];
-        // const denomYearCity = denomYear.cityMembership.filter((d) => d.denomination === denom.denomination);
-        
-        
-        // for (let k = 0; k < denomYearCity.length; k += 1) {
-          // const denomYearCityDenom = denomYearCity[k];
-          // output.push({
-            // state: denomYearCityDenom.state,
-        //     city: denomYearCityDenom.city,
-        //     year: denomYearCityDenom.year,
-        //     denomination: denomYearCityDenom.denomination,
-        //     members_total: denomYearCityDenom.members_total,
-        //     churches: denomYearCityDenom.churches,
-        //     population_1926: denomYearCityDenom.population_1926,
-        //     lon: denomYearCityDenom.lon,
-        //     lat: denomYearCityDenom.lat,
-          // });
-        // }
-      }
+  // When a user selects a year or denomination, we fetch a new URL from the
+  // data endpoint to pass along the data selections and assign the resulting
+  // array.
+  updateFilterSelections(year, denomination) {
+    if (this.denomination === 'All') {
+      return this.data.cityMembership.filter((d) => d.year === this.year);
     }
 
-    // console.log(output);
-
-    // Filter the data down to the cities that should be displayed in a year
-    return year;
+    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    return fetch(url)
+      .then(response => response.json())
+      .then((data) => data)
+      .catch(error => {
+        console.error('There has been a problem with fetching denominations:', error);
+      });
   }
 }
