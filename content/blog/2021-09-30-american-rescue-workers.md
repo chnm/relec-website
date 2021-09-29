@@ -1,7 +1,7 @@
 ---
 title: "American Rescure Workers"
 author: Lincoln Mullen
-date: 2021-09-20
+date: 2021-09-30
 draft: true
 abstract: "The 41 American Rescue Workers schedules included in the 1926 U.S. Census of Religious Bodies all include an extra page detailing the organizations charity work at the specific mission. By analyzing the location and specific type of charity work done to explore how the missions met their constituents' needs, and how their work was so important that the included information not asked for on the schedule."
 image: ""/blog-img/arwheaders.png""
