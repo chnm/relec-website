@@ -170,9 +170,17 @@ export default class DenominationsMap extends Visualization {
     this.year = year;
     this.denomination = denomination;
 
+    // Update the denomination data by returning the Promise below in
+    // updateFilterSelections().
+    this.denominationData = Promise.resolve(this.updateFilterSelections(year, denomination))
+      .then((data) => {
+        console.log('data: ', data);
+        this.data = data;
+      });
+
     this.viz
       .selectAll('circle:not(.legend)')
-      .data(this.updateFilterSelections(year, denomination), this.key)
+      .data(this.denominationData, this.key)
       .join(
         (enter) => enter
           .append('circle')
@@ -207,9 +215,9 @@ export default class DenominationsMap extends Visualization {
       .on('click', this.zoom);
   }
 
-  // When a user selects a year or denomination, we fetch a new URL from the
-  // data endpoint to pass along the data selections and assign the resulting
-  // array.
+  // When a user selects a year or denomination, we fetch the data from the API and
+  // return a Promise that resolves to the data. We then update the visualization
+  // with the new data.
   updateFilterSelections(year, denomination) {
     if (this.denomination === 'All') {
       return this.data.cityMembership.filter((d) => d.year === this.year);
@@ -217,10 +225,11 @@ export default class DenominationsMap extends Visualization {
 
     const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     return fetch(url)
-      .then(response => response.json())
+      .then((response) => response.json())
       .then((data) => data)
-      .catch(error => {
-        console.error('There has been a problem with fetching denominations:', error);
+      .catch((error) => {
+        console.error('There has been a problem with fetching denominations: ', error);
+        console.log('Attempted url: ', url);
       });
   }
 }
