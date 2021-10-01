@@ -36,19 +36,6 @@ Promise.all(promises)
       // Convert year from string to number
       year = parseInt(year, 10);
 
-      // If the dropdown is not All, then filter the data
-      if (denomination !== 'All') {
-        const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
-        try {
-          const response = await fetch(url);
-          const results = await response.json();
-          data[2] = results;
-          console.log(data[2]);
-        } catch (error) {
-          console.error('There has been a problem with fetching denominations: ', error);
-          console.log('Attempted url: ', url);
-        }
-      }
       citiesMap.update(year, denomination);
     });
   })

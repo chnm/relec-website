@@ -78,8 +78,13 @@ export default class DenominationsMap extends Visualization {
 
     // Handle point radius scaling
     this.populationRadiusScale = d3.scaleSqrt()
-      .domain([0, 100000])
+      .domain([0, 1000])
       .range([0, 100]);
+    // TODO This will be updated to something more like this, but generalized:
+      // this.populationRadiusScale = d3.scaleSqrt()
+      // .domain([d3.min(this.data.cityMembership, (d) => d.churches),
+      //   d3.max(this.data.cityMembership, (d) => d.churches)])
+      // .range([0, 100]);
 
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
@@ -109,15 +114,15 @@ export default class DenominationsMap extends Visualization {
         .transition()
         .duration(500)
         .attr('r', (d) => this.populationRadiusScale(d.churches))
-        .style('stroke-width', `${this.populationRadiusScale(1) / this.kScale}px`);
+        .style('stroke-width', `${this.populationRadiusScale(.5) / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
         .duration(500)
-        .style('stroke-width', `${this.populationRadiusScale(1) / k}px`);
+        .style('stroke-width', `${this.populationRadiusScale(.5) / k}px`);
       this.viz.selectAll('.states')
         .transition()
         .duration(500)
-        .style('stroke-width', `${this.populationRadiusScale(1) / k}px`);
+        .style('stroke-width', `${this.populationRadiusScale(.5) / k}px`);
     };
 
     this.tooltipRender = (e, d) => {
@@ -170,53 +175,65 @@ export default class DenominationsMap extends Visualization {
     this.year = year;
     this.denomination = denomination;
 
-    this.viz
-      .selectAll('circle:not(.legend)')
-      .data(this.updateFilterSelections(), this.key)
-      .join(
-        (enter) => enter
-          .append('circle')
-          .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
-          .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-          .attr('r', (d) => this.populationRadiusScale(d.churches))
-          .style('stroke-width', this.populationRadiusScale(1))
-          .attr('class', 'point'),
-        (update) => update
-          .attr('class', 'point'),
-        (exit) => exit
-          .remove(),
-      );
+    // Update the denomination data by returning the Promise below
+    // array to the updateFilterSelections() function.
+    Promise.resolve(this.updateFilterSelections(year, denomination))
+      .then((data) => {
+        // console.log('data: ', data);
+        // this.data = data;
+        this.viz
+          .selectAll('circle:not(.legend)')
+          .data(data, this.key)
+          .join(
+            (enter) => enter
+              .append('circle')
+              .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
+              .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
+              .attr('r', (d) => this.populationRadiusScale(d.churches))
+              .style('stroke-width', this.populationRadiusScale(.5))
+              .attr('class', 'point'),
+            (update) => update
+              .attr('class', 'point'),
+            (exit) => exit
+              .remove(),
+          );
 
-    this.viz
-      .selectAll('circle')
-      .on('mouseover', this.tooltipRender)
-      .on('mousemove', () => {
-        // Show the tooltip to the right of the mouse, unless we are
-        // on the rightmost 25% of the browser.
-        if (event.clientX / this.width >= 0.75) {
-          this.tooltip
-            .style('top', `${event.pageY - 10}px`)
-            .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
-        } else {
-          this.tooltip
-            .style('top', `${event.pageY - 10}px`)
-            .style('left', `${event.pageX + 10}px`);
-        }
-      })
-      .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
-      .on('click', this.zoom);
+        this.viz
+          .selectAll('circle')
+          .on('mouseover', this.tooltipRender)
+          .on('mousemove', () => {
+            // Show the tooltip to the right of the mouse, unless we are
+            // on the rightmost 25% of the browser.
+            if (event.clientX / this.width >= 0.75) {
+              this.tooltip
+                .style('top', `${event.pageY - 10}px`)
+                .style('left', `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+            } else {
+              this.tooltip
+                .style('top', `${event.pageY - 10}px`)
+                .style('left', `${event.pageX + 10}px`);
+            }
+          })
+          .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
+          .on('click', this.zoom);
+      });
   }
 
   // When a user selects a year or denomination, we fetch the data from the API and
   // return a Promise that resolves to the data. We then update the visualization
   // with the new data.
-  updateFilterSelections() {
+  updateFilterSelections(year, denomination) {
     if (this.denomination === 'All') {
-      const denom = this.data.cityMembership.filter((d) => d.year === this.year);
-      return denom;
+      return this.data.cityMembership.filter((d) => d.year === this.year);
     }
 
-    const denom = this.data.denominationFilter.filter((d) => d.year === this.year);
-    return denom;
+    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    return fetch(url)
+      .then((response) => response.json())
+      .then((data) => data)
+      .catch((error) => {
+        console.error('There has been a problem with fetching denominations: ', error);
+        console.log('Attempted url: ', url);
+      });
   }
 }
