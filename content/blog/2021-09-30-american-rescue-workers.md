@@ -1,5 +1,5 @@
 ---
-title: "American Rescure Workers"
+title: "American Rescue Workers"
 author: Greta Swain and Caroline Greer
 date: 2021-09-30
 draft: false
