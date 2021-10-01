@@ -173,10 +173,7 @@ export default class DenominationsMap extends Visualization {
     // Update the denomination data by returning the Promise below in
     // updateFilterSelections().
     this.denominationData = Promise.resolve(this.updateFilterSelections(year, denomination))
-      .then((data) => {
-        console.log('data: ', data);
-        this.data = data;
-      });
+      .then((data) => { this.data = data; });
 
     this.viz
       .selectAll('circle:not(.legend)')
