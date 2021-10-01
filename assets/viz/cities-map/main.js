@@ -29,13 +29,26 @@ Promise.all(promises)
     citiesMap.render();
 
     // Listen for changes to the filter options and return them to update() and re-render the map.
-    d3.selectAll('.filterSelection').on('change', () => {
+    d3.selectAll('.filterSelection').on('change', async () => {
       let year = d3.select('#year-dropdown option:checked').text();
       const denomination = d3.select('#denomination-dropdown option:checked').text();
 
       // Convert year from string to number
       year = parseInt(year, 10);
 
+      // If the dropdown is not All, then filter the data
+      if (denomination !== 'All') {
+        const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+        try {
+          const response = await fetch(url);
+          const results = await response.json();
+          data[2] = results;
+          console.log(data[2]);
+        } catch (error) {
+          console.error('There has been a problem with fetching denominations: ', error);
+          console.log('Attempted url: ', url);
+        }
+      }
       citiesMap.update(year, denomination);
     });
   })
