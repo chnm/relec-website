@@ -227,7 +227,7 @@ export default class DenominationsMap extends Visualization {
       return this.data.cityMembership.filter((d) => d.year === this.year);
     }
 
-    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    const url = `https://data.chnm.org/city-membership?year=${year}&denomination=${denomination}`;
     return fetch(url)
       .then((response) => response.json())
       .then((data) => data)
