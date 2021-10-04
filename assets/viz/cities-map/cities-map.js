@@ -78,7 +78,7 @@ export default class DenominationsMap extends Visualization {
 
     // Handle point radius scaling
     this.populationRadiusScale = d3.scaleSqrt()
-      .domain([0, 1000])
+      .domain([0, 10000])
       .range([0, 100]);
     // TODO This will be updated to something more like this, but generalized:
       // this.populationRadiusScale = d3.scaleSqrt()
@@ -227,7 +227,7 @@ export default class DenominationsMap extends Visualization {
       return this.data.cityMembership.filter((d) => d.year === this.year);
     }
 
-    const url = `https://data.chnm.org/city-membership?year=${year}&denomination=${denomination}`;
+    const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     return fetch(url)
       .then((response) => response.json())
       .then((data) => data)
