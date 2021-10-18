@@ -21,10 +21,14 @@ export default class DenominationsMap extends Visualization {
 
     // Fetch the list of denominations from the API, and use groupSort to organize them.
     const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
+    // eslint-disable-next-line max-len
+    const denominationFamilies = d3.groupSort(this.data.denominationFamilies, (d) => d.name, (d) => d.name);
 
     // We use the spread operator to create an array that includes an
     // "All" option and appends the data from the API.
     const denominationSelection = ['All', ...denominationType];
+    const denominationFamilySelection = ['All', ...denominationFamilies];
+
 
     d3.select('#year-dropdown')
       .append('label').text('Select a Year')
@@ -49,16 +53,15 @@ export default class DenominationsMap extends Visualization {
       .text((d) => d)
       .property('selected', (d) => d === 'Protestant Episcopal Church'); // default denomination
 
-    d3.select('#count-dropdown')
-      .append('label').text('Select a Count')
+    d3.select('#denomination-family-dropdown')
+      .append('label').text('Select a denomination family')
       .append('select')
       .selectAll('option')
-      .data(countType)
+      .data(denominationFamilySelection)
       .enter()
       .append('option')
       .attr('value', (d) => d)
-      .text((d) => d)
-      .property('selected', (d) => d === 'Total churches'); // default count
+      .text((d) => d);
 
     // The following handles year data and zoom behavior.
     this.year = d3.select('#year-dropdown').node().value = 1926; // default selected year -- probably a better way to handle this
