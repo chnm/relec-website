@@ -19,10 +19,10 @@ The interactive map below shows something awesome...
             <div id="year-dropdown" class="filterSelection" name="year"></div>
         </div>
         <div class="columns small-12 medium-6">
-            <div id="denomination-dropdown" class="filterSelection"></div>
+            <div id="denomination-family-dropdown" class="filterSelection"></div>
         </div>
         <div class="columns small-12 medium-6">
-            <div id="denomination-family-dropdown" class="filterSelection"></div>
+            <div id="denomination-dropdown" class="filterSelection"></div>
         </div>
     </div>
   </div>

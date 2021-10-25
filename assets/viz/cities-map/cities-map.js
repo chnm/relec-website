@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import * as d3 from 'd3';
 import Visualization from '../common/visualization';
 
@@ -17,21 +18,19 @@ export default class DenominationsMap extends Visualization {
     //
     // Filtering of this data happens below in the update() function.
     const yearSelect = [1906, 1916, 1926, 1936];
-    const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
+    // const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
 
     // Fetch the list of denominations from the API, and use groupSort to organize them.
     const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
-    // eslint-disable-next-line max-len
-    const denominationFamilies = d3.groupSort(this.data.denominationFamilies, (d) => d.name, (d) => d.name);
+    const denomFamilies = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
 
     // We use the spread operator to create an array that includes an
     // "All" option and appends the data from the API.
     const denominationSelection = ['All', ...denominationType];
-    const denominationFamilySelection = ['All', ...denominationFamilies];
-
+    const denominationFamilySelection = ['All', ...denomFamilies];
 
     d3.select('#year-dropdown')
-      .append('label').text('Select a Year')
+      .append('label').text('Select a year')
       .append('select')
       .attr('id', 'year_selection')
       .selectAll('option')
@@ -43,7 +42,7 @@ export default class DenominationsMap extends Visualization {
       .property('selected', (d) => d === 1926); // default year -- TODO: should this be an index instead?
 
     d3.select('#denomination-dropdown')
-      .append('label').text('Select a Denomination')
+      .append('label').text('Select a denomination')
       .append('select')
       .selectAll('option')
       .data(denominationSelection)
