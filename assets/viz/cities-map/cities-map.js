@@ -78,12 +78,12 @@ export default class DenominationsMap extends Visualization {
     this.centered = null;
 
     // Keep track of how much to scale things based on zoom
-    this.kScale = 1;
+    this.kScale = 0.5;
 
     // Handle point radius scaling
     this.populationRadiusScale = d3.scaleSqrt()
-      .domain([0, 10000])
-      .range([0, 100]);
+      .domain([3, 10000])
+      .range([3, 100]);
     // TODO: This will be updated to something more like this, but generalized:
     // this.populationRadiusScale = d3.scaleSqrt()
     // .domain([d3.min(this.data.cityMembership, (d) => d.churches),
@@ -118,15 +118,15 @@ export default class DenominationsMap extends Visualization {
         .transition()
         .duration(500)
         .attr('r', (d) => this.populationRadiusScale(d.churches))
-        .style('stroke-width', `${this.populationRadiusScale(0.5) / this.kScale}px`);
+        .style('stroke-width', `${0.5 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
         .duration(500)
-        .style('stroke-width', `${this.populationRadiusScale(0.5) / k}px`);
+        .style('stroke-width', `${0.5 / this.kScale}px`);
       this.viz.selectAll('.states')
         .transition()
         .duration(500)
-        .style('stroke-width', `${this.populationRadiusScale(0.5) / k}px`);
+        .style('stroke-width', `${0.5 / this.kScale}px`);
     };
 
     this.tooltipRender = (e, d) => {
@@ -192,7 +192,7 @@ export default class DenominationsMap extends Visualization {
               .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
               .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
               .attr('r', (d) => this.populationRadiusScale(d.churches))
-              .style('stroke-width', this.populationRadiusScale(0.5))
+              .style('stroke-width', '0.5px')
               .attr('class', 'point'),
             (update) => update
               .attr('class', 'point'),

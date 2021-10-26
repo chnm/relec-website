@@ -8,27 +8,6 @@
     stroke: rgb(200, 200, 200);
 }
 
-.diocese {
-    fill: purple;
-    fill-opacity: 0.25;
-    stroke: purple;
-    stroke-opacity: 1;
-}
-
-.metropolitan {
-    fill: red;
-    fill-opacity: 0.25;
-    stroke: red;
-    stroke-opacity: 1;
-}
-
-.nonlatin {
-    fill-opacity: 0.75;
-    stroke: black;
-    stroke-width: 1;
-    stroke-opacity: 1;
-}
-
 .point {
     fill: orange;
     fill-opacity: 0.5;
