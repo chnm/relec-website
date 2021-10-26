@@ -17,10 +17,12 @@ export default class DenominationsMap extends Visualization {
     // the selections made in the dropdown.
     //
     // Filtering of this data happens below in the update() function.
-    const yearSelect = [1906, 1916, 1926, 1936];
-    // const countType = ['Total churches', 'Total membership', 'Male', 'Female', '< 13', '> 13'];
 
-    // Fetch the list of denominations from the API, and use groupSort to organize them.
+    // Our year options that are available.
+    const yearSelect = [1906, 1916, 1926, 1936];
+
+    // Fetch the list of denominations and denomination families from the API,
+    // and use d3.groupSort to organize them.
     const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
     const denomFamilies = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
 
@@ -29,6 +31,7 @@ export default class DenominationsMap extends Visualization {
     const denominationSelection = ['All', ...denominationType];
     const denominationFamilySelection = ['All', ...denomFamilies];
 
+    // Build each of the dropdown elements.
     d3.select('#year-dropdown')
       .append('label').text('Select a year')
       .append('select')
@@ -62,8 +65,7 @@ export default class DenominationsMap extends Visualization {
       .attr('value', (d) => d)
       .text((d) => d);
 
-    // The following handles year data and zoom behavior.
-    this.year = d3.select('#year-dropdown').node().value = 1926; // default selected year -- probably a better way to handle this
+    // The following handles year data, map projections, and zoom behavior.
     this.projection = d3.geoAlbers()
       .translate([this.width / 2 + 60, this.height / 2 + 40])
       .scale(1000);
@@ -82,11 +84,11 @@ export default class DenominationsMap extends Visualization {
     this.populationRadiusScale = d3.scaleSqrt()
       .domain([0, 10000])
       .range([0, 100]);
-    // TODO This will be updated to something more like this, but generalized:
-      // this.populationRadiusScale = d3.scaleSqrt()
-      // .domain([d3.min(this.data.cityMembership, (d) => d.churches),
-      //   d3.max(this.data.cityMembership, (d) => d.churches)])
-      // .range([0, 100]);
+    // TODO: This will be updated to something more like this, but generalized:
+    // this.populationRadiusScale = d3.scaleSqrt()
+    // .domain([d3.min(this.data.cityMembership, (d) => d.churches),
+    //   d3.max(this.data.cityMembership, (d) => d.churches)])
+    // .range([0, 100]);
 
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
@@ -116,15 +118,15 @@ export default class DenominationsMap extends Visualization {
         .transition()
         .duration(500)
         .attr('r', (d) => this.populationRadiusScale(d.churches))
-        .style('stroke-width', `${this.populationRadiusScale(.5) / this.kScale}px`);
+        .style('stroke-width', `${this.populationRadiusScale(0.5) / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
         .duration(500)
-        .style('stroke-width', `${this.populationRadiusScale(.5) / k}px`);
+        .style('stroke-width', `${this.populationRadiusScale(0.5) / k}px`);
       this.viz.selectAll('.states')
         .transition()
         .duration(500)
-        .style('stroke-width', `${this.populationRadiusScale(.5) / k}px`);
+        .style('stroke-width', `${this.populationRadiusScale(0.5) / k}px`);
     };
 
     this.tooltipRender = (e, d) => {
@@ -181,8 +183,6 @@ export default class DenominationsMap extends Visualization {
     // array to the updateFilterSelections() function.
     Promise.resolve(this.updateFilterSelections(year, denomination))
       .then((data) => {
-        // console.log('data: ', data);
-        // this.data = data;
         this.viz
           .selectAll('circle:not(.legend)')
           .data(data, this.key)
@@ -192,7 +192,7 @@ export default class DenominationsMap extends Visualization {
               .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
               .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
               .attr('r', (d) => this.populationRadiusScale(d.churches))
-              .style('stroke-width', this.populationRadiusScale(.5))
+              .style('stroke-width', this.populationRadiusScale(0.5))
               .attr('class', 'point'),
             (update) => update
               .attr('class', 'point'),
@@ -229,7 +229,17 @@ export default class DenominationsMap extends Visualization {
       return this.data.cityMembership.filter((d) => d.year === this.year);
     }
 
+    // Set the default values for the year and denomination to 1926 and Protestant Episcopal Church
+    // if they are not provided.
+    if (year === undefined) {
+      year = 1926;
+    }
+    if (denomination === undefined) {
+      denomination = 'Protestant Episcopal Church';
+    }
+
     const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    console.log(url);
     return fetch(url)
       .then((response) => response.json())
       .then((data) => data)
