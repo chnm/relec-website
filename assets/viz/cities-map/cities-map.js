@@ -71,9 +71,6 @@ export default class DenominationsMap extends Visualization {
       .scale(1000);
     this.path = d3.geoPath().projection(this.projection);
 
-    // Provide object key for data joining
-    this.key = (d) => d.city + d.state;
-
     // Keep track of which element is centered
     this.centered = null;
 
@@ -179,13 +176,16 @@ export default class DenominationsMap extends Visualization {
     this.year = year;
     this.denomination = denomination;
 
+    // On update, remove existing points and redraw with new data.
+    this.viz.selectAll('circle:not(.legend)').remove();
+
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
     Promise.resolve(this.updateFilterSelections(year, denomination))
       .then((data) => {
         this.viz
           .selectAll('circle:not(.legend)')
-          .data(data, this.key)
+          .data(data)
           .join(
             (enter) => enter
               .append('circle')
@@ -196,8 +196,8 @@ export default class DenominationsMap extends Visualization {
               .attr('class', 'point'),
             (update) => update
               .attr('class', 'point'),
-            (exit) => exit
-              .remove(),
+            // (exit) => exit
+            //   .remove(),
           );
 
         this.viz
@@ -225,6 +225,8 @@ export default class DenominationsMap extends Visualization {
   // return a Promise that resolves to the data. We then update the visualization
   // with the new data.
   updateFilterSelections(year, denomination) {
+    // If a user selects All, we return the cityMembership API to display the data.
+    // Otherwise, we return the denominationFilter API url with the selected year and denomination.
     if (this.denomination === 'All') {
       return this.data.cityMembership.filter((d) => d.year === this.year);
     }
@@ -238,8 +240,10 @@ export default class DenominationsMap extends Visualization {
       denomination = 'Protestant Episcopal Church';
     }
 
+    // Remove all data from the map and redraw with our new data.
+    // this.viz.selectAll('circle:not(.legend)').remove();
+
     const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
-    console.log(url);
     return fetch(url)
       .then((response) => response.json())
       .then((data) => data)
