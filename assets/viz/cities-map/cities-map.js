@@ -126,12 +126,23 @@ export default class DenominationsMap extends Visualization {
         .style('stroke-width', `${0.5 / this.kScale}px`);
     };
 
+    // The tooltip is conditional based on whether we're displaying
+    // All data or a single denomination.
     this.tooltipRender = (e, d) => {
-      // We use JS native .toLocalString() to display thousands separator based on user's locale
-      const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
-        + `Denominations: ${d.denominations.toLocaleString()}<br/>`
-        + `Churches: ${d.churches.toLocaleString()}<br/>`
+      if (this.denomination === 'All') {
+        // We use JS native .toLocalString() to display thousands separator based on user's locale
+        const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
+        + `Number of denominations: ${d.denominations.toLocaleString()}<br/>`
+        + `Number of churches: ${d.churches.toLocaleString()}<br/>`
         + `City population: ${d.population_1926.toLocaleString()}`;
+        this.tooltip.html(text);
+        this.tooltip.style('visibility', 'visible');
+      }
+
+      const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
+        + `Denomination: ${d.denomination}<br/>`
+        + `Number of churches: ${d.churches.toLocaleString()}<br/>`
+        + `Total church membership: ${d.members_total.toLocaleString()}`;
       this.tooltip.html(text);
       this.tooltip.style('visibility', 'visible');
     };
