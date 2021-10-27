@@ -79,14 +79,17 @@ export default class DenominationsMap extends Visualization {
 
     // Handle point radius scaling
     this.populationRadiusScale = d3.scaleSqrt()
-      .domain([3, 10000])
-      .range([3, 100]);
+      .domain([3, 200])
+      .range([5, 50]);
     // TODO: This will be updated to something more like this, but generalized:
     // this.populationRadiusScale = d3.scaleSqrt()
     // .domain([d3.min(this.data.cityMembership, (d) => d.churches),
     //   d3.max(this.data.cityMembership, (d) => d.churches)])
     // .range([0, 100]);
 
+    this.radius = d3.scaleSqrt([0, 200], [5, 60]);
+
+    // radius = d3.scaleSqrt([0, d3.max(data, d => d.value)], [0, 40])
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
     this.zoom = (e, d) => {
@@ -111,7 +114,7 @@ export default class DenominationsMap extends Visualization {
         .transition()
         .duration(500)
         .attr('transform', `translate(${this.width / 2},${this.height / 2})scale(${k}) translate(${-x},${-y})`);
-      this.viz.selectAll('circle')
+      this.viz.selectAll('circle:not(.legend)')
         .transition()
         .duration(500)
         .attr('r', (d) => this.populationRadiusScale(d.churches))
@@ -150,6 +153,31 @@ export default class DenominationsMap extends Visualization {
 
   // Draw the unchanging parts of the visualization
   render() {
+    // Draw the legend
+    const legend = this.viz
+      .append('g')
+      .attr('fill', '#777')
+      .attr('transform', 'translate(120,470)')
+      .attr('text-anchor', 'middle')
+      .style('font', '10px sans-serif')
+      .selectAll('g')
+      .data(this.radius.ticks(4).slice(1))
+      .join('g')
+      .classed('legend', true);
+
+    legend.append('circle')
+      .attr('fill', 'none')
+      .attr('stroke', '#ccc')
+      .attr('cy', (d) => -this.radius(d))
+      .attr('r', this.radius)
+      .classed('legend', true);
+
+    legend.append('text')
+      .attr('y', (d) => -2.1 * this.radius(d))
+      .attr('dy', '1.3em')
+      .text(this.radius.tickFormat(4, 's'));
+
+    // Draw the map features
     this.viz
       .selectAll('path')
       .data(this.data.northamerica.features)
@@ -165,6 +193,7 @@ export default class DenominationsMap extends Visualization {
       .attr('d', this.path)
       .attr('class', 'states');
 
+    // Draw the tooltip
     this.tooltip = d3.select('body').append('div')
       .attr('class', 'tooltip')
       .attr('id', 'dioceses-map-tooltip')
@@ -212,7 +241,7 @@ export default class DenominationsMap extends Visualization {
           );
 
         this.viz
-          .selectAll('circle')
+          .selectAll('circle:not(.legend)')
           .on('mouseover', this.tooltipRender)
           .on('mousemove', () => {
             // Show the tooltip to the right of the mouse, unless we are
