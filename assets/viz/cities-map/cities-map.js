@@ -42,7 +42,8 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 1926); // default year -- TODO: should this be an index instead?
+      .property('selected', (d) => d === 1926) // default year -- TODO: should this be an index instead?
+      .on('change', this.zoom);
 
     d3.select('#denomination-dropdown')
       .append('label').text('Select a denomination')
@@ -53,7 +54,8 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 'Protestant Episcopal Church'); // default denomination
+      .property('selected', (d) => d === 'Protestant Episcopal Church') // default denomination
+      .on('change', this.zoom);
 
     d3.select('#denomination-family-dropdown')
       .append('label').text('Select a denomination family')
@@ -63,7 +65,8 @@ export default class DenominationsMap extends Visualization {
       .enter()
       .append('option')
       .attr('value', (d) => d)
-      .text((d) => d);
+      .text((d) => d)
+      .on('change', this.zoom);
 
     // The following handles year data, map projections, and zoom behavior.
     this.projection = d3.geoAlbers()
@@ -161,8 +164,8 @@ export default class DenominationsMap extends Visualization {
       .attr('text-anchor', 'middle')
       .style('font', '10px sans-serif')
       .selectAll('g')
-      .data(this.radius.ticks(4).slice(1))
       .join('g')
+      .data(this.radius.ticks(4).slice(1))
       .classed('legend', true);
 
     legend.append('circle')
