@@ -26,10 +26,19 @@ export default class DenominationsMap extends Visualization {
     const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
     const denomFamilies = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
 
+    console.log(denominationType);
+
     // We use the spread operator to create an array that includes an
     // "All" option and appends the data from the API.
     const denominationSelection = ['All', ...denominationType];
     const denominationFamilySelection = ['All', ...denomFamilies];
+
+    // We build the denomination-dropdown to dynamically update when the user 
+    // selects from denomFamilies and filters the list of denominations based on the
+    // selected denomination family.
+    d3.select('#denomination-dropdown')
+      .append('label').text('Select a denomination')
+      .append('select');
 
     // Build each of the dropdown elements.
     d3.select('#year-dropdown')
@@ -45,18 +54,6 @@ export default class DenominationsMap extends Visualization {
       .property('selected', (d) => d === 1926) // default year -- TODO: should this be an index instead?
       .on('change', this.zoom);
 
-    d3.select('#denomination-dropdown')
-      .append('label').text('Select a denomination')
-      .append('select')
-      .selectAll('option')
-      .data(denominationSelection)
-      .enter()
-      .append('option')
-      .attr('value', (d) => d)
-      .text((d) => d)
-      .property('selected', (d) => d === 'Protestant Episcopal Church') // default denomination
-      .on('change', this.zoom);
-
     d3.select('#denomination-family-dropdown')
       .append('label').text('Select a denomination family')
       .append('select')
@@ -66,7 +63,33 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .on('change', this.zoom);
+      .property('selected', (d) => d === 'Episcopalian') // default denomination family
+      .on('change', () => {
+        const selectedFamily = d3.select('#denomination-family-dropdown option:checked').property('value');
+        console.log(selectedFamily);
+        const denomFamFiltered = denominationType.filter((d) => d.name === selectedFamily);
+        const denomFiltered = d3.groupSort(denomFamFiltered, (d) => d.name, (d) => d.name);
+        const denomSelection = ['All', ...denomFiltered];
+        d3.select('#denomination-dropdown').selectAll('option').remove();
+        d3.select('#denomination-dropdown')
+          .selectAll('option')
+          .data(denomSelection).enter()
+          .append('option')
+          .attr('value', (d) => d)
+          .text((d) => d);
+      });
+
+    // d3.select('#denomination-dropdown')
+    //   .append('label').text('Select a denomination')
+    //   .append('select')
+    //   .selectAll('option')
+    //   .data(denominationSelection)
+    //   .enter()
+    //   .append('option')
+    //   .attr('value', (d) => d)
+    //   .text((d) => d)
+    //   .property('selected', (d) => d === 'Protestant Episcopal Church') // default denomination
+    //   .on('change', this.zoom);
 
     // The following handles year data, map projections, and zoom behavior.
     this.projection = d3.geoAlbers()
@@ -215,16 +238,17 @@ export default class DenominationsMap extends Visualization {
   }
 
   // Draw the stuff that gets updated
-  update(year, denomination) {
+  update(year, denomination, family) {
     this.year = year;
     this.denomination = denomination;
+    this.family = family;
 
     // On update, remove existing points and redraw with new data.
     this.viz.selectAll('circle:not(.legend)').remove();
 
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
-    Promise.resolve(this.updateFilterSelections(year, denomination))
+    Promise.resolve(this.updateFilterSelections(year, denomination, family))
       .then((data) => {
         this.viz
           .selectAll('circle:not(.legend)')
@@ -267,7 +291,7 @@ export default class DenominationsMap extends Visualization {
   // When a user selects a year or denomination, we fetch the data from the API and
   // return a Promise that resolves to the data. We then update the visualization
   // with the new data.
-  updateFilterSelections(year, denomination) {
+  updateFilterSelections(year, denomination, family) {
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
     if (this.denomination === 'All') {
@@ -275,16 +299,16 @@ export default class DenominationsMap extends Visualization {
     }
 
     // Set the default values for the year and denomination to 1926 and Protestant Episcopal Church
-    // if they are not provided.
+    // and Episcopalian if they are not provided.
     if (year === undefined) {
       year = 1926;
     }
     if (denomination === undefined) {
       denomination = 'Protestant Episcopal Church';
     }
-
-    // Remove all data from the map and redraw with our new data.
-    // this.viz.selectAll('circle:not(.legend)').remove();
+    if (family === undefined) {
+      family = 'Episcopalian';
+    }
 
     const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     return fetch(url)
