@@ -82,7 +82,7 @@ export default class DenominationsMap extends Visualization {
         selectionDenoms.innerHTML = '';
         d3.select('[name=denomination-selection]')
           .selectAll('option')
-          .data(denominationType)
+          .data(denominationSelection)
           .enter()
           .append('option')
           .attr('value', (d) => d)
@@ -167,7 +167,7 @@ export default class DenominationsMap extends Visualization {
     // The tooltip is conditional based on whether we're displaying
     // All data or a single denomination.
     this.tooltipRender = (e, d) => {
-      if (this.denomination === 'All') {
+      if (this.denomination === 'All' && this.family === 'All') {
         // We use JS native .toLocalString() to display thousands separator based on user's locale
         const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
         + `Number of denominations: ${d.denominations.toLocaleString()}<br/>`
@@ -178,7 +178,8 @@ export default class DenominationsMap extends Visualization {
       }
 
       const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
-        + `Denomination: ${d.denomination}<br/>`
+      // if d.denomination===undefined, then d.denomination is showing All denominations.
+        + `Denomination: ${d.denomination || 'All'}<br/>`
         + `Number of churches: ${d.churches.toLocaleString()}<br/>`
         + `Total church membership: ${d.members_total.toLocaleString()}`;
       this.tooltip.html(text);
