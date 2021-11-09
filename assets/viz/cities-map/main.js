@@ -34,11 +34,12 @@ Promise.all(promises)
     d3.selectAll('.filterSelection').on('change', async () => {
       let year = d3.select('#year-dropdown option:checked').text();
       const denomination = d3.select('#denomination-dropdown option:checked').text();
+      const denominationFamilySelection = d3.select('#denomination-family-dropdown option:checked').text();
 
       // Convert year from string to number
       year = parseInt(year, 10);
 
-      citiesMap.update(year, denomination);
+      citiesMap.update(year, denomination, denominationFamilySelection);
     });
   })
   .catch((e) => {

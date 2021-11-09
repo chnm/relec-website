@@ -26,25 +26,15 @@ export default class DenominationsMap extends Visualization {
     const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
     const denomFamilies = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
 
-    console.log(denominationType);
-
     // We use the spread operator to create an array that includes an
     // "All" option and appends the data from the API.
     const denominationSelection = ['All', ...denominationType];
     const denominationFamilySelection = ['All', ...denomFamilies];
 
-    // We build the denomination-dropdown to dynamically update when the user 
-    // selects from denomFamilies and filters the list of denominations based on the
-    // selected denomination family.
-    d3.select('#denomination-dropdown')
-      .append('label').text('Select a denomination')
-      .append('select');
-
     // Build each of the dropdown elements.
     d3.select('#year-dropdown')
       .append('label').text('Select a year')
-      .append('select')
-      .attr('id', 'year_selection')
+      .append('select').attr('id', 'year_selection')
       .selectAll('option')
       .data(yearSelect)
       .enter()
@@ -56,40 +46,59 @@ export default class DenominationsMap extends Visualization {
 
     d3.select('#denomination-family-dropdown')
       .append('label').text('Select a denomination family')
-      .append('select')
+      .append('select').attr('name', 'denomination-family-selection')
       .selectAll('option')
       .data(denominationFamilySelection)
       .enter()
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 'Episcopalian') // default denomination family
-      .on('change', () => {
-        const selectedFamily = d3.select('#denomination-family-dropdown option:checked').property('value');
-        console.log(selectedFamily);
-        const denomFamFiltered = denominationType.filter((d) => d.name === selectedFamily);
-        const denomFiltered = d3.groupSort(denomFamFiltered, (d) => d.name, (d) => d.name);
-        const denomSelection = ['All', ...denomFiltered];
-        d3.select('#denomination-dropdown').selectAll('option').remove();
-        d3.select('#denomination-dropdown')
+      .property('selected', (d) => d === 'Episcopalian'); // default denomination family
+
+    d3.select('#denomination-dropdown')
+      .append('label').text('Select a denomination')
+      .append('select').attr('name', 'denomination-selection')
+      .selectAll('option')
+      .data(denominationSelection)
+      .enter()
+      .append('option')
+      .attr('value', (d) => d)
+      .text((d) => d)
+      .property('selected', (d) => d === 'Protestant Episcopal Church') // default denomination
+      .on('change', this.zoom);
+
+    const selectionDenoms = document.querySelector('[name=denomination-selection]');
+    document.querySelector('[name=denomination-family-selection]').addEventListener('change', (e) => {
+      const denomFamiliesSelectionValue = e.target.value;
+
+      // Find where the value of denomFamiliesSelectionValue is equal to name values in this.data.denominations
+      // and use these values to re-populate the denominations dropdown.
+      const denoms = this.data.denominations.filter((d) => d.family_relec === denomFamiliesSelectionValue);
+      const denomsNames = d3.groupSort(denoms, (d) => d.name, (d) => d.name);
+      const denomSelection = ['All', ...denomsNames];
+
+      // If denomination family is "All", then display all the denomination options.
+      if (denomFamiliesSelectionValue === 'All') {
+        selectionDenoms.innerHTML = '';
+        d3.select('[name=denomination-selection]')
           .selectAll('option')
-          .data(denomSelection).enter()
+          .data(denominationType)
+          .enter()
           .append('option')
           .attr('value', (d) => d)
           .text((d) => d);
-      });
-
-    // d3.select('#denomination-dropdown')
-    //   .append('label').text('Select a denomination')
-    //   .append('select')
-    //   .selectAll('option')
-    //   .data(denominationSelection)
-    //   .enter()
-    //   .append('option')
-    //   .attr('value', (d) => d)
-    //   .text((d) => d)
-    //   .property('selected', (d) => d === 'Protestant Episcopal Church') // default denomination
-    //   .on('change', this.zoom);
+      } else {
+        // Otherwise, only display the denominations that belong to the selected denomination family.
+        selectionDenoms.innerHTML = '';
+        d3.select('[name=denomination-selection]')
+          .selectAll('option')
+          .data(denomSelection)
+          .enter()
+          .append('option')
+          .attr('value', (d) => d)
+          .text((d) => d);
+      }
+    });
 
     // The following handles year data, map projections, and zoom behavior.
     this.projection = d3.geoAlbers()
