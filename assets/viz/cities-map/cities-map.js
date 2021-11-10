@@ -167,7 +167,7 @@ export default class DenominationsMap extends Visualization {
     // The tooltip is conditional based on whether we're displaying
     // All data or a single denomination.
     this.tooltipRender = (e, d) => {
-      if (this.denomination === 'All' && this.family === 'All') {
+      if (this.denomination === 'All' || this.family === 'All') {
         // We use JS native .toLocalString() to display thousands separator based on user's locale
         const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
         + `Number of denominations: ${d.denominations.toLocaleString()}<br/>`
@@ -252,6 +252,7 @@ export default class DenominationsMap extends Visualization {
     this.year = year;
     this.denomination = denomination;
     this.family = family;
+    console.log('update() family', family);
 
     // On update, remove existing points and redraw with new data.
     this.viz.selectAll('circle:not(.legend)').remove();
@@ -304,9 +305,12 @@ export default class DenominationsMap extends Visualization {
   updateFilterSelections(year, denomination, family) {
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
-    if (this.denomination === 'All') {
+    if (this.denomination === 'All' && this.family === 'All') {
       return this.data.cityMembership.filter((d) => d.year === this.year);
     }
+
+    console.log('family', family);
+    console.log('denom', denomination);
 
     // Set the default values for the year and denomination to 1926 and Protestant Episcopal Church
     // and Episcopalian if they are not provided.
@@ -318,6 +322,34 @@ export default class DenominationsMap extends Visualization {
     }
     if (family === undefined) {
       family = 'Episcopalian';
+    }
+
+    // If this.family is set to 'All', then we nest the data by denomination
+    // and sum the data on members_total and churches for the selected
+    // denomination.
+    if (denomination === 'All') {
+      this.data.denominationFilter
+        .filter((d) => d.year === year)
+        .filter((d) => d.denomination === denomination)
+        .map((d) => ({
+          year: d.year,
+          denomination: d.denomination,
+          members_total: d.members_total,
+          churches: d.churches,
+        }))
+        .reduce((acc, cur) => {
+          const denomination = cur.denomination;
+          const members_total = acc[denomination] ? acc[denomination].members_total + cur.members_total : cur.members_total;
+          const churches = acc[denomination] ? acc[denomination].churches + cur.churches : cur.churches;
+          acc[denomination] = {
+            year,
+            denomination,
+            members_total,
+            churches,
+          };
+          console.log(acc);
+          return acc;
+        }, {});
     }
 
     const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
