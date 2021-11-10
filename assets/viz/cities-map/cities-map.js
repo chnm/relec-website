@@ -309,9 +309,6 @@ export default class DenominationsMap extends Visualization {
       return this.data.cityMembership.filter((d) => d.year === this.year);
     }
 
-    console.log('family', family);
-    console.log('denom', denomination);
-
     // Set the default values for the year and denomination to 1926 and Protestant Episcopal Church
     // and Episcopalian if they are not provided.
     if (year === undefined) {
@@ -324,41 +321,32 @@ export default class DenominationsMap extends Visualization {
       family = 'Episcopalian';
     }
 
-    // If this.family is set to 'All', then we nest the data by denomination
-    // and sum the data on members_total and churches for the selected
-    // denomination.
-    if (denomination === 'All') {
-      this.data.denominationFilter
-        .filter((d) => d.year === year)
-        .filter((d) => d.denomination === denomination)
-        .map((d) => ({
-          year: d.year,
-          denomination: d.denomination,
-          members_total: d.members_total,
-          churches: d.churches,
-        }))
-        .reduce((acc, cur) => {
-          const denomination = cur.denomination;
-          const members_total = acc[denomination] ? acc[denomination].members_total + cur.members_total : cur.members_total;
-          const churches = acc[denomination] ? acc[denomination].churches + cur.churches : cur.churches;
-          acc[denomination] = {
-            year,
-            denomination,
-            members_total,
-            churches,
-          };
-          console.log(acc);
-          return acc;
-        }, {});
-    }
-
     const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
-    return fetch(url)
+    const dataResponse = fetch(url)
       .then((response) => response.json())
       .then((data) => data)
       .catch((error) => {
         console.error('There has been a problem with fetching denominations: ', error);
         console.log('Attempted url: ', url);
       });
+
+    // If a user selects a single denomination and family as 'All',
+    // we sum the churches and members_total for each city and nest the data per city.
+    if (this.denomination === 'All' && this.family !== 'All') {
+      console.log('start ==');
+      return dataResponse.then((data) => {
+        const nestedData = d3.nest()
+          .key((d) => d.city)
+          .rollup((v) => ({
+            churches: d3.sum(v, (d) => d.churches),
+            members_total: d3.sum(v, (d) => d.members_total),
+          }))
+          .entries(data);
+        console.log(nestedData);
+        return nestedData;
+      });
+    }
+
+    return dataResponse;
   }
 }
