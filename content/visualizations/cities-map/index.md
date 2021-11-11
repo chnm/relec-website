@@ -21,9 +21,9 @@ The interactive map below shows something awesome...
         <div class="columns small-12 medium-6">
             <div id="denomination-family-dropdown" class="filterSelection"></div>
         </div>
-        <div class="columns small-12 medium-6">
-            <div id="denomination-dropdown" class="filterSelection"></div>
-        </div>
+      </div>
+    <div class="row menu">
+      <div id="denomination-dropdown" class="filterSelection"></div>
     </div>
   </div>
   <div class="cell medium-12 xlarge-10 large-offset-1">
