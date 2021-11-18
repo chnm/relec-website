@@ -20,6 +20,7 @@ export default class DenominationsMap extends Visualization {
 
     // Our year options that are available.
     const yearSelect = [1906, 1916, 1926, 1936];
+    const countSelect = ['Churches', 'Total members'];
 
     // Fetch the list of denominations and denomination families from the API,
     // and use d3.groupSort to organize them.
@@ -37,6 +38,18 @@ export default class DenominationsMap extends Visualization {
       .append('select').attr('id', 'year_selection')
       .selectAll('option')
       .data(yearSelect)
+      .enter()
+      .append('option')
+      .attr('value', (d) => d)
+      .text((d) => d)
+      .property('selected', (d) => d === 1926) // default year -- TODO: should this be an index instead?
+      .on('change', this.zoom);
+
+    d3.select('#counts-dropdown')
+      .append('label').text('Select a count type')
+      .append('select').attr('id', 'count__selection')
+      .selectAll('option')
+      .data(countSelect)
       .enter()
       .append('option')
       .attr('value', (d) => d)
@@ -177,10 +190,9 @@ export default class DenominationsMap extends Visualization {
         this.tooltip.style('visibility', 'visible');
       } else {
         const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
-        // if d.denomination===undefined, then d.denomination is showing All denominations.
-          + `Denomination: ${d.denomination || 'All'}<br/>`
+          + `Denomination: ${d.denomination}<br/>`
           + `Number of churches: ${d.churches.toLocaleString()}<br/>`
-          + `Total church membership: ${d.members_total.toLocaleString()}`;
+          + `Total church membership: ${d.members.toLocaleString()}`;
         this.tooltip.html(text);
         this.tooltip.style('visibility', 'visible');
       }
@@ -212,6 +224,7 @@ export default class DenominationsMap extends Visualization {
       .attr('y', (d) => -2.1 * this.radius(d))
       .attr('dy', '1.3em')
       .text(this.radius.tickFormat(4, 's'));
+    // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
 
     // Draw the map features
     this.viz
@@ -252,7 +265,6 @@ export default class DenominationsMap extends Visualization {
     this.year = year;
     this.denomination = denomination;
     this.family = family;
-    console.log('update() family', family);
 
     // On update, remove existing points and redraw with new data.
     this.viz.selectAll('circle:not(.legend)').remove();
@@ -274,8 +286,6 @@ export default class DenominationsMap extends Visualization {
               .attr('class', 'point'),
             (update) => update
               .attr('class', 'point'),
-            // (exit) => exit
-            //   .remove(),
           );
 
         this.viz
@@ -320,8 +330,26 @@ export default class DenominationsMap extends Visualization {
     if (family === undefined) {
       family = 'Episcopalian';
     }
+    // If a user selects a single denomination and family as 'All',
+    // we return the summed data for the selected year and denomination family.
+    if (this.denomination === 'All' && this.family !== 'All') {
+      console.log('family', family);
+      console.log('denomination', denomination);
+      const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
+      console.log(url);
+      const denomfamily = fetch(url)
+        .then((response) => response.json())
+        .then((data) => data)
+        .catch((error) => {
+          console.error('There has been a problem with fetching denominations: ', error);
+          console.log('Attempted url: ', url);
+        });
 
-    const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+      return denomfamily;
+    }
+
+    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    // console.log(url);
     const dataResponse = fetch(url)
       .then((response) => response.json())
       .then((data) => data)
@@ -329,23 +357,6 @@ export default class DenominationsMap extends Visualization {
         console.error('There has been a problem with fetching denominations: ', error);
         console.log('Attempted url: ', url);
       });
-
-    // If a user selects a single denomination and family as 'All',
-    // we sum the churches and members_total for each city and nest the data per city.
-    if (this.denomination === 'All' && this.family !== 'All') {
-      console.log('start ==');
-      return dataResponse.then((data) => {
-        const nestedData = d3.nest()
-          .key((d) => d.city)
-          .rollup((v) => ({
-            churches: d3.sum(v, (d) => d.churches),
-            members_total: d3.sum(v, (d) => d.members_total),
-          }))
-          .entries(data);
-        console.log(nestedData);
-        return nestedData;
-      });
-    }
 
     return dataResponse;
   }
