@@ -316,7 +316,7 @@ export default class DenominationsMap extends Visualization {
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
     if (this.denomination === 'All' && this.family === 'All') {
-      return this.data.cityMembership.filter((d) => d.year === this.year);
+      return this.data.denominationAggregate.filter((d) => d.year === this.year);
     }
 
     // Set the default values for the year and denomination to 1926 and Protestant Episcopal Church

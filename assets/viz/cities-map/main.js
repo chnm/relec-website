@@ -4,8 +4,8 @@ import DenominationsMap from './cities-map';
 // Load the data
 const urls = [
   'http://localhost:8090/relcensus/denominations',
-  'http://localhost:8090/relcensus/city-membership?year=1926',
   'http://localhost:8090/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church',
+  'http://localhost:8090/relcensus/city-membership?year=1926',
   'http://localhost:8090/relcensus/denomination-families',
   'http://localhost:8090/ne/northamerica/',
   'http://localhost:8090/ahcb/states/1926-07-04/',
@@ -21,7 +21,7 @@ Promise.all(promises)
       {
         denominations: data[0],
         cityMembership: data[1],
-        denominationFilter: data[2],
+        denominationAggregate: data[2],
         denominationFamilies: data[3],
         northamerica: data[4],
         states: data[5],
