@@ -333,10 +333,7 @@ export default class DenominationsMap extends Visualization {
     // If a user selects a single denomination and family as 'All',
     // we return the summed data for the selected year and denomination family.
     if (this.denomination === 'All' && this.family !== 'All') {
-      console.log('family', family);
-      console.log('denomination', denomination);
-      const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
-      console.log(url);
+      const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
       const denomfamily = fetch(url)
         .then((response) => response.json())
         .then((data) => data)
@@ -348,7 +345,7 @@ export default class DenominationsMap extends Visualization {
       return denomfamily;
     }
 
-    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     // console.log(url);
     const dataResponse = fetch(url)
       .then((response) => response.json())

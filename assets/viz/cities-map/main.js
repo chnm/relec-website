@@ -3,12 +3,12 @@ import DenominationsMap from './cities-map';
 
 // Load the data
 const urls = [
-  'http://localhost:8090/relcensus/denominations',
-  'http://localhost:8090/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church',
-  'http://localhost:8090/relcensus/city-membership?year=1926',
-  'http://localhost:8090/relcensus/denomination-families',
-  'http://localhost:8090/ne/northamerica/',
-  'http://localhost:8090/ahcb/states/1926-07-04/',
+  'https://data.chnm.org/relcensus/denominations',
+  'https://data.chnm.org/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church',
+  'https://data.chnm.org/relcensus/city-membership?year=1926',
+  'https://data.chnm.org/relcensus/denomination-families',
+  'https://data.chnm.org/ne/northamerica/',
+  'https://data.chnm.org/ahcb/states/1926-07-04/',
 ];
 const promises = [];
 urls.forEach((url) => promises.push(d3.json(url)));
