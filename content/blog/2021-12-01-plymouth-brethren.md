@@ -1,15 +1,15 @@
 ---
 title: "Schedule Spotlight: Plymouth Brethren"
 author: Caroline Greer
-date: 2021-10-04
-draft: true
+date: 2021-12-01
+draft: false
 abstract: "This Plymouth Brethen schedule included a handwritten note located on the back of the document. This note included the name of a woman who owned the house where the congregation met. With some online digging, we learn more about this woman here. 
 image: "/blog-img/bowershall2.jpeg" 
-imagealt: The handwritten note located on the back of the schedule. The note reads "Hall owned individually by a sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly, for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a stronghold for Universalists and the Holiness workers."
+imagealt: "The handwritten note located on the back of the schedule. The note reads in part 'Hall owned individually by a sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly, for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a stronghold for Universalists and the Holiness workers.'"
 ---
 
 
-As we've written about before in other blog posts at Religious Ecologies, seeing women’s names documented in Census schedules is rare - and therefore, worth noting. Though many denominations documented more female members than male, the pastor names are often men’s names, and few other names appear on the schedule. However, in this specific schedule, the person who filled out the information added a note on the back of the piece of paper. With this note, we get the name of an important woman in a Plymouth Brethren congregation in a small town in Georgia, and can learn more about her. 
+As we've written about before in other blog posts at *Religious Ecologies*, seeing women’s names documented in Census schedules is rare - and therefore, worth noting. Though many denominations documented more female members than male, the pastor names are often men’s names, and few other names appear on the schedule. However, in this specific schedule, the person who filled out the information added a note on the back of the piece of paper. With this note, we get the name of an important woman in a Plymouth Brethren congregation in a small town in Georgia, and can learn more about her. 
 
 In the early nineteenth century, John Nelson Darby, a strict Calvinist and premillennialist, helped found the Plymouth Brethren denomination. Darby, an Anglo-Irish clergyman, broke from the Church of Ireland after serving as a country curate, and his Plymouth Brethren grew as a separatist movement in Ireland and Britain, and later in continental Europe. A further split in 1848 formed the Open and Exclusive Brethren, and the Plymouth Brethren are part of the Open Brethren tradition. The name Plymouth Brethren came from a meeting formed in Plymouth, England in 1831, which Darby attended. Darby emphasized a separation of Brethren from society and worldly activities. Darby traveled to North America in the 1860s and 1870s, bringing along his dispensational premillennialism beliefs and emphasis on prophecy and focus on scripture. Other emigrant Plymouth Brethren further established the movement in the United States in following decades. 
 
@@ -20,7 +20,7 @@ The Census Bureau listed six different bodies of the Plymouth Brethren movement 
 
 Bower’s Hall was a Plymouth Brethren I congregation located at 2 Main Street in Franklin, Georgia as of June 3, 1927. The schedule shows that the congregation had five members, two women and three men, and no expenses or debt, and no Sunday School. But the interesting part of the schedule is on the pack of the form. A handwritten note reads “Hall is owned individually by a Sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a strong hold for Universalists and the Holiness Workers. E.B.” It is also interesting to note that the schedules used for the Plymouth Brethren differed from those used throughout the 1926 Religious Census, and was noticeably shorter. 
 
-{{< figure src="/blog-img/bowershall2.jpeg" caption="Figure 1. Back of schedule for Bowers Hall in Canon, Georgia. Handwritten note signed by E. B(owers). The note includes information about Sister Lois Bowers, the dwelling used by the congregation, and a desire for an evangelist to come to Canon." >}}
+{{< figure src="/blog-img/bowershall2.jpeg" caption="Figure 2. Back of schedule for Bowers Hall in Canon, Georgia. Handwritten note signed by E. B(owers). The note includes information about Sister Lois Bowers, the dwelling used by the congregation, and a desire for an evangelist to come to Canon." >}}
 
 Sister Lois Bowers owned the meeting place and gave her name to the congregation. The ownership of the place is surprising because of the gendered aspects of property rights, but also because “(w)omen take no part in public ministry,” though there are no clergy and anyone can preside over meetings.[^2] Lois Bowers was listed in the 1930 US Census as a single, white woman born in Georgia in 1869. Therefore, in 1927 she would have been around 58 years old. Though the census lists her household as having included her brother, Ezrie or Ezra Bowers, she was documented as the head of the household, though her brother’s age was 66 to her 61.[^3] Since Ezrie lived with Lois, there’s a chance he was also a member of the Plymouth Brethren of Bowers Hall (especially since the schedule was filled out by E. Bowers and the additional note on the back of the form was also signed by E.B.).
 
