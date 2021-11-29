@@ -1,5 +1,5 @@
 ---
-title: "Schedule Spotlight: Plymouth Brethren"
+title: "Schedule Spotlight: Plymouth Brethren 1: 122"
 author: Caroline Greer
 date: 2021-12-01
 draft: true
@@ -13,7 +13,7 @@ As we've written about before in other blog posts at *Religious Ecologies*, seei
 
 In the early nineteenth century, John Nelson Darby, a strict Calvinist and premillennialist, helped found the Plymouth Brethren denomination. Darby, an Anglo-Irish clergyman, broke from the Church of Ireland after serving as a country curate, and his Plymouth Brethren grew as a separatist movement in Ireland and Britain, and later in continental Europe. A further split in 1848 formed the Open and Exclusive Brethren, and the Plymouth Brethren are part of the Open Brethren tradition. The name Plymouth Brethren came from a meeting formed in Plymouth, England in 1831, which Darby attended. Darby emphasized a separation of the Brethren from society and worldly activities. Darby traveled to North America in the 1860s and 1870s, bringing along his dispensational premillennialism beliefs. Other emigrant Plymouth Brethren further established the movement in the United States in following decades. 
 
-Though they have no official ecclesiastical organization, clergy, or doctrinal creed, all Plymouth Brethren place emphasis on Scripture, the salvation of all believers, and prophecies. Evangelization and missionary work is important to the Plymouth Brethren, as shown by their international presence today, with over 50,000 members across the United Kingdom, Europe, the Americas, Australia, and New Zealand today. 
+Though they have no official ecclesiastical organization, clergy, or doctrinal creed, all Plymouth Brethren place emphasis on Scripture, the salvation of all believers, and prophecies. Evangelization and missionary work is important to the Plymouth Brethren, as shown by their international presence, with over 50,000 members across the United Kingdom, Europe, the Americas, Australia, and New Zealand today. 
 
 The Census Bureau listed six different bodies of the Plymouth Brethren movement in the 1926 Census, and the schedule we are focusing on include a congregation listed as part of the Plymouth Brethren I. According to the Census Bureau’s categorization, Plymouth Brethren I is the more conservative sect of the Plymouth Brethren, but this categorization is the Census Bureau’s own. In fact, the Census Bureau wrote in published records that the “Roman numerals are used for the sake of distinction, but they do not imply any precedence in chronological order or strength of membership; they simply indicate the order in which the different bodies came to the knowledge of the Bureau of the Census.”[^1] The Plymouth Brethren do not use this categorization themselves, but we will use it since we are working with Census data from schedules.
 
