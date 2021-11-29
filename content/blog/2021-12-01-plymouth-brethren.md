@@ -1,5 +1,5 @@
 ---
-title: "Schedule Spotlight: Plymouth Brethren 1: 122"
+title: "Schedule Spotlight: Plymouth Brethren I: 122"
 author: Caroline Greer
 date: 2021-12-01
 draft: true
