@@ -27,7 +27,7 @@ Sister Lois Bowers owned the meeting place and gave her name to the congregation
 
  Sister Bowers’ ownership of her own house and her designation as head of household - despite an older brother at home - bucks expected gender norms of the early 20th century. The use of her name for the Hall further suggests that women could have an important role in Plymouth Brethren congregations, at least if they could provide financial support. This additional note and the inclusion of a woman’s name provide a unique window into a congregation of a small Christian movement. 
 
-[^1]:  *Religious Bodies: 1926*, (Washington, D.C.: Government Printing Office, 1930), 1: 257. 
+[^1]:  *Religious Bodies: 1926*, Department of Commerce, Bureau of the Census (Government Printing Office, 1930), 1: 257. 
 
 [^2]: *Religious Bodies: 1926*, Department of Commerce, Bureau of the Census (Government Printing Office, 1930), 2: 257. 
 
