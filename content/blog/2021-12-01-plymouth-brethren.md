@@ -5,7 +5,7 @@ date: 2021-12-01
 draft: 
 abstract: "This Plymouth Brethen schedule included a handwritten note located on the back of the document. This note included the name of a woman who owned the house where the congregation met. With some online digging, we learn more about this woman here. 
 image: "/blog-img/bowershall2.jpeg" 
-imagealt: "The handwritten note located on the back of the schedule. The note reads in part 'Hall owned individually by a sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly, for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a stronghold for Universalists and the Holiness workers.'"
+imagealt: "The handwritten note located on the back of the schedule. The note reads in part *Hall owned individually by a sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly, for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a stronghold for Universalists and the Holiness workers.*"
 ---
 
 
