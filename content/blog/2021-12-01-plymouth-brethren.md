@@ -2,12 +2,11 @@
 title: "Schedule Spotlight: Plymouth Brethren I: 122"
 author: Caroline Greer
 date: 2021-12-01
-draft: true
+draft: false
 abstract: "This Plymouth Brethen schedule included a handwritten note located on the back of the document. This note included the name of a woman who owned the house where the congregation met. With some online digging, we learn more about this woman here." 
 image: "/blog-img/bowershall2.jpeg" 
-imagealt: "The handwritten note located on the back of the schedule. The note reads in part *Hall owned individually by a sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly, for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a stronghold for Universalists and the Holiness workers.'"
+imagealt: "The handwritten note located on the back of the schedule. The note reads in part Hall owned individually by a sister, Lois Bowers, 2nd story above store and dwelling. Opening, gladly, for someone with truth to come and feed the little flock here; also for a work of evangelist, this being a stronghold for Universalists and the Holiness workers.'"
 ---
-
 
 As we've written about before in other blog posts at *Religious Ecologies*, seeing women’s names documented in Census schedules is rare - and therefore, worth noting. Though many denominations documented more female members than male, the pastor names are often men’s names, and few other names appear on the schedule. However, in this specific schedule, the person who filled out the information added a note on the back of the piece of paper. With this note, we get the name of an important woman in a Plymouth Brethren congregation in a small town in Georgia, Lois Bowers. With her name, we can learn more about her, as well as the Plymouth Brethren.
 
