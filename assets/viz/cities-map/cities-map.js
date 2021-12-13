@@ -35,7 +35,8 @@ export default class DenominationsMap extends Visualization {
     // Build each of the dropdown elements.
     d3.select('#year-dropdown')
       .append('label').text('Select a year')
-      .append('select').attr('id', 'year_selection')
+      .append('select')
+      .attr('id', 'year_selection')
       .selectAll('option')
       .data(yearSelect)
       .enter()
@@ -47,7 +48,8 @@ export default class DenominationsMap extends Visualization {
 
     d3.select('#counts-dropdown')
       .append('label').text('Select a count type')
-      .append('select').attr('id', 'count__selection')
+      .append('select')
+      .attr('id', 'count__selection')
       .selectAll('option')
       .data(countSelect)
       .enter()
@@ -59,7 +61,8 @@ export default class DenominationsMap extends Visualization {
 
     d3.select('#denomination-family-dropdown')
       .append('label').text('Select a denomination family')
-      .append('select').attr('name', 'denomination-family-selection')
+      .append('select')
+      .attr('name', 'denomination-family-selection')
       .selectAll('option')
       .data(denominationFamilySelection)
       .enter()
@@ -70,7 +73,8 @@ export default class DenominationsMap extends Visualization {
 
     d3.select('#denomination-dropdown')
       .append('label').text('Select a denomination')
-      .append('select').attr('name', 'denomination-selection')
+      .append('select')
+      .attr('name', 'denomination-selection')
       .selectAll('option')
       .data(denominationSelection)
       .enter()
@@ -201,31 +205,6 @@ export default class DenominationsMap extends Visualization {
 
   // Draw the unchanging parts of the visualization
   render() {
-    // Draw the legend
-    const legend = this.viz
-      .append('g')
-      .attr('fill', '#777')
-      .attr('transform', 'translate(120,470)')
-      .attr('text-anchor', 'middle')
-      .style('font', '10px sans-serif')
-      .selectAll('g')
-      .join('g')
-      .data(this.radius.ticks(4).slice(1))
-      .classed('legend', true);
-
-    legend.append('circle')
-      .attr('fill', 'none')
-      .attr('stroke', '#ccc')
-      .attr('cy', (d) => -this.radius(d))
-      .attr('r', this.radius)
-      .classed('legend', true);
-
-    legend.append('text')
-      .attr('y', (d) => -2.1 * this.radius(d))
-      .attr('dy', '1.3em')
-      .text(this.radius.tickFormat(4, 's'));
-    // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
-
     // Draw the map features
     this.viz
       .selectAll('path')
@@ -255,6 +234,30 @@ export default class DenominationsMap extends Visualization {
       .attr('width', this.width)
       .attr('height', this.height)
       .on('click', this.zoom);
+
+    // Draw the legend
+    const legend = this.viz
+      .append('g')
+      .attr('fill', '#777')
+      .attr('transform', 'translate(120,470)')
+      .attr('text-anchor', 'middle')
+      .style('font', '10px sans-serif')
+      .selectAll('g')
+      .data(this.radius.ticks(4).slice(1))
+      .join('g');
+
+    legend.append('circle')
+      .attr('fill', 'none')
+      .attr('stroke', '#ccc')
+      .attr('cy', (d) => -this.radius(d))
+      .attr('r', this.radius)
+      .classed('legend', true);
+
+    legend.append('text')
+      .attr('y', (d) => -2.1 * this.radius(d))
+      .attr('dy', '1.3em')
+      .text(this.radius.tickFormat(4, 's'));
+    // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
 
     // On first render, draw the default filter selections
     this.update(this.year, this.denominations);
