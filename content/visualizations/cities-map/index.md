@@ -1,13 +1,14 @@
 ---
 title: "City Denominations Map"
 date: 2021-07-19
-updated: 2021-08-09
+updated: 2021-11-15
 abstract: "Here is our abstract..."
 script: viz/cities-map/main.js
 styles: viz/cities-map/style.css
 layout: visualization
 thumbnail: citiesmap.png
 thumbdesc: "A screenshot cities map..."
+doi: "https://doi.org/1234/1234"
 ---
 
 The interactive map below shows something awesome...
@@ -20,6 +21,9 @@ The interactive map below shows something awesome...
         </div>
         <div class="columns small-12 medium-6">
             <div id="denomination-family-dropdown" class="filterSelection"></div>
+        </div>
+        <div class="columns small-12 medium-6">
+            <div id="counts-dropdown" class="filterSelection"></div>
         </div>
       </div>
     <div class="row menu">
@@ -47,7 +51,7 @@ Here's some more historical context and conclusions we've drawn from the map...
 
 Please use the following as a suggested citation:
 
-> "American City Denominations," *American Religious Ecologies*, Roy Rosenzweig Center for History and New Media, George Mason University (2020): <https://religiousecologies.org/visualizations/catholic-dioceses/>, <https://doi.org/10.31835/relec.dioceses>.
+{{< citation >}}
 
 ### Sources
 
