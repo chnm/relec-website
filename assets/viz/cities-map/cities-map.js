@@ -24,7 +24,7 @@ export default class DenominationsMap extends Visualization {
 
     // Fetch the list of denominations and denomination families from the API,
     // and use d3.groupSort to organize them.
-    const denominationType = d3.groupSort(this.data.denominations, (d) => d.name, (d) => d.name);
+    const denominationType = d3.groupSort(this.data.denominations, (d) => d.short_name, (d) => d.short_name);
     const denomFamilies = d3.groupSort(this.data.denominationFamilies.family_relec, (d) => d.name, (d) => d.name);
 
     // We use the spread operator to create an array that includes an
@@ -87,7 +87,7 @@ export default class DenominationsMap extends Visualization {
       // Find where the value of denomFamiliesSelectionValue is equal to name values in this.data.denominations
       // and use these values to re-populate the denominations dropdown.
       const denoms = this.data.denominations.filter((d) => d.family_relec === denomFamiliesSelectionValue);
-      const denomsNames = d3.groupSort(denoms, (d) => d.name, (d) => d.name);
+      const denomsNames = d3.groupSort(denoms, (d) => d.short_name, (d) => d.short_name);
       const denomSelection = ['All', ...denomsNames];
 
       // If denomination family is "All", then display all the denomination options.
@@ -333,7 +333,7 @@ export default class DenominationsMap extends Visualization {
     // If a user selects a single denomination and family as 'All',
     // we return the summed data for the selected year and denomination family.
     if (this.denomination === 'All' && this.family !== 'All') {
-      const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
+      const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
       const denomfamily = fetch(url)
         .then((response) => response.json())
         .then((data) => data)
@@ -345,7 +345,7 @@ export default class DenominationsMap extends Visualization {
       return denomfamily;
     }
 
-    const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     // console.log(url);
     const dataResponse = fetch(url)
       .then((response) => response.json())
