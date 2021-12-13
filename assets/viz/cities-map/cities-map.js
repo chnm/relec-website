@@ -192,7 +192,7 @@ export default class DenominationsMap extends Visualization {
         const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
           + `Denomination: ${d.denomination}<br/>`
           + `Number of churches: ${d.churches.toLocaleString()}<br/>`
-          + `Total church membership: ${d.members.toLocaleString()}`;
+          + `Total church membership: ${d.members_total.toLocaleString()}`;
         this.tooltip.html(text);
         this.tooltip.style('visibility', 'visible');
       }
@@ -316,6 +316,7 @@ export default class DenominationsMap extends Visualization {
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
     if (this.denomination === 'All' && this.family === 'All') {
+      console.log(this.denominationAggregate);
       return this.data.denominationAggregate.filter((d) => d.year === this.year);
     }
 
