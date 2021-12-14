@@ -5,7 +5,7 @@ import DenominationsMap from './cities-map';
 const urls = [
   'http://localhost:8090/relcensus/denominations',
   'http://localhost:8090/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church',
-  'http://localhost:8090/relcensus/city-total-membership?year=1926',
+  'http://localhost:8090/relcensus/city-membership?year=1926',
   'http://localhost:8090/relcensus/denomination-families',
   'http://localhost:8090/ne/northamerica/',
   'http://localhost:8090/ahcb/states/1926-07-04/',
