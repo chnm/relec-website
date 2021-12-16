@@ -135,17 +135,46 @@ export default class DenominationsMap extends Visualization {
     // Keep track of how much to scale things based on zoom
     this.kScale = 0.5;
 
-    // Handle point radius scaling
-    this.populationRadiusScale = d3.scaleSqrt()
-      .domain([3, 200])
-      .range([5, 50]);
-    // TODO: This will be updated to something more like this, but generalized:
-    // this.populationRadiusScale = d3.scaleSqrt()
-    // .domain([d3.min(this.data.cityMembership, (d) => d.churches),
-    //   d3.max(this.data.cityMembership, (d) => d.churches)])
-    // .range([0, 100]);
+    // The radius handles three possible options for setting the radius on points using d3.sqrt.
+    // The options are:
+    // 1. A scale to handle the selection of All families and All denominations
+    // 2. A scale to handle the selection of a single family and All denominations
+    // 3. A scale to handle the selection of a single family and a single denomination
+    if (this.family === 'All' && this.denomination !== 'All') {
+      // If the user selects All families and a single denomination, then the radius is set to a scale
+      // that is based on the number of churches in the state.
 
-    this.radius = d3.scaleSqrt([0, 200], [5, 60]);
+      // Get the number of churches in the state that match the selected denomination.
+      // const numChurchesDenom = this.data.denominations.filter((d) => d.denom_relec === document.querySelector('[name=denomination-selection]').value).length;
+
+      // Set the radius scale to a scale that is based on the number of churches in the state or the 
+      // total number of members in the state, depending on what the user has selected.
+      this.radius = d3.scaleSqrt()
+        .domain([0, 300])
+        .range([2, 90]);
+    } else if (this.family !== 'All' && this.denomination === 'All') {
+      // If the user selects a single family and All denominations, then the radius is set to a scale
+      // that is based on the number of churches in the state.
+
+      // Get the number of churches in the state that match the selected denomination family.
+      // const numChurchesDenomFam = this.data.denominations.filter((d) => d.denom_family_relec === document.querySelector('[name=denomination-family-selection]').value).length;
+
+      // Set the radius scale to a scale that is based on the number of churches in the state.
+      this.radius = d3.scaleSqrt()
+        .domain([0, 400])
+        .range([2, 60]);
+    } else {
+      // If the user selects a single family and a single denomination, then the radius is set to a scale
+      // that is based on the number of churches in the state.
+
+      // Get the number of churches in the state that match the selected denomination.
+      // const numChurchesDenom = this.data.denominations.filter((d) => d.denom_relec === document.querySelector('[name=denomination-selection]').value).length;
+
+      // Set the radius scale to a scale that is based on the number of churches in the state.
+      this.radius = d3.scaleSqrt()
+        .domain([0, 700])
+        .range([2, 20]);
+    }
 
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
