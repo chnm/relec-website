@@ -1,17 +1,17 @@
 ---
-title: "City Denominations Map"
+title: "City Denominations"
 date: 2021-07-19
 updated: 2021-11-15
-abstract: "Here is our abstract..."
+abstract: "What we can learn from mapping the U.S. Census of Religious Bodies in the United States."
 script: viz/cities-map/main.js
 styles: viz/cities-map/style.css
 layout: visualization
 thumbnail: citiesmap.png
-thumbdesc: "A screenshot cities map..."
+thumbdesc: "A screenshot of cities with denominations on a map of the United States."
 doi: "https://doi.org/1234/1234"
 ---
 
-The interactive map below shows something awesome...
+This interactive map below shows different denominations’ presence in large cities in the United States in the years 1906, 1916, 1926, and 1936, when the U.S. Census of Religious Bodies conducted censuses of different churches and congregations and published official reports. The Census Bureau categorized denominations by different denomination families, linking together churches that share broader religious overlap. Cities included are those with over 25,000 residents.
 
 <div class="viz-block grid-x grid-padding-x">
   <div class="cell medium-12 xlarge-10 large-offset-1">
@@ -31,7 +31,8 @@ The interactive map below shows something awesome...
     </div>
   </div>
   <div class="cell medium-12 xlarge-10 large-offset-1">
-    <h3>Denominations map</h3>
+    <h3 class="graphic-title">Map of [denom] in US Cities in [year]</h3>
+    <h5 class="graphic-title">Cities included are those with Populations over 25,000</h5>
     <svg id="chrono-map" width="100%"></svg>
   </div>
   <div id="controls" class="cell medium-12 xlarge-10 large-offset-1">
@@ -48,7 +49,15 @@ The interactive map below shows something awesome...
   </div>
 </div>
 
-Here's some more historical context and conclusions we've drawn from the map...
+The U.S. Census of Religious Bodies conducted four censuses categorizing religious congregations across the United States throughout the decades of 1906 to 1936. In doing so, the Census Bureau categorized different churches by both denominations and denominational families. This map displays circles that represent the number of churches of a certain denomination in cities in the different years of the census. This map does not display all the congregations of a denomination across the country, but instead focuses on urban areas.
+
+In 1906, there were only 160 cities that met the Census Bureau's criteria as an "urban" area, with over 25,000 residents. In 1936, there were 378 cities that met the criteria as urban. Because of the growth in the number of larger cities, the higher number of churches represented in the 1936 map also represents the growth of urban areas throughout the decades. 
+
+Some denominations, such as the Protestant Episcopal Church, had a large presence across urban areas in the United States in the different years, with large circles located in cities such as New York City, with 194 churches and 141,205 church members, or across the country in Los Angeles, with 29 churches and 13,894 members, all in 1926. Other denominations had less of a coast-to-coast presence in cities throughout the years, such as the Primitive Baptists. In 1906, the Primitive Baptists denomination 1 church in Seattle, Washington, with 14 members; otherwise the churches were located in the Eastern United States. In later years, there was no western presence of Primitive Baptists in urban areas. 
+
+Nonetheless, this map demonstrates that even denominations often thought of as regionally-specific had concentrations throughout the United States in larger cities. The Church of Jesus Christ of Latter-Day Saints, for example, had the largest congregation of churches in Salt Lake City, Utah, but had at least one church in dozens of other cities throughout the entire United States in 1926 and 1936. 
+
+Using the data from the Census Bureau at the city level instead of at the state or county level, and utilizing schedule data we have digitized, this map provides a more precise look at where certain denominations were prevalent within urban areas. 
 
 ### Suggested citation
 
