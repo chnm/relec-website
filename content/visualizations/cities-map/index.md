@@ -38,7 +38,10 @@ The interactive map below shows something awesome...
     <div class="grid-x grid-padding-x">
       <div class="cell medium-6 xlarge-6">
         <p class="instructions">
-          <small><strong>How to use this visualization:</strong> Adjust the filters to control the data displayed in the map. Hover over points on the map to see details about each location. Click on a point to zoom into that region; click anywhere else to zoom back out.</small>
+         <details>
+          <summary><strong><small>How to use this visualization</small></strong></summary>
+          <p><small>Using data from the published records of the U.S. Census of Religious Bodies, this map shows the number of churches for a specific denomination, represented by a yellow circle, in major cities. The larger the circle, the more churches were located in that area. Users can hover over the circle to see more information, including the number of churches and total church membership. To change the year or denomination featured, users can use the drop down boxes located above the map to change the filters. The “Select a year” box allows users to choose between 1906, 1916, 1926, and 1936. The “Select a denomination family” box allows users to choose a specific denomination family to see what denominations are included, or the user can select “All” to see all the denominations in the map. The “Select a denomination” box allows the user to choose which denomination will be featured in the map. Click on a point to zoom into that region; click anywhere else to zoom back out.</small></p>
+        </details> 
         </p>
       </div>
     </div>
