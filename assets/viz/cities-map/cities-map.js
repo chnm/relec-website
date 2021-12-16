@@ -22,6 +22,12 @@ export default class DenominationsMap extends Visualization {
     const yearSelect = [1906, 1916, 1926, 1936];
     const countSelect = ['Churches', 'Total members'];
 
+    // Keep track of defaults
+    this.countType = 'Churches';
+    this.family = 'Episcopalian';
+    this.denomination = 'Protestant Episcopal Church';
+    this.year = 1926;
+
     // Fetch the list of denominations and denomination families from the API,
     // and use d3.groupSort to organize them.
     const denominationType = d3.groupSort(this.data.denominations, (d) => d.short_name, (d) => d.short_name);
@@ -43,7 +49,7 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 1926) // default year -- TODO: should this be an index instead?
+      .property('selected', (d) => d === this.year) // default year -- TODO: should this be an index instead?
       .on('change', this.zoom);
 
     d3.select('#counts-dropdown')
@@ -56,7 +62,7 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 1926) // default year -- TODO: should this be an index instead?
+      .property('selected', (d) => d === this.countType) // default year -- TODO: should this be an index instead?
       .on('change', this.zoom);
 
     d3.select('#denomination-family-dropdown')
@@ -69,7 +75,7 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 'Episcopalian'); // default denomination family
+      .property('selected', (d) => d === this.family); // default denomination family
 
     d3.select('#denomination-dropdown')
       .append('label').text('Select a denomination')
@@ -81,7 +87,7 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === 'Protestant Episcopal Church') // default denomination
+      .property('selected', (d) => d === this.denomination) // default denomination
       .on('change', this.zoom);
 
     const selectionDenoms = document.querySelector('[name=denomination-selection]');
@@ -141,7 +147,6 @@ export default class DenominationsMap extends Visualization {
 
     this.radius = d3.scaleSqrt([0, 200], [5, 60]);
 
-    // radius = d3.scaleSqrt([0, d3.max(data, d => d.value)], [0, 40])
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
     this.zoom = (e, d) => {
@@ -169,7 +174,7 @@ export default class DenominationsMap extends Visualization {
       this.viz.selectAll('circle:not(.legend)')
         .transition()
         .duration(500)
-        .attr('r', (d) => this.populationRadiusScale(d.churches))
+        .attr('r', (d) => this.radius(d.churches))
         .style('stroke-width', `${0.5 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
@@ -194,9 +199,9 @@ export default class DenominationsMap extends Visualization {
         this.tooltip.style('visibility', 'visible');
       } else {
         const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
-          + `Denomination: ${d.denomination}<br/>`
+          + `Denomination: ${d.group}<br/>`
           + `Number of churches: ${d.churches.toLocaleString()}<br/>`
-          + `Total church membership: ${d.members_total.toLocaleString()}`;
+          + `Total church membership: ${d.members.toLocaleString()}`;
         this.tooltip.html(text);
         this.tooltip.style('visibility', 'visible');
       }
@@ -260,7 +265,7 @@ export default class DenominationsMap extends Visualization {
     // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
 
     // On first render, draw the default filter selections
-    this.update(this.year, this.denominations);
+    this.update(this.year, this.denomination, this.family);
   }
 
   // Draw the stuff that gets updated
@@ -284,7 +289,7 @@ export default class DenominationsMap extends Visualization {
               .append('circle')
               .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
               .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-              .attr('r', (d) => this.populationRadiusScale(d.churches))
+              .attr('r', (d) => this.radius(d.churches))
               .style('stroke-width', '0.5px')
               .attr('class', 'point'),
             (update) => update
@@ -319,25 +324,17 @@ export default class DenominationsMap extends Visualization {
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
     if (this.denomination === 'All' && this.family === 'All') {
-      console.log(this.denominationAggregate);
       return this.data.denominationAggregate.filter((d) => d.year === this.year);
     }
 
-    // Set the default values for the year and denomination to 1926 and Protestant Episcopal Church
-    // and Episcopalian if they are not provided.
-    if (year === undefined) {
-      year = 1926;
-    }
-    if (denomination === undefined) {
-      denomination = 'Protestant Episcopal Church';
-    }
-    if (family === undefined) {
-      family = 'Episcopalian';
-    }
+    this.year = year;
+    this.denomination = denomination;
+    this.family = family;
+
     // If a user selects a single denomination and family as 'All',
     // we return the summed data for the selected year and denomination family.
     if (this.denomination === 'All' && this.family !== 'All') {
-      const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
+      const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
       const denomfamily = fetch(url)
         .then((response) => response.json())
         .then((data) => data)
@@ -349,7 +346,7 @@ export default class DenominationsMap extends Visualization {
       return denomfamily;
     }
 
-    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     // console.log(url);
     const dataResponse = fetch(url)
       .then((response) => response.json())
