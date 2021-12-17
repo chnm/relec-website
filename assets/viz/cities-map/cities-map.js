@@ -184,9 +184,8 @@ export default class DenominationsMap extends Visualization {
         const text = `${`Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
         + `Number of denominations: ${d.denominations.toLocaleString()}<br/>`
         + `Number of churches: ${d.churches.toLocaleString()}<br/>`}${
-        // Check to make sure population is not null
+        // Check to make sure population data is not null
           d.population_1926 === null ? 'City population: Missing' : `City population: ${d.population_1926.toLocaleString()}<br/>`}`;
-        // + `City population: ${d.population_1926.toLocaleString()}`; // TODO: check if d.population_1926 is not null
         this.tooltip.html(text);
         this.tooltip.style('visibility', 'visible');
       } else {
@@ -286,6 +285,7 @@ export default class DenominationsMap extends Visualization {
           }
         }
 
+        // Join new data from the API.
         this.viz
           .selectAll('circle:not(.legend)')
           .data(data
@@ -302,7 +302,7 @@ export default class DenominationsMap extends Visualization {
               .attr('class', 'point'),
           );
 
-        // Draw the legend
+        // Draw the legend, update radius based on extent of data.
         const legend = this.viz
           .append('g')
           .attr('fill', '#777')
@@ -324,8 +324,8 @@ export default class DenominationsMap extends Visualization {
           .attr('y', (d) => -2.1 * this.radius(d))
           .attr('dy', '1.3em')
           .text(this.radius.tickFormat(4, 's'))
-          .classed('legend-text', true);
-        // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
+          .classed('legend-text', true)
+          .text((d, i, e) => (i === e.length - 1 ? `${d} ${this.countSelectChoice.toLowerCase()}` : d));
 
         this.viz
           .selectAll('circle:not(.legend)')
