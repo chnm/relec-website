@@ -35,11 +35,12 @@ Promise.all(promises)
       let year = d3.select('#year-dropdown option:checked').text();
       const denomination = d3.select('#denomination-dropdown option:checked').text();
       const denominationFamilySelection = d3.select('#denomination-family-dropdown option:checked').text();
+      const countSelection = d3.select('#counts-dropdown option:checked').text();
 
       // Convert year from string to number
       year = parseInt(year, 10);
 
-      citiesMap.update(year, denomination, denominationFamilySelection);
+      citiesMap.update(year, denomination, denominationFamilySelection, countSelection);
     });
   })
   .catch((e) => {

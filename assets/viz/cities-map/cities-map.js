@@ -18,12 +18,12 @@ export default class DenominationsMap extends Visualization {
     //
     // Filtering of this data happens below in the update() function.
 
-    // Our year options that are available.
+    // Our selection options that are available.
     const yearSelect = [1906, 1916, 1926, 1936];
-    const countSelect = ['Churches', 'Total members'];
+    const countSelect = ['Churches', 'Members'];
 
-    // Keep track of defaults
-    this.countType = 'Churches';
+    // Keep track of defaults.
+    this.countSelectChoice = 'Churches';
     this.family = 'Episcopalian';
     this.denomination = 'Protestant Episcopal Church';
     this.year = 1926;
@@ -49,11 +49,11 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === this.year) // default year -- TODO: should this be an index instead?
+      .property('selected', (d) => d === this.year)
       .on('change', this.zoom);
 
     d3.select('#counts-dropdown')
-      .append('label').text('Select a count type')
+      .append('label').text('Select a count total')
       .append('select')
       .attr('id', 'count__selection')
       .selectAll('option')
@@ -62,7 +62,7 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === this.countType) // default year -- TODO: should this be an index instead?
+      .property('selected', (d) => d === this.countSelectChoice)
       .on('change', this.zoom);
 
     d3.select('#denomination-family-dropdown')
@@ -75,7 +75,7 @@ export default class DenominationsMap extends Visualization {
       .append('option')
       .attr('value', (d) => d)
       .text((d) => d)
-      .property('selected', (d) => d === this.family); // default denomination family
+      .property('selected', (d) => d === this.family);
 
     d3.select('#denomination-dropdown')
       .append('label').text('Select a denomination')
@@ -90,6 +90,8 @@ export default class DenominationsMap extends Visualization {
       .property('selected', (d) => d === this.denomination) // default denomination
       .on('change', this.zoom);
 
+    // The following filters the denomination dropdown based on what a user has selected
+    // in the denomination family dropdown.
     const selectionDenoms = document.querySelector('[name=denomination-selection]');
     document.querySelector('[name=denomination-family-selection]').addEventListener('change', (e) => {
       const denomFamiliesSelectionValue = e.target.value;
@@ -135,47 +137,6 @@ export default class DenominationsMap extends Visualization {
     // Keep track of how much to scale things based on zoom
     this.kScale = 0.5;
 
-    // The radius handles three possible options for setting the radius on points using d3.sqrt.
-    // The options are:
-    // 1. A scale to handle the selection of All families and All denominations
-    // 2. A scale to handle the selection of a single family and All denominations
-    // 3. A scale to handle the selection of a single family and a single denomination
-    if (this.family === 'All' && this.denomination !== 'All') {
-      // If the user selects All families and a single denomination, then the radius is set to a scale
-      // that is based on the number of churches in the state.
-
-      // Get the number of churches in the state that match the selected denomination.
-      // const numChurchesDenom = this.data.denominations.filter((d) => d.denom_relec === document.querySelector('[name=denomination-selection]').value).length;
-
-      // Set the radius scale to a scale that is based on the number of churches in the state or the 
-      // total number of members in the state, depending on what the user has selected.
-      this.radius = d3.scaleSqrt()
-        .domain([0, 300])
-        .range([2, 90]);
-    } else if (this.family !== 'All' && this.denomination === 'All') {
-      // If the user selects a single family and All denominations, then the radius is set to a scale
-      // that is based on the number of churches in the state.
-
-      // Get the number of churches in the state that match the selected denomination family.
-      // const numChurchesDenomFam = this.data.denominations.filter((d) => d.denom_family_relec === document.querySelector('[name=denomination-family-selection]').value).length;
-
-      // Set the radius scale to a scale that is based on the number of churches in the state.
-      this.radius = d3.scaleSqrt()
-        .domain([0, 400])
-        .range([2, 60]);
-    } else {
-      // If the user selects a single family and a single denomination, then the radius is set to a scale
-      // that is based on the number of churches in the state.
-
-      // Get the number of churches in the state that match the selected denomination.
-      // const numChurchesDenom = this.data.denominations.filter((d) => d.denom_relec === document.querySelector('[name=denomination-selection]').value).length;
-
-      // Set the radius scale to a scale that is based on the number of churches in the state.
-      this.radius = d3.scaleSqrt()
-        .domain([0, 700])
-        .range([2, 20]);
-    }
-
     // The zoom function is called below in update() to handle zooming in and out on points
     // using the updated zoom(event, datum) => {...} changes in D3 v6+.
     this.zoom = (e, d) => {
@@ -220,10 +181,12 @@ export default class DenominationsMap extends Visualization {
     this.tooltipRender = (e, d) => {
       if (this.denomination === 'All' && this.family === 'All') {
         // We use JS native .toLocalString() to display thousands separator based on user's locale
-        const text = `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
+        const text = `${`Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
         + `Number of denominations: ${d.denominations.toLocaleString()}<br/>`
-        + `Number of churches: ${d.churches.toLocaleString()}<br/>`
-        + `City population: ${d.population_1926.toLocaleString()}`;
+        + `Number of churches: ${d.churches.toLocaleString()}<br/>`}${
+        // Check to make sure population is not null
+          d.population_1926 === null ? 'City population: Missing' : `City population: ${d.population_1926.toLocaleString()}<br/>`}`;
+        // + `City population: ${d.population_1926.toLocaleString()}`; // TODO: check if d.population_1926 is not null
         this.tooltip.html(text);
         this.tooltip.style('visibility', 'visible');
       } else {
@@ -269,42 +232,57 @@ export default class DenominationsMap extends Visualization {
       .attr('height', this.height)
       .on('click', this.zoom);
 
-    // Draw the legend
-    const legend = this.viz
-      .append('g')
-      .attr('fill', '#777')
-      .attr('transform', 'translate(120,470)')
-      .attr('text-anchor', 'middle')
-      .style('font', '10px sans-serif')
-      .selectAll('g')
-      .data(this.radius.ticks(4).slice(1))
-      .join('g');
-
-    legend.append('circle')
-      .attr('fill', 'none')
-      .attr('stroke', '#ccc')
-      .attr('cy', (d) => -this.radius(d))
-      .attr('r', this.radius)
-      .classed('legend', true);
-
-    legend.append('text')
-      .attr('y', (d) => -2.1 * this.radius(d))
-      .attr('dy', '1.3em')
-      .text(this.radius.tickFormat(4, 's'));
-    // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
-
     // On first render, draw the default filter selections
-    this.update(this.year, this.denomination, this.family);
+    this.update(this.year, this.denomination, this.family, this.countSelectChoice);
   }
 
   // Draw the stuff that gets updated
-  update(year, denomination, family) {
+  update(year, denomination, family, countSelectChoice) {
     this.year = year;
     this.denomination = denomination;
     this.family = family;
+    this.countSelectChoice = countSelectChoice;
 
-    // On update, remove existing points and redraw with new data.
+    // On update, remove existing data and redraw with new data.
     this.viz.selectAll('circle:not(.legend)').remove();
+    this.viz.selectAll('.legend').remove();
+    this.viz.selectAll('.legend-text').remove();
+
+    // this.radius sets the radius of the circles using d3.scaleSqrt(). The domain is set to the max
+    // value of the data. The range is set to the max radius of the map. The radius needs to change 
+    // depending on the choices by the user. There are three options for
+    // the radius scale:
+    // 1. A scale to handle the selection of All families and All denominations
+    // 2. A scale to handle the selection of a single family and All denominations
+    // 3. A scale to handle the selection of a single family and a single denomination
+    // The first two options are handled by the same scale, but the third option is handled by a
+    // different scale. The values of the radius scale will change depending on the user's selection
+    // of this.countSelectChoice, to either be d.members or d.churches in data.cityMembership.
+    if (family === 'All' && denomination === 'All') {
+      if (countSelectChoice === 'Churches') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 50]);
+      } else if (countSelectChoice === 'Members') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
+      }
+    } else if (family !== 'All' && denomination === 'All') {
+      if (countSelectChoice === 'Churches') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 40]);
+      } else if (countSelectChoice === 'Members') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
+      }
+    } else if (family === 'All' && denomination !== 'All') {
+      if (countSelectChoice === 'Churches') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 40]);
+      } else if (countSelectChoice === 'Members') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
+      }
+    } else if (family !== 'All' && denomination !== 'All') {
+      if (countSelectChoice === 'Churches') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 40]);
+      } else if (countSelectChoice === 'Members') {
+        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
+      }
+    }
 
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
@@ -318,12 +296,37 @@ export default class DenominationsMap extends Visualization {
               .append('circle')
               .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
               .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-              .attr('r', (d) => this.radius(d.churches))
+              .attr('r', (d) => this.radius(this.countSelectChoice === 'Churches' ? d.churches : d.members))
               .style('stroke-width', '0.5px')
               .attr('class', 'point'),
             (update) => update
               .attr('class', 'point'),
           );
+
+        // Draw the legend
+        const legend = this.viz
+          .append('g')
+          .attr('fill', '#777')
+          .attr('transform', 'translate(120,470)')
+          .attr('text-anchor', 'middle')
+          .style('font', '10px sans-serif')
+          .selectAll('g')
+          .data(this.radius.ticks(5).slice(1))
+          .join('g');
+
+        legend.append('circle')
+          .attr('fill', 'none')
+          .attr('stroke', '#ccc')
+          .attr('cy', (d) => -this.radius(d))
+          .attr('r', this.radius)
+          .classed('legend', true);
+
+        legend.append('text')
+          .attr('y', (d) => -2.1 * this.radius(d))
+          .attr('dy', '1.3em')
+          .text(this.radius.tickFormat(4, 's'))
+          .classed('legend-text', true);
+        // .text((d, i, e) => (i === e.length - 1 ? `${d} churches` : d));
 
         this.viz
           .selectAll('circle:not(.legend)')
@@ -350,15 +353,15 @@ export default class DenominationsMap extends Visualization {
   // return a Promise that resolves to the data. We then update the visualization
   // with the new data.
   updateFilterSelections(year, denomination, family) {
+    this.year = year;
+    this.denomination = denomination;
+    this.family = family;
+
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
     if (this.denomination === 'All' && this.family === 'All') {
       return this.data.denominationAggregate.filter((d) => d.year === this.year);
     }
-
-    this.year = year;
-    this.denomination = denomination;
-    this.family = family;
 
     // If a user selects a single denomination and family as 'All',
     // we return the summed data for the selected year and denomination family.
