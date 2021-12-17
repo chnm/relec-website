@@ -288,7 +288,8 @@ export default class DenominationsMap extends Visualization {
 
         this.viz
           .selectAll('circle:not(.legend)')
-          .data(data)
+          .data(data
+            .sort((a, b) => d3.descending(a.churches, b.churches)))
           .join(
             (enter) => enter
               .append('circle')
