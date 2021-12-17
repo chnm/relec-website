@@ -248,46 +248,44 @@ export default class DenominationsMap extends Visualization {
     this.viz.selectAll('.legend').remove();
     this.viz.selectAll('.legend-text').remove();
 
-    // this.radius sets the radius of the circles using d3.scaleSqrt(). The domain is set to the max
-    // value of the data. The range is set to the max radius of the map. The radius needs to change 
-    // depending on the choices by the user. There are three options for
-    // the radius scale:
-    // 1. A scale to handle the selection of All families and All denominations
-    // 2. A scale to handle the selection of a single family and All denominations
-    // 3. A scale to handle the selection of a single family and a single denomination
-    // The first two options are handled by the same scale, but the third option is handled by a
-    // different scale. The values of the radius scale will change depending on the user's selection
-    // of this.countSelectChoice, to either be d.members or d.churches in data.cityMembership.
-    if (family === 'All' && denomination === 'All') {
-      if (countSelectChoice === 'Churches') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 50]);
-      } else if (countSelectChoice === 'Members') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
-      }
-    } else if (family !== 'All' && denomination === 'All') {
-      if (countSelectChoice === 'Churches') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 40]);
-      } else if (countSelectChoice === 'Members') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
-      }
-    } else if (family === 'All' && denomination !== 'All') {
-      if (countSelectChoice === 'Churches') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 40]);
-      } else if (countSelectChoice === 'Members') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
-      }
-    } else if (family !== 'All' && denomination !== 'All') {
-      if (countSelectChoice === 'Churches') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.churches)]).range([0, 40]);
-      } else if (countSelectChoice === 'Members') {
-        this.radius = d3.scaleSqrt().domain([0, d3.max(this.data.cityMembership, (d) => d.members)]).range([1, 100]);
-      }
-    }
-
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
     Promise.resolve(this.updateFilterSelections(year, denomination, family))
       .then((data) => {
+      // this.radius sets the radius of the circles using d3.scaleSqrt(). The domain is set to the max
+      // value of the data. The range is set to some sensible defaults. The radius needs to change
+      // depending on the choices by the user. There are three options for the radius scale:
+      // 1. A scale to handle the selection of All families and All denominations
+      // 2. A scale to handle the selection of a single family and All denominations
+      // 3. A scale to handle the selection of a single family and a single denomination
+      // The values of the radius scale will change depending on the user's selection
+      // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
+        if (family === 'All' && denomination === 'All') {
+          if (countSelectChoice === 'Churches') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 50]);
+          } else if (countSelectChoice === 'Members') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
+          }
+        } else if (family !== 'All' && denomination === 'All') {
+          if (countSelectChoice === 'Churches') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 40]);
+          } else if (countSelectChoice === 'Members') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
+          }
+        } else if (family === 'All' && denomination !== 'All') {
+          if (countSelectChoice === 'Churches') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 40]);
+          } else if (countSelectChoice === 'Members') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
+          }
+        } else if (family !== 'All' && denomination !== 'All') {
+          if (countSelectChoice === 'Churches') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 40]);
+          } else if (countSelectChoice === 'Members') {
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 100]);
+          }
+        }
+
         this.viz
           .selectAll('circle:not(.legend)')
           .data(data)
