@@ -247,6 +247,9 @@ export default class DenominationsMap extends Visualization {
     this.viz.selectAll('.legend').remove();
     this.viz.selectAll('.legend-text').remove();
 
+    d3.select('.year-title').text(`${this.year}`);
+    d3.select('.count-title').text(`${this.countSelectChoice}`);
+
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
     Promise.resolve(this.updateFilterSelections(year, denomination, family))
@@ -260,26 +263,30 @@ export default class DenominationsMap extends Visualization {
       // The values of the radius scale will change depending on the user's selection
       // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
         if (family === 'All' && denomination === 'All') {
+          d3.select('.denomination-title').text('all denominations');
           if (countSelectChoice === 'Churches') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 50]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
         } else if (family !== 'All' && denomination === 'All') {
+          d3.select('.denomination-title').text(`${this.family}`);
           if (countSelectChoice === 'Churches') {
-            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 40]);
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
         } else if (family === 'All' && denomination !== 'All') {
+          d3.select('.denomination-title').text(`${this.denomination}`);
           if (countSelectChoice === 'Churches') {
-            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 40]);
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
         } else if (family !== 'All' && denomination !== 'All') {
+          d3.select('.denomination-title').text(`${this.denomination}`);
           if (countSelectChoice === 'Churches') {
-            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 40]);
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 100]);
           }
