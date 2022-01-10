@@ -352,6 +352,21 @@ export default class DenominationsMap extends Visualization {
           })
           .on('mouseout', () => this.tooltip.style('visibility', 'hidden'))
           .on('click', this.zoom);
+      })
+      .catch((log) => {
+        console.log(log);
+        // We select the viz and display error text in the event something goes wrong.
+        this.viz.selectAll('circle').remove();
+        this.viz.selectAll('path').remove();
+        this.viz.selectAll('text').remove();
+        this.viz.append('text')
+          .attr('x', this.width / 2)
+          .attr('y', this.height / 2)
+          .attr('text-anchor', 'middle')
+          .style('font-size', '20px')
+          .style('fill', '#777')
+          .text('Sorry, there was a problem on our end with loading the data. Please try again later.')
+          .classed('error', true);
       });
   }
 
