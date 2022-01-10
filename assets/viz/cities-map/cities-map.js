@@ -38,6 +38,11 @@ export default class DenominationsMap extends Visualization {
     const denominationSelection = ['All', ...denominationType];
     const denominationFamilySelection = ['All', ...denomFamilies];
 
+    // Default denomination selection filtered to a particular family.
+    const defaultDenominations = this.data.denominations.filter((d) => d.family_relec === this.family);
+    const defaultDenominationsSorted = d3.groupSort(defaultDenominations, (d) => d.name, (d) => d.name);
+    const defaultDenominationSelection = ['All', ...defaultDenominationsSorted];
+
     // Build each of the dropdown elements.
     d3.select('#year-dropdown')
       .append('label').text('Select a year')
@@ -82,7 +87,7 @@ export default class DenominationsMap extends Visualization {
       .append('select')
       .attr('name', 'denomination-selection')
       .selectAll('option')
-      .data(denominationSelection)
+      .data(defaultDenominationSelection)
       .enter()
       .append('option')
       .attr('value', (d) => d)
