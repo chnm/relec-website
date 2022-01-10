@@ -164,7 +164,7 @@ export default class DenominationsMap extends Visualization {
       this.viz.selectAll('circle:not(.legend)')
         .transition()
         .duration(500)
-        .attr('r', (d) => this.radius(d.churches))
+        .attr('r', (d) => this.radius(this.countSelectChoice === 'Churches' ? d.churches : d.members))
         .style('stroke-width', `${0.5 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
@@ -274,7 +274,7 @@ export default class DenominationsMap extends Visualization {
           if (countSelectChoice === 'Churches') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
-            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([1, 40]);
           }
         } else if (family === 'All' && denomination !== 'All') {
           d3.select('.denomination-title').text(`${this.denomination}`);
@@ -288,7 +288,7 @@ export default class DenominationsMap extends Visualization {
           if (countSelectChoice === 'Churches') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
-            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 100]);
+            this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 40]);
           }
         }
 
