@@ -20,7 +20,7 @@ Promise.all(promises)
       { dioceses: data[0], northamerica: data[2] },
       { width: 1000, height: 525 },
     );
-    chronoMap.render();  
+    chronoMap.render();
 
     const chart = new DiocesesBarChart(
       '#barchart',
