@@ -57,6 +57,13 @@ Some denominations, such as the Protestant Episcopal Church, had a large presenc
 
 Nonetheless, this map demonstrates that even denominations often thought of as regionally-specific had concentrations throughout the United States in larger cities. The Church of Jesus Christ of Latter-Day Saints, for example, had the largest congregation of churches in Salt Lake City, Utah, but had at least one church in dozens of other cities throughout the entire United States in 1926 and 1936. 
 
+<div class="viz-block grid-x grid-padding-x" id="lds-map-container">
+  <div class="cell medium-10 xlarge-8 medium-offset-1 xlarge-offset-2">
+    <h3>Latter-Day Saints Congregations in 1926</h3>
+    <svg id="lds-map" width="100%"></svg>
+  </div>
+</div>
+
 Using the data from the Census Bureau at the city level instead of at the state or county level, and utilizing schedule data we have digitized, this map provides a more precise look at where certain denominations were prevalent within urban areas. 
 
 ### Suggested citation

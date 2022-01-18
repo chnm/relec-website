@@ -16,6 +16,11 @@
     stroke-opacity: 1;
 }
 
+.congregation {
+    fill-opacity: 0.75;
+    stroke-opacity: 1;
+}
+
 rect {
     fill: gray;
 }

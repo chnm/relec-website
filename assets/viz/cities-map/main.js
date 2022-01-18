@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import DenominationsMap from './cities-map';
+import LDSMap from './lds-map';
 
 // Load the data
 const urls = [
@@ -9,6 +10,9 @@ const urls = [
   'https://data.chnm.org/relcensus/denomination-families',
   'https://data.chnm.org/ne/northamerica/',
   'https://data.chnm.org/ahcb/states/1926-07-04/',
+
+  'https://data.chnm.org/relcensus/city-membership?year=1926&denomination=Church+of+Jesus+Christ+of+Latter-day+Saints',
+  'https://data.chnm.org/relcensus/city-membership?year=1926&denomination=Reorganized+Church+of+Jesus+Christ+of+Latter+Day+Saints',
 ];
 const promises = [];
 urls.forEach((url) => promises.push(d3.json(url)));
@@ -29,6 +33,17 @@ Promise.all(promises)
       { width: 1000, height: 525 },
     );
     citiesMap.render();
+
+    const LdsMap = new LDSMap(
+      '#lds-map',
+      {
+        lds: data[6],
+        rlds: data[7],
+        northamerica: data[4],
+      },
+      { width: 1000, height: 600 },
+    );
+    LdsMap.render();
 
     // Listen for changes to the filter options and return them to update() and re-render the map.
     d3.selectAll('.filterSelection').on('change', async () => {

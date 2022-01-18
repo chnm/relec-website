@@ -405,7 +405,6 @@ export default class DenominationsMap extends Visualization {
     }
 
     const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
-    // console.log(url);
     const dataResponse = fetch(url)
       .then((response) => response.json())
       .then((data) => data)
