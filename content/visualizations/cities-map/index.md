@@ -1,7 +1,7 @@
 ---
 title: "City Denominations"
 date: 2021-07-19
-updated: 2021-11-15
+updated: 2022-01-19
 abstract: "What we can learn from mapping the U.S. Census of Religious Bodies in the United States."
 script: viz/cities-map/main.js
 styles: viz/cities-map/style.css
