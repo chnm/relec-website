@@ -31,7 +31,7 @@ This interactive map below shows different denominations’ presence in large ci
     </div>
   </div>
   <div class="cell medium-12 xlarge-10 large-offset-1">
-    <h3 class="graphic-title">Map of total <span class="count-title">churches</span> among <span class="denomination-title">denominations</span> in US Cities in <span class="year-title">1926</span></h3>
+    <h3 class="graphic-title">Map of <span class="denomination-title">denominations</span> <span class="count-title">congregations</span> in US Cities, <span class="year-title">1926</span></h3>
     <h5 class="graphic-title">Cities included are those with Populations over 25,000</h5>
     <svg id="chrono-map" width="100%"></svg>
   </div>

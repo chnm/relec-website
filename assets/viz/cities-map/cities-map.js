@@ -20,10 +20,10 @@ export default class DenominationsMap extends Visualization {
 
     // Our selection options that are available.
     const yearSelect = [1906, 1916, 1926, 1936];
-    const countSelect = ['Churches', 'Members'];
+    const countSelect = ['Congregations', 'Members'];
 
     // Keep track of defaults.
-    this.countSelectChoice = 'Churches';
+    this.countSelectChoice = 'Congregations';
     this.family = 'Episcopalian';
     this.denomination = 'Protestant Episcopal Church';
     this.year = 1926;
@@ -169,7 +169,7 @@ export default class DenominationsMap extends Visualization {
       this.viz.selectAll('circle:not(.legend)')
         .transition()
         .duration(500)
-        .attr('r', (d) => this.radius(this.countSelectChoice === 'Churches' ? d.churches : d.members))
+        .attr('r', (d) => this.radius(this.countSelectChoice === 'Congregations' ? d.churches : d.members))
         .style('stroke-width', `${0.5 / this.kScale}px`);
       this.viz.selectAll('.country')
         .transition()
@@ -269,28 +269,28 @@ export default class DenominationsMap extends Visualization {
       // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
         if (family === 'All' && denomination === 'All') {
           d3.select('.denomination-title').text('all denominations');
-          if (countSelectChoice === 'Churches') {
+          if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 50]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
         } else if (family !== 'All' && denomination === 'All') {
           d3.select('.denomination-title').text(`${this.family}`);
-          if (countSelectChoice === 'Churches') {
+          if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([1, 40]);
           }
         } else if (family === 'All' && denomination !== 'All') {
           d3.select('.denomination-title').text(`${this.denomination}`);
-          if (countSelectChoice === 'Churches') {
+          if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
         } else if (family !== 'All' && denomination !== 'All') {
           d3.select('.denomination-title').text(`${this.denomination}`);
-          if (countSelectChoice === 'Churches') {
+          if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 40]);
@@ -307,7 +307,7 @@ export default class DenominationsMap extends Visualization {
               .append('circle')
               .attr('cx', (d) => this.projection([d.lon, d.lat])[0])
               .attr('cy', (d) => this.projection([d.lon, d.lat])[1])
-              .attr('r', (d) => this.radius(this.countSelectChoice === 'Churches' ? d.churches : d.members))
+              .attr('r', (d) => this.radius(this.countSelectChoice === 'Congregations' ? d.churches : d.members))
               .style('stroke-width', '0.5px')
               .attr('class', 'point'),
             (update) => update
