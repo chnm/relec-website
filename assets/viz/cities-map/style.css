@@ -1,15 +1,15 @@
 .country {
-    fill: rgba(212, 234, 254, 0.3);
-    stroke: rgb(200, 200, 200);
+    fill: #F2F2F2;
+    stroke: #41464C;
 }
 
 .states {
     fill: transparent;
-    stroke: rgb(200, 200, 200);
+    stroke: #41464C;
 }
 
 .point {
-    fill: orange;
+    fill: #F2AC29;
     fill-opacity: 0.5;
     stroke: black;
     stroke-width: 1;
@@ -19,6 +19,10 @@
 .congregation {
     fill-opacity: 0.75;
     stroke-opacity: 1;
+}
+
+#denomination-dropdown {
+    width: 40vw;
 }
 
 rect {
