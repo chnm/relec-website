@@ -271,7 +271,7 @@ export default class DenominationsMap extends Visualization {
       // The values of the radius scale will change depending on the user's selection
       // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
         if (family === this.allFamilies && denomination === this.allDenominations) {
-          d3.select('.denomination-title').text('all denominations');
+          d3.select('.denomination-title').text('all');
           if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 50]);
           } else if (countSelectChoice === 'Members') {
@@ -320,7 +320,7 @@ export default class DenominationsMap extends Visualization {
         // Draw the legend, update radius based on extent of data.
         const legend = this.viz
           .append('g')
-          .attr('fill', '#777')
+          .attr('fill', '#41464C')
           .attr('transform', 'translate(120,470)')
           .attr('text-anchor', 'middle')
           .style('font', '10px sans-serif')
