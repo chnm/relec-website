@@ -1,4 +1,7 @@
 <figure>
+	{{ if .Get "title" }}
+	<h4>{{ .Get "title" | markdownify }}</h4>
+	{{ end }}
 	{{ $id := .Get "id" }}
 	<div id="{{ $id }}" class="interactive-fig"></div>
 	<figcaption>
