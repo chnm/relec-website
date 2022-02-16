@@ -1,6 +1,6 @@
 <figure>
 	{{ $id := .Get "id" }}
-	<div id="{{ $id }}"></div>
+	<div id="{{ $id }}" class="interactive-fig"></div>
 	<figcaption>
 		<p>{{ .Get "caption" | markdownify }}</p>
 	</figcaption>
