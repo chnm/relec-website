@@ -1,7 +1,7 @@
 ---
-title: "City Denominations"
+title: "Urban American Congregations"
 date: 2021-07-19
-updated: 2022-01-19
+updated: 2022-02-16
 abstract: "What we can learn from mapping the U.S. Census of Religious Bodies in the United States."
 script: viz/cities-map/main.js
 styles: viz/cities-map/style.css
@@ -14,6 +14,18 @@ doi: "https://doi.org/1234/1234"
 This interactive map below shows different denominations’ presence in large cities in the United States in the years 1906, 1916, 1926, and 1936, when the U.S. Census of Religious Bodies conducted censuses of different churches and congregations and published official reports. The Census Bureau categorized denominations by different denomination families, linking together churches that share broader religious overlap. Cities included are those with over 25,000 residents.
 
 <div class="viz-block grid-x grid-padding-x">
+  <div id="controls" class="cell medium-12 xlarge-10 large-offset-1">
+    <div class="grid-x grid-padding-x">
+      <div class="cell large-12 how-to">
+        <p class="instructions">
+         <details>
+          <summary><strong><small>How to use this visualization</small></strong></summary>
+          <p><small>Using data from the published records of the U.S. Census of Religious Bodies, this map shows the number of churches for a specific denomination, represented by a yellow circle, in major cities. The larger the circle, the more churches were located in that area. Users can hover over the circle to see more information, including the number of churches and total church membership. To change the year or denomination featured, users can use the drop down boxes located above the map to change the filters. The “Select a year” box allows users to choose between 1906, 1916, 1926, and 1936. The “Select a denomination family” box allows users to choose a specific denomination family to see what denominations are included, or the user can select “All” to see all the denominations in the map. The “Select a denomination” box allows the user to choose which denomination will be featured in the map. Click on a point to zoom into that region; click anywhere else to zoom back out.</small></p>
+        </details> 
+        </p>
+      </div>
+    </div>
+  </div>
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <div class="row menu">
         <div class="columns small-12 medium-6">
@@ -35,18 +47,6 @@ This interactive map below shows different denominations’ presence in large ci
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <h3 class="graphic-title">Map of <span class="denomination-title">denominations</span> <span class="count-title">congregations</span> in US Cities, <span class="year-title">1926</span></h3>
     <svg id="chrono-map" width="100%"></svg>
-  </div>
-  <div id="controls" class="cell medium-12 xlarge-10 large-offset-1">
-    <div class="grid-x grid-padding-x">
-      <div class="cell medium-6 xlarge-6">
-        <p class="instructions">
-         <details>
-          <summary><strong><small>How to use this visualization</small></strong></summary>
-          <p><small>Using data from the published records of the U.S. Census of Religious Bodies, this map shows the number of churches for a specific denomination, represented by a yellow circle, in major cities. The larger the circle, the more churches were located in that area. Users can hover over the circle to see more information, including the number of churches and total church membership. To change the year or denomination featured, users can use the drop down boxes located above the map to change the filters. The “Select a year” box allows users to choose between 1906, 1916, 1926, and 1936. The “Select a denomination family” box allows users to choose a specific denomination family to see what denominations are included, or the user can select “All” to see all the denominations in the map. The “Select a denomination” box allows the user to choose which denomination will be featured in the map. Click on a point to zoom into that region; click anywhere else to zoom back out.</small></p>
-        </details> 
-        </p>
-      </div>
-    </div>
   </div>
 </div>
 
