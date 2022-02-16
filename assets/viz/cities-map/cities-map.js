@@ -19,14 +19,17 @@ export default class DenominationsMap extends Visualization {
     // Filtering of this data happens below in the update() function.
 
     // Our selection options that are available.
-    const yearSelect = [1906, 1916, 1926, 1936];
+    // TODO: Years will be updated as data becomes available for 1906, 1916, and 1936.
+    const yearSelect = [1926];
     const countSelect = ['Congregations', 'Members'];
 
     // Keep track of defaults.
     this.countSelectChoice = 'Congregations';
-    this.family = 'Episcopalian';
-    this.denomination = 'Protestant Episcopal Church';
+    this.family = 'Adventist';
+    this.denomination = 'All denominations';
     this.year = 1926;
+    this.allFamilies = 'All denomination families';
+    this.allDenominations = 'All denominations';
 
     // Fetch the list of denominations and denomination families from the API,
     // and use d3.groupSort to organize them.
@@ -35,13 +38,13 @@ export default class DenominationsMap extends Visualization {
 
     // We use the spread operator to create an array that includes an
     // "All" option and appends the data from the API.
-    const denominationSelection = ['All', ...denominationType];
-    const denominationFamilySelection = ['All', ...denomFamilies];
+    const denominationSelection = [this.allDenominations, ...denominationType];
+    const denominationFamilySelection = [this.allFamilies, ...denomFamilies];
 
     // Default denomination selection filtered to a particular family.
     const defaultDenominations = this.data.denominations.filter((d) => d.family_relec === this.family);
     const defaultDenominationsSorted = d3.groupSort(defaultDenominations, (d) => d.name, (d) => d.name);
-    const defaultDenominationSelection = ['All', ...defaultDenominationsSorted];
+    const defaultDenominationSelection = [this.allDenominations, ...defaultDenominationsSorted];
 
     // Build each of the dropdown elements.
     d3.select('#year-dropdown')
@@ -105,10 +108,10 @@ export default class DenominationsMap extends Visualization {
       // and use these values to re-populate the denominations dropdown.
       const denoms = this.data.denominations.filter((d) => d.family_relec === denomFamiliesSelectionValue);
       const denomsNames = d3.groupSort(denoms, (d) => d.short_name, (d) => d.short_name);
-      const denomSelection = ['All', ...denomsNames];
+      const denomSelection = [this.allDenominations, ...denomsNames];
 
       // If denomination family is "All", then display all the denomination options.
-      if (denomFamiliesSelectionValue === 'All') {
+      if (denomFamiliesSelectionValue === this.allFamilies) {
         selectionDenoms.innerHTML = '';
         d3.select('[name=denomination-selection]')
           .selectAll('option')
@@ -184,7 +187,7 @@ export default class DenominationsMap extends Visualization {
     // The tooltip is conditional based on whether we're displaying
     // All data or a single denomination.
     this.tooltipRender = (e, d) => {
-      if (this.denomination === 'All' && this.family === 'All') {
+      if (this.denomination === this.allDenominations && this.family === this.allFamilies) {
         // We use JS native .toLocalString() to display thousands separator based on user's locale
         const text = `${`Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>`
         + `Number of denominations: ${d.denominations.toLocaleString()}<br/>`
@@ -267,28 +270,28 @@ export default class DenominationsMap extends Visualization {
       // 3. A scale to handle the selection of a single family and a single denomination
       // The values of the radius scale will change depending on the user's selection
       // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
-        if (family === 'All' && denomination === 'All') {
+        if (family === this.allFamilies && denomination === this.allDenominations) {
           d3.select('.denomination-title').text('all denominations');
           if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([0, 50]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
-        } else if (family !== 'All' && denomination === 'All') {
+        } else if (family !== this.allFamilies && denomination === this.allDenominations) {
           d3.select('.denomination-title').text(`${this.family}`);
           if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([1, 40]);
           }
-        } else if (family === 'All' && denomination !== 'All') {
+        } else if (family === this.allFamilies && denomination !== this.allDenominations) {
           d3.select('.denomination-title').text(`${this.denomination}`);
           if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
           } else if (countSelectChoice === 'Members') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.members)]).range([0, 80]);
           }
-        } else if (family !== 'All' && denomination !== 'All') {
+        } else if (family !== this.allFamilies && denomination !== this.allDenominations) {
           d3.select('.denomination-title').text(`${this.denomination}`);
           if (countSelectChoice === 'Congregations') {
             this.radius = d3.scaleSqrt().domain([0, d3.max(data, (d) => d.churches)]).range([1, 40]);
@@ -385,13 +388,13 @@ export default class DenominationsMap extends Visualization {
 
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
-    if (this.denomination === 'All' && this.family === 'All') {
+    if (this.denomination === this.allDenominations && this.family === this.allFamilies) {
       return this.data.denominationAggregate.filter((d) => d.year === this.year);
     }
 
     // If a user selects a single denomination and family as 'All',
     // we return the summed data for the selected year and denomination family.
-    if (this.denomination === 'All' && this.family !== 'All') {
+    if (this.denomination === this.allDenominations && this.family !== this.allFamilies) {
       const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
       const denomfamily = fetch(url)
         .then((response) => response.json())

@@ -21,6 +21,8 @@ Jordan Bratt, graduate research assistant
 
 Brandan Buck, graduate research assistant for spatial data
 
+Bridget Bukovich, community engagement coordinator, RRCHNM
+
 Abderraouf Deghdegh, undergraduate research assistant
 
 Reagan Emmerling, undergraduate research assistant

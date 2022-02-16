@@ -1,5 +1,17 @@
 @charset 'utf-8';
 
+// Resolve depreciation warnings on !global declarations
+$warning-color: null;
+$error-color: null;
+$success-color: null;
+$info-color: null;
+$primary-color: null;
+$secondary-color: null;
+$alert-color: null;
+
+$-zf-size: null;
+$-zf-bp-value: null;
+
 @import 'settings';
 @import '../../node_modules/foundation-sites/scss/foundation';
 @import '../../node_modules/motion-ui/motion-ui';
@@ -363,10 +375,6 @@ footer .logos img {
 
 .graphic-title {
   text-align: center;
-}
-
-#denomination-dropdown {
-  width: 100%;
 }
 
 .visualization .grid-container {
