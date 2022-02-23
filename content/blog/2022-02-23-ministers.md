@@ -21,7 +21,7 @@ In 1906, the Bureau asked for little information about the ministers. There was 
 
 In 1916, the Bureau included a Schedule for Ministers, sent to all clergy whose contact information could be found. This schedule asked for some information similar to questions included in the 1926 Census, though it was separated out. As stated in the published reports, “[t]he statistics of ministers were gathered by sending a card schedule to the ministers direct. The lists of ministers, with addresses, were obtained in most cases, as in the case of the churches, from various denominational publications.” [^2]
 
-{{< figure src="/blog-img/ministersimage1.png" caption="Figure 3. List of questions included on the Schedule for Ministers, *Religious Bodies 1916*, 1:12." >}}
+{{< figure src="/blog-img/ministersimage3.png" caption="Figure 1. List of questions included on the Schedule for Ministers, *Religious Bodies 1916*, 1:12." >}}
 
 The 1916 Census explicitly asked for the name of the ‘minister, priest, or rabbi’ who led the congregation, other churches they served, their salary, if they had any other occupation, date of ordination, age, and if they graduated from college or theological school. 
 
@@ -53,7 +53,7 @@ The 1926 Census only asked if there were a pastor and/or assistant pastors (inst
 
 The 1936 Census looked similar to the 1926 one, with some important distinctions. First, the 1936 schedule entitled the section “PASTOR OR LEADER,” using more inclusive language for non-Christian congregations. Second, the Census asked for the locations of the other churches that the pastor served, if there were any. Third, the schedule asked for the “Number of unordained full-time religious workers.” This last question insinuates that the Bureau began to recognize the importance of church leadership outside of the sole role of minister, an important insight, given how much labor goes into running a church. 
 
-{{< figure src="/blog-img/ministersimage3.png" caption="Figure 1.The sample schedule form from the 1936 U.S. Census of Religious Bodies,  *Religious Bodies: 1936* 1:5" >}}
+{{< figure src="/blog-img/ministersimage1.png" caption="Figure 3.The sample schedule form from the 1936 U.S. Census of Religious Bodies,  *Religious Bodies: 1936* 1:5" >}}
 
 The changing questions about ministers and church leadership provide an example of how the Census Bureau refined its survey with each successive decennial census. Bureau officials had to decide which information was most valuable to the public and which information was feasible to collect.  For example, salary ceased to become a question, but education remained even when the number of questions related to ministers was cut. Therefore, the questions related to the leadership of the churches and religious organizations provide a way of understanding how those working with the Bureau thought about religious data, how they decided what questions were important or not, and how they worked with hundreds of thousands of organizations.
 
