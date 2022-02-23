@@ -5,7 +5,7 @@ date: 2022-02-23
 draft: true
 abstract: Through the four different censuses conducted through the decades of the early twentieth-century, the Census Bureau changed the way it asked certain questions and how it approached gathering information. This blog posts discusses changes made to questions about ministers. 
 image: "/blog-img/ministersimage3.png"
-imagealt: A separate Schedule for Ministers sent out by the Bureau in 1916. 
+imagealt: A separate Schedule for Ministers sent out by the Bureau in 1916 asking questions such as name, denominational connection, education, salary, and more.
 ---
 The 1926 U.S. Census of Religious Bodies and the surviving schedules for over 200,000 congregations provide the opportunity to use data to answer  questions about religion in the early twentieth century. The possibilities of working with this data mean that scholars must consider how those at the Census Bureau understood religion and religious organizations, how these considerations created the schedules, and what information was collected by the Bureau.
 
