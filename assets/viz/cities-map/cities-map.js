@@ -13,148 +13,9 @@ export default class DenominationsMap extends Visualization {
 
     super(id, data, dim, margin);
 
-    // The code below sets up the dropdowns for the map views. The views
-    // currently include: year and denomination. The first set
-    // of variables reads in data to group and sort unique keys from the API. Then,
-    // those are passed along to the dropdown and filters are then applied based on
-    // the selections made in the dropdown.
-    //
-    // Filtering of this data happens below in the update() function.
-
-    // Our selection options that are available.
-    // TODO: Years will be updated as data becomes available for 1906, 1916, and 1936.
-    const yearSelect = [1926];
-    const countSelect = ["Congregations", "Members"];
-
     // Keep track of defaults.
-    this.countSelectChoice = "Congregations";
-    this.family = "Adventist";
-    this.denomination = "All denominations";
-    this.year = 1926;
-    this.allFamilies = "All denomination families";
-    this.allDenominations = "All denominations";
-
-    // Fetch the list of denominations and denomination families from the API,
-    // and use d3.groupSort to organize them.
-    const denominationType = d3.groupSort(
-      this.data.denominations,
-      (d) => d.short_name,
-      (d) => d.short_name
-    );
-    const denomFamilies = d3.groupSort(
-      this.data.denominationFamilies.family_relec,
-      (d) => d.name,
-      (d) => d.name
-    );
-
-    // We use the spread operator to create an array that includes an
-    // "All" option and appends the data from the API.
-    const denominationSelection = [this.allDenominations, ...denominationType];
-    const denominationFamilySelection = [this.allFamilies, ...denomFamilies];
-
-    // Default denomination selection filtered to a particular family.
-    const defaultDenominations = this.data.denominations.filter((d) => d.family_relec === this.family);
-    const defaultDenominationsSorted = d3.groupSort(
-      defaultDenominations,
-      (d) => d.name,
-      (d) => d.name
-    );
-    const defaultDenominationSelection = [this.allDenominations, ...defaultDenominationsSorted];
-
-    // Build each of the dropdown elements.
-    d3.select("#year-dropdown")
-      .append("label")
-      .text("Select a year")
-      .append("select")
-      .attr("id", "year_selection")
-      .selectAll("option")
-      .data(yearSelect)
-      .enter()
-      .append("option")
-      .attr("value", (d) => d)
-      .text((d) => d)
-      .property("selected", (d) => d === this.year)
-      .on("change", this.zoom);
-
-    d3.select("#counts-dropdown")
-      .append("label")
-      .text("Select a count total")
-      .append("select")
-      .attr("id", "count_selection")
-      .selectAll("option")
-      .data(countSelect)
-      .enter()
-      .append("option")
-      .attr("value", (d) => d)
-      .text((d) => d)
-      .property("selected", (d) => d === this.countSelectChoice)
-      .on("change", this.zoom);
-
-    d3.select("#denomination-family-dropdown")
-      .append("label")
-      .text("Select a denomination family")
-      .append("select")
-      .attr("name", "denomination-family-selection")
-      .selectAll("option")
-      .data(denominationFamilySelection)
-      .enter()
-      .append("option")
-      .attr("value", (d) => d)
-      .text((d) => d)
-      .property("selected", (d) => d === this.family);
-
-    d3.select("#denomination-dropdown")
-      .append("label")
-      .text("Select a denomination")
-      .append("select")
-      .attr("name", "denomination-selection")
-      .selectAll("option")
-      .data(defaultDenominationSelection)
-      .enter()
-      .append("option")
-      .attr("value", (d) => d)
-      .text((d) => d)
-      .property("selected", (d) => d === this.denomination) // default denomination
-      .on("change", this.zoom);
-
-    // The following filters the denomination dropdown based on what a user has selected
-    // in the denomination family dropdown.
-    const selectionDenoms = document.querySelector("[name=denomination-selection]");
-    document.querySelector("[name=denomination-family-selection]").addEventListener("change", (e) => {
-      const denomFamiliesSelectionValue = e.target.value;
-
-      // Find where the value of denomFamiliesSelectionValue is equal to name values in this.data.denominations
-      // and use these values to re-populate the denominations dropdown.
-      const denoms = this.data.denominations.filter((d) => d.family_relec === denomFamiliesSelectionValue);
-      const denomsNames = d3.groupSort(
-        denoms,
-        (d) => d.short_name,
-        (d) => d.short_name
-      );
-      const denomSelection = [this.allDenominations, ...denomsNames];
-
-      // If denomination family is "All", then display all the denomination options.
-      if (denomFamiliesSelectionValue === this.allFamilies) {
-        selectionDenoms.innerHTML = "";
-        d3.select("[name=denomination-selection]")
-          .selectAll("option")
-          .data(denominationSelection)
-          .enter()
-          .append("option")
-          .attr("value", (d) => d)
-          .text((d) => d);
-      } else {
-        // Otherwise, only display the denominations that belong to the selected denomination family.
-        selectionDenoms.innerHTML = "";
-        d3.select("[name=denomination-selection]")
-          .selectAll("option")
-          .data(denomSelection)
-          .enter()
-          .append("option")
-          .attr("value", (d) => d)
-          .text((d) => d);
-      }
-    });
+    this.allFamilies = 'All denomination families';
+    this.allDenominations = 'All denominations';
 
     // The following handles year data, map projections, and zoom behavior.
     this.projection = d3
@@ -197,7 +58,7 @@ export default class DenominationsMap extends Visualization {
         .selectAll("circle:not(.legend)")
         .transition()
         .duration(500)
-        .attr("r", (d) => this.radius(this.countSelectChoice === "Congregations" ? d.churches : d.members))
+        .attr("r", (d) => this.radius(this.countSelection === "Congregations" ? d.churches : d.members))
         .style("stroke-width", `${0.5 / this.kScale}px`);
       this.viz
         .selectAll(".country")
@@ -274,25 +135,17 @@ export default class DenominationsMap extends Visualization {
       .attr("width", this.width)
       .attr("height", this.height)
       .on("click", this.zoom);
-
-    // On first render, draw the default filter selections
-    this.update(this.year, this.denomination, this.family, this.countSelectChoice);
   }
 
   // Draw the stuff that gets updated
-  update(year, denomination, family, countSelectChoice) {
-    this.year = year;
-    this.denomination = denomination;
-    this.family = family;
-    this.countSelectChoice = countSelectChoice;
-
+  update(year, denomination, family, countSelection) {
     // On update, remove existing data and redraw with new data.
     this.viz.selectAll("circle:not(.legend)").remove();
     this.viz.selectAll(".legend").remove();
     this.viz.selectAll(".legend-text").remove();
 
-    d3.select(".year-title").text(`${this.year}`);
-    d3.select(".count-title").text(`${this.countSelectChoice}`);
+    d3.select(".year-title").text(`${year}`);
+    d3.select(".count-title").text(`${countSelection}`);
 
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
@@ -308,12 +161,12 @@ export default class DenominationsMap extends Visualization {
         // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
         if (family === this.allFamilies && denomination === this.allDenominations) {
           d3.select(".denomination-title").text("all");
-          if (countSelectChoice === "Congregations") {
+          if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.churches)])
               .range([0, 50]);
-          } else if (countSelectChoice === "Members") {
+          } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.members)])
@@ -321,12 +174,12 @@ export default class DenominationsMap extends Visualization {
           }
         } else if (family !== this.allFamilies && denomination === this.allDenominations) {
           d3.select(".denomination-title").text(`${this.family}`);
-          if (countSelectChoice === "Congregations") {
+          if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.churches)])
               .range([1, 40]);
-          } else if (countSelectChoice === "Members") {
+          } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.members)])
@@ -334,12 +187,12 @@ export default class DenominationsMap extends Visualization {
           }
         } else if (family === this.allFamilies && denomination !== this.allDenominations) {
           d3.select(".denomination-title").text(`${this.denomination}`);
-          if (countSelectChoice === "Congregations") {
+          if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.churches)])
               .range([1, 40]);
-          } else if (countSelectChoice === "Members") {
+          } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.members)])
@@ -347,12 +200,12 @@ export default class DenominationsMap extends Visualization {
           }
         } else if (family !== this.allFamilies && denomination !== this.allDenominations) {
           d3.select(".denomination-title").text(`${this.denomination}`);
-          if (countSelectChoice === "Congregations") {
+          if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.churches)])
               .range([1, 40]);
-          } else if (countSelectChoice === "Members") {
+          } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.members)])
@@ -370,7 +223,7 @@ export default class DenominationsMap extends Visualization {
                 .append("circle")
                 .attr("cx", (d) => this.projection([d.lon, d.lat])[0])
                 .attr("cy", (d) => this.projection([d.lon, d.lat])[1])
-                .attr("r", (d) => this.radius(this.countSelectChoice === "Congregations" ? d.churches : d.members))
+                .attr("r", (d) => this.radius(countSelection === "Congregations" ? d.churches : d.members))
                 .style("stroke-width", "0.5px")
                 .attr("class", "point"),
             (update) => update.attr("class", "point")
@@ -401,7 +254,7 @@ export default class DenominationsMap extends Visualization {
           .attr("dy", "1.3em")
           .text(this.radius.tickFormat(4, "s"))
           .classed("legend-text", true)
-          .text((d, i, e) => (i === e.length - 1 ? `${d} ${this.countSelectChoice.toLowerCase()}` : d));
+          .text((d, i, e) => (i === e.length - 1 ? `${d} ${countSelection.toLowerCase()}` : d));
 
         this.viz
           .selectAll("circle:not(.legend)")
