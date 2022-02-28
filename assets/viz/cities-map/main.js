@@ -38,7 +38,7 @@ function setup(data) {
   );
   citiesMap.render();
 
-  // Get initial state from the query params
+  // Get initial state from the query params. If no query params, use the default.
   let year, denomination, denominationFamily, countSelection;
   const initialState = getInitialState();
   if (initialState === null) {
@@ -62,10 +62,9 @@ function setup(data) {
 
   // options.denomination needs to be filtered where a denomination is only displayed if it 
   // is part of a options.denominationFamily. We do this by getting the selected denominationFamily
-  // either from initialState or the URL params. 
-  const denominationFamilySelection = initialState === null ? 
-    getInitialState()[2] : 
-    denominationFamily;
+  // either from initialState or the URL params, and then filtering the options.denomination array
+  // to only include the denominations that are part of the selected denominationFamily.
+  let denominationFamilySelection = denominationFamily;
   const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
   const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
 
