@@ -55,12 +55,6 @@ export default class DenominationsMap extends Visualization {
         .duration(500)
         .attr("transform", `translate(${this.width / 2},${this.height / 2})scale(${k}) translate(${-x},${-y})`);
       this.viz
-        .selectAll("circle:not(.legend)")
-        .transition()
-        .duration(500)
-        .attr("r", (d) => this.radius(this.countSelection === "Congregations" ? d.churches : d.members))
-        .style("stroke-width", `${0.5 / this.kScale}px`);
-      this.viz
         .selectAll(".country")
         .transition()
         .duration(500)
@@ -147,6 +141,14 @@ export default class DenominationsMap extends Visualization {
     d3.select(".year-title").text(`${year}`);
     d3.select(".count-title").text(`${countSelection}`);
 
+    // Update the radius of the points based on the countSelection
+    this.viz
+      .selectAll("circle:not(.legend)")
+      .transition()
+      .duration(500)
+      .attr("r", (d) => this.radius(countSelection === "Congregations" ? d.churches : d.members))
+      .style("stroke-width", `${0.5 / this.kScale}px`);
+
     // Update the denomination data by returning the Promise below
     // array to the updateFilterSelections() function.
     Promise.resolve(this.updateFilterSelections(year, denomination, family))
@@ -159,6 +161,8 @@ export default class DenominationsMap extends Visualization {
         // 3. A scale to handle the selection of a single family and a single denomination
         // The values of the radius scale will change depending on the user's selection
         // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
+
+        // 1. A scale to handle the selection of All families and All denominations
         if (family === this.allFamilies && denomination === this.allDenominations) {
           d3.select(".denomination-title").text("all");
           if (countSelection === "Congregations") {
@@ -172,39 +176,42 @@ export default class DenominationsMap extends Visualization {
               .domain([0, d3.max(data, (d) => d.members)])
               .range([0, 80]);
           }
+          // 2a. A scale to handle the selection of a single family and All denominations
         } else if (family !== this.allFamilies && denomination === this.allDenominations) {
           d3.select(".denomination-title").text(`${this.family}`);
           if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.churches)])
-              .range([1, 40]);
+              .range([1, d3.max(data, (d) => d.churches) < 6 ? 4 : 30]);
           } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.members)])
-              .range([1, 40]);
+              .range([0, 40]);
           }
+          // 2b. A scale to handle the selection of all families and a single denominations
         } else if (family === this.allFamilies && denomination !== this.allDenominations) {
           d3.select(".denomination-title").text(`${this.denomination}`);
           if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
-              .domain([0, d3.max(data, (d) => d.churches)])
-              .range([1, 40]);
+              .domain([1, d3.max(data, (d) => d.churches)])
+              .range([1, d3.max(data, (d) => d.churches) < 6 ? 4 : 40]);
           } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.members)])
               .range([0, 80]);
           }
+          // 3. A scale to handle the selection of a single family and a single denomination
         } else if (family !== this.allFamilies && denomination !== this.allDenominations) {
           d3.select(".denomination-title").text(`${this.denomination}`);
           if (countSelection === "Congregations") {
             this.radius = d3
               .scaleSqrt()
               .domain([0, d3.max(data, (d) => d.churches)])
-              .range([1, 40]);
+              .range([1, d3.max(data, (d) => d.churches) < 6 ? 7 : 30]);
           } else if (countSelection === "Members") {
             this.radius = d3
               .scaleSqrt()
@@ -230,14 +237,18 @@ export default class DenominationsMap extends Visualization {
           );
 
         // Draw the legend, update radius based on extent of data.
-        const legend = this.viz
+        const legend = this.viz 
           .append("g")
-          .attr("fill", "#41464C")
+          .attr("class", "legend")
           .attr("transform", "translate(120,470)")
           .attr("text-anchor", "middle")
           .style("font", "10px sans-serif")
           .selectAll("g")
-          .data(this.radius.ticks(5).slice(1))
+          .data(this.radius.ticks(
+            // if d.churches < 6, the legend will be one circle, otherwise four circles
+            d3.max(data, (d) => d.churches) < 6 ? 1 : 4
+            // 3
+          ).slice(1))
           .join("g");
 
         legend

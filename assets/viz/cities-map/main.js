@@ -67,6 +67,16 @@ function setup(data) {
   let denominationFamilySelection = denominationFamily;
   const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
   const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
+  // sort the short_name alphabetically except for "All denominations"
+  filteredDenominationOptions.sort((a, b) => {
+    if (a === "All denominations") {
+      return -1;
+    } else if (b === "All denominations") {
+      return 1;
+    } else {
+      return a.localeCompare(b);
+    }
+  });
 
   // TODO: Remove these before prod
   // --------------------------------------------------
@@ -133,6 +143,15 @@ function setup(data) {
     const denominationFamilySelection = d3.select(this).node().value;
     const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
     const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
+    filteredDenominationOptions.sort((a, b) => {
+      if (a === "All denominations") {
+        return -1;
+      } else if (b === "All denominations") {
+        return 1;
+      } else {
+        return a.localeCompare(b);
+      }
+    });
     denominationDropdownValues.selectAll("option").remove();
     denominationDropdownValues.selectAll("option")
       .data(filteredDenominationOptions)
