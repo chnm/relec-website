@@ -19,7 +19,7 @@
   {{ $sass := resources.Get "scss/app.scss" }}
   {{ $style := $sass | resources.ToCSS (dict "targetPath" "./css/app.css") | resources.PostCSS (dict "use" "autoprefixer" "css-loader" "style-loader") | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href=" {{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
-
+  <!-- <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css" rel="stylesheet" type="text/css"> -->
 
   <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" />
   {{- partial "twitter-card.html" . -}} 

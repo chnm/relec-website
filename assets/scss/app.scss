@@ -217,12 +217,16 @@ footer .logos img {
 
 // -- Home
 
-#home-accordion .button {
+#home .button {
   font-size: $global-font-size;
   text-align: left;
 }
 
-#home-accordion {
+#home .button {
+  display: block;
+}
+
+#home {
   background-color: transparent;
   border-top: 1px solid $medium-gray;
   margin: calc(#{-2   * $global-margin} - 1px) 0;
@@ -232,21 +236,21 @@ footer .logos img {
   }
 }
 
-#home-accordion a,
-#home-accordion a:hover {
+#home a,
+#home a:hover {
   text-decoration: none;
 }
 
-#home-accordion h2 {
+#home h2 {
   margin-bottom: 0;
   padding-right: 2rem;
 }
 
-#home-accordion .accordion-title {
+#home .home-title {
   @extend .h2;
 }
 
-#home-accordion .accordion-title {
+#home .home-title {
   margin-bottom: 0;
   padding: $global-padding;
   text-align: left;
@@ -258,18 +262,14 @@ footer .logos img {
   }
 }
 
-#home-accordion .accordion-title {
-  border-bottom: 1px solid $medium-gray;
-}
-
-#home-accordion .accordion-content {
+#home .home-content {
   background-color: transparent;
   border: 0;
   overflow: hidden;
   border-bottom: 1px solid $medium-gray;
 }
 
-#home-accordion .is-active .accordion-content {
+#home .is-active .home-content {
   display: block;
 
   @include breakpoint(large up) {
@@ -279,13 +279,34 @@ footer .logos img {
   }
 }
 
-#home-accordion .home-text {
+#home .home-text {
   @include breakpoint(large up) {
     max-width: 50%;  
   }
 }
 
-#home-accordion .float-left {
+.home-columns {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.home-column__item {
+  align-self: center;
+  justify-self: center;
+}
+
+@media (min-width: 820px) {
+  .home-columns { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1116px) {
+  .home-columns { grid-template-columns: repeat(1, 1fr); }
+  .home-column__item:first-child { padding-bottom: ($global-padding); border-bottom: 1px solid $medium-gray; }
+}
+
+#home .float-left {
   margin: (.5 * $global-margin) (2 *$global-margin) (2 * $global-margin) 0;
   
   @include breakpoint(small down) {
@@ -293,7 +314,7 @@ footer .logos img {
   }
 }
 
-#home-accordion .float-right {
+#home .float-right {
   order: 2;
   margin: (.5 * $global-margin) 0 (2 * $global-margin) (2 * $global-margin);
   
@@ -302,7 +323,7 @@ footer .logos img {
   }
 }
 
-#home-accordion .landscape {
+#home .landscape {
   margin-bottom: 0;
   
   @include breakpoint(medium down) {
@@ -316,7 +337,7 @@ footer .logos img {
   }
 }
 
-#home-accordion .portrait {
+#home .portrait {
   max-width: 50%;
   height: auto;
 }
