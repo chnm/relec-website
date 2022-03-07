@@ -14,8 +14,8 @@ export default class DenominationsMap extends Visualization {
     super(id, data, dim, margin);
 
     // Keep track of defaults.
-    this.allFamilies = 'All denomination families';
-    this.allDenominations = 'All denominations';
+    this.allFamilies = "All denomination families";
+    this.allDenominations = "All denominations";
 
     // The following handles year data, map projections, and zoom behavior.
     this.projection = d3
@@ -53,7 +53,12 @@ export default class DenominationsMap extends Visualization {
       this.viz
         .transition()
         .duration(500)
-        .attr("transform", `translate(${this.width / 2},${this.height / 2})scale(${k}) translate(${-x},${-y})`);
+        .attr(
+          "transform",
+          `translate(${this.width / 2},${
+            this.height / 2
+          })scale(${k}) translate(${-x},${-y})`
+        );
       this.viz
         .selectAll(".country")
         .transition()
@@ -69,7 +74,10 @@ export default class DenominationsMap extends Visualization {
     // The tooltip is conditional based on whether we're displaying
     // All data or a single denomination.
     this.tooltipRender = (e, d) => {
-      if (this.denomination === this.allDenominations && this.family === this.allFamilies) {
+      if (
+        this.denomination === this.allDenominations &&
+        this.family === this.allFamilies
+      ) {
         // We use JS native .toLocalString() to display thousands separator based on user's locale
         const text = `${
           `Denomination count for <strong>${d.city}, ${d.state}</strong> in <strong>${d.year}</strong><br/>` +
@@ -146,7 +154,9 @@ export default class DenominationsMap extends Visualization {
       .selectAll("circle:not(.legend)")
       .transition()
       .duration(500)
-      .attr("r", (d) => this.radius(countSelection === "Congregations" ? d.churches : d.members))
+      .attr("r", (d) =>
+        this.radius(countSelection === "Congregations" ? d.churches : d.members)
+      )
       .style("stroke-width", `${0.5 / this.kScale}px`);
 
     // Update the denomination data by returning the Promise below
@@ -163,7 +173,10 @@ export default class DenominationsMap extends Visualization {
         // of this.countSelectChoice, to either be d.members or d.churches in data from the Promise.
 
         // 1. A scale to handle the selection of All families and All denominations
-        if (family === this.allFamilies && denomination === this.allDenominations) {
+        if (
+          family === this.allFamilies &&
+          denomination === this.allDenominations
+        ) {
           d3.select(".denomination-title").text("all");
           if (countSelection === "Congregations") {
             this.radius = d3
@@ -177,7 +190,10 @@ export default class DenominationsMap extends Visualization {
               .range([0, 80]);
           }
           // 2a. A scale to handle the selection of a single family and All denominations
-        } else if (family !== this.allFamilies && denomination === this.allDenominations) {
+        } else if (
+          family !== this.allFamilies &&
+          denomination === this.allDenominations
+        ) {
           d3.select(".denomination-title").text(`${this.family}`);
           if (countSelection === "Congregations") {
             this.radius = d3
@@ -191,7 +207,10 @@ export default class DenominationsMap extends Visualization {
               .range([0, 40]);
           }
           // 2b. A scale to handle the selection of all families and a single denominations
-        } else if (family === this.allFamilies && denomination !== this.allDenominations) {
+        } else if (
+          family === this.allFamilies &&
+          denomination !== this.allDenominations
+        ) {
           d3.select(".denomination-title").text(`${this.denomination}`);
           if (countSelection === "Congregations") {
             this.radius = d3
@@ -205,7 +224,10 @@ export default class DenominationsMap extends Visualization {
               .range([0, 80]);
           }
           // 3. A scale to handle the selection of a single family and a single denomination
-        } else if (family !== this.allFamilies && denomination !== this.allDenominations) {
+        } else if (
+          family !== this.allFamilies &&
+          denomination !== this.allDenominations
+        ) {
           d3.select(".denomination-title").text(`${this.denomination}`);
           if (countSelection === "Congregations") {
             this.radius = d3
@@ -230,25 +252,33 @@ export default class DenominationsMap extends Visualization {
                 .append("circle")
                 .attr("cx", (d) => this.projection([d.lon, d.lat])[0])
                 .attr("cy", (d) => this.projection([d.lon, d.lat])[1])
-                .attr("r", (d) => this.radius(countSelection === "Congregations" ? d.churches : d.members))
+                .attr("r", (d) =>
+                  this.radius(
+                    countSelection === "Congregations" ? d.churches : d.members
+                  )
+                )
                 .style("stroke-width", "0.5px")
                 .attr("class", "point"),
             (update) => update.attr("class", "point")
           );
 
         // Draw the legend, update radius based on extent of data.
-        const legend = this.viz 
+        const legend = this.viz
           .append("g")
           .attr("class", "legend")
           .attr("transform", "translate(120,470)")
           .attr("text-anchor", "middle")
           .style("font", "10px sans-serif")
           .selectAll("g")
-          .data(this.radius.ticks(
-            // if d.churches < 6, the legend will be one circle, otherwise four circles
-            d3.max(data, (d) => d.churches) < 6 ? 1 : 4
-            // 3
-          ).slice(1))
+          .data(
+            this.radius
+              .ticks(
+                // if d.churches < 6, the legend will be one circle, otherwise four circles
+                d3.max(data, (d) => d.churches) < 6 ? 1 : 4
+                // 3
+              )
+              .slice(1)
+          )
           .join("g");
 
         legend
@@ -265,7 +295,9 @@ export default class DenominationsMap extends Visualization {
           .attr("dy", "1.3em")
           .text(this.radius.tickFormat(4, "s"))
           .classed("legend-text", true)
-          .text((d, i, e) => (i === e.length - 1 ? `${d} ${countSelection.toLowerCase()}` : d));
+          .text((d, i, e) =>
+            i === e.length - 1 ? `${d} ${countSelection.toLowerCase()}` : d
+          );
 
         this.viz
           .selectAll("circle:not(.legend)")
@@ -276,9 +308,18 @@ export default class DenominationsMap extends Visualization {
             if (event.clientX / this.width >= 0.75) {
               this.tooltip
                 .style("top", `${event.pageY - 10}px`)
-                .style("left", `${event.pageX - this.tooltip.node().getBoundingClientRect().width - 10}px`);
+                .style(
+                  "left",
+                  `${
+                    event.pageX -
+                    this.tooltip.node().getBoundingClientRect().width -
+                    10
+                  }px`
+                );
             } else {
-              this.tooltip.style("top", `${event.pageY - 10}px`).style("left", `${event.pageX + 10}px`);
+              this.tooltip
+                .style("top", `${event.pageY - 10}px`)
+                .style("left", `${event.pageX + 10}px`);
             }
           })
           .on("mouseout", () => this.tooltip.style("visibility", "hidden"))
@@ -297,7 +338,9 @@ export default class DenominationsMap extends Visualization {
           .attr("text-anchor", "middle")
           .style("font-size", "20px")
           .style("fill", "#777")
-          .text("Sorry, there was a problem on our end with loading the data. Please try again later.")
+          .text(
+            "Sorry, there was a problem on our end with loading the data. Please try again later."
+          )
           .classed("error", true);
       });
   }
@@ -312,19 +355,30 @@ export default class DenominationsMap extends Visualization {
 
     // If a user selects All, we return the cityMembership API to display the data.
     // Otherwise, we return the denominationFilter API url with the selected year and denomination.
-    if (this.denomination === this.allDenominations && this.family === this.allFamilies) {
-      return this.data.denominationAggregate.filter((d) => d.year === this.year);
+    if (
+      this.denomination === this.allDenominations &&
+      this.family === this.allFamilies
+    ) {
+      return this.data.denominationAggregate.filter(
+        (d) => d.year === this.year
+      );
     }
 
     // If a user selects a single denomination and family as 'All',
     // we return the summed data for the selected year and denomination family.
-    if (this.denomination === this.allDenominations && this.family !== this.allFamilies) {
+    if (
+      this.denomination === this.allDenominations &&
+      this.family !== this.allFamilies
+    ) {
       const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
       const denomfamily = fetch(url)
         .then((response) => response.json())
         .then((data) => data)
         .catch((error) => {
-          console.error("There has been a problem with fetching denominations: ", error);
+          console.error(
+            "There has been a problem with fetching denominations: ",
+            error
+          );
           console.log("Attempted url: ", url);
         });
 
@@ -336,7 +390,10 @@ export default class DenominationsMap extends Visualization {
       .then((response) => response.json())
       .then((data) => data)
       .catch((error) => {
-        console.error("There has been a problem with fetching denominations: ", error);
+        console.error(
+          "There has been a problem with fetching denominations: ",
+          error
+        );
         console.log("Attempted url: ", url);
       });
 
