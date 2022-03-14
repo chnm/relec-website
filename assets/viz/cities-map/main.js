@@ -54,7 +54,8 @@ function setup(data) {
   // -------------------------------------------------------------------------
   // Add the options to the dropdowns
   const options = {
-    year: [1906, 1916, 1926, 1936],
+    // TODO: Re-enable the full year array when the years are available
+    year: [1926], // [1906, 1916, 1926, 1936]
     denomination: ["All denominations", ...data[0].map((d) => d.short_name)],
     denominationFamily: ["All denomination families", ...data[3].family_relec.map((d) => d.name)],
     countSelection: ["Congregations", "Members"],
