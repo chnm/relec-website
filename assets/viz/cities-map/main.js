@@ -51,7 +51,6 @@ function setup(data) {
   }
 
   // We build the dropdown menus from the data and add event listeners to them
-  // -------------------------------------------------------------------------
   // Add the options to the dropdowns
   const options = {
     // TODO: Re-enable the full year array when the years are available
@@ -78,12 +77,6 @@ function setup(data) {
       return a.localeCompare(b);
     }
   });
-
-  // TODO: Remove these before prod
-  // --------------------------------------------------
-  // console.log(denominationFamilySelection);
-  // console.log(data[0].map((d) => d.family_relec));
-  // console.log(filteredDenominationOptions);
 
   // Build each of the dropdown elements.
   d3.select("#year-dropdown")
@@ -123,14 +116,12 @@ function setup(data) {
         .attr("name", "denomination-selection");
 
   // Set the initial state of the dropdown menus
-  // denominationDropdownValues.selectAll("option").remove();
   denominationDropdownValues.selectAll("option")
     .data(filteredDenominationOptions)
     .join("option")
     .attr("value", (d) => d)
     .text((d) => d);
 
-  // denominationFamilyDropdownValues.selectAll("option").remove();
   denominationFamilyDropdownValues.selectAll("option")
     .data(options.denominationFamily)
     .join("option")
