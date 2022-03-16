@@ -66,7 +66,12 @@ Please use the following as a suggested citation:
 
 ### Sources
 
-The data for this map comes from...
+U.S. Census Bureau. Religious Bodies: 1906. 2 vols. Washington, DC: Government Printing Office, 1910. <https://catalog.hathitrust.org/Record/008603051>
 
-### Notes
+U.S. Census Bureau. Religious Bodies: 1916. 2 vols. Washington, DC: Government Printing Office, 1920. <https://catalog.hathitrust.org/Record/102180335>
+
+U.S. Census Bureau. Religious Bodies: 1926. 2 vols. Washington, DC: Government Printing Office, 1930. <https://catalog.hathitrust.org/Record/102366493>
+
+U.S. Census Bureau. Religious Bodies: 1936. 2 vols. Washington, DC: Government Printing Office, 1940. <https://catalog.hathitrust.org/Record/102180336>
+
 
