@@ -8,7 +8,7 @@ styles: viz/cities-map/style.css
 layout: visualization
 thumbnail: citiesmap.png
 thumbdesc: "A screenshot of cities with denominations on a map of the United States."
-doi: "https://doi.org/1234/1234"
+doi: "https://doi.org/10.31835/relec.citiesmap"
 ---
 
 In the early twentieth century, the U.S. Census Bureau conducted surveys of American religious congregations every ten years and published reports on the data it collected. The Bureau categorized denominations into different denomination families, linking together churches that had shared history, theology, or practice. This interactive map displays congregations by denominations and denominational families in American cities, including places with 25,000 or more residents. This map does not display congregations in rural areas or smaller towns.
