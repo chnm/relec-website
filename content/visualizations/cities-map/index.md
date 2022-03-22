@@ -1,8 +1,8 @@
 ---
 title: "Urban American Congregations"
-date: 2021-07-19
-updated: 2022-02-16
-abstract: "What we can learn from mapping the U.S. Census of Religious Bodies in the United States."
+date: 2022-03-22
+updated: 2022-03-22
+abstract: "What we can learn from mapping cities in the U.S. Census of Religious Bodies?"
 script: viz/cities-map/main.js
 styles: viz/cities-map/style.css
 layout: visualization
