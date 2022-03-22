@@ -394,6 +394,27 @@ footer .logos img {
 
 // -- Visualization
 
+.how-to {
+  border: 1px solid #41464C;
+  background: #f4f4f4;
+  border-radius: .25rem;
+  margin: 0 2px 40px;
+  padding: .4em;
+}
+
+.how-to details summary {
+  cursor: zoom-in;
+  margin-inline-start: 20px;
+}
+
+.how-to details[open] summary {
+  cursor: zoom-out;
+}
+
+.graphic-title {
+  text-align: center;
+}
+
 .visualization .grid-container {
   @extend .fluid;
 }

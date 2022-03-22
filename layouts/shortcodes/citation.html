@@ -1,0 +1,7 @@
+{{ $url := .Page.Permalink | absURL }}
+{{ $year := .Page.Params.updated | dateFormat "2006" }}
+{{ $doi := .Page.Params.doi }}
+
+<blockquote>
+    "{{ .Page.Title }}," <em>American Religious Ecologies</em>, Roy Rosenzweig Center for History and New Media, George Mason University ({{ $year }}): <{{ $url }}>, <<a href="{{$doi}}">{{ $doi }}</a>>.
+</blockquote>

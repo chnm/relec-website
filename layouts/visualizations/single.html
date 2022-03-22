@@ -11,11 +11,21 @@
 
         {{.Content}} 
 
-        {{ $cssStyle := resources.Get .Params.styles | resources.Minify | resources.Fingerprint }}
+        {{ if hugo.Environment | eq "development" }}
+          {{/* Only minify for production; in development, keep things verbose for debugging and troubleshooting. */}}
+        {{ $cssStyle := resources.Get .Params.styles }}
         <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
-
-        {{ $script := resources.Get .Params.script | js.Build (dict "minify" true "target" "es2020") | resources.Fingerprint }}
+        {{ $script := resources.Get .Params.script | js.Build (dict "target" "es2020") }}
         <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+        
+        {{ else }}
+        
+        {{ $cssStyle := resources.Get .Params.styles | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
+        {{ $script := resources.Get .Params.script | js.Build (dict "target" "es2020") | resources.Fingerprint }}
+        <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+        {{ end }}
+
       </div>
     </div>
     {{- partial "footer.html" . -}}

@@ -5,4 +5,5 @@ hugo.exe
 website.code-workspace
 .vscode/tasks.json
 resources/_gen
+scratchpad.txt
 .hugo_build.lock

@@ -1,0 +1,67 @@
+.country {
+    fill: transparent;
+    stroke: #41464C;
+}
+
+.states {
+    fill: transparent;
+    stroke: #41464C;
+}
+
+.point {
+    fill: #F2AC29;
+    fill-opacity: 0.5;
+    stroke: black;
+    stroke-width: 1;
+    stroke-opacity: 1;
+}
+
+.congregation {
+    fill-opacity: 0.75;
+    stroke-opacity: 1;
+}
+
+#denomination-dropdown {
+    width: 40vw;
+}
+
+rect {
+    fill: gray;
+}
+
+.active {
+    fill: red;
+    }
+
+.tooltip {
+    background: rgba(101, 104, 109, 0.9);
+    border-radius: .2rem;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    max-width: 400px;
+    padding: .2rem .4rem;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 300;
+    visibility: hidden;
+    }
+
+input[type=range] {
+    width: 100%;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.instructions {
+    line-height: 1.3rem;
+}
+
+/* Alignment and padding for the vis filters */
+.row.menu > div {
+    padding-right: 4px;
+  }
