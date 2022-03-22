@@ -1,35 +1,61 @@
+/* color scheme: 
+    #F2AC29 orange #F18701
+    #FEFEFE white #F7F4F3
+    #8ACDEA blue #9EB3C2
+    #FE654F red #D7263D
+    #122C34 black #2E282A
+    #659157 green #8DAA91 */
+
+:root {
+    --color-orange: #F18701;
+    --color-white: #F7F4F3;
+    --color-blue: #9EB3C2;
+    --color-red: #D7263D;
+    --color-black: #2E282A;
+    --color-green: #8DAA91;
+    --color-link-primary: #0060b1;
+    --color-link-hover: #005398;
+}
+
 .country {
-    fill: rgba(212, 234, 254, 0.3);
-    stroke: rgb(200, 200, 200);
+    fill: transparent;
+    stroke: var(--color-black);
+    stroke-opacity: 0.5;
+}
+
+.states {
+    fill: transparent;
+    stroke: var(--color-black);
+    stroke-opacity: 0.5;
 }
 
 .diocese {
-    fill: purple;
-    fill-opacity: 0.25;
-    stroke: purple;
+    fill: var(--color-orange);
+    fill-opacity: 0.5;
+    stroke: var(--color-orange);
     stroke-opacity: 1;
 }
 
 .metropolitan {
-    fill: red;
-    fill-opacity: 0.25;
-    stroke: red;
+    fill: var(--color-green);
+    fill-opacity: 0.5;
+    stroke: var(--color-green);
     stroke-opacity: 1;
 }
 
 .nonlatin {
     fill-opacity: 0.75;
-    stroke: black;
+    stroke: var(--color-black);
     stroke-width: 1;
     stroke-opacity: 1;
 }
 
 rect {
-    fill: gray;
+    fill: var(--color-black);
 }
 
 .active {
-    fill: red;
+    fill: var(--color-red);
     }
 
 .tooltip {
