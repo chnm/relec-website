@@ -2,7 +2,6 @@
 title: "Schedule Spotlight: Advent Christian Church in St. Johnsbury, Vermont"
 author: Caroline Greer
 date: 2022-03-23
-draft: true
 abstract: For Women's History Month, we are spotlighting a congregation that not only had a female pastor but had highly active women church members in their church services and official leadership. 
 image: "/blog-img/adventchurchstjohn.jpeg"
 imagealt: "The Census schedule for the Advent Christian Church in St. Johnsbury, Vermont. Two women are featured on the schedule: Mrs. Susie M. Dow, the preacher, and Evalyn B. Dean, the clerk."
