@@ -1,8 +1,7 @@
----
 title: "Schedule Spotlight: Watervliet Shakers"
 author: Caroline Greer
 date: 2022-03-23
-abstract: The Watervliet Shakers in Colonie, New York were the site of the first permanent Shaker settlement in the United States. This post explores the community in 1926.
+abstract:  The Watervliet Shakers in Colonie, New York were the site of the first permanent Shaker settlement in the United States. This post explores the community in 1926.
 image: "/blog-img/postcard-shakers.png"
 imagealt: "A postcard featuring a group of Shakers in Troy, New York, taken in 1870." 
 ---
