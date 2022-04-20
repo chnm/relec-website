@@ -33,7 +33,7 @@ Though the Watervliet Shakers were already facing decline in the 1920s, that the
 [^2]: Cornelia E. Brooke, “Watervliet Shaker Historic District,” National Registration of Historic Places Nomination Form, (Washington, DC: U.S. Department of the Interior, National Park Service, 1973), Section 7.  
 [^3]:Sydney E. Ahlstrom, *A Religious History of the American People*, (Yale University, 1972,) 492-3.
 [^4]: Ahlstrom, A Religious History of the American People, 494. 
-[^5]: Freeman, [“The Rhythm of Shaker Dance Marked the Shakers as “Other,”](https://daily.jstor.org/the-rhythms-of-shaker-dance-marked-the-shakers-as-other/ ) *JSTOR Daily*, 21 August 2019. 
+[^5]: Elizabeth Freeman, [“The Rhythm of Shaker Dance Marked the Shakers as “Other,”](https://daily.jstor.org/the-rhythms-of-shaker-dance-marked-the-shakers-as-other/ ) *JSTOR Daily*, 21 August 2019. 
 [^6]: Cornelia E. Brooke, “Watervliet Shaker Historic District,” National Registration of Historic Places Nomination Form, (Washington, DC: U.S. Department of the Interior, National Park Service, 1973), Section 8. 
 [^7]: Cornelia E. Brooke, “Watervliet Shaker Historic District,” National Registration of Historic Places Nomination Form, (Washington, DC: U.S. Department of the Interior, National Park Service, 1973), Section 8. 
 [^8]: [*Year: 1920; Census Place: Colonie, Albany, New York*](https://www.ancestry.com/discoveryui-content/view/30887562:6061?tid=&pid=&queryId=8dea28c9830af720af9ce5187fc841fa&_phsrc=TeA46&_phstart=successSource); Roll: T625_1083; Page: 8A; Enumeration District: 151. Ancestry,  Accessed 13 April 2022. 
