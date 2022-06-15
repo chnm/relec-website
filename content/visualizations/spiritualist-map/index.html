@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+	<style>
+		#map {
+			height: 600px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Caroline's map</h1>
+	<h2>You are lucky to be looking at it</h2>
+	<div id="map"></div>
+
+	<script>
+		var data = {
+			"type": "FeatureCollection",
+			"features": [
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-72.585762, 42.102021]
+					},
+					"properties": {
+						"schedule_id": 1,
+						"Name": "The First Spiritual Alliance Church",
+						"city": "Springfield",
+						"state": "Massachusetts",
+						"pastor_name": "Millie M. Barrett",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.058884, 42.360081]
+					},
+					"properties": {
+						"schedule_id": 2,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Boston ",
+						"state": "Massachusetts",
+						"pastor_name": "Helen Greene",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.058884, 42.360081]
+					},
+					"properties": {
+						"schedule_id": 3,
+						"Name": "The Freewill Spiritual Alliance Temple",
+						"city": "Boston ",
+						"state": "Massachusetts",
+						"pastor_name": "Amanda A. Gauld",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.058884, 42.360081]
+					},
+					"properties": {
+						"schedule_id": 4,
+						"Name": "Christian Psychic",
+						"city": "Boston ",
+						"state": "Massachusetts",
+						"pastor_name": "",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-72.51643, 42.55777]
+					},
+					"properties": {
+						"schedule_id": 5,
+						"Name": "Headquarters or Mother Church of the National Spiritual Alliance",
+						"city": "Lake Pleasant",
+						"state": "Massachusetts",
+						"pastor_name": "William Whicher",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.382408, 41.879902]
+					},
+					"properties": {
+						"schedule_id": 6,
+						"Name": "The Divine Spiritual Church",
+						"city": "Pawtucket",
+						"state": "Rhode Island",
+						"pastor_name": "",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.4128, 41.824]
+					},
+					"properties": {
+						"schedule_id": 7,
+						"Name": "The Divine Spiritualist Alliance Church",
+						"city": "Providence",
+						"state": "Rhode Island",
+						"pastor_name": "",
+						"pastor_gender": "",
+						"Notes": "Note written on side of schedule: Div [was?] closed our church June 24th 1927 through illness expect to open Sept 9th 1928 - Mrs. C. Taber"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.4128, 41.824]
+					},
+					"properties": {
+						"schedule_id": 8,
+						"Name": "Holy Angel Alliance Mission",
+						"city": "Providence",
+						"state": "Rhode Island",
+						"pastor_name": "",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-71.4128, 41.824]
+					},
+					"properties": {
+						"schedule_id": 9,
+						"Name": "W. T. Stead Spiritualist Church Inc. ",
+						"city": "Providence ",
+						"state": "Rhode Island",
+						"pastor_name": "",
+						"pastor_gender": "",
+						"Notes": "Note: No pastor at present engage speakers each sunday"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-72.9279, 41.3083]
+					},
+					"properties": {
+						"schedule_id": 10,
+						"Name": "First Spiritual Alliance Church",
+						"city": "New Haven",
+						"state": "Connecticut",
+						"pastor_name": "",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-73.7562, 42.6526]
+					},
+					"properties": {
+						"schedule_id": 11,
+						"Name": "The Spiritualist Church of the Arisen",
+						"city": "Albany",
+						"state": "New York",
+						"pastor_name": "Milicent Hubbard",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-74.006, 40.7128]
+					},
+					"properties": {
+						"schedule_id": 12,
+						"Name": "First Liberty Spiritual Pentecost Alliance Church",
+						"city": "New York City",
+						"state": "New York",
+						"pastor_name": "Rosie P. A. Braxton",
+						"pastor_gender": "female",
+						"Notes": "Note: Signed as 'pastor and healer'"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-74.006, 40.7128]
+					},
+					"properties": {
+						"schedule_id": 13,
+						"Name": "Union Spiritualist Alliance",
+						"city": "New York City",
+						"state": "New York",
+						"pastor_name": "Elizabeth Squirrell",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-74.006, 40.7128]
+					},
+					"properties": {
+						"schedule_id": 14,
+						"Name": "Universal Constructed Spiritual Church of Love",
+						"city": "New York City",
+						"state": "New York",
+						"pastor_name": "Nancy [Lea] Frochard Drozé",
+						"pastor_gender": "female",
+						"Notes": "Note: pastor graduate at Allen University, an HBCU that trained many ministers and teachers"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-73.9396, 42.8142]
+					},
+					"properties": {
+						"schedule_id": 15,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Schenectady",
+						"state": "New York",
+						"pastor_name": "Jennie K. Bellegarde",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-74.3437, 43.0529]
+					},
+					"properties": {
+						"schedule_id": 16,
+						"Name": "The First Spiritualist Church Inc.",
+						"city": "Gloversville",
+						"state": "New York",
+						"pastor_name": "Howard P. Johnson",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-74.2165, 42.2898]
+					},
+					"properties": {
+						"schedule_id": 17,
+						"Name": "Glenside Spiritual Science Church",
+						"city": "Hensonville",
+						"state": "New York",
+						"pastor_name": "Louis C. Bennett",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-79.9959, 40.4406]
+					},
+					"properties": {
+						"schedule_id": 18,
+						"Name": "Mount Hope Spiritualist Church",
+						"city": "Pittsburgh",
+						"state": "Pennsylvania ",
+						"pastor_name": "J. W. Buzzard",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 19,
+						"Name": "Erie Spiritual Alliance",
+						"city": "Erie",
+						"state": "Pennsylvania ",
+						"pastor_name": "Mrs. W. J. Sawdey",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 20,
+						"Name": "Alliance Church of Spiritual Vision",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "F. [P.?] Hill",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 21,
+						"Name": "Centre Spiritual Alliance",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Mrs. L. A. Metzer",
+						"pastor_gender": "female",
+						"Notes": "Note: Scratched out pastor and wrote 'in charge of' and signed the bottom as 'member'"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 22,
+						"Name": "Dorcas Spiritual Alliance Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Dorcas A. Brown",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 23,
+						"Name": "The Elizabeth Spiritual Alliance Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Mary E. Coleman",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 24,
+						"Name": "Grace Spiritual Alliance Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Grace Egan",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 25,
+						"Name": "Mt. Olive Spiritual Alliance Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Letitia Richardson",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 26,
+						"Name": "Peters Spiritual Alliance",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Nannie Oliver",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 27,
+						"Name": "Prospect Spiritual Alliance Church (Colored.",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "William Davis",
+						"pastor_gender": "male",
+						"Notes": "Note: scratched out pastor and wrote 'president'"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 28,
+						"Name": "St. Ebenezer Spiritual Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "T. L. Nelson",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 29,
+						"Name": "St John's Spiritual Alliance",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Charles J. Heckler",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 30,
+						"Name": "St. John Spiritual Alliance Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Chas. A. James",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 31,
+						"Name": "St. Paul Spiritual Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "L Wilson",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.1652, 39.9526]
+					},
+					"properties": {
+						"schedule_id": 32,
+						"Name": "Sunshine Spiritual Church",
+						"city": "Philadelphia",
+						"state": "Pennsylvania ",
+						"pastor_name": "Martin H. Davis",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-75.6496, 40.2454]
+					},
+					"properties": {
+						"schedule_id": 33,
+						"Name": "First Spiritual Alliance  ",
+						"city": "Pottstown ",
+						"state": "Pennsylvania ",
+						"pastor_name": "David Blair",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.0004, 40.3863]
+					},
+					"properties": {
+						"schedule_id": 34,
+						"Name": "God is Love",
+						"city": "Overbrook",
+						"state": "Pennsylvania ",
+						"pastor_name": "Unknown",
+						"pastor_gender": "",
+						"Notes": "Note: Allegheny County"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.6495, 41.0998]
+					},
+					"properties": {
+						"schedule_id": 35,
+						"Name": "Ingersol Memorial Spiritual Alliance Church",
+						"city": "Youngstown",
+						"state": "Ohio",
+						"pastor_name": "Rosa Hoyle",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.6495, 41.0998]
+					},
+					"properties": {
+						"schedule_id": 36,
+						"Name": "Youngstown Spiritual Alliance",
+						"city": "Youngstown",
+						"state": "Ohio",
+						"pastor_name": "Lula Marion",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.6495, 41.0998]
+					},
+					"properties": {
+						"schedule_id": 37,
+						"Name": "The First Spiritual Alliance of America",
+						"city": "Youngstown",
+						"state": "Ohio",
+						"pastor_name": "- Suttclif",
+						"pastor_gender": "",
+						"Notes": "Note: Asst pastor may be a woman: \"M[rs]. Pearce\""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-81.3784, 40.7989]
+					},
+					"properties": {
+						"schedule_id": 38,
+						"Name": "First Spiritual Alliance",
+						"city": "Canton",
+						"state": "Ohio",
+						"pastor_name": "R. B. Rheaumont",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.8184, 41.2376]
+					},
+					"properties": {
+						"schedule_id": 39,
+						"Name": "Warren Spiritual Alliance Church",
+						"city": "Warren ",
+						"state": "Ohio",
+						"pastor_name": "Hattie Polonus",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-86.252, 41.6764]
+					},
+					"properties": {
+						"schedule_id": 40,
+						"Name": "First Spiritual Alliance Church",
+						"city": "South Bend",
+						"state": "Indiana",
+						"pastor_name": "W. J. McNutt",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-87.6298, 41.8781]
+					},
+					"properties": {
+						"schedule_id": 41,
+						"Name": "Lincoln Spiritual Alliance",
+						"city": "Chicago",
+						"state": "Illinois",
+						"pastor_name": "M. [Marceleay?]",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-90.5787, 41.5095]
+					},
+					"properties": {
+						"schedule_id": 42,
+						"Name": "United Spiritual Allieance",
+						"city": "Rock Island",
+						"state": "Illinois",
+						"pastor_name": "Clara Neale",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-89.094, 42.2711]
+					},
+					"properties": {
+						"schedule_id": 43,
+						"Name": "The Progressive Spiritual Alliance Church",
+						"city": "Rockford",
+						"state": "Illinois",
+						"pastor_name": "Folke Tegner",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-87.9065, 43.0389]
+					},
+					"properties": {
+						"schedule_id": 44,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Milwaukee",
+						"state": "Wisconsin",
+						"pastor_name": "L. Stroik ",
+						"pastor_gender": "",
+						"Notes": "Note: Strock?"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-90.5776, 41.5236]
+					},
+					"properties": {
+						"schedule_id": 45,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Davenport",
+						"state": "Iowa",
+						"pastor_name": "[M. Marceleay?]",
+						"pastor_gender": "",
+						"Notes": "Note: Schedule filled out by Mrs. M. Kline, who signed her title as \"Asst. Pastor-Sec.\"D"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-91.0432, 41.4245]
+					},
+					"properties": {
+						"schedule_id": 46,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Muscatine",
+						"state": "Iowa",
+						"pastor_name": "Mrs. M. Kline",
+						"pastor_gender": "female",
+						"Notes": "Note: Probably same woman as asst. pastor for 45"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-94.5786, 39.0997]
+					},
+					"properties": {
+						"schedule_id": 47,
+						"Name": "The First National Spiritual Alliance Church",
+						"city": "Kansas City",
+						"state": "Missouri",
+						"pastor_name": "Jane K. Grimpel and N. Van Dolan",
+						"pastor_gender": "female",
+						"Notes": "Note: Under College information, J. wrote \"Spiritualists have no such schools. - Ordination depends on services and developments personally\""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-94.5786, 39.0997]
+					},
+					"properties": {
+						"schedule_id": 48,
+						"Name": "Guiding Star of Light T.N.S.A.",
+						"city": "Kansas City",
+						"state": "Missouri",
+						"pastor_name": "Addie Johnson",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-94.5786, 39.0997]
+					},
+					"properties": {
+						"schedule_id": 49,
+						"Name": "West Side",
+						"city": "Kansas City",
+						"state": "Missouri",
+						"pastor_name": "Emma Cox",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-90.1994, 38.627]
+					},
+					"properties": {
+						"schedule_id": 50,
+						"Name": "Alliance Spiritual Truth Church",
+						"city": "St. Louis",
+						"state": "Missouri",
+						"pastor_name": "Gilbert Anderson",
+						"pastor_gender": "male",
+						"Notes": "Note: President givena as title"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-94.6268, 39.1155]
+					},
+					"properties": {
+						"schedule_id": 51,
+						"Name": "Rosebud Alliance Mission",
+						"city": "Kansas City",
+						"state": "Kansas",
+						"pastor_name": "Thomas McLean",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-76.6122, 39.2904]
+					},
+					"properties": {
+						"schedule_id": 52,
+						"Name": "Sacred Heart Spiritual Baptist Ch. ",
+						"city": "Baltimore",
+						"state": "Maryland",
+						"pastor_name": "E. Adelie Williams",
+						"pastor_gender": "female",
+						"Notes": "Sigend: Ethel Williams"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.1918, 25.7617]
+					},
+					"properties": {
+						"schedule_id": 53,
+						"Name": "Sunlight Spiritual Alliance Church Colored",
+						"city": "Miami",
+						"state": "Florida",
+						"pastor_name": "Hannah Wheeler",
+						"pastor_gender": "female",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-81.6557, 30.3322]
+					},
+					"properties": {
+						"schedule_id": 54,
+						"Name": "The Christian Spiritual Alliance",
+						"city": "Jacksonville",
+						"state": "Florida",
+						"pastor_name": "D. Gautling",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-80.2167, 25.8318]
+					},
+					"properties": {
+						"schedule_id": 55,
+						"Name": "White Rose Spiritual Alliance Church (Colored)",
+						"city": "Liberty City",
+						"state": "Florida",
+						"pastor_name": "D. Gautling",
+						"pastor_gender": "",
+						"Notes": "Note: Liberty City is in Miami"
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-97.5164, 35.4676]
+					},
+					"properties": {
+						"schedule_id": 56,
+						"Name": "The First Spiritual Alliance Church",
+						"city": "Oklahoma City",
+						"state": "Oklahoma",
+						"pastor_name": "Nicholas Beeker",
+						"pastor_gender": "male",
+						"Notes": ""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-81.5267, 29.4044]
+					},
+					"properties": {
+						"schedule_id": 57,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Denver",
+						"state": "Colorado",
+						"pastor_name": "[T J M?] Rich",
+						"pastor_gender": "",
+						"Notes": "Note: Education included Whites College ofd Mystic Science and he signed his name as \"Rev Dr\""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-81.5267, 29.4044]
+					},
+					"properties": {
+						"schedule_id": 58,
+						"Name": "Spiritual Alliance Church of Christ",
+						"city": "Denver",
+						"state": "Colorado",
+						"pastor_name": "Fornberg Hacker",
+						"pastor_gender": "",
+						"Notes": "Note: \"Church is held in our home. I recieve no salary.\""
+					}
+				},
+				{
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [-118.2437, 34.0522]
+					},
+					"properties": {
+						"schedule_id": 59,
+						"Name": "First Spiritual Alliance Church",
+						"city": "Los Angeles",
+						"state": "California",
+						"pastor_name": "H. B. [Faffe?]",
+						"pastor_gender": "",
+						"Notes": ""
+					}
+				}
+			]
+		}
+
+		var map = L.map('map').setView([39.953, -75.265], 6);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+		}).addTo(map);
+
+		var geojsonMarkerOptions = {
+			radius: 8,
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.8
+		};
+
+		var points = L.geoJSON(data, {
+			pointToLayer: function (feature, latlng) {
+				let options = geojsonMarkerOptions;
+				switch (feature.properties.pastor_gender) {
+					case 'female':
+						options.color = "red";
+						options.fillColor = "red";
+						break;
+					case 'male':
+						options.color = "green";
+						options.fillColor = "green";
+						break;
+					case '':
+						options.color = "blue";
+						options.fillColor = "blue";
+						break;
+				}
+				return L.circleMarker(latlng, options);
+			},
+			onEachFeature: function (feature, layer) {
+				layer.bindPopup(feature.properties.pastor_name);
+			},
+		});
+		points.addTo(map);
+
+		map.fitBounds(points.getBounds());
+
+	</script>
+</body>
+
+</html>
