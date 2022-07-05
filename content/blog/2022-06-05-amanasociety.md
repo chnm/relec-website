@@ -2,9 +2,9 @@
 title: "Schedule Spotlight: the Amana Society"
 author: Caroline Greer
 date: 2022-06-05
-abstract:  
-image: 
-imagealt:
+abstract:  This month's spotlight schedule is about the Amana Society, a communal living society with seven villages across Iowa. Here we look into the group's history and development and their communities as they were in 1926, while also examining how the Census Bureau collected data about non-traditional denominations.
+image: "/blog-img/amana-meetinghouse.jpeg"
+imagealt: The Main Meetinghouse in Amana, Iowa. 
 ---
 
 This month’s spotlight schedule comes from a communitarian Pietist sect in Iowa. The Amana Society, or Amana Colonies, had seven villages, each coinciding with one of the seven organizations listed on the master schedule:Middle Amana, Amana, South Amana, Homestead, West Amana, High Amana, and East Amana. 
