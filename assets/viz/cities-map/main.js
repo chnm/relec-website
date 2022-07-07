@@ -63,10 +63,18 @@ function setup(data) {
   // options.denomination needs to be filtered where a denomination is only displayed if it 
   // is part of a options.denominationFamily. We do this by getting the selected denominationFamily
   // either from initialState or the URL params, and then filtering the options.denomination array
-  // to only include the denominations that are part of the selected denominationFamily.
-  let denominationFamilySelection = denominationFamily;
-  const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
+  // to only include the denominations that are part of the selected denominationFamily. We need to 
+  // match exactly the denominationFamily with family_relec.name, so we use the indexOf method.
+  const denominationFamilyIndex = data[3].family_relec.findIndex((d) => d.name === denominationFamily);
+  const filteredDenominations = data[0].filter((d) => d.family_relec[denominationFamilyIndex].indexOf(d.short_name) !== -1);
   const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
+
+
+  // let denominationFamilySelection = denominationFamily;
+  // console.log('family', denominationFamily);
+  // const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
+  // console.log('denoms', filteredDenominations);
+  // const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
   // sort the short_name alphabetically except for "All denominations"
   filteredDenominationOptions.sort((a, b) => {
     if (a === "All denominations") {
@@ -130,11 +138,15 @@ function setup(data) {
 
   // Add event listener to the family dropdown. When a user changes the family dropdown value, 
   // we need to update the denomination dropdown with the appropriate values. These then persist 
-  // whether the user changes the dropdown or uses the URL params.
+  // whether the user changes the dropdown or uses the URL params. We need an exact match, so we
+  // use the indexOf method instead of includes().  
   denominationFamilyDropdownValues.on("change", function() {
     const denominationFamilySelection = d3.select(this).node().value;
-    const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
+    const filteredDenominations = data[0].filter((d) => d.family_relec === denominationFamilySelection);
+    // const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
     const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
+    
+    // sort the short_name alphabetically except for "All denominations"
     filteredDenominationOptions.sort((a, b) => {
       if (a === "All denominations") {
         return -1;
