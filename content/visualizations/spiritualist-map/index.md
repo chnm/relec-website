@@ -17,7 +17,7 @@ Caroline's cool text to come
 <div class="viz-block grid-x grid-padding-x">
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <h3 class="graphic-title">Map of Spiritualists</h3>
-    <svg id="spiritualist-map" width="100%"></svg>
+    <div id="spiritualist-map"></div>
   </div>
 </div>
 
