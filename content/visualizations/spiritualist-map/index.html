@@ -999,7 +999,7 @@
     "state":"Colorado",
     "pastor_name":"[T J M?] Rich",
     "pastor_gender":"Unknown",
-    "notes":"Note: Education included Whites College ofd Mystic Science and he signed his name as \"Rev Dr\""
+    "notes":"Note: Education included Whites College of Mystic Science and he signed his name as \"Rev Dr\""
     }
   },
   {
@@ -1058,16 +1058,16 @@
 				let options = geojsonMarkerOptions;
 				switch (feature.properties.pastor_gender) {
 					case 'Female':
-						options.color = "green";
-						options.fillColor = "green";
+						options.color = "purple";
+						options.fillColor = "purple";
 						break;
 					case 'Male':
-						options.color = "yellow";
-						options.fillColor = "yellow";
+						options.color = "blue";
+						options.fillColor = "blue";
 						break;
 					case 'Unknown':
-						options.color = "orange";
-						options.fillColor = "orange";
+						options.color = "black";
+						options.fillColor = "black";
 						break;
             case 'None':
               options.color = 'red';
