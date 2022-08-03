@@ -1,5 +1,6 @@
 ---
 title: National Spiritual Alliance Map 
+author: Caroline Greer
 date: 2022-08-03
 updated: 2022-08-03
 abstract: "This map shows the geographic distribution of male and female pastors in the National Spiritual Alliance in 1926 to highlight the large amount of women represented in Spiritualist leadership."
