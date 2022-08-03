@@ -4,8 +4,8 @@ author: Caroline Greer
 date: 2022-08-03
 updated: 2022-08-03
 abstract: "This map shows the geographic distribution of male and female pastors in the National Spiritual Alliance in 1926 to highlight the large amount of women represented in Spiritualist leadership."
-script: viz/cities-map/main.js
-styles: viz/cities-map/style.css
+script: viz/spiritualist-map/main.js
+styles: viz/spiritualist-map/style.css
 layout: visualization
 thumbnail: citiesmap.png
 thumbdesc: "A screenshot of cities with denominations on a map of the United States."
