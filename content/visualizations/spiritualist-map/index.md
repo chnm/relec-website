@@ -18,7 +18,18 @@ Caroline's cool text to come
   <div class="cell medium-12 xlarge-10 large-offset-1">
     <h3 class="graphic-title">Map of Spiritualists</h3>
     <div id="spiritualist-map"></div>
-  </div>
+    <!-- add dropdown of genders to filter -->
+    <div id="filter" style="width: 30%">
+    <label class="gender-dropdown">Select a gender:</label>
+      <select name="gender" id="filters">
+        <option value="All">All</option>
+        <option value="Female">Female preachers</option>
+        <option value="Male">Male preachers</option>
+        <option value="None">None</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+      </div>
+    </div>
 </div>
 
 ### Suggested citation

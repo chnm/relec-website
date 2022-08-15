@@ -56,3 +56,42 @@ var points = L.geoJSON(data, {
 points.addTo(map);
 
 map.fitBounds(points.getBounds());
+
+// Add the legend for each of the properties.pastor_gender values
+const legend = L.control({position: 'bottomright'});
+legend.onAdd = function (map) {
+    const div = L.DomUtil.create('div', 'info legend'),
+        labels = ["Female", "Male", "None", "Unknown"],
+        colors = ["purple", "blue", "black", "red"];
+        // labels = [];
+
+    // Loop through the grades and display their color 
+    for (let i = 0; i < labels.length; i++) {
+      div.innerHTML += 
+      '<div class="legend-label"><i style="background:' + colors[i] + '"></i> ' +
+      labels[i] + '</div>';
+    }
+
+    return div;
+};
+
+legend.addTo(map);
+
+// Handle filtering of the markers on the map
+const filter = document.getElementById("filter");
+filter.addEventListener("change", function (e) {
+  const value = e.target.value;
+  console.log(value);
+  points.eachLayer(function (layer) {
+    if (layer.feature.properties.pastor_gender
+      .includes(value)) {
+      layer.addTo(map);
+    }
+    else if (value === "All") {
+      layer.addTo(map);
+    }
+    else {
+      map.removeLayer(layer);
+    }
+  });
+});
