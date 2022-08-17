@@ -96,8 +96,8 @@
     "name":"Christian Psychic",
     "city":"Boston ",
     "state":"Massachusetts",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":""
     }
   },
@@ -130,8 +130,8 @@
     "name":"The Divine Spiritual Church",
     "city":"Pawtucket",
     "state":"Rhode Island",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":""
     }
   },
@@ -147,8 +147,8 @@
     "name":"The Divine Spiritualist Alliance Church",
     "city":"Providence",
     "state":"Rhode Island",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":"Note written on side of schedule: Div [was?] closed our church June 24th 1927 through illness expect to open Sept 9th 1928 - Mrs. C. Taber; Address: 95 Wheeler Ave"
     }
   },
@@ -164,8 +164,8 @@
     "name":"Holy Angel Alliance Mission",
     "city":"Providence",
     "state":"Rhode Island",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":""
     }
   },
@@ -181,8 +181,8 @@
     "name":"W. T. Stead Spiritualist Church Inc. ",
     "city":"Providence ",
     "state":"Rhode Island",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":"Note: No pastor at present engage speakers each sunday"
     }
   },
@@ -198,8 +198,8 @@
     "name":"First Spiritual Alliance Church",
     "city":"New Haven",
     "state":"Connecticut",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":""
     }
   },
@@ -368,7 +368,7 @@
     "name":"Alliance Church of Spiritual Vision",
     "city":"Philadelphia",
     "state":"Pennsylvania ",
-    "pastor_name":"F. [P.?] Hill",
+    "pastor_name":"F. P. Hill",
     "pastor_gender":"Unknown",
     "notes":""
     }
@@ -606,8 +606,8 @@
     "name":"God is Love",
     "city":"Overbrook",
     "state":"Pennsylvania ",
-    "pastor_name":"",
-    "pastor_gender":"None",
+    "pastor_name":"No pastor",
+    "pastor_gender":"N/A",
     "notes":"Note: Allegheny County"
     }
   },
@@ -657,7 +657,7 @@
     "name":"The First Spiritual Alliance of America",
     "city":"Youngstown",
     "state":"Ohio",
-    "pastor_name":"- Suttclif",
+    "pastor_name":"M Suttclif",
     "pastor_gender":"Unknown",
     "notes":"Note: Asst pastor may be a woman: \"M[rs]. Pearce\";  Address: 940 Katherine Ave"
     }
@@ -725,7 +725,7 @@
     "name":"Lincoln Spiritual Alliance",
     "city":"Chicago",
     "state":"Illinois",
-    "pastor_name":"M. [Marceleay?]",
+    "pastor_name":"M. Marceleay",
     "pastor_gender":"Unknown",
     "notes":""
     }
@@ -793,7 +793,7 @@
     "name":"First Spiritual Alliance Church",
     "city":"Davenport",
     "state":"Iowa",
-    "pastor_name":"[M. Marceleay?]",
+    "pastor_name":"M. Marceleay",
     "pastor_gender":"Unknown",
     "notes":"Note: Schedule filled out by Mrs. M. Kline, who signed her title as \"Asst. Pastor-Sec.\"D"
     }
@@ -997,7 +997,7 @@
     "name":"First Spiritual Alliance Church",
     "city":"Denver",
     "state":"Colorado",
-    "pastor_name":"[T J M?] Rich",
+    "pastor_name":"T J M Rich",
     "pastor_gender":"Unknown",
     "notes":"Note: Education included Whites College of Mystic Science and he signed his name as \"Rev Dr\""
     }
@@ -1031,7 +1031,7 @@
     "name":"First Spiritual Alliance Church",
     "city":"Los Angeles",
     "state":"California",
-    "pastor_name":"H. B. [Faffe?]",
+    "pastor_name":"H. B. Faffe",
     "pastor_gender":"Unknown",
     "notes":""
     }
@@ -1069,7 +1069,7 @@
 						options.color = "black";
 						options.fillColor = "black";
 						break;
-            case 'None':
+            case 'No pastor':
               options.color = 'red';
               options.fillcolor = 'red'
               break; 
@@ -1082,6 +1082,7 @@
 					<div class="popup">
 						<strong>Pastor:</strong> ${feature.properties.pastor_name}<br/>
 						<strong>Gender:</strong> ${feature.properties.pastor_gender}<br/>
+            <strong>Gender:</strong> ${feature.properties.name}<br/>
 						<a href="${feature.properties.url}" target="_blank">Link to census schedule</a>
 					</div>
 					`

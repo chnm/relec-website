@@ -25,7 +25,7 @@ doi: "https://doi.org/10.31835/TBD"
         <option value="All">All</option>
         <option value="Female">Female preachers</option>
         <option value="Male">Male preachers</option>
-        <option value="None">None</option>
+        <option value="N/A">None</option>
         <option value="Unknown">Unknown</option>
       </select>
       </div>
