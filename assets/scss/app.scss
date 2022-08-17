@@ -471,6 +471,11 @@ a.footnote-backref {
   text-decoration: none;
 }
 
+.visualization .footnotes {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
 .visualization .footnotes hr {
   display: none;
 }
