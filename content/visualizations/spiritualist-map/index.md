@@ -1,14 +1,14 @@
 ---
-title: National Spiritual Alliance Map 
+title: Male and Female Pastors in the National Spiritual Alliance 
 author: Caroline Greer
-date: 2022-08-03
-updated: 2022-08-03
-abstract: "This map shows the geographic distribution of male and female pastors in the National Spiritual Alliance in 1926 to highlight the large amount of women represented in Spiritualist leadership."
+date: 2022-08-18
+updated: 2022-08-18
+abstract: "This map shows the geographic distribution of male and female pastors in the National Spiritual Alliance of the United States in 1926 to highlight the large amount of women represented in Spiritualist leadership. There are 59 congregations represented in this map."
 script: viz/spiritualist-map/main.js
 styles: viz/spiritualist-map/style.css
 layout: visualization
-thumbnail: citiesmap.png
-thumbdesc: "A screenshot of cities with denominations on a map of the United States."
+thumbnail: spiritualistmapheader.png
+thumbdesc: "A screenshot of National Spiritual Alliance of the United States congregations in 1926."
 doi: "https://doi.org/10.31835/TBD"
 ---
 
@@ -61,7 +61,7 @@ Please use the following as a suggested citation:
 [^2]: Robert Cox, “Spiritualism,” in *Early Republic and Antebellum America*, 963.
 [^3]: Catherine Albanese, *A Republic of Mind and Spirit: A Cultural History of American Metaphysical Religion* (Yale University Press, 2007), 235. 
 [^4]: Ann Braude, *Radical Spirits: Spiritualism and Women’s Rights in America* (Beacon Press: Boston, 1989), 83. Braude argued that Spiritualism was intertwined with women’s rights and gave women one of the largest public platforms to advocate for reform through the acceptance of female mediumship. Catherine Albanese also wrote, “Still, from its beginning the mass spiritualist movement presents the first major case in which women became acknowledged leaders in a religious milieu. The metaphysical religion of the later nineteenth century would continue to valorize the role of women. Indeed, one reason why American metaphysical religion has been understudied and sometimes flatly disdained by scholars has arguably been its strong female presence and leadership” (Albanese, 235).
-[^5]: Braude, *Radical Spirits* 165; Albanese, *A Republic of Mind and Spirit*, 220. 
+[^5]: Braude, *Radical Spirits*, 165; Albanese, *A Republic of Mind and Spirit*, 220. 
 [^6]: Albanese, *A Republic of Mind and Spirit*, 220. 
 [^7]: Braude, *Radical Spirits*, 7n.
 [^8]: The National Spiritual Alliance website “About,” http://www.spiritualallianceusa.org/About.html
