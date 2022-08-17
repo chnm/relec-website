@@ -1,5 +1,5 @@
 ---
-title: Male and Female Pastors in the National Spiritual Alliance 
+title: Male and Female Leaders in the National Spiritual Alliance 
 author: Caroline Greer
 date: 2022-08-18
 updated: 2022-08-18
