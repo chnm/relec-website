@@ -1,5 +1,5 @@
 ---
-title: Male and Female Leaders in the National Spiritual Alliance 
+title: Male and Female Pastors in the National Spiritual Alliance 
 author: Caroline Greer
 date: 2022-08-18
 updated: 2022-08-18
@@ -16,7 +16,7 @@ doi: "https://doi.org/10.31835/TBD"
 
 <div class="viz-block grid-x grid-padding-x">
   <div class="cell medium-12 xlarge-10 large-offset-1">
-    <h3 class="graphic-title">Map of Spiritualists</h3>
+    <h3 class="graphic-title">Map of the National Spiritual Alliance in 1926</h3>
     <div id="spiritualist-map"></div>
     <!-- add dropdown of genders to filter -->
     <div id="filter" style="width: 30%">
@@ -38,7 +38,7 @@ This map allows a geographic visualization that argues for the prevalence of wom
 
 The beginning of the broader Spiritualist movement dates back to 1848, and the preponderance of female leadership in later, formalized Spiritualist groups can be traced to the beginning. Katherine and Margaret Fox, two sisters from the burned-over district in Rochester, New York, began hearing ‘spirit rapping’ in their house. They gained prominence and started touring across the state, holding public seances. Their popularity was controversial, with some followers ardently believing in their communication with the dead while others believed the Fox sisters to be either frauds or to hold demonic powers. Nonetheless, the interest and belief in communicating with the dead continued, and Spiritualism became one of the fastest growing religious movements in the antebellum United States. However, during these decades, there was no formal organization, but two methods of practicing Spiritualism proliferated, one called Phenomenal Spiritualism and the other Philosophical Spiritualism.
 
-Phenomenal Spiritualism focused on mediums such as the Fox sisters and their performances of seances, verifying the belief in communication with the dead with experiences. Philosophical Spiritualism came from Andrew Jackson Davis, who was influenced by Emanuel Swedenborg, a Swedish philosopher from the 18th century, and his writings about the afterlife. Jackson lectured about the afterlife, believing there was no heaven or hell but ‘a concentric series of spheres into which all entered and through which all ascended as they grew in spiritual insight,’ and sins were shedded, with no punishment, only love and education.[^1] The living were connected to the dead, and vice versa, through ‘bonds of affection’ and the ‘power of sympathy.’[^2]
+Phenomenal Spiritualism focused on mediums such as the Fox sisters and their performances of seances, verifying the belief in communication with the dead with experiences. Philosophical Spiritualism came from Andrew Jackson Davis, who was influenced by Emanuel Swedenborg, a Swedish philosopher from the eighteenth century, and his writings about the afterlife. Jackson lectured about the afterlife, believing there was no heaven or hell but ‘a concentric series of spheres into which all entered and through which all ascended as they grew in spiritual insight,’ and sins were shedded, with no punishment, only love and education.[^1] The living were connected to the dead, and vice versa, through ‘bonds of affection’ and the ‘power of sympathy.’[^2]
 
 Early Spiritualist leaders were mediums who connected with the spirits of the dead and performed seances, sometimes in large, public venues, as trance speakers. Mediumship gave women largely accepted access to religious leadership. Despite a roughly equal gender ratio, according to a survey from 1859, there were still more women who were mediums than men.[^3] There were no educational requirements or social barriers, only the ability of a person to communicate with the dead, and women, often young and white, took this opportunity. Though there were female preachers of other denominations, mediumship was tied to femininity in a manner being a preacher never was, especially as passivity characterized the role of a medium.[^4] During the height of Spiritualism in the United States, abolitionists and women’s rights advocates were frequently connected to the religion, which was viewed by many as radical because of the lack of formal organization and hierarchy, and the role of women in public.    
 
