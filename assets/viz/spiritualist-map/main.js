@@ -23,20 +23,20 @@ var points = L.geoJSON(data, {
     let options = geojsonMarkerOptions;
     switch (feature.properties.pastor_gender) {
       case "Female":
-        options.color = "purple";
-        options.fillColor = "purple";
+        options.color = "#d7191c";
+        options.fillColor = "#d7191c";
         break;
       case "Male":
-        options.color = "green";
-        options.fillColor = "green";
+        options.color = "#fdae61";
+        options.fillColor = "#fdae61";
         break;
       case "Unknown":
-        options.color = "black";
-        options.fillColor = "black";
+        options.color = "#abd9e9";
+        options.fillColor = "#abd9e9";
         break;
       case "N/A":
-        options.color = "red";
-        options.fillcolor = "red";
+        options.color = "#2c7bb6";
+        options.fillcolor = "#2c7bb6";
         break;
     }
     return L.circleMarker(latlng, options);
@@ -62,8 +62,8 @@ map.fitBounds(points.getBounds());
 const legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
     const div = L.DomUtil.create('div', 'info legend'),
-        labels = ["Female", "Male", "None", "Unknown"],
-        colors = ["purple", "blue", "black", "red"];
+        labels = ["Female", "Male", "N/A", "Unknown"],
+        colors = ["#d7191c", "#fdae61", "#2c7bb6", "#abd9e9"];
         // labels = [];
 
     // Loop through the grades and display their color 
