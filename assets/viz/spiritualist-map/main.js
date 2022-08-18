@@ -14,7 +14,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 var geojsonMarkerOptions = {
   radius: 9,
   weight: 2,
-  opacity: 2,
+  opacity: 4,
   fillOpacity: 0.2,
 };
 
@@ -27,14 +27,14 @@ var points = L.geoJSON(data, {
         options.fillColor = "purple";
         break;
       case "Male":
-        options.color = "blue";
-        options.fillColor = "blue";
+        options.color = "green";
+        options.fillColor = "green";
         break;
       case "Unknown":
         options.color = "black";
         options.fillColor = "black";
         break;
-      case "None":
+      case "N/A":
         options.color = "red";
         options.fillcolor = "red";
         break;
@@ -47,6 +47,7 @@ var points = L.geoJSON(data, {
             <div class="popup">
                 <strong>Pastor:</strong> ${feature.properties.pastor_name}<br/>
                 <strong>Gender:</strong> ${feature.properties.pastor_gender}<br/>
+                <strong>Name of Church:</strong> ${feature.properties.name}<br/>
                 <a href="${feature.properties.url}" target="_blank">Link to census schedule</a>
             </div>
             `

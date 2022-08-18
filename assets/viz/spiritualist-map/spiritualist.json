@@ -64,8 +64,8 @@
      "name":"Christian Psychic",
      "city":"Boston ",
      "state":"Massachusetts",
-     "pastor_name":"",
-     "pastor_gender":"None",
+     "pastor_name":"No pastor",
+     "pastor_gender":"N/A",
      "notes":""
      }
    },
@@ -98,8 +98,8 @@
      "name":"The Divine Spiritual Church",
      "city":"Pawtucket",
      "state":"Rhode Island",
-     "pastor_name":"",
-     "pastor_gender":"None",
+     "pastor_name":"No pastor",
+     "pastor_gender":"N/A",
      "notes":""
      }
    },
@@ -574,7 +574,7 @@
      "name":"God is Love",
      "city":"Overbrook",
      "state":"Pennsylvania ",
-     "pastor_name":"Unlisted",
+     "pastor_name":"No pastor",
      "pastor_gender":"N/A",
      "notes":"Note: Allegheny County"
      }
@@ -625,7 +625,7 @@
      "name":"The First Spiritual Alliance of America",
      "city":"Youngstown",
      "state":"Ohio",
-     "pastor_name":"MT Suttclif",
+     "pastor_name":"M. T. Suttclif",
      "pastor_gender":"Unknown",
      "notes":"Note: Asst pastor may be a woman: \"M[rs]. Pearce\";  Address: 940 Katherine Ave"
      }
@@ -965,7 +965,7 @@
      "name":"First Spiritual Alliance Church",
      "city":"Denver",
      "state":"Colorado",
-     "pastor_name":"T J M Rich",
+     "pastor_name":"T. J. M. Rich",
      "pastor_gender":"Unknown",
      "notes":"Note: Education included Whites College of Mystic Science and he signed his name as \"Rev Dr\""
      }
