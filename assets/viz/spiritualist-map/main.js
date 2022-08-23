@@ -65,7 +65,7 @@ map.fitBounds(points.getBounds());
 
 // Add the legend for each of the properties.pastor_gender values
 const legend = L.control({ position: "bottomright" });
-legend.onAdd = function (map) {
+legend.onAdd = function () {
   const div = L.DomUtil.create("div", "info legend"),
     labels = ["Female", "Male", "Unknown", "No pastor"],
     colors = [femaleColor, maleColor, unknownColor, npColor];
