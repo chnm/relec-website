@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{- partial "head.html" . -}}
+{{- partial "head.html" . -}}
 
-  <body class="visualization">
-    {{- partial "header.html" . -}}
-    <div id="content" class="grid-x grid-padding-x post">
-      <div class="row cell post-content">
-        <h2>{{.Title}}</h2>
-        <p>{{.Params.Author}}</p>
-        <p class="abstract">{{ .Params.abstract }}</p>
+<body class="visualization">
+  {{- partial "header.html" . -}}
+  <div id="content" class="grid-x grid-padding-x post">
+    <div class="row cell post-content">
+      <h2>{{.Title}}</h2>
+      <p class="author">{{.Params.Author}}</p>
+      <p class="abstract">{{ .Params.abstract }}</p>
 
-        {{.Content}} 
+      {{.Content}}
 
-        {{ if hugo.Environment | eq "development" }}
-          {{/* Only minify for production; in development, keep things verbose for debugging and troubleshooting. */}}
-        {{ $cssStyle := resources.Get .Params.styles }}
-        <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
-        {{ $script := resources.Get .Params.script | js.Build (dict "target" "es2020") }}
-        <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
-        
-        {{ else }}
-        
-        {{ $cssStyle := resources.Get .Params.styles | resources.Fingerprint }}
-        <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
-        {{ $script := resources.Get .Params.script | js.Build (dict "target" "es2020") | resources.Fingerprint }}
-        <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
-        {{ end }}
+      {{ if hugo.Environment | eq "development" }}
+      {{/* Only minify for production; in development, keep things verbose for debugging and troubleshooting. */}}
+      {{ $cssStyle := resources.Get .Params.styles }}
+      <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
+      {{ $script := resources.Get .Params.script | js.Build (dict "target" "es2020") }}
+      <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 
-      </div>
+      {{ else }}
+
+      {{ $cssStyle := resources.Get .Params.styles | resources.Fingerprint }}
+      <link rel="stylesheet" href="{{ $cssStyle.Permalink }}" integrity="{{ $cssStyle.Data.Integrity }}">
+      {{ $script := resources.Get .Params.script | js.Build (dict "target" "es2020") | resources.Fingerprint }}
+      <script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+      {{ end }}
+
     </div>
-    {{- partial "footer.html" . -}}
-  </body>
+  </div>
+  {{- partial "footer.html" . -}}
+</body>
+
 </html>
