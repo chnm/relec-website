@@ -53,7 +53,7 @@ var points = L.geoJSON(data, {
                 <strong>Pastor:</strong> ${feature.properties.pastor_name}<br/>
                 <strong>Gender:</strong> ${feature.properties.pastor_gender}<br/>
                 <strong>Name of Church:</strong> ${feature.properties.name}<br/>
-                <a href="${feature.properties.url}" target="_blank">Link to census schedule</a>
+                <a href="${feature.properties.url}" target="_blank"><strong>See the census schedule &rarr;</strong></a>
             </div>
             `
     );
