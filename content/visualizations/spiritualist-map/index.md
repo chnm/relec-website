@@ -26,8 +26,8 @@ In 1926, the United States Census Bureau cataloged five Spiritualist denominatio
         <option value="All">All</option>
         <option value="Female">Female preachers</option>
         <option value="Male">Male preachers</option>
-        <option value="N/A">N/A</option>
-        <option value="Unknown">Unknown</option>
+        <option value="Unknown">Pastor gender unknown</option>
+        <option value="No pastor">No pastor</option>
       </select>
       </div>
     </div>

@@ -34,7 +34,7 @@ var points = L.geoJSON(data, {
         options.color = "#c2a5cf";
         options.fillColor = "#c2a5cf";
         break;
-      case "N/A":
+      case "No pastor":
         options.color = "#a6dba0";
         options.fillcolor = "#a6dba0";
         break;
@@ -59,21 +59,24 @@ points.addTo(map);
 map.fitBounds(points.getBounds());
 
 // Add the legend for each of the properties.pastor_gender values
-const legend = L.control({position: 'bottomright'});
+const legend = L.control({ position: "bottomright" });
 legend.onAdd = function (map) {
-    const div = L.DomUtil.create('div', 'info legend'),
-        labels = ["Female", "Male", "Unknown", "N/A"],
-        colors = ["#7b3294", "#008837", "#c2a5cf", "#a6dba0"];
-        // labels = [];
+  const div = L.DomUtil.create("div", "info legend"),
+    labels = ["Female", "Male", "Unknown", "No pastor"],
+    colors = ["#7b3294", "#008837", "#c2a5cf", "#a6dba0"];
+  // labels = [];
 
-    // Loop through the grades and display their color 
-    for (let i = 0; i < labels.length; i++) {
-      div.innerHTML += 
-      '<div class="legend-label"><i style="background:' + colors[i] + '"></i> ' +
-      labels[i] + '</div>';
-    }
+  // Loop through the grades and display their color
+  for (let i = 0; i < labels.length; i++) {
+    div.innerHTML +=
+      '<div class="legend-label"><i style="background:' +
+      colors[i] +
+      '"></i> ' +
+      labels[i] +
+      "</div>";
+  }
 
-    return div;
+  return div;
 };
 
 legend.addTo(map);
@@ -84,14 +87,11 @@ filter.addEventListener("change", function (e) {
   const value = e.target.value;
   console.log(value);
   points.eachLayer(function (layer) {
-    if (layer.feature.properties.pastor_gender
-      .includes(value)) {
+    if (layer.feature.properties.pastor_gender.includes(value)) {
       layer.addTo(map);
-    }
-    else if (value === "All") {
+    } else if (value === "All") {
       layer.addTo(map);
-    }
-    else {
+    } else {
       map.removeLayer(layer);
     }
   });

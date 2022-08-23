@@ -1,1008 +1,1008 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-   {
-     "type": "Feature",
-     "geometry": {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -72.56882,42.10245 ]
-     },
-     "properties": {
-     "schedule_id":1,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47261",
-     "name":"The First Spiritual Alliance Church",
-     "city":"Springfield",
-     "state":"Massachusetts",
-     "pastor_name":"Eli N. Barrett",
-     "pastor_gender":"Male",
-     "notes":"257 Walnut Street"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-72.56882, 42.10245]
+      },
+      "properties": {
+        "schedule_id": 1,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47261",
+        "name": "The First Spiritual Alliance Church",
+        "city": "Springfield",
+        "state": "Massachusetts",
+        "pastor_name": "Eli N. Barrett",
+        "pastor_gender": "Male",
+        "notes": "257 Walnut Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.06688,42.37782 ]
-     },
-     "properties": {
-     "schedule_id":2,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47262",
-     "name":"First Spiritual Alliance Church",
-     "city":"Boston ",
-     "state":"Massachusetts",
-     "pastor_name":"Helen Greene",
-     "pastor_gender":"Female",
-     "notes":"9 Sullivan Street"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.06688, 42.37782]
+      },
+      "properties": {
+        "schedule_id": 2,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47262",
+        "name": "First Spiritual Alliance Church",
+        "city": "Boston ",
+        "state": "Massachusetts",
+        "pastor_name": "Helen Greene",
+        "pastor_gender": "Female",
+        "notes": "9 Sullivan Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.06906,42.37894 ]
-     },
-     "properties": {
-     "schedule_id":3,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47263",
-     "name":"The Freewill Spiritual Alliance Temple",
-     "city":"Boston ",
-     "state":"Massachusetts",
-     "pastor_name":"Amanda A. Gauld",
-     "pastor_gender":"Female",
-     "notes":"7 Essex Street Charlestown, Boston MA"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.06906, 42.37894]
+      },
+      "properties": {
+        "schedule_id": 3,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47263",
+        "name": "The Freewill Spiritual Alliance Temple",
+        "city": "Boston ",
+        "state": "Massachusetts",
+        "pastor_name": "Amanda A. Gauld",
+        "pastor_gender": "Female",
+        "notes": "7 Essex Street Charlestown, Boston MA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.38954,41.88044 ]
-     },
-     "properties": {
-     "schedule_id":4,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47264",
-     "name":"Christian Psychic",
-     "city":"Boston ",
-     "state":"Massachusetts",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.38954, 41.88044]
+      },
+      "properties": {
+        "schedule_id": 4,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47264",
+        "name": "Christian Psychic",
+        "city": "Boston ",
+        "state": "Massachusetts",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -72.51643,42.55777 ]
-     },
-     "properties": {
-     "schedule_id":5,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47265",
-     "name":"Headquarters or Mother Church of the National Spiritual Alliance",
-     "city":"Lake Pleasant",
-     "state":"Massachusetts",
-     "pastor_name":"William Whicher",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-72.51643, 42.55777]
+      },
+      "properties": {
+        "schedule_id": 5,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47265",
+        "name": "Headquarters or Mother Church of the National Spiritual Alliance",
+        "city": "Lake Pleasant",
+        "state": "Massachusetts",
+        "pastor_name": "William Whicher",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.38954,41.88044 ]
-     },
-     "properties": {
-     "schedule_id":6,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47266",
-     "name":"The Divine Spiritual Church",
-     "city":"Pawtucket",
-     "state":"Rhode Island",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.38954, 41.88044]
+      },
+      "properties": {
+        "schedule_id": 6,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47266",
+        "name": "The Divine Spiritual Church",
+        "city": "Pawtucket",
+        "state": "Rhode Island",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.36266,41.78569 ]
-     },
-     "properties": {
-     "schedule_id":7,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47267",
-     "name":"The Divine Spiritualist Alliance Church",
-     "city":"Providence",
-     "state":"Rhode Island",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":"Note written on side of schedule: Div [was?] closed our church June 24th 1927 through illness expect to open Sept 9th 1928 - Mrs. C. Taber; Address: 95 Wheeler Ave"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.36266, 41.78569]
+      },
+      "properties": {
+        "schedule_id": 7,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47267",
+        "name": "The Divine Spiritualist Alliance Church",
+        "city": "Providence",
+        "state": "Rhode Island",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": "Note written on side of schedule: Div [was?] closed our church June 24th 1927 through illness expect to open Sept 9th 1928 - Mrs. C. Taber; Address: 95 Wheeler Ave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.4128,41.824 ]
-     },
-     "properties": {
-     "schedule_id":8,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47268",
-     "name":"Holy Angel Alliance Mission",
-     "city":"Providence",
-     "state":"Rhode Island",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.4128, 41.824]
+      },
+      "properties": {
+        "schedule_id": 8,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47268",
+        "name": "Holy Angel Alliance Mission",
+        "city": "Providence",
+        "state": "Rhode Island",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -71.427773,41.84677 ]
-     },
-     "properties": {
-     "schedule_id":9,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47269",
-     "name":"W. T. Stead Spiritualist Church Inc. ",
-     "city":"Providence ",
-     "state":"Rhode Island",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":"Note: No pastor at present engage speakers each sunday"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-71.427773, 41.84677]
+      },
+      "properties": {
+        "schedule_id": 9,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47269",
+        "name": "W. T. Stead Spiritualist Church Inc. ",
+        "city": "Providence ",
+        "state": "Rhode Island",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": "Note: No pastor at present engage speakers each sunday"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -72.9279,41.3083 ]
-     },
-     "properties": {
-     "schedule_id":10,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47270",
-     "name":"First Spiritual Alliance Church",
-     "city":"New Haven",
-     "state":"Connecticut",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-72.9279, 41.3083]
+      },
+      "properties": {
+        "schedule_id": 10,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47270",
+        "name": "First Spiritual Alliance Church",
+        "city": "New Haven",
+        "state": "Connecticut",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -73.7562,42.6526 ]
-     },
-     "properties": {
-     "schedule_id":11,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47271",
-     "name":"The Spiritualist Church of the Arisen",
-     "city":"Albany",
-     "state":"New York",
-     "pastor_name":"Milicent Hubbard",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-73.7562, 42.6526]
+      },
+      "properties": {
+        "schedule_id": 11,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47271",
+        "name": "The Spiritualist Church of the Arisen",
+        "city": "Albany",
+        "state": "New York",
+        "pastor_name": "Milicent Hubbard",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -73.9419,40.82118 ]
-     },
-     "properties": {
-     "schedule_id":12,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47272",
-     "name":"First Liberty Spiritual Pentecost Alliance Church",
-     "city":"New York City",
-     "state":"New York",
-     "pastor_name":"Rosie P. A. Braxton",
-     "pastor_gender":"Female",
-     "notes":"Note: Signed as 'pastor and healer'; Address is 245 W. 143rd St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-73.9419, 40.82118]
+      },
+      "properties": {
+        "schedule_id": 12,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47272",
+        "name": "First Liberty Spiritual Pentecost Alliance Church",
+        "city": "New York City",
+        "state": "New York",
+        "pastor_name": "Rosie P. A. Braxton",
+        "pastor_gender": "Female",
+        "notes": "Note: Signed as 'pastor and healer'; Address is 245 W. 143rd St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -73.951321,40.827678 ]
-     },
-     "properties": {
-     "schedule_id":13,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47273",
-     "name":"Union Spiritualist Alliance",
-     "city":"New York City",
-     "state":"New York",
-     "pastor_name":"Elizabeth Squirrell",
-     "pastor_gender":"Female",
-     "notes":"218 1/2  W 146th St New York City, US"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-73.951321, 40.827678]
+      },
+      "properties": {
+        "schedule_id": 13,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47273",
+        "name": "Union Spiritualist Alliance",
+        "city": "New York City",
+        "state": "New York",
+        "pastor_name": "Elizabeth Squirrell",
+        "pastor_gender": "Female",
+        "notes": "218 1/2  W 146th St New York City, US"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -73.949655,40.8073253 ]
-     },
-     "properties": {
-     "schedule_id":14,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47274",
-     "name":"Universal Constructed Spiritual Church of Love",
-     "city":"New York City",
-     "state":"New York",
-     "pastor_name":"Nancy [Lea] Frochard Drozé",
-     "pastor_gender":"Female",
-     "notes":"Note: pastor graduate at Allen University, an HBCU that trained many ministers and teachers; 2048 7th Ave"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-73.949655, 40.8073253]
+      },
+      "properties": {
+        "schedule_id": 14,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47274",
+        "name": "Universal Constructed Spiritual Church of Love",
+        "city": "New York City",
+        "state": "New York",
+        "pastor_name": "Nancy [Lea] Frochard Drozé",
+        "pastor_gender": "Female",
+        "notes": "Note: pastor graduate at Allen University, an HBCU that trained many ministers and teachers; 2048 7th Ave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -73.9396,42.8142 ]
-     },
-     "properties": {
-     "schedule_id":15,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47275",
-     "name":"First Spiritual Alliance Church",
-     "city":"Schenectady",
-     "state":"New York",
-     "pastor_name":"Jennie K. Bellegarde",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-73.9396, 42.8142]
+      },
+      "properties": {
+        "schedule_id": 15,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47275",
+        "name": "First Spiritual Alliance Church",
+        "city": "Schenectady",
+        "state": "New York",
+        "pastor_name": "Jennie K. Bellegarde",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -74.3437,43.0529 ]
-     },
-     "properties": {
-     "schedule_id":16,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47276",
-     "name":"The First Spiritualist Church Inc.",
-     "city":"Gloversville",
-     "state":"New York",
-     "pastor_name":"Howard P. Johnson",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-74.3437, 43.0529]
+      },
+      "properties": {
+        "schedule_id": 16,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47276",
+        "name": "The First Spiritualist Church Inc.",
+        "city": "Gloversville",
+        "state": "New York",
+        "pastor_name": "Howard P. Johnson",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -74.2165,42.2898 ]
-     },
-     "properties": {
-     "schedule_id":17,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47277",
-     "name":"Glenside Spiritual Science Church",
-     "city":"Hensonville",
-     "state":"New York",
-     "pastor_name":"Louis C. Bennett",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-74.2165, 42.2898]
+      },
+      "properties": {
+        "schedule_id": 17,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47277",
+        "name": "Glenside Spiritual Science Church",
+        "city": "Hensonville",
+        "state": "New York",
+        "pastor_name": "Louis C. Bennett",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -79.9959,40.4406 ]
-     },
-     "properties": {
-     "schedule_id":18,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47278",
-     "name":"Mount Hope Spiritualist Church",
-     "city":"Pittsburgh",
-     "state":"Pennsylvania ",
-     "pastor_name":"J. W. Buzzard",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-79.9959, 40.4406]
+      },
+      "properties": {
+        "schedule_id": 18,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47278",
+        "name": "Mount Hope Spiritualist Church",
+        "city": "Pittsburgh",
+        "state": "Pennsylvania ",
+        "pastor_name": "J. W. Buzzard",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.0851,42.1292]
-     },
-     "properties": {
-     "schedule_id":19,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47339",
-     "name":"Erie Spiritual Alliance",
-     "city":"Erie",
-     "state":"Pennsylvania ",
-     "pastor_name":"Mrs. W. J. Sawdey",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.0851, 42.1292]
+      },
+      "properties": {
+        "schedule_id": 19,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47339",
+        "name": "Erie Spiritual Alliance",
+        "city": "Erie",
+        "state": "Pennsylvania ",
+        "pastor_name": "Mrs. W. J. Sawdey",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1652,39.9526 ]
-     },
-     "properties": {
-     "schedule_id":20,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47340",
-     "name":"Alliance Church of Spiritual Vision",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"F. P. Hill",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1652, 39.9526]
+      },
+      "properties": {
+        "schedule_id": 20,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47340",
+        "name": "Alliance Church of Spiritual Vision",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "F. P. Hill",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.17979431,39.99422836 ]
-     },
-     "properties": {
-     "schedule_id":21,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47341",
-     "name":"Centre Spiritual Alliance",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Mrs. L. A. Metzer",
-     "pastor_gender":"Female",
-     "notes":"Note: Scratched out pastor and wrote 'in charge of' and signed the bottom as 'member'; Address is 2424 N. Hollywood St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.17979431, 39.99422836]
+      },
+      "properties": {
+        "schedule_id": 21,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47341",
+        "name": "Centre Spiritual Alliance",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Mrs. L. A. Metzer",
+        "pastor_gender": "Female",
+        "notes": "Note: Scratched out pastor and wrote 'in charge of' and signed the bottom as 'member'; Address is 2424 N. Hollywood St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.2,39.96 ]
-     },
-     "properties": {
-     "schedule_id":22,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47342",
-     "name":"Dorcas Spiritual Alliance Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Dorcas A. Brown",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.2, 39.96]
+      },
+      "properties": {
+        "schedule_id": 22,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47342",
+        "name": "Dorcas Spiritual Alliance Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Dorcas A. Brown",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.16598511,39.97906494 ]
-     },
-     "properties": {
-     "schedule_id":23,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47343",
-     "name":"The Elizabeth Spiritual Alliance Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Mary E. Coleman",
-     "pastor_gender":"Female",
-     "notes":"Note: 1509 N. 19th St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.16598511, 39.97906494]
+      },
+      "properties": {
+        "schedule_id": 23,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47343",
+        "name": "The Elizabeth Spiritual Alliance Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Mary E. Coleman",
+        "pastor_gender": "Female",
+        "notes": "Note: 1509 N. 19th St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1537479,39.9869351 ]
-     },
-     "properties": {
-     "schedule_id":24,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47344",
-     "name":"Grace Spiritual Alliance Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Grace Egan",
-     "pastor_gender":"Female",
-     "notes":"2261 N. 13th St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1537479, 39.9869351]
+      },
+      "properties": {
+        "schedule_id": 24,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47344",
+        "name": "Grace Spiritual Alliance Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Grace Egan",
+        "pastor_gender": "Female",
+        "notes": "2261 N. 13th St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1808829,39.9369114 ]
-     },
-     "properties": {
-     "schedule_id":25,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47345",
-     "name":"Mt. Olive Spiritual Alliance Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Letitia Richardson",
-     "pastor_gender":"Female",
-     "notes":"2224 Oakford St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1808829, 39.9369114]
+      },
+      "properties": {
+        "schedule_id": 25,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47345",
+        "name": "Mt. Olive Spiritual Alliance Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Letitia Richardson",
+        "pastor_gender": "Female",
+        "notes": "2224 Oakford St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1741134,39.9374223 ]
-     },
-     "properties": {
-     "schedule_id":26,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47346",
-     "name":"Peters Spiritual Alliance",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Nannie Oliver",
-     "pastor_gender":"Female",
-     "notes":"1130 S. Cleveland Ave "
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1741134, 39.9374223]
+      },
+      "properties": {
+        "schedule_id": 26,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47346",
+        "name": "Peters Spiritual Alliance",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Nannie Oliver",
+        "pastor_gender": "Female",
+        "notes": "1130 S. Cleveland Ave "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.05,39.9 ]
-     },
-     "properties": {
-     "schedule_id":27,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47347",
-     "name":"Prospect Spiritual Alliance Church (Colored.",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"William Davis",
-     "pastor_gender":"Male",
-     "notes":"Note: scratched out pastor and wrote 'president'"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.05, 39.9]
+      },
+      "properties": {
+        "schedule_id": 27,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47347",
+        "name": "Prospect Spiritual Alliance Church (Colored.",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "William Davis",
+        "pastor_gender": "Male",
+        "notes": "Note: scratched out pastor and wrote 'president'"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1691845,39.944186 ]
-     },
-     "properties": {
-     "schedule_id":28,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47348",
-     "name":"St. Ebenezer Spiritual Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"T. L. Nelson",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1691845, 39.944186]
+      },
+      "properties": {
+        "schedule_id": 28,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47348",
+        "name": "St. Ebenezer Spiritual Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "T. L. Nelson",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1454278,39.9926752 ]
-     },
-     "properties": {
-     "schedule_id":29,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47349",
-     "name":"St John's Spiritual Alliance",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Charles J. Heckler",
-     "pastor_gender":"Male",
-     "notes":"808 West Lehigh Ave"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1454278, 39.9926752]
+      },
+      "properties": {
+        "schedule_id": 29,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47349",
+        "name": "St John's Spiritual Alliance",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Charles J. Heckler",
+        "pastor_gender": "Male",
+        "notes": "808 West Lehigh Ave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1747198,39.9411612 ]
-     },
-     "properties": {
-     "schedule_id":30,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47350",
-     "name":"St. John Spiritual Alliance Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Chas. A. James",
-     "pastor_gender":"Male",
-     "notes":"1925 Christian St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1747198, 39.9411612]
+      },
+      "properties": {
+        "schedule_id": 30,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47350",
+        "name": "St. John Spiritual Alliance Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Chas. A. James",
+        "pastor_gender": "Male",
+        "notes": "1925 Christian St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1758416,39.9412206 ]
-     },
-     "properties": {
-     "schedule_id":31,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47351",
-     "name":"St. Paul Spiritual Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"L Wilson",
-     "pastor_gender":"Unknown",
-     "notes":"[18] Christian St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1758416, 39.9412206]
+      },
+      "properties": {
+        "schedule_id": 31,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47351",
+        "name": "St. Paul Spiritual Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "L Wilson",
+        "pastor_gender": "Unknown",
+        "notes": "[18] Christian St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.1344074,39.9724951 ]
-     },
-     "properties": {
-     "schedule_id":32,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47352",
-     "name":"Sunshine Spiritual Church",
-     "city":"Philadelphia",
-     "state":"Pennsylvania ",
-     "pastor_name":"Martin H. Davis",
-     "pastor_gender":"Male",
-     "notes":"1442 Frankford Ave"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.1344074, 39.9724951]
+      },
+      "properties": {
+        "schedule_id": 32,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47352",
+        "name": "Sunshine Spiritual Church",
+        "city": "Philadelphia",
+        "state": "Pennsylvania ",
+        "pastor_name": "Martin H. Davis",
+        "pastor_gender": "Male",
+        "notes": "1442 Frankford Ave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -75.6496,40.2454 ]
-     },
-     "properties": {
-     "schedule_id":33,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47353",
-     "name":"First Spiritual Alliance  ",
-     "city":"Pottstown ",
-     "state":"Pennsylvania ",
-     "pastor_name":"David Blair",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-75.6496, 40.2454]
+      },
+      "properties": {
+        "schedule_id": 33,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47353",
+        "name": "First Spiritual Alliance  ",
+        "city": "Pottstown ",
+        "state": "Pennsylvania ",
+        "pastor_name": "David Blair",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.0004,40.3863 ]
-     },
-     "properties": {
-     "schedule_id":34,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47354",
-     "name":"God is Love",
-     "city":"Overbrook",
-     "state":"Pennsylvania ",
-     "pastor_name":"No pastor",
-     "pastor_gender":"N/A",
-     "notes":"Note: Allegheny County"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.0004, 40.3863]
+      },
+      "properties": {
+        "schedule_id": 34,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47354",
+        "name": "God is Love",
+        "city": "Overbrook",
+        "state": "Pennsylvania ",
+        "pastor_name": "No pastor",
+        "pastor_gender": "No pastor",
+        "notes": "Note: Allegheny County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.6271539,41.0934965 ]
-     },
-     "properties": {
-     "schedule_id":35,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47355",
-     "name":"Ingersol Memorial Spiritual Alliance Church",
-     "city":"Youngstown",
-     "state":"Ohio",
-     "pastor_name":"Rosa Hoyle",
-     "pastor_gender":"Female",
-     "notes":"160 S. Bruce St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.6271539, 41.0934965]
+      },
+      "properties": {
+        "schedule_id": 35,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47355",
+        "name": "Ingersol Memorial Spiritual Alliance Church",
+        "city": "Youngstown",
+        "state": "Ohio",
+        "pastor_name": "Rosa Hoyle",
+        "pastor_gender": "Female",
+        "notes": "160 S. Bruce St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.6495,41.0998 ]
-     },
-     "properties": {
-     "schedule_id":36,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47356",
-     "name":"Youngstown Spiritual Alliance",
-     "city":"Youngstown",
-     "state":"Ohio",
-     "pastor_name":"Lula Marion",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.6495, 41.0998]
+      },
+      "properties": {
+        "schedule_id": 36,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47356",
+        "name": "Youngstown Spiritual Alliance",
+        "city": "Youngstown",
+        "state": "Ohio",
+        "pastor_name": "Lula Marion",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.620581,41.1126776 ]
-     },
-     "properties": {
-     "schedule_id":37,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47357",
-     "name":"The First Spiritual Alliance of America",
-     "city":"Youngstown",
-     "state":"Ohio",
-     "pastor_name":"M. T. Suttclif",
-     "pastor_gender":"Unknown",
-     "notes":"Note: Asst pastor may be a woman: \"M[rs]. Pearce\";  Address: 940 Katherine Ave"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.620581, 41.1126776]
+      },
+      "properties": {
+        "schedule_id": 37,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47357",
+        "name": "The First Spiritual Alliance of America",
+        "city": "Youngstown",
+        "state": "Ohio",
+        "pastor_name": "M. T. Suttclif",
+        "pastor_gender": "Unknown",
+        "notes": "Note: Asst pastor may be a woman: \"M[rs]. Pearce\";  Address: 940 Katherine Ave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -81.3784,40.7989 ]
-     },
-     "properties": {
-     "schedule_id":38,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47358",
-     "name":"First Spiritual Alliance",
-     "city":"Canton",
-     "state":"Ohio",
-     "pastor_name":"R. B. Rheaumont",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-81.3784, 40.7989]
+      },
+      "properties": {
+        "schedule_id": 38,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47358",
+        "name": "First Spiritual Alliance",
+        "city": "Canton",
+        "state": "Ohio",
+        "pastor_name": "R. B. Rheaumont",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.8184,41.2376 ]
-     },
-     "properties": {
-     "schedule_id":39,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47419",
-     "name":"Warren Spiritual Alliance Church",
-     "city":"Warren ",
-     "state":"Ohio",
-     "pastor_name":"Hattie Polonus",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.8184, 41.2376]
+      },
+      "properties": {
+        "schedule_id": 39,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47419",
+        "name": "Warren Spiritual Alliance Church",
+        "city": "Warren ",
+        "state": "Ohio",
+        "pastor_name": "Hattie Polonus",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -86.252,41.6764 ]
-     },
-     "properties": {
-     "schedule_id":40,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47420",
-     "name":"First Spiritual Alliance Church",
-     "city":"South Bend",
-     "state":"Indiana",
-     "pastor_name":"W. J. McNutt",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-86.252, 41.6764]
+      },
+      "properties": {
+        "schedule_id": 40,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47420",
+        "name": "First Spiritual Alliance Church",
+        "city": "South Bend",
+        "state": "Indiana",
+        "pastor_name": "W. J. McNutt",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -87.6298,41.8781 ]
-     },
-     "properties": {
-     "schedule_id":41,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47421",
-     "name":"Lincoln Spiritual Alliance",
-     "city":"Chicago",
-     "state":"Illinois",
-     "pastor_name":"M. Marceleay",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-87.6298, 41.8781]
+      },
+      "properties": {
+        "schedule_id": 41,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47421",
+        "name": "Lincoln Spiritual Alliance",
+        "city": "Chicago",
+        "state": "Illinois",
+        "pastor_name": "M. Marceleay",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -90.5787,41.5095 ]
-     },
-     "properties": {
-     "schedule_id":42,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47422",
-     "name":"United Spiritual Alliance",
-     "city":"Rock Island",
-     "state":"Illinois",
-     "pastor_name":"Clara Neale",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-90.5787, 41.5095]
+      },
+      "properties": {
+        "schedule_id": 42,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47422",
+        "name": "United Spiritual Alliance",
+        "city": "Rock Island",
+        "state": "Illinois",
+        "pastor_name": "Clara Neale",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -89.094,42.2711 ]
-     },
-     "properties": {
-     "schedule_id":43,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47423",
-     "name":"The Progressive Spiritual Alliance Church",
-     "city":"Rockford",
-     "state":"Illinois",
-     "pastor_name":"Folke Tegner",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-89.094, 42.2711]
+      },
+      "properties": {
+        "schedule_id": 43,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47423",
+        "name": "The Progressive Spiritual Alliance Church",
+        "city": "Rockford",
+        "state": "Illinois",
+        "pastor_name": "Folke Tegner",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -87.9065,43.0389 ]
-     },
-     "properties": {
-     "schedule_id":44,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47424",
-     "name":"First Spiritual Alliance Church",
-     "city":"Milwaukee",
-     "state":"Wisconsin",
-     "pastor_name":"L. Stroik ",
-     "pastor_gender":"Unknown",
-     "notes":"Note: Strock?"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-87.9065, 43.0389]
+      },
+      "properties": {
+        "schedule_id": 44,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47424",
+        "name": "First Spiritual Alliance Church",
+        "city": "Milwaukee",
+        "state": "Wisconsin",
+        "pastor_name": "L. Stroik ",
+        "pastor_gender": "Unknown",
+        "notes": "Note: Strock?"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -90.5776,41.5236 ]
-     },
-     "properties": {
-     "schedule_id":45,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47425",
-     "name":"First Spiritual Alliance Church",
-     "city":"Davenport",
-     "state":"Iowa",
-     "pastor_name":"M. Marceleay",
-     "pastor_gender":"Unknown",
-     "notes":"Note: Schedule filled out by Mrs. M. Kline, who signed her title as \"Asst. Pastor-Sec.\"D"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-90.5776, 41.5236]
+      },
+      "properties": {
+        "schedule_id": 45,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47425",
+        "name": "First Spiritual Alliance Church",
+        "city": "Davenport",
+        "state": "Iowa",
+        "pastor_name": "M. Marceleay",
+        "pastor_gender": "Unknown",
+        "notes": "Note: Schedule filled out by Mrs. M. Kline, who signed her title as \"Asst. Pastor-Sec.\"D"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -91.0432,41.4245 ]
-     },
-     "properties": {
-     "schedule_id":46,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47426",
-     "name":"First Spiritual Alliance Church",
-     "city":"Muscatine",
-     "state":"Iowa",
-     "pastor_name":"Mrs. M. Kline",
-     "pastor_gender":"Female",
-     "notes":"Note: Probably same woman as asst. pastor for 45"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-91.0432, 41.4245]
+      },
+      "properties": {
+        "schedule_id": 46,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47426",
+        "name": "First Spiritual Alliance Church",
+        "city": "Muscatine",
+        "state": "Iowa",
+        "pastor_name": "Mrs. M. Kline",
+        "pastor_gender": "Female",
+        "notes": "Note: Probably same woman as asst. pastor for 45"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -94.5141301,39.1127598 ]
-     },
-     "properties": {
-     "schedule_id":47,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47427",
-     "name":"The First National Spiritual Alliance Church",
-     "city":"Kansas City",
-     "state":"Missouri",
-     "pastor_name":"Jane K. Grimpel and N. Van Dolan",
-     "pastor_gender":"Female",
-     "notes":"Note: Under College information, J. wrote \"Spiritualists have no such schools. - Ordination depends on services and developments personally\"; 142 N. Topping Ave"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-94.5141301, 39.1127598]
+      },
+      "properties": {
+        "schedule_id": 47,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47427",
+        "name": "The First National Spiritual Alliance Church",
+        "city": "Kansas City",
+        "state": "Missouri",
+        "pastor_name": "Jane K. Grimpel and N. Van Dolan",
+        "pastor_gender": "Female",
+        "notes": "Note: Under College information, J. wrote \"Spiritualists have no such schools. - Ordination depends on services and developments personally\"; 142 N. Topping Ave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -94.5932943,39.0970473 ]
-     },
-     "properties": {
-     "schedule_id":48,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47428",
-     "name":"Guiding Star of Light T.N.S.A.",
-     "city":"Kansas City",
-     "state":"Missouri",
-     "pastor_name":"Addie Johnson",
-     "pastor_gender":"Female",
-     "notes":"1402 Summit St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-94.5932943, 39.0970473]
+      },
+      "properties": {
+        "schedule_id": 48,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47428",
+        "name": "Guiding Star of Light T.N.S.A.",
+        "city": "Kansas City",
+        "state": "Missouri",
+        "pastor_name": "Addie Johnson",
+        "pastor_gender": "Female",
+        "notes": "1402 Summit St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -94.5924439,39.0873162 ]
-     },
-     "properties": {
-     "schedule_id":49,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47429",
-     "name":"West Side",
-     "city":"Kansas City",
-     "state":"Missouri",
-     "pastor_name":"Emma Cox",
-     "pastor_gender":"Female",
-     "notes":"2111 Jefferson St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-94.5924439, 39.0873162]
+      },
+      "properties": {
+        "schedule_id": 49,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47429",
+        "name": "West Side",
+        "city": "Kansas City",
+        "state": "Missouri",
+        "pastor_name": "Emma Cox",
+        "pastor_gender": "Female",
+        "notes": "2111 Jefferson St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -90.1994,38.627 ]
-     },
-     "properties": {
-     "schedule_id":50,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47430",
-     "name":"Alliance Spiritual Truth Church",
-     "city":"St. Louis",
-     "state":"Missouri",
-     "pastor_name":"Gilbert Anderson",
-     "pastor_gender":"Male",
-     "notes":"Note: President given as title"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-90.1994, 38.627]
+      },
+      "properties": {
+        "schedule_id": 50,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47430",
+        "name": "Alliance Spiritual Truth Church",
+        "city": "St. Louis",
+        "state": "Missouri",
+        "pastor_name": "Gilbert Anderson",
+        "pastor_gender": "Male",
+        "notes": "Note: President given as title"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -94.6268,39.1155 ]
-     },
-     "properties": {
-     "schedule_id":51,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47431",
-     "name":"Rosebud Alliance Mission",
-     "city":"Kansas City",
-     "state":"Kansas",
-     "pastor_name":"Thomas McLean",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-94.6268, 39.1155]
+      },
+      "properties": {
+        "schedule_id": 51,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47431",
+        "name": "Rosebud Alliance Mission",
+        "city": "Kansas City",
+        "state": "Kansas",
+        "pastor_name": "Thomas McLean",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -76.6122,39.2904 ]
-     },
-     "properties": {
-     "schedule_id":52,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47432",
-     "name":"Sacred Heart Spiritual Baptist Ch. ",
-     "city":"Baltimore",
-     "state":"Maryland",
-     "pastor_name":"E. Adelie Williams",
-     "pastor_gender":"Female",
-     "notes":"Sigend: Ethel Williams"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-76.6122, 39.2904]
+      },
+      "properties": {
+        "schedule_id": 52,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47432",
+        "name": "Sacred Heart Spiritual Baptist Ch. ",
+        "city": "Baltimore",
+        "state": "Maryland",
+        "pastor_name": "E. Adelie Williams",
+        "pastor_gender": "Female",
+        "notes": "Sigend: Ethel Williams"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.1918,25.7617 ]
-     },
-     "properties": {
-     "schedule_id":53,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47433",
-     "name":"Sunlight Spiritual Alliance Church Colored",
-     "city":"Miami",
-     "state":"Florida",
-     "pastor_name":"Hannah Wheeler",
-     "pastor_gender":"Female",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.1918, 25.7617]
+      },
+      "properties": {
+        "schedule_id": 53,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47433",
+        "name": "Sunlight Spiritual Alliance Church Colored",
+        "city": "Miami",
+        "state": "Florida",
+        "pastor_name": "Hannah Wheeler",
+        "pastor_gender": "Female",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -81.6557,30.3322 ]
-     },
-     "properties": {
-     "schedule_id":54,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47434",
-     "name":"The Christian Spiritual Alliance",
-     "city":"Jacksonville",
-     "state":"Florida",
-     "pastor_name":"D. Gautling",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-81.6557, 30.3322]
+      },
+      "properties": {
+        "schedule_id": 54,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47434",
+        "name": "The Christian Spiritual Alliance",
+        "city": "Jacksonville",
+        "state": "Florida",
+        "pastor_name": "D. Gautling",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -80.2167,25.8318 ]
-     },
-     "properties": {
-     "schedule_id":55,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47435",
-     "name":"White Rose Spiritual Alliance Church (Colored)",
-     "city":"Liberty City",
-     "state":"Florida",
-     "pastor_name":"D. Gautling",
-     "pastor_gender":"Unknown",
-     "notes":"Note: Liberty City is in Miami"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-80.2167, 25.8318]
+      },
+      "properties": {
+        "schedule_id": 55,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47435",
+        "name": "White Rose Spiritual Alliance Church (Colored)",
+        "city": "Liberty City",
+        "state": "Florida",
+        "pastor_name": "D. Gautling",
+        "pastor_gender": "Unknown",
+        "notes": "Note: Liberty City is in Miami"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -97.5164,35.4676 ]
-     },
-     "properties": {
-     "schedule_id":56,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47436",
-     "name":"The First Spiritual Alliance Church",
-     "city":"Oklahoma City",
-     "state":"Oklahoma",
-     "pastor_name":"Nicholas Beeker",
-     "pastor_gender":"Male",
-     "notes":""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-97.5164, 35.4676]
+      },
+      "properties": {
+        "schedule_id": 56,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47436",
+        "name": "The First Spiritual Alliance Church",
+        "city": "Oklahoma City",
+        "state": "Oklahoma",
+        "pastor_name": "Nicholas Beeker",
+        "pastor_gender": "Male",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -81.5267,29.4044 ]
-     },
-     "properties": {
-     "schedule_id":57,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47437",
-     "name":"First Spiritual Alliance Church",
-     "city":"Denver",
-     "state":"Colorado",
-     "pastor_name":"T. J. M. Rich",
-     "pastor_gender":"Unknown",
-     "notes":"Note: Education included Whites College of Mystic Science and he signed his name as \"Rev Dr\""
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-81.5267, 29.4044]
+      },
+      "properties": {
+        "schedule_id": 57,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47437",
+        "name": "First Spiritual Alliance Church",
+        "city": "Denver",
+        "state": "Colorado",
+        "pastor_name": "T. J. M. Rich",
+        "pastor_gender": "Unknown",
+        "notes": "Note: Education included Whites College of Mystic Science and he signed his name as \"Rev Dr\""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -104.9865262,39.7483943 ]
-     },
-     "properties": {
-     "schedule_id":58,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47438",
-     "name":"Spiritual Alliance Church of Christ",
-     "city":"Denver",
-     "state":"Colorado",
-     "pastor_name":"Fornberg Hacker",
-     "pastor_gender":"Male",
-     "notes":"Note: \"Church is held in our home. I recieve no salary.\"; 603 20th St"
-     }
-   },
-   {
-     "type": "Feature",
-     "geometry": {
+        "coordinates": [-104.9865262, 39.7483943]
+      },
+      "properties": {
+        "schedule_id": 58,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47438",
+        "name": "Spiritual Alliance Church of Christ",
+        "city": "Denver",
+        "state": "Colorado",
+        "pastor_name": "Fornberg Hacker",
+        "pastor_gender": "Male",
+        "notes": "Note: \"Church is held in our home. I recieve no salary.\"; 603 20th St"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "type": "Point",
-        "coordinates":  [ -118.2437,34.0522 ]
-     },
-     "properties": {
-     "schedule_id":59,
-     "url":"https://omeka.religiousecologies.org/s/census-1926/item/47459",
-     "name":"First Spiritual Alliance Church",
-     "city":"Los Angeles",
-     "state":"California",
-     "pastor_name":"H. B. Faffe",
-     "pastor_gender":"Unknown",
-     "notes":""
-     }
-   }
- ]
- }
+        "coordinates": [-118.2437, 34.0522]
+      },
+      "properties": {
+        "schedule_id": 59,
+        "url": "https://omeka.religiousecologies.org/s/census-1926/item/47459",
+        "name": "First Spiritual Alliance Church",
+        "city": "Los Angeles",
+        "state": "California",
+        "pastor_name": "H. B. Faffe",
+        "pastor_gender": "Unknown",
+        "notes": ""
+      }
+    }
+  ]
+}
