@@ -3,7 +3,10 @@ import { leafletCSS } from "../common/leaflet-css";
 import data from "./spiritualist.json";
 
 leafletCSS(L.version); // Add the leaflet CSS in the correct version
-var map = L.map("spiritualist-map").setView([39.953, -75.265], 4);
+var map = L.map("spiritualist-map", { minZoom: 3, maxZoom: 6 }).setView(
+  [39.953, -75.265],
+  4
+);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
