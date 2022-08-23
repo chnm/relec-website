@@ -3,12 +3,12 @@ title: Male and Female Pastors in the National Spiritual Alliance
 author: Caroline Greer
 date: 2022-08-18
 updated: 2022-08-18
-abstract: "This map shows the geographic distribution of male and female pastors in the National Spiritual Alliance of the United States in 1926 to highlight the large amount of women represented in Spiritualist leadership. There are 59 congregations represented in this map."
+abstract: "How—and where—were women pastors in the National Spiritualist Alliance?"
 script: viz/spiritualist-map/main.js
 styles: viz/spiritualist-map/style.css
 layout: visualization
 thumbnail: spiritualistmapheader.png
-thumbdesc: "A screenshot of National Spiritual Alliance of the United States congregations in 1926."
+thumbdesc: "A screenshot of National Spiritualist Alliance of the United States congregations in 1926."
 doi: "https://doi.org/10.31835/TBD"
 ---
 
