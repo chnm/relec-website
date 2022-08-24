@@ -72,7 +72,6 @@ legend.onAdd = function () {
   const div = L.DomUtil.create("div", "info legend"),
     labels = ["Female", "Male", "Unknown", "No pastor"],
     colors = [femaleColor, maleColor, unknownColor, npColor];
-  // labels = [];
 
   // Loop through the grades and display their color
   for (let i = 0; i < labels.length; i++) {
@@ -93,7 +92,6 @@ legend.addTo(map);
 const filter = document.getElementById("filter");
 filter.addEventListener("change", function (e) {
   const value = e.target.value;
-  console.log(value);
   points.eachLayer(function (layer) {
     if (layer.feature.properties.pastor_gender.includes(value)) {
       layer.addTo(map);
