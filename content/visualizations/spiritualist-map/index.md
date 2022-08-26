@@ -9,7 +9,7 @@ styles: viz/spiritualist-map/style.css
 layout: visualization
 thumbnail: spiritualistmapheader1.png
 thumbdesc: "A screenshot of National Spiritualist Alliance of the United States congregations in 1926."
-doi: "https://doi.org/10.31835/TBD"
+doi: "https://doi.org/10.31835/relec.spiritualistmap"
 ---
 
 
