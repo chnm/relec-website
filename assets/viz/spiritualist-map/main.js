@@ -9,7 +9,7 @@ var map = L.map("spiritualist-map", { minZoom: 3, maxZoom: 6 }).setView(
 );
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
+  maxZoom: 25,
   attribution:
     '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
 }).addTo(map);
@@ -21,10 +21,10 @@ var geojsonMarkerOptions = {
   fillOpacity: 0.2,
 };
 
-let npColor = "#ffff99";
-let unknownColor = "#fdc086";
-let maleColor = "#7fc97f";
-let femaleColor = "#beaed4";
+let npColor = "#66a61e";
+let unknownColor = "#d95f02";
+let maleColor = "#7570b3";
+let femaleColor = "#e6ab02";
 
 var points = L.geoJSON(data, {
   pointToLayer: function (feature, latlng) {
