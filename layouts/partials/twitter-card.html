@@ -1,4 +1,21 @@
 <!-- Twitter card -->
+{{ if .IsHome }}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@chnm" />
+<meta name="twitter:creator" content="@chnm" />
+<meta name="twitter:title" content="{{ .Site.Title }}" />
+<meta name="twitter:description" content="{{ .Site.Params.Description }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL}}/img/are-3.jpg" />
+<meta name="twitter:domain" content="religiousecologies.org" />
+
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:description" content="{{ .Site.Params.Description }}" />
+<meta property="og:url" content="{{ .Site.BaseURL }}" />
+<meta property="og:image" content="{{ .Site.BaseURL}}/img/are-3.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+{{ end }}
+
 {{ if eq .Type "blog" }}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@chnm" />
@@ -6,7 +23,16 @@
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:description" content="{{ .Params.abstract }}" />
 <meta name="twitter:image" content="{{ .Site.BaseURL}}{{ .Params.image }}" />
+<meta name="twitter:domain" content="religiousecologies.org" />
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ .Params.abstract }}" />
+<meta property="og:url" content="{{ .Page.Permalink }}" />
+<meta property="og:image" content="{{ .Site.BaseURL}}{{ .Params.image }}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
 {{ end }}
+
 {{ if eq .Type "visualizations" }}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@chnm" />
@@ -14,4 +40,12 @@
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:description" content="{{ .Params.abstract }}" />
 <meta name="twitter:image" content="{{ .Site.BaseURL}}/img/viz/{{ .Params.thumbnail }}" />
+<meta name="twitter:domain" content="religiousecologies.org" />
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ .Params.abstract }}" />
+<meta property="og:url" content="{{ .Page.Permalink }}" />
+<meta property="og:image" content="{{ .Site.BaseURL}}/img/viz/{{ .Params.thumbnail }}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
 {{ end }}

@@ -1,6 +1,9 @@
 title: "American Religious Ecologies"
 baseURL: "https://religiousecologies.org"
 
+params:
+  description: "This American religious history project created by RRCHNM documents and maps religious ecologies using the U.S. Census of Religious Bodies from 1926."
+
 permalinks:
   blog: "/:section/:slug/"
   page: "/:slug/"
