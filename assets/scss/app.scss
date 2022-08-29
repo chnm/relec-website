@@ -12,9 +12,9 @@ $alert-color: null;
 $-zf-size: null;
 $-zf-bp-value: null;
 
-@import 'settings';
-@import '../../node_modules/foundation-sites/scss/foundation';
-@import '../../node_modules/motion-ui/motion-ui';
+@import "settings";
+@import "../../node_modules/foundation-sites/scss/foundation";
+@import "../../node_modules/motion-ui/motion-ui";
 
 // Global styles
 @include foundation-global-styles;
@@ -85,16 +85,16 @@ $secondary-header-font-family: "Cormorant", serif;
   outline: 3px solid lightblue;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   text-transform: lowercase;
 }
 
-body {    
+body {
   @include breakpoint(large up) {
     font-size: 1.25 * $global-font-size;
   }
@@ -103,18 +103,18 @@ body {
 img {
   border: 1px solid $primary-color;
   box-shadow: 5px 5px 0 $primary-color;
-  margin-bottom: .5 * $global-margin;
+  margin-bottom: 0.5 * $global-margin;
 }
 
 .card {
   background-color: transparent;
   border: 0;
-  
+
   a.image-link {
     margin-bottom: $global-margin;
     display: block;
   }
-  
+
   a.image-link img {
     border: 1px solid $primary-color;
   }
@@ -131,7 +131,7 @@ header {
   justify-content: space-between;
   margin-top: 2 * $global-margin;
   margin-bottom: 2 * $global-margin;
-  
+
   @include breakpoint(small down) {
     margin-top: 0;
     margin-bottom: 0;
@@ -143,18 +143,17 @@ header h1 {
   text-transform: capitalize;
   min-width: 60%;
   margin-bottom: 0;
-  
+
   @include breakpoint(small down) {
     width: 100%;
-    margin: (.5 * $global-margin) 0 0;
-    
+    margin: (0.5 * $global-margin) 0 0;
   }
-  
+
   img {
     max-width: 700px;
     height: auto;
     box-shadow: none;
-    
+
     @include breakpoint(small down) {
       max-width: 100%;
       width: 100%;
@@ -164,15 +163,15 @@ header h1 {
 
 header nav {
   font-family: $secondary-header-font-family;
-  
+
   @include breakpoint(small down) {
     width: 100%;
   }
-  
+
   ul {
     @include breakpoint(small down) {
-      justify-content : center;
-    }    
+      justify-content: center;
+    }
   }
 }
 
@@ -181,8 +180,8 @@ figure {
 }
 
 figcaption {
-  font-size: .875 * $global-font-size;
-  margin-top: .5 * $global-margin;
+  font-size: 0.875 * $global-font-size;
+  margin-top: 0.5 * $global-margin;
 }
 
 // -- Footer
@@ -191,7 +190,7 @@ footer {
   margin: (2 * $global-margin) 0 $global-margin;
   padding: (2 * $global-padding) 0;
   border-top: 1px solid $medium-gray;
-  
+
   @include breakpoint(small down) {
     margin-top: 0;
   }
@@ -208,10 +207,10 @@ footer .logos img {
   margin: $global-margin (2 * $global-margin) 0 0;
   box-shadow: none;
   border: 0;
-  
+
   &.gmu-logo {
-      width: 80px;
-      margin-top: 0;
+    width: 80px;
+    margin-top: 0;
   }
 }
 
@@ -229,10 +228,10 @@ footer .logos img {
 #home {
   background-color: transparent;
   border-top: 1px solid $medium-gray;
-  margin: calc(#{-2   * $global-margin} - 1px) 0;
-  
+  margin: calc(#{-2 * $global-margin} - 1px) 0;
+
   @include breakpoint(small down) {
-      margin: -1px 0;
+    margin: -1px 0;
   }
 }
 
@@ -255,7 +254,7 @@ footer .logos img {
   padding: $global-padding;
   text-align: left;
   border: 0;
-  
+
   &:before {
     margin-top: 0;
     transform: translateY(-50%);
@@ -275,13 +274,13 @@ footer .logos img {
   @include breakpoint(large up) {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;    
+    justify-content: space-between;
   }
 }
 
 #home .home-text {
   @include breakpoint(large up) {
-    max-width: 50%;  
+    max-width: 50%;
   }
 }
 
@@ -298,39 +297,46 @@ footer .logos img {
 }
 
 @media (min-width: 820px) {
-  .home-columns { grid-template-columns: repeat(2, 1fr); }
+  .home-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 1116px) {
-  .home-columns { grid-template-columns: repeat(1, 1fr); }
-  .home-column__item:first-child { padding-bottom: ($global-padding); border-bottom: 1px solid $medium-gray; }
+  .home-columns {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .home-column__item:first-child {
+    padding-bottom: ($global-padding);
+    border-bottom: 1px solid $medium-gray;
+  }
 }
 
 #home .float-left {
-  margin: (.5 * $global-margin) (2 *$global-margin) (2 * $global-margin) 0;
-  
+  margin: (0.5 * $global-margin) (2 * $global-margin) (2 * $global-margin) 0;
+
   @include breakpoint(small down) {
-    margin: (.5 * $global-margin) $global-margin 0 0;
+    margin: (0.5 * $global-margin) $global-margin 0 0;
   }
 }
 
 #home .float-right {
   order: 2;
-  margin: (.5 * $global-margin) 0 (2 * $global-margin) (2 * $global-margin);
-  
+  margin: (0.5 * $global-margin) 0 (2 * $global-margin) (2 * $global-margin);
+
   @include breakpoint(small down) {
-    margin: (.5 * $global-margin) 0 0 $global-margin;
+    margin: (0.5 * $global-margin) 0 0 $global-margin;
   }
 }
 
 #home .landscape {
   margin-bottom: 0;
-  
+
   @include breakpoint(medium down) {
     max-width: 50%;
     height: auto;
   }
-  
+
   @include breakpoint(small down) {
     max-width: none;
     float: none !important;
@@ -354,11 +360,11 @@ footer .logos img {
   margin: $global-margin 0;
   border-bottom: 1px solid $medium-gray;
   padding: $global-padding 0;
-  
+
   &:last-child {
     border-bottom-color: transparent;
   }
-  
+
   h2 a,
   h2 a:active {
     text-decoration: none;
@@ -371,7 +377,7 @@ footer .logos img {
   font-family: $header-font-family;
   text-transform: lowercase;
   color: $dark-gray;
-  
+
   @include breakpoint(small down) {
     text-align: left;
     margin: 0;
@@ -395,11 +401,11 @@ footer .logos img {
 // -- Visualization
 
 .how-to {
-  border: 1px solid #41464C;
+  border: 1px solid #41464c;
   background: #f4f4f4;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin: 0 2px 40px;
-  padding: .4em;
+  padding: 0.4em;
 }
 
 .how-to details summary {
@@ -421,7 +427,7 @@ footer .logos img {
 
 .visualization header {
   margin: 0 0 $global-margin;
-  padding: 0 0 (.25 * $global-padding);
+  padding: 0 0 (0.25 * $global-padding);
   align-items: center;
 }
 
@@ -436,7 +442,7 @@ footer .logos img {
 }
 
 .visualization header nav {
-  font-size: .875 * $global-font-size;
+  font-size: 0.875 * $global-font-size;
 }
 
 .visualization .post-content > *:not(div) {
@@ -465,6 +471,11 @@ a.footnote-backref {
   text-decoration: none;
 }
 
+.visualization .footnotes {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
 .visualization .footnotes hr {
   display: none;
 }
@@ -482,4 +493,10 @@ blockquote p a {
   word-wrap: break-word;
   word-break: break-word;
   hyphens: none;
+}
+
+/* Leaflet fixes */
+.leaflet-tile {
+  border: none;
+  box-shadow: none;
 }
