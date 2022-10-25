@@ -17,6 +17,8 @@ Ida Akiwumi, UX researcher, RRCHNM
 
 Ken Albers, software developer, RRCHNM
 
+Rachel Birch, graduate research assistant
+
 Jordan Bratt, graduate research assistant
 
 Brandan Buck, graduate research assistant for spatial data
@@ -31,11 +33,13 @@ Kaila Etienne-Best, undergraduate research assistant
 
 Thana Fazelyar, undergraduate research assistant
 
+Paris Frascella, undergraduate research assistant
+
 Alexis Frambes, research associate
 
 Danielle Gaita, undergraduate research assistant
 
-Caroline Greer, graduate research assistant
+Caroline Greer, project manager and graduate research assistant 
 
 Imran Haq, undergraduate research assistant
 
@@ -60,6 +64,10 @@ Lincoln Mullen, co--project director
 Kim Nguyen, web designer, RRCHNM
 
 Thanh Nguyen, office manager, RRCHNM
+
+Megan Pellerin, undergraduate research assistant
+
+Naomi Reed, undergraduate research assistant
 
 Jim Safley, senior software developer & metadata specialist, RRCHNM
 
