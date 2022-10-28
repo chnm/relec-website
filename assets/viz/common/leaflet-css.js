@@ -1,7 +1,7 @@
-export const leafletCSS = function (version) {
+export const leafletCSS = function () {
   const link = document.createElement("link");
   link.type = "text/css";
   link.rel = "stylesheet";
   document.head.appendChild(link);
-  link.href = `//unpkg.com/leaflet@${version}/dist/leaflet.css`;
+  link.href = `/css/leaflet.css`;
 };
