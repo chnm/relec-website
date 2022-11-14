@@ -1,7 +1,7 @@
 ---
 title: "How middle was Middletown?"
 author: Lincoln Mullen
-date: "2022-11-12"
+date: "2022-11-14"
 abstract:  The city-level data from the Census of Religious Bodies lets us understand how ecologies of religion varied from city to city..
 image:  "/blog-img/dorcas-1.jpeg"
 imagealt: A visualization comparing religious diversity in U.S. cities
