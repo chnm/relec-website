@@ -26,27 +26,10 @@ Introductory text goes here
       </div>
     </div>
   </div>
+  
   <div class="cell medium-12 xlarge-10 large-offset-1">
-    <div class="row menu">
-        <div class="columns small-12 medium-6">
-            <div id="year-dropdown" class="filterSelection" name="year"></div>
-        </div>
-        <div class="columns small-12 medium-6">
-            <div id="counts-dropdown" class="filterSelection"></div>
-        </div>
-      </div>
-    <div class="row menu">
-        <div class="columns small-12 medium-6">
-            <div id="denomination-family-dropdown" class="filterSelection"></div>
-        </div>
-        <div class="columns small-12 medium-6">
-          <div id="denomination-dropdown" class="filterSelection"></div>
-        </div>
-    </div>
-  </div>
-  <div class="cell medium-12 xlarge-10 large-offset-1">
-    <h3 class="graphic-title">Map of <span class="denomination-title">denominations</span> <span class="count-title">congregations</span> in US Cities, <span class="year-title">1926</span></h3>
-    <svg id="chrono-map" width="100%"></svg>
+    <h3 class="map-title">Draft Map</h3>
+    <svg id="schedules-map" width="100%"></svg>
   </div>
 </div>
 

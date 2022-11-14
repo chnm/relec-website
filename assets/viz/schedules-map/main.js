@@ -1,10 +1,9 @@
 import * as d3 from "d3";
 import SchedulesMap from "./schedules-map";
-import { updateURL, getInitialState, setDropDowns } from "./urls";
 
 // Load the data
 const urls = [
-  "https://data.chnm.org/relcensus/schedules/",
+  // "https://data.chnm.org/relcensus/schedules/",
   "https://data.chnm.org/ne/northamerica/",
   "https://data.chnm.org/ahcb/states/1926-07-04/",
 ];
@@ -22,157 +21,32 @@ Promise.all(promises)
 
 function setup(data) {
   const schedulesMap = new SchedulesMap(
-    "#chrono-map",
+    "#schedules-map",
     {
-      schedules: data[0],
-      northamerica: data[1],
-      states: data[2],
+      // schedules: data[0],
+      northamerica: data[0],
+      states: data[1],
+      schedules: [
+        {"omeka_id":91178,"datascribe_record_id":17649,"denomination_id":"0-5-2","schedule_id":1,"ahcb_state_id":"oh_state","ahcb_county_id":"ohs_hamilton","urban_rural":"Urban","location_id":1066650,"members_total_sex":175,"members_male":75,"members_female":100,"place":"Cincinnati","county":"Hamilton","state":"OH","lat":39.1035,"lon":-84.5153,"pop_est_1926":431195},{"omeka_id":91179,"datascribe_record_id":17650,"denomination_id":"0-5-2","schedule_id":2,"ahcb_state_id":"oh_state","ahcb_county_id":"ohs_montgomery","urban_rural":"Urban","location_id":1064514,"members_total_sex":82,"members_male":40,"members_female":42,"place":"Dayton","county":"Montgomery","state":"OH","lat":39.7589,"lon":-84.1916,"pop_est_1926":181613},{"omeka_id":91180,"datascribe_record_id":17651,"denomination_id":"0-5-2","schedule_id":3,"ahcb_state_id":"in_state","ahcb_county_id":"ins_marion","urban_rural":"Urban","location_id":452890,"members_total_sex":200,"members_male":120,"members_female":80,"place":"Indianapolis","county":"Marion","state":"IN","lat":39.7684,"lon":-86.158,"pop_est_1926":344174},{"omeka_id":91181,"datascribe_record_id":17687,"denomination_id":"0-5-2","schedule_id":4,"ahcb_state_id":"in_state","ahcb_county_id":"ins_vanderburgh","urban_rural":"Urban","location_id":434258,"members_total_sex":120,"members_male":50,"members_female":70,"place":"Evansville","county":"Vanderburgh","state":"IN","lat":37.9748,"lon":-87.5558,"pop_est_1926":95455},{"omeka_id":91182,"datascribe_record_id":17689,"denomination_id":"0-5-2","schedule_id":5,"ahcb_state_id":"in_state","ahcb_county_id":"ins_vanderburgh","urban_rural":"Rural","members_total_sex":155,"members_male":75,"members_female":80},{"omeka_id":91183,"datascribe_record_id":18058,"denomination_id":"0-5-2","schedule_id":6,"ahcb_state_id":"il_state","ahcb_county_id":"ils_cook","urban_rural":"Urban","location_id":423587,"members_total_sex":501,"members_male":300,"members_female":201,"place":"Chicago","county":"Cook","state":"IL","lat":41.85,"lon":-87.6501,"pop_est_1926":3106545},{"omeka_id":91184,"datascribe_record_id":18059,"denomination_id":"0-5-2","schedule_id":7,"ahcb_state_id":"ky_state","ahcb_county_id":"kys_jefferson","urban_rural":"Urban","location_id":509453,"members_total_sex":132,"members_male":60,"members_female":72,"place":"Louisville","county":"Jefferson","state":"KY","lat":38.2542,"lon":-85.7594,"pop_est_1926":278603},{"omeka_id":91185,"datascribe_record_id":18014,"denomination_id":"0-5-2","schedule_id":8,"ahcb_state_id":"tn_state","ahcb_county_id":"tns_shelby","urban_rural":"Urban","location_id":1326388,"members_total_sex":134,"members_male":34,"members_female":100,"place":"Memphis","county":"Shelby","state":"TN","lat":35.1495,"lon":-90.049,"pop_est_1926":216826},{"omeka_id":91186,"datascribe_record_id":18015,"denomination_id":"0-5-2","schedule_id":9,"ahcb_state_id":"ar_state","ahcb_county_id":"ars_miller","urban_rural":"Urban","location_id":78542,"members_total_sex":42,"members_male":14,"members_female":28,"place":"Texarkana","county":"Miller","state":"AR","lat":33.4418,"lon":-94.0377,"pop_est_1926":9761},{"omeka_id":91187,"datascribe_record_id":17652,"denomination_id":"0-5-2","schedule_id":10,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_canadian","urban_rural":"Urban","location_id":1092512,"members_total_sex":46,"members_male":32,"members_female":14,"place":"El Reno","county":"Canadian","state":"OK","lat":35.5323,"lon":-97.955,"pop_est_1926":8725},{"omeka_id":91188,"datascribe_record_id":17653,"denomination_id":"0-5-2","schedule_id":11,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_carter","urban_rural":"Rural","location_id":1098763,"members_total_sex":55,"members_male":30,"members_female":25,"place":"Tatums","county":"Carter","state":"OK","lat":34.4829,"lon":-97.4617},{"omeka_id":91189,"datascribe_record_id":17654,"denomination_id":"0-5-2","schedule_id":12,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_carter","urban_rural":"Urban","location_id":1089691,"members_total_sex":50,"members_male":30,"members_female":20,"place":"Ardmore","county":"Carter","state":"OK","lat":34.1743,"lon":-97.1436,"pop_est_1926":15117},{"omeka_id":91190,"datascribe_record_id":17655,"denomination_id":"0-5-2","schedule_id":13,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_comanche","urban_rural":"Urban","location_id":1094539,"members_total_sex":31,"members_male":16,"members_female":15,"place":"Lawton","county":"Comanche","state":"OK","lat":34.6087,"lon":-98.3903,"pop_est_1926":10845},{"omeka_id":91191,"datascribe_record_id":17656,"denomination_id":"0-5-2","schedule_id":14,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_creek","urban_rural":"Urban","location_id":1090502,"members_total_sex":40,"members_male":23,"members_female":17,"place":"Bristow","county":"Creek","state":"OK","lat":35.8306,"lon":-96.3911,"pop_est_1926":5355},{"omeka_id":91212,"datascribe_record_id":17657,"denomination_id":"0-5-2","schedule_id":15,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_creek","urban_rural":"Rural","location_id":1092051,"members_total_sex":40,"members_male":28,"members_female":12,"place":"Depew","county":"Creek","state":"OK","lat":35.8028,"lon":-96.5061},{"omeka_id":91213,"datascribe_record_id":17658,"denomination_id":"0-5-2","schedule_id":16,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_garvin","urban_rural":"Urban","location_id":1096470,"members_total_sex":40,"members_male":24,"members_female":16,"place":"Pauls Valley","county":"Garvin","state":"OK","lat":34.7401,"lon":-97.2222,"pop_est_1926":4019},{"omeka_id":91214,"datascribe_record_id":17659,"denomination_id":"0-5-2","schedule_id":17,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_grady","urban_rural":"Urban","location_id":1091277,"members_total_sex":112,"members_male":70,"members_female":42,"place":"Chickasha","county":"Grady","state":"OK","lat":35.0526,"lon":-97.9364,"pop_est_1926":12531},{"omeka_id":91215,"datascribe_record_id":17660,"denomination_id":"0-5-2","schedule_id":18,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_jackson","urban_rural":"Urban","location_id":1089598,"members_total_sex":20,"members_male":12,"members_female":8,"place":"Altus","county":"Jackson","state":"OK","lat":34.6381,"lon":-99.334,"pop_est_1926":6872},{"omeka_id":91216,"datascribe_record_id":17661,"denomination_id":"0-5-2","schedule_id":19,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_logan","urban_rural":"Urban","members_total_sex":32,"members_male":14,"members_female":18},{"omeka_id":91217,"datascribe_record_id":17662,"denomination_id":"0-5-2","schedule_id":20,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_muskogee","urban_rural":"Urban","location_id":1095717,"members_total_sex":71,"members_male":48,"members_female":23,"place":"Muskogee","county":"Muskogee","state":"OK","lat":35.7479,"lon":-95.3697,"pop_est_1926":31326},{"omeka_id":91218,"datascribe_record_id":17691,"denomination_id":"0-5-2","schedule_id":21,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_oklahoma","urban_rural":"Urban","location_id":1102140,"members_total_sex":235,"members_male":98,"members_female":137,"place":"Oklahoma City","county":"Oklahoma","state":"OK","lat":35.4676,"lon":-97.5164,"pop_est_1926":147751},{"omeka_id":91219,"datascribe_record_id":17693,"denomination_id":"0-5-2","schedule_id":22,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_okmulgee","urban_rural":"Urban","location_id":1096218,"members_total_sex":66,"members_male":45,"members_female":21,"place":"Okmulgee","county":"Okmulgee","state":"OK","lat":35.6234,"lon":-95.9605,"pop_est_1926":17230},{"omeka_id":91220,"datascribe_record_id":17694,"denomination_id":"0-5-2","schedule_id":23,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_okmulgee","urban_rural":"Rural","location_id":1089974,"members_total_sex":60,"members_male":37,"members_female":23,"place":"Beggs","county":"Okmulgee","state":"OK","lat":35.7426,"lon":-96.0703},{"omeka_id":91221,"datascribe_record_id":17695,"denomination_id":"0-5-2","schedule_id":24,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_pittsburg","urban_rural":"Urban","location_id":1095202,"members_total_sex":43,"members_male":25,"members_female":18,"place":"McAlester","county":"Pittsburg","state":"OK","lat":34.9334,"lon":-95.7697,"pop_est_1926":11335},{"omeka_id":91222,"datascribe_record_id":17696,"denomination_id":"0-5-2","schedule_id":25,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_pottawatomie","urban_rural":"Urban","location_id":1097964,"members_total_sex":39,"members_male":22,"members_female":17,"place":"Shawnee","county":"Pottawatomie","state":"OK","lat":35.3273,"lon":-96.9253,"pop_est_1926":20109},{"omeka_id":91223,"datascribe_record_id":17697,"denomination_id":"0-5-2","schedule_id":26,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_seminole","urban_rural":"Rural","location_id":1097908,"members_total_sex":37,"members_male":23,"members_female":14,"place":"Seminole","county":"Seminole","state":"OK","lat":35.2245,"lon":-96.6706,"pop_est_1926":6875},{"omeka_id":91224,"datascribe_record_id":17698,"denomination_id":"0-5-2","schedule_id":27,"ahcb_state_id":"ok_state","ahcb_county_id":"oks_tulsa","urban_rural":"Urban","location_id":1100962,"members_total_sex":83,"members_male":52,"members_female":31,"place":"Tulsa","county":"Tulsa","state":"OK","lat":36.154,"lon":-95.9928,"pop_est_1926":113585},{"omeka_id":91225,"datascribe_record_id":17699,"denomination_id":"0-5-2","schedule_id":28,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_anderson","urban_rural":"Urban","location_id":1364714,"members_total_sex":42,"members_male":20,"members_female":22,"place":"Palestine","county":"Anderson","state":"TX","lat":31.7621,"lon":-95.6308,"pop_est_1926":11283},{"omeka_id":91226,"datascribe_record_id":17700,"denomination_id":"0-5-2","schedule_id":29,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_anderson","urban_rural":"Rural","location_id":1378648,"members_total_sex":54,"members_male":30,"members_female":24,"place":"Massey Lake","county":"Anderson","state":"TX","lat":31.8121,"lon":-95.8683},{"omeka_id":91227,"datascribe_record_id":17701,"denomination_id":"0-5-2","schedule_id":30,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_austin","urban_rural":"Rural","location_id":1346329,"members_total_sex":32,"members_male":22,"members_female":10,"place":"San Felipe","county":"Austin","state":"TX","lat":29.793,"lon":-96.1008},{"omeka_id":91228,"datascribe_record_id":17702,"denomination_id":"0-5-2","schedule_id":31,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_austin","urban_rural":"Rural","location_id":1346849,"members_total_sex":53,"members_male":33,"members_female":20,"place":"Sealy","county":"Austin","state":"TX","lat":29.7808,"lon":-96.1572},{"omeka_id":91229,"datascribe_record_id":17703,"denomination_id":"0-5-2","schedule_id":33,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_bosque","urban_rural":"Rural","location_id":1376565,"members_total_sex":47,"members_male":25,"members_female":22,"place":"Valley Mills","county":"Bosque","state":"TX","lat":31.6593,"lon":-97.4722},{"omeka_id":91230,"datascribe_record_id":17704,"denomination_id":"0-5-2","schedule_id":34,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_bowie","urban_rural":"Rural","location_id":1380832,"members_total_sex":42,"members_male":20,"members_female":22,"place":"Corley","county":"Bowie","state":"TX","lat":33.3262,"lon":-94.3944},{"omeka_id":91231,"datascribe_record_id":17705,"denomination_id":"0-5-2","schedule_id":35,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_brazos","urban_rural":"Urban","location_id":1353099,"members_total_sex":94,"members_male":62,"members_female":32,"place":"Bryan","county":"Brazos","state":"TX","lat":30.6744,"lon":-96.37,"pop_est_1926":7211},{"omeka_id":91252,"datascribe_record_id":17706,"denomination_id":"0-5-2","schedule_id":36,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_cherokee","urban_rural":"Rural","location_id":1372283,"members_total_sex":41,"members_male":20,"members_female":21,"place":"Alto","county":"Cherokee","state":"TX","lat":31.6505,"lon":-95.0727},{"omeka_id":91253,"datascribe_record_id":17707,"denomination_id":"0-5-2","schedule_id":37,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_dallas","urban_rural":"Urban","location_id":1380944,"members_total_sex":75,"members_male":50,"members_female":25,"place":"Dallas","county":"Dallas","state":"TX","lat":32.7831,"lon":-96.8067,"pop_est_1926":219875},{"omeka_id":91254,"datascribe_record_id":17708,"denomination_id":"0-5-2","schedule_id":38,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_ellis","urban_rural":"Urban","location_id":1349560,"members_total_sex":45,"members_male":23,"members_female":22,"place":"Waxahachie","county":"Ellis","state":"TX","lat":32.3865,"lon":-96.8483,"pop_est_1926":8008},{"omeka_id":91255,"datascribe_record_id":17709,"denomination_id":"0-5-2","schedule_id":39,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_falls","urban_rural":"Rural","location_id":1354403,"members_total_sex":45,"members_male":35,"members_female":10,"place":"Chilton","county":"Falls","state":"TX","lat":31.2802,"lon":-97.0642},{"omeka_id":91256,"datascribe_record_id":17710,"denomination_id":"0-5-2","schedule_id":40,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_falls","urban_rural":"Urban","location_id":1362189,"members_total_sex":123,"members_male":81,"members_female":42,"place":"Marlin","county":"Falls","state":"TX","lat":31.3063,"lon":-96.898,"pop_est_1926":4927},{"omeka_id":91257,"datascribe_record_id":17711,"denomination_id":"0-5-2","schedule_id":41,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_foard","urban_rural":"Rural","location_id":1355438,"members_total_sex":64,"members_male":40,"members_female":24,"place":"Crowell","county":"Foard","state":"TX","lat":33.984,"lon":-99.7248},{"omeka_id":91258,"datascribe_record_id":17712,"denomination_id":"0-5-2","schedule_id":42,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_fortbend","urban_rural":"Rural","location_id":1345187,"members_total_sex":42,"members_male":20,"members_female":22,"place":"Richmond","county":"Fort Bend","state":"TX","lat":29.5822,"lon":-95.7608},{"omeka_id":91259,"datascribe_record_id":17713,"denomination_id":"0-5-2","schedule_id":43,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_galveston","urban_rural":"Urban","location_id":1377745,"members_total_sex":25,"members_male":15,"members_female":10,"place":"Galveston","county":"Galveston","state":"TX","lat":29.3014,"lon":-94.7978,"pop_est_1926":49465},{"omeka_id":91260,"datascribe_record_id":17714,"denomination_id":"0-5-2","schedule_id":44,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_galveston","urban_rural":"Urban","location_id":1377745,"members_total_sex":65,"members_male":45,"members_female":20,"place":"Galveston","county":"Galveston","state":"TX","lat":29.3014,"lon":-94.7978,"pop_est_1926":49465},{"omeka_id":91261,"datascribe_record_id":17715,"denomination_id":"0-5-2","schedule_id":45,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_galveston","urban_rural":"Rural","members_total_sex":47,"members_male":29,"members_female":18},{"omeka_id":91262,"datascribe_record_id":17716,"denomination_id":"0-5-2","schedule_id":46,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_gregg","urban_rural":"Rural","location_id":1339101,"members_total_sex":132,"members_male":60,"members_female":72,"place":"Kilgore","county":"Gregg","state":"TX","lat":32.3863,"lon":-94.8758},{"omeka_id":91263,"datascribe_record_id":17717,"denomination_id":"0-5-2","schedule_id":47,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_grimes","urban_rural":"Urban","location_id":1375099,"members_total_sex":74,"members_male":51,"members_female":23,"place":"Navasota","county":"Grimes","state":"TX","lat":30.388,"lon":-96.0877,"pop_est_1926":5101},{"omeka_id":91264,"datascribe_record_id":17718,"denomination_id":"0-5-2","schedule_id":48,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_grimes","urban_rural":"Rural","location_id":1333528,"members_total_sex":85,"members_male":44,"members_female":41,"place":"Courtney","county":"Grimes","state":"TX","lat":30.2672,"lon":-96.06},{"omeka_id":91265,"datascribe_record_id":17719,"denomination_id":"0-5-2","schedule_id":49,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_harris","urban_rural":"Urban","location_id":1380948,"members_total_sex":125,"members_male":50,"members_female":75,"place":"Houston","county":"Harris","state":"TX","lat":29.7633,"lon":-95.3633,"pop_est_1926":230722},{"omeka_id":91266,"datascribe_record_id":17720,"denomination_id":"0-5-2","schedule_id":50,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_harris","urban_rural":"Rural","members_total_sex":49,"members_male":29,"members_female":20},{"omeka_id":91267,"datascribe_record_id":17721,"denomination_id":"0-5-2","schedule_id":51,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_harris","urban_rural":"Rural","members_total_sex":42,"members_male":20,"members_female":22},{"omeka_id":91268,"datascribe_record_id":17722,"denomination_id":"0-5-2","schedule_id":52,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_henderson","urban_rural":"Urban","location_id":1329816,"members_total_sex":152,"members_male":112,"members_female":40,"place":"Athens","county":"Henderson","state":"TX","lat":32.2049,"lon":-95.8555,"pop_est_1926":3876},{"omeka_id":91269,"datascribe_record_id":17723,"denomination_id":"0-5-2","schedule_id":53,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_houston","urban_rural":"Rural","location_id":1385453,"members_total_sex":80,"members_male":45,"members_female":35,"place":"Weches","county":"Houston","state":"TX","lat":31.5441,"lon":-95.2277},{"omeka_id":91270,"datascribe_record_id":17724,"denomination_id":"0-5-2","schedule_id":54,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_hunt","urban_rural":"Urban","location_id":1377755,"members_total_sex":30,"members_male":9,"members_female":21,"place":"Greenville","county":"Hunt","state":"TX","lat":33.1384,"lon":-96.1108,"pop_est_1926":12398},{"omeka_id":91271,"datascribe_record_id":17725,"denomination_id":"0-5-2","schedule_id":56,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_karnes","urban_rural":"Rural","location_id":1367003,"members_total_sex":62,"members_male":40,"members_female":22,"place":"Runge","county":"Karnes","state":"TX","lat":28.8833,"lon":-97.7131},{"omeka_id":91292,"datascribe_record_id":18060,"denomination_id":"0-5-2","schedule_id":57,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_kaufman","urban_rural":"Urban","members_total_sex":31,"members_male":14,"members_female":17},{"omeka_id":91293,"datascribe_record_id":18061,"denomination_id":"0-5-2","schedule_id":58,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_kaufman","urban_rural":"Urban","members_total_sex":39,"members_male":20,"members_female":19},{"omeka_id":91294,"datascribe_record_id":18062,"denomination_id":"0-5-2","schedule_id":59,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_knox","urban_rural":"Rural","location_id":1360735,"members_total_sex":55,"members_male":24,"members_female":31,"place":"Knox City","county":"Knox","state":"TX","lat":33.4182,"lon":-99.819},{"omeka_id":91295,"datascribe_record_id":18063,"denomination_id":"0-5-2","schedule_id":60,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_leon","urban_rural":"Rural","location_id":1375253,"members_total_sex":36,"members_male":16,"members_female":20,"place":"Oakwood","county":"Leon","state":"TX","lat":31.5849,"lon":-95.8491},{"omeka_id":91296,"datascribe_record_id":18064,"denomination_id":"0-5-2","schedule_id":61,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_liberty","urban_rural":"Rural","location_id":1366839,"members_total_sex":18,"members_male":10,"members_female":8,"place":"Romayor","county":"Liberty","state":"TX","lat":30.4513,"lon":-94.8433},{"omeka_id":91297,"datascribe_record_id":18065,"denomination_id":"0-5-2","schedule_id":62,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_matagorda","urban_rural":"Rural","members_total_sex":71,"members_male":30,"members_female":41},{"omeka_id":91298,"datascribe_record_id":18067,"denomination_id":"0-5-2","schedule_id":63,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_matagorda","urban_rural":"Urban","location_id":1351611,"members_total_sex":42,"members_male":30,"members_female":12,"place":"Bay City","county":"Matagorda","state":"TX","lat":28.9828,"lon":-95.9694,"pop_est_1926":3824},{"omeka_id":91299,"datascribe_record_id":18068,"denomination_id":"0-5-2","schedule_id":64,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_mclennan","urban_rural":"Urban","location_id":1370701,"members_total_sex":142,"members_male":82,"members_female":60,"place":"Waco","county":"Mclennan","state":"TX","lat":31.5493,"lon":-97.1467,"pop_est_1926":47109},{"omeka_id":91300,"datascribe_record_id":18069,"denomination_id":"0-5-2","schedule_id":65,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_montgomery","urban_rural":"Rural","location_id":1381210,"members_total_sex":34,"members_male":14,"members_female":20,"place":"Fostoria","county":"Montgomery","state":"TX","lat":30.3263,"lon":-95.1663},{"omeka_id":91301,"datascribe_record_id":18070,"denomination_id":"0-5-2","schedule_id":66,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_navarro","urban_rural":"Rural","location_id":1339049,"members_total_sex":78,"members_male":50,"members_female":28,"place":"Kerens","county":"Navarro","state":"TX","lat":32.1332,"lon":-96.2278},{"omeka_id":91302,"datascribe_record_id":18071,"denomination_id":"0-5-2","schedule_id":67,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_panola","urban_rural":"Rural","location_id":1376867,"members_total_sex":38,"members_male":18,"members_female":20,"place":"Woods","county":"Panola","state":"TX","lat":32.0085,"lon":-94.2483},{"omeka_id":91303,"datascribe_record_id":18072,"denomination_id":"0-5-2","schedule_id":68,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_potter","urban_rural":"Urban","members_total_sex":54,"members_male":42,"members_female":12},{"omeka_id":91304,"datascribe_record_id":18073,"denomination_id":"0-5-2","schedule_id":69,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_redriver","urban_rural":"Rural","location_id":1352562,"members_total_sex":31,"members_male":21,"members_female":10,"place":"Bogata","county":"Red River","state":"TX","lat":33.4707,"lon":-95.2138},{"omeka_id":91305,"datascribe_record_id":18074,"denomination_id":"0-5-2","schedule_id":70,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_sanjacinto","urban_rural":"Rural","location_id":1382413,"members_total_sex":48,"members_male":18,"members_female":30,"place":"Oakhurst","county":"San Jacinto","state":"TX","lat":30.7371,"lon":-95.3161},{"omeka_id":91306,"datascribe_record_id":18075,"denomination_id":"0-5-2","schedule_id":71,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_shelby","urban_rural":"Rural","location_id":1354185,"members_total_sex":22,"members_male":10,"members_female":12,"place":"Center","county":"Shelby","state":"TX","lat":31.7955,"lon":-94.1791,"pop_est_1926":1506},{"omeka_id":91307,"datascribe_record_id":18076,"denomination_id":"0-5-2","schedule_id":72,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_smith","urban_rural":"Rural","members_total_sex":42,"members_male":30,"members_female":12},{"omeka_id":91308,"datascribe_record_id":18016,"denomination_id":"0-5-2","schedule_id":73,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_smith","urban_rural":"Urban","location_id":1348998,"members_total_sex":133,"members_male":70,"members_female":63,"place":"Tyler","county":"Smith","state":"TX","lat":32.3513,"lon":-95.3011,"pop_est_1926":15102},{"omeka_id":91309,"datascribe_record_id":18017,"denomination_id":"0-5-2","schedule_id":74,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_smith","urban_rural":"Urban","location_id":1348998,"members_total_sex":38,"members_male":20,"members_female":18,"place":"Tyler","county":"Smith","state":"TX","lat":32.3513,"lon":-95.3011,"pop_est_1926":15102},{"omeka_id":91310,"datascribe_record_id":18018,"denomination_id":"0-5-2","schedule_id":75,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_titus","urban_rural":"Urban","location_id":1342094,"members_total_sex":36,"members_male":20,"members_female":16,"place":"Mount Pleasant","county":"Titus","state":"TX","lat":33.1568,"lon":-94.9683,"pop_est_1926":3764},{"omeka_id":91311,"datascribe_record_id":18019,"denomination_id":"0-5-2","schedule_id":76,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_travis","urban_rural":"Urban","location_id":1384879,"members_total_sex":42,"members_male":20,"members_female":22,"place":"Austin","county":"Travis","state":"TX","lat":30.2672,"lon":-97.7431,"pop_est_1926":45822},{"omeka_id":91332,"datascribe_record_id":17681,"denomination_id":"0-5-2","schedule_id":77,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_trinity","urban_rural":"Rural","location_id":1370117,"members_total_sex":38,"members_male":22,"members_female":16,"place":"Trinity","county":"Trinity","state":"TX","lat":30.9452,"lon":-95.3755},{"omeka_id":91333,"datascribe_record_id":18020,"denomination_id":"0-5-2","schedule_id":78,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_trinity","urban_rural":"Rural","location_id":1381950,"members_total_sex":39,"members_male":22,"members_female":17,"place":"Groveton","county":"Trinity","state":"TX","lat":31.0549,"lon":-95.1258},{"omeka_id":91334,"datascribe_record_id":17683,"denomination_id":"0-5-2","schedule_id":79,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_wichita","urban_rural":"Urban","location_id":1376776,"members_total_sex":77,"members_male":45,"members_female":32,"place":"Wichita Falls","county":"Wichita","state":"TX","lat":33.9137,"lon":-98.4934,"pop_est_1926":42246},{"omeka_id":91335,"datascribe_record_id":18021,"denomination_id":"0-5-2","schedule_id":80,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_wilbarger","urban_rural":"Urban","location_id":1370623,"members_total_sex":72,"members_male":52,"members_female":20,"place":"Vernon","county":"Wilbarger","state":"TX","lat":34.1545,"lon":-99.2651,"pop_est_1926":7539},{"omeka_id":91336,"datascribe_record_id":17680,"denomination_id":"0-5-2","schedule_id":81,"ahcb_state_id":"tx_state","ahcb_county_id":"txs_vanzandt","urban_rural":"Rural","location_id":1336284,"members_total_sex":41,"members_male":21,"members_female":20,"place":"Fruitvale","county":"Van Zandt","state":"TX","lat":32.6832,"lon":-95.8033}
+      ]
     },
     { width: 1000, height: 525 }
   );
   schedulesMap.render();
-
-  // Get initial state from the query params. If no query params, use the default.
-  let year, denomination, denominationFamily, countSelection;
-  const initialState = getInitialState();
-  if (initialState === null) {
-    year = 1926;
-    denomination = "All denominations";
-    denominationFamily = "Adventist";
-    countSelection = "Congregations";    
-  } else {
-    [year, denomination, denominationFamily, countSelection] = initialState;
-  }
-
-  // We build the dropdown menus from the data and add event listeners to them
-  // Add the options to the dropdowns
-  const options = {
-    year: [1926],
-    denomination: ["All denominations", ...data[0].map((d) => d.short_name)],
-    denominationFamily: ["All denomination families", ...data[3].family_relec.map((d) => d.name)],
-    countSelection: ["Congregations", "Members"],
-  }
-
-  // options.denomination needs to be filtered where a denomination is only displayed if it 
-  // is part of a options.denominationFamily. We do this by getting the selected denominationFamily
-  // either from initialState or the URL params, and then filtering the options.denomination array
-  // to only include the denominations that are part of the selected denominationFamily. We need to 
-  // match exactly the denominationFamily with family_relec.name, so we use the indexOf method.
-  const denominationFamilyIndex = data[3].family_relec.findIndex((d) => d.name === denominationFamily);
-  const filteredDenominations = data[0].filter((d) => d.family_relec[denominationFamilyIndex].indexOf(d.short_name) !== -1);
-  const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
-
-  filteredDenominationOptions.sort((a, b) => {
-    if (a === "All denominations") {
-      return -1;
-    } else if (b === "All denominations") {
-      return 1;
-    } else {
-      return a.localeCompare(b);
-    }
-  });
-
-  // Build each of the dropdown elements.
-  d3.select("#year-dropdown")
-    .append("label")
-    .text("Select a year")
-    .append("select")
-    .attr("id", "year_selection")
-    .selectAll("option")
-    .data(options.year)
-    .join("option")
-    .attr("value", (d) => d)
-    .text((d) => d)
-    .property("selected", 1926);
-
-  d3.select("#counts-dropdown")
-    .append("label")
-    .text("Select a count total")
-    .append("select")
-    .attr("id", "count_selection")
-    .selectAll("option")
-    .data(options.countSelection)
-    .join("option")
-    .attr("value", (d) => d)
-    .text((d) => d)
-    .property("selected", "Congregations");
-
-  const denominationFamilyDropdownValues = d3.select("#denomination-family-dropdown")
-        .append("label")
-        .text("Select a denomination family")
-        .append("select")
-        .attr("name", "denomination-family-selection");
-         
-  const denominationDropdownValues = d3.select("#denomination-dropdown")
-        .append("label")
-        .text("Select a denomination")
-        .append("select")
-        .attr("name", "denomination-selection");
-
-  // Set the initial state of the dropdown menus
-  denominationDropdownValues.selectAll("option")
-    .data(filteredDenominationOptions)
-    .join("option")
-    .attr("value", (d) => d)
-    .text((d) => d);
-
-  denominationFamilyDropdownValues.selectAll("option")
-    .data(options.denominationFamily)
-    .join("option")
-    .attr("value", (d) => d)
-    .text((d) => d);
-
-  // Add event listener to the family dropdown. When a user changes the family dropdown value, 
-  // we need to update the denomination dropdown with the appropriate values. These then persist 
-  // whether the user changes the dropdown or uses the URL params. We need an exact match, so we
-  // use the indexOf method instead of includes().  
-  denominationFamilyDropdownValues.on("change", function() {
-    const denominationFamilySelection = d3.select(this).node().value;
-    const filteredDenominations = data[0].filter((d) => d.family_relec === denominationFamilySelection);
-    // const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
-    const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
-    
-    // sort the short_name alphabetically except for "All denominations"
-    filteredDenominationOptions.sort((a, b) => {
-      if (a === "All denominations") {
-        return -1;
-      } else if (b === "All denominations") {
-        return 1;
-      } else {
-        return a.localeCompare(b);
-      }
-    });
-    denominationDropdownValues.selectAll("option").remove();
-    denominationDropdownValues.selectAll("option")
-      .data(filteredDenominationOptions)
-      .join("option")
-      .attr("value", (d) => d)
-      .text((d) => d);
-  });
     
   // This function updates the map, the URL/browser history and the citation.
   // It is defined here so that `schedulesMap` is available to it.
-  const updateAll = (year, denomination, denominationFamily, countSelection) => {
-    schedulesMap.update(year, denomination, denominationFamily, countSelection);
-    updateURL(year, denomination, denominationFamily, countSelection);
-    setDropDowns(year, denomination, denominationFamily, countSelection);
+  const updateAll = (year) => {
+    schedulesMap.update(year);
   };
-
-  // Now update everything for the first time based on that initial state.
-  // For the first time we have to set the dropdowns too.
-  updateAll(year, denomination, denominationFamily, countSelection);
-  setDropDowns(year, denomination, denominationFamily, countSelection);
 
   // Listen for changes to the filter options and return them to update() and re-render the map.
   d3.selectAll(".filterSelection").on("change", async () => {
     let year = d3.select("#year-dropdown option:checked").text();
-    const denomination = d3.select("#denomination-dropdown option:checked").text();
-    const denominationFamily = d3.select("#denomination-family-dropdown option:checked").text();
-    const countSelection = d3.select("#counts-dropdown option:checked").text();
 
     // Convert year from string to number
     year = parseInt(year, 10);
 
-    updateAll(year, denomination, denominationFamily, countSelection);
+    updateAll(year);
   });
 }

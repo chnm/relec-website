@@ -13,10 +13,6 @@ export default class SchedulesMap extends Visualization {
 
     super(id, data, dim, margin);
 
-    // Keep track of defaults.
-    this.allFamilies = "All denomination families";
-    this.allDenominations = "All denominations";
-
     // The following handles year data, map projections, and zoom behavior.
     this.projection = d3
       .geoAlbers()
