@@ -23,7 +23,7 @@ deploy-prod : build-prod
 	@echo "\nDeploying the site to production with rsync ..."
 	rsync --delete --itemize-changes --omit-dir-times \
 		--checksum -avz --no-t --no-perms --exclude-from=rsync-excludes \
-		public/ athena:/websites/releco/www/ | egrep -v '^\.'
+		public/ athena:/websites/religiousecologies.org/ | egrep -v '^\.'
 	@echo "Finished deploying the site to production with rsync."
 
 .PHONY : preview build deploy
