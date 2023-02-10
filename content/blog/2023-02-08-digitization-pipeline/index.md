@@ -2,7 +2,7 @@
 title: "How we digitize the 1926 census"
 author: Lincoln Mullen
 date: "2023-02-09"
-abstract:  Our project's poster displayed at the American Historical Association gives an overview of the project.
+abstract:  A comprehensive case study documents our process for digitizing and transcribing the 1926 Census of Religious Bodies.
 image:  "/blog/how-we-digitize-the-1926-census/casestudy-thumbnail.png"
 imagealt: A thumbnail of transcribing the 1926 census of religion
 ---
