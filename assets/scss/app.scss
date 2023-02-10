@@ -184,6 +184,20 @@ figcaption {
   margin-top: 0.5 * $global-margin;
 }
 
+// Automatic figure numbering
+article {
+  counter-reset: figures;
+}
+
+figure {
+  counter-increment: figures;
+}
+
+figcaption p:before {
+  content: "Figure " counter(figures) ". ";
+  font-weight: 500;
+}
+
 // -- Footer
 
 footer {
