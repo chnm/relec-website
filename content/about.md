@@ -85,7 +85,7 @@ Stephanie Vu, undergraduate research assistant
 
 ## Advisory board
 
-Margaret Bendroth, Congregational Library and Archives
+Margaret Bendroth, independent scholar
 
 David Campbell, Political Science, University of Notre Dame
 
