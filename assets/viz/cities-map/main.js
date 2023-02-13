@@ -8,7 +8,7 @@ const urls = [
   "https://data.chnm.org/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church",
   "https://data.chnm.org/relcensus/city-membership?year=1926",
   "https://data.chnm.org/relcensus/denomination-families",
-  "https://data.chnm.org/ne/northamerica/",
+  "https://data.chnm.org/ne/globe?location=North+America",
   "https://data.chnm.org/ahcb/states/1926-07-04/",
 ];
 const promises = [];
