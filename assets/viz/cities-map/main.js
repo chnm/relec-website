@@ -38,44 +38,38 @@ function setup(data) {
   );
   citiesMap.render();
 
-  // Get initial state from the query params. If no query params, use the default.
-  let year, denomination, denominationFamily, countSelection;
-  const initialState = getInitialState();
+  // Get initial state from the query params. We use this in the event that someone
+  // shares a URL set to a specific state. If the URL is invalid, then we use the default
+  // state.
+  let initialState = getInitialState();
   if (initialState === null) {
-    year = 1926;
-    denomination = "All denominations";
-    denominationFamily = "Adventist";
-    countSelection = "Congregations";    
-  } else {
-    [year, denomination, denominationFamily, countSelection] = initialState;
+    initialState = [1926, "All denominations", "Adventist", "Congregations"];
   }
 
   // We build the dropdown menus from the data and add event listeners to them
   // Add the options to the dropdowns
   const options = {
-    // TODO: Re-enable the full year array when the years are available
     year: [1926], // [1906, 1916, 1926, 1936]
     denomination: ["All denominations", ...data[0].map((d) => d.short_name)],
     denominationFamily: ["All denomination families", ...data[3].family_relec.map((d) => d.name)],
     countSelection: ["Congregations", "Members"],
   }
 
-  // options.denomination needs to be filtered where a denomination is only displayed if it 
-  // is part of a options.denominationFamily. We do this by getting the selected denominationFamily
-  // either from initialState or the URL params, and then filtering the options.denomination array
+  // intitialState denomination (initialState[2]) needs to be filtered where a denomination is only displayed if it 
+  // is part of a denominationFamily. We do this by getting the selected denominationFamily
+  // either from initialState, and then filtering the denomination array
   // to only include the denominations that are part of the selected denominationFamily. We need to 
   // match exactly the denominationFamily with family_relec.name, so we use the indexOf method.
-  const denominationFamilyIndex = data[3].family_relec.findIndex((d) => d.name === denominationFamily);
-  const filteredDenominations = data[0].filter((d) => d.family_relec[denominationFamilyIndex].indexOf(d.short_name) !== -1);
-  const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
+  const denominationFamily = initialState[2] === "All denomination families" ? "All denomination families" : data[3].family_relec.filter((d) => d.name.indexOf(initialState[2]) !== -1)[0].name;
+  console.log('denom family', denominationFamily);
 
+  // Filter the denominations based on the denominationFamily
+  let filteredDenominationOptions = ["All denominations", ...data[0].map((d) => d.short_name)];
+  if (denominationFamily !== "All denomination families") {
+    filteredDenominationOptions = ["All denominations", ...data[0].filter((d) => d.family_relec.includes(denominationFamily)).map((d) => d.short_name)];
+  }
 
-  // let denominationFamilySelection = denominationFamily;
-  // console.log('family', denominationFamily);
-  // const filteredDenominations = data[0].filter((d) => d.family_relec.includes(denominationFamilySelection));
-  // console.log('denoms', filteredDenominations);
-  // const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
-  // sort the short_name alphabetically except for "All denominations"
+  // Sort the short_name alphabetically except for "All denominations"
   filteredDenominationOptions.sort((a, b) => {
     if (a === "All denominations") {
       return -1;
@@ -109,7 +103,7 @@ function setup(data) {
     .join("option")
     .attr("value", (d) => d)
     .text((d) => d)
-    .property("selected", "Congregations");
+    .property("selected", initialState[3]);
 
   const denominationFamilyDropdownValues = d3.select("#denomination-family-dropdown")
         .append("label")
@@ -174,8 +168,8 @@ function setup(data) {
 
   // Now update everything for the first time based on that initial state.
   // For the first time we have to set the dropdowns too.
-  updateAll(year, denomination, denominationFamily, countSelection);
-  setDropDowns(year, denomination, denominationFamily, countSelection);
+  updateAll(initialState[0], initialState[1], initialState[2], initialState[3]);
+  setDropDowns(initialState[0], initialState[1], initialState[2], initialState[3]);
 
   // Listen for changes to the filter options and return them to update() and re-render the map.
   d3.selectAll(".filterSelection").on("change", async () => {

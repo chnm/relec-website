@@ -370,7 +370,7 @@ export default class DenominationsMap extends Visualization {
       this.denomination === this.allDenominations &&
       this.family !== this.allFamilies
     ) {
-      const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
+      const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denominationFamily=${family}`;
       const denomfamily = fetch(url)
         .then((response) => response.json())
         .then((data) => data)
@@ -385,7 +385,7 @@ export default class DenominationsMap extends Visualization {
       return denomfamily;
     }
 
-    const url = `https://data.chnm.org/relcensus/city-membership?year=${year}&denomination=${denomination}`;
+    const url = `http://localhost:8090/relcensus/city-membership?year=${year}&denomination=${denomination}`;
     const dataResponse = fetch(url)
       .then((response) => response.json())
       .then((data) => data)
