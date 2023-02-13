@@ -4,12 +4,12 @@ import { updateURL, getInitialState, setDropDowns } from "./urls";
 
 // Load the data
 const urls = [
-  "http://localhost:8090/relcensus/denominations",
-  "http://localhost:8090/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church",
-  "http://localhost:8090/relcensus/city-membership?year=1926",
-  "http://localhost:8090/relcensus/denomination-families",
-  "http://localhost:8090/ne/northamerica/",
-  "http://localhost:8090/ahcb/states/1926-07-04/",
+  "https://data.chnm.org/relcensus/denominations",
+  "https://data.chnm.org/relcensus/city-membership?year=1926&denomination=Protestant+Episcopal+Church",
+  "https://data.chnm.org/relcensus/city-membership?year=1926",
+  "https://data.chnm.org/relcensus/denomination-families",
+  "https://data.chnm.org/ne/northamerica/",
+  "https://data.chnm.org/ahcb/states/1926-07-04/",
 ];
 const promises = [];
 urls.forEach((url) => promises.push(d3.json(url)));
@@ -38,53 +38,38 @@ function setup(data) {
   );
   citiesMap.render();
 
-  // Get initial state from the query params. If no query params, use the default.
-  let year, denomination, denominationFamily, countSelection;
-  const initialState = getInitialState();
+  // Get initial state from the query params. We use this in the event that someone
+  // shares a URL set to a specific state. If the URL is invalid, then we use the default
+  // state.
+  let initialState = getInitialState();
   if (initialState === null) {
-    year = 1926;
-    denomination = "All denominations";
-    denominationFamily = "Adventist";
-    countSelection = "Congregations";    
-  } else {
-    [year, denomination, denominationFamily, countSelection] = initialState;
+    initialState = [1926, "All denominations", "Adventist", "Congregations"];
   }
 
   // We build the dropdown menus from the data and add event listeners to them
   // Add the options to the dropdowns
   const options = {
-    // TODO: Re-enable the full year array when the years are available
     year: [1926], // [1906, 1916, 1926, 1936]
     denomination: ["All denominations", ...data[0].map((d) => d.short_name)],
     denominationFamily: ["All denomination families", ...data[3].family_relec.map((d) => d.name)],
     countSelection: ["Congregations", "Members"],
   }
 
-console.log(data[3].family_relec[0].name);
-console.log(initialState)
-
-  // options.denomination needs to be filtered where a denomination is only displayed if it 
-  // is part of a options.denominationFamily. We do this by getting the selected denominationFamily
-  // either from initialState or the URL params, and then filtering the options.denomination array
+  // intitialState denomination (initialState[2]) needs to be filtered where a denomination is only displayed if it 
+  // is part of a denominationFamily. We do this by getting the selected denominationFamily
+  // either from initialState, and then filtering the denomination array
   // to only include the denominations that are part of the selected denominationFamily. We need to 
   // match exactly the denominationFamily with family_relec.name, so we use the indexOf method.
-  // To start, we create the family index. If initialState is not null, we use the values from initialState
-  // to get the index. If initialState is null, we use data.family_relec[0].name to get the index.
-  const denominationFamilyIndex = initialState !== null ? data[3].family_relec.findIndex((d) => d.name === initialState[2]) :
-    data[3].family_relec.findIndex((d) => d.name === data[3].family_relec[0].name);
-  // data[3].family_relec.findIndex((d) => d.name === denominationFamily);
-  // Filter the denominations array to only include the denominations that are part of the selected denominationFamily
-  // We need to handle any values that may be set in initialState, so we use the denominationFamilyIndex to get the
-  // correct family_relec array. Otherwise, we use the values in data[0].filter family_relec[denominationFamilyIndex]
-  const filteredDenominations = initialState !== null ? data[0].filter((d) => d.family_relec[denominationFamilyIndex].indexOf(d.short_name) !== -1) :
-    data[0].filter((d) => d.family_relec[denominationFamilyIndex].indexOf(d.short_name) !== -1);
+  const denominationFamily = initialState[2] === "All denomination families" ? "All denomination families" : data[3].family_relec.filter((d) => d.name.indexOf(initialState[2]) !== -1)[0].name;
+  console.log('denom family', denominationFamily);
 
+  // Filter the denominations based on the denominationFamily
+  let filteredDenominationOptions = ["All denominations", ...data[0].map((d) => d.short_name)];
+  if (denominationFamily !== "All denomination families") {
+    filteredDenominationOptions = ["All denominations", ...data[0].filter((d) => d.family_relec.includes(denominationFamily)).map((d) => d.short_name)];
+  }
 
-
-  // const filteredDenominations = data[0].filter((d) => d.family_relec[denominationFamilyIndex].indexOf(d.short_name) !== -1);
-  const filteredDenominationOptions = ["All denominations", ...filteredDenominations.map((d) => d.short_name)];
-
-  // sort the short_name alphabetically except for "All denominations"
+  // Sort the short_name alphabetically except for "All denominations"
   filteredDenominationOptions.sort((a, b) => {
     if (a === "All denominations") {
       return -1;
@@ -118,7 +103,7 @@ console.log(initialState)
     .join("option")
     .attr("value", (d) => d)
     .text((d) => d)
-    .property("selected", "Congregations");
+    .property("selected", initialState[3]);
 
   const denominationFamilyDropdownValues = d3.select("#denomination-family-dropdown")
         .append("label")
@@ -144,24 +129,6 @@ console.log(initialState)
     .join("option")
     .attr("value", (d) => d)
     .text((d) => d);
-  
-  // After the dropdowns are built, we set the initial state of the dropdowns
-  // We set this to initialState unless it is empty, in which case we set it to the default
-  // values.
-
-  console.log(initialState);
-
-  if (initialState === null) {
-    d3.select("#year_selection").property("value", year);
-    d3.select("#count_selection").property("value", countSelection);
-    d3.select("select[name='denomination-family-selection']").property("value", denominationFamily);
-    d3.select("select[name='denomination-selection']").property("value", denomination);
-  } else {
-    d3.select("#year_selection").property("value", year);
-    d3.select("#count_selection").property("value", countSelection);
-    d3.select("select[name='denomination-family-selection']").property("value", denominationFamily);
-    d3.select("select[name='denomination-selection']").property("value", denomination);
-  }
 
   // Add event listener to the family dropdown. When a user changes the family dropdown value, 
   // we need to update the denomination dropdown with the appropriate values. These then persist 
@@ -201,8 +168,8 @@ console.log(initialState)
 
   // Now update everything for the first time based on that initial state.
   // For the first time we have to set the dropdowns too.
-  updateAll(year, denomination, denominationFamily, countSelection);
-  setDropDowns(year, denomination, denominationFamily, countSelection);
+  updateAll(initialState[0], initialState[1], initialState[2], initialState[3]);
+  setDropDowns(initialState[0], initialState[1], initialState[2], initialState[3]);
 
   // Listen for changes to the filter options and return them to update() and re-render the map.
   d3.selectAll(".filterSelection").on("change", async () => {
