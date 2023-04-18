@@ -33,9 +33,9 @@ Kaila Etienne-Best, undergraduate research assistant
 
 Thana Fazelyar, undergraduate research assistant
 
-Paris Frascella, undergraduate research assistant
-
 Alexis Frambes, research associate
+
+Paris Frascella, undergraduate research assistant
 
 Danielle Gaita, undergraduate research assistant
 
@@ -79,7 +79,11 @@ Kris Stinson, graduate research assistant
 
 Greta Swain, project manager and graduate research assistant
 
+Tony Trinh, systems administrator
+
 John Turner, co--project director
+
+Rachel Whyte, project manager and graduate research assistant
 
 Stephanie Vu, undergraduate research assistant
 
