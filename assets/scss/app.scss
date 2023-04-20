@@ -216,15 +216,14 @@ footer .logos {
 }
 
 footer .logos img {
-  width: 200px;
-  height: auto;
+  width: auto;
+  height: 60px;
   margin: $global-margin (2 * $global-margin) 0 0;
   box-shadow: none;
   border: 0;
 
   &.gmu-logo {
     width: 80px;
-    margin-top: 0;
   }
 }
 
