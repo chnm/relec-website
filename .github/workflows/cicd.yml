@@ -2,7 +2,7 @@ name: "[relec-website] Build & Publish"
 
 on:
   push:
-    branchs:
+    branches:
       - "main"
       - "preview"
 
