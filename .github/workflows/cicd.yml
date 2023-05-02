@@ -5,7 +5,7 @@ on:
     branchs:
       - "main"
       - "preview"
-      - "feature/cicd"
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: "ghcr.io/${{ github.repository }}"
