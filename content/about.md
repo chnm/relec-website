@@ -17,7 +17,11 @@ Ida Akiwumi, UX researcher, RRCHNM
 
 Ken Albers, software developer, RRCHNM
 
+Donna Baker, grants administrator, RRCHNM
+
 Rachel Birch, graduate research assistant
+
+Isabella Blakley, undergraduate research assistant
 
 Jordan Bratt, graduate research assistant
 
@@ -26,6 +30,10 @@ Brandan Buck, graduate research assistant for spatial data
 Bridget Bukovich, community engagement coordinator, RRCHNM
 
 Abderraouf Deghdegh, undergraduate research assistant
+
+Olivia Degraff, undergraduate research assistant
+
+Truman Deree, graduate research assistant
 
 Reagan Emmerling, undergraduate research assistant
 
@@ -61,6 +69,8 @@ Jannelle Legg, graduate research assistant
 
 Andrew Leitner, undergraduate research assistant
 
+Megan Merillat, graduate research assistant
+
 Lincoln Mullen, co--project director
 
 Kim Nguyen, web designer, RRCHNM
@@ -69,11 +79,17 @@ Thanh Nguyen, office manager, RRCHNM
 
 Megan Pellerin, undergraduate research assistant
 
+Anna Putnam, undergraduate research assistant
+
 Naomi Reed, undergraduate research assistant
+
+Harval Reyes, undergraduate research assistant
 
 Jim Safley, senior software developer & metadata specialist, RRCHNM
 
 Nayomi Santos, undergraduate research assistants
+
+Lydia Sigman, undergraduate research assistant
 
 Ava Smigliani, undergraduate research assistant
 
