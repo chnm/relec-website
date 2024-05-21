@@ -1,0 +1,25 @@
+name: "[relec-website] Build, Release, Deploy"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+      - "preview"
+
+jobs:
+  hugo-build-release-deploy:
+    uses: chnm/.github/.github/workflows/hugo--build-release-deploy.yml@main
+    secrets: inherit
+    with:
+      container-registry: "ghcr.io"
+      container-image-name: "relec-website"
+      hugo-context-root: "."
+      hugo-devl-url: "http://dev.religiousecologies.org"
+      hugo-prod-url: "https://religiousecologies.org"
+      
+      build-artifact-name: "relec-website"
+      release-tag-name-type: "iso"
+      
+      website-devl-fqdn: "dev.religiousecologies.org"
+      website-prod-fqdn: "religiousecologies.org"

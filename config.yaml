@@ -15,3 +15,5 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+timeout: "120s"
