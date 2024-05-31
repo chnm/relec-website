@@ -22,18 +22,19 @@ DOI: TK
 
 This dataset contains the membership data for denominations (or other religious groupings) grouped by city. Included are the cities data listed in the 1906, 1916, 1926, and 1936 censuses. Note that in addition to the number of congregations and total membership, the census bureau in some years reported membership data broken down by age (over or under 13 years old) and in other years by sex (male and female).
 
-#### Download 
+#### Download
 
-- link TK 
-- link TK 
-- linnk TK 
+- link TK
+- link TK
+- link TK
 
 ### Populated places listed in the 1926 Census of Religious Bodies
 
 This dataset contains a list of populated places suitable for use with the city-level data published by the U.S. Census Bureau in the 1926 Census of Religious Bodies. The Census Bureau defined a city as a place that had a population greater than or equal to 25,000 people in the 1920 decennial population census, and additional information is available for those cities.
 
-#### Download 
+#### Download
 
-- link TK 
-- link TK 
-- linnk TK 
+- link TK
+- link TK
+- link TK
+
