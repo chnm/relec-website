@@ -216,15 +216,14 @@ footer .logos {
 }
 
 footer .logos img {
-  width: 200px;
-  height: auto;
+  width: auto;
+  height: 60px;
   margin: $global-margin (2 * $global-margin) 0 0;
   box-shadow: none;
   border: 0;
 
   &.gmu-logo {
     width: 80px;
-    margin-top: 0;
   }
 }
 
@@ -513,4 +512,36 @@ blockquote p a {
 .leaflet-tile {
   border: none;
   box-shadow: none;
+}
+
+// -- Data 
+.data-title {
+  border-bottom: 1px solid $medium-gray;
+  padding: 0 0 $global-padding;
+}
+
+.toc {
+  margin: 0 2px 40px;
+  border: 1px solid $medium-gray;
+  border-radius: 0.5rem;
+  padding: 0.4em;
+}
+
+.toc .details {
+  display: inline;
+  font-weight: 500;
+}
+
+.toc details summary {
+  cursor: zoom-in;
+  margin-inline-start: 20px;
+}
+
+.toc details[open] summary {
+  cursor: zoom-out;
+}
+
+.toc .inner {
+  margin: 0 20px;
+  padding: 10px 20px;
 }

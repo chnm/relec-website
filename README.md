@@ -1,6 +1,6 @@
 # American Religious Ecologies
 
-This repository contains the website for the [*American Religious Ecologies*](http://religiousecologies.org) project at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org).
+This repository contains the website for the [*American Religious Ecologies*](https://religiousecologies.org) project at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org).
 
 ## Installing
 
