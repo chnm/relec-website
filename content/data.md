@@ -6,6 +6,8 @@ ShowToc: true
 
 The following datasets are compiled and released by the American Religious Ecologies project lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec semper metus. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
 
+---
+
 <h3 id="001">Denominations in the U.S. Censuses of Religious Bodies</h3>
 
 This dataset contains a list of the denominations (or other religious groupings) used by the U.S. Census Bureau in the federal Census of Religious Bodies. Included are the denominations listed in the 1906, 1916, 1926, and 1936 censuses. The same denomination will appear in different census years. Not all denominations will appear in each year, because the Census Bureau changed with denominations it counted each decade, but also because denominations split, merged, were formed, or were dissolved from decade to decade.
@@ -17,6 +19,8 @@ DOI: 10.31835/relec.data.001
 - [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/csv/denominations.csv)
 - [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/csv/denominations.csv)
 - [Read the codebook](https://github.com/chnm/relec-website)
+
+---
 
 <h3 id="002">City-level Membership Data by Denomination from the U.S. Censuses of Religious Bodies</h3>
 
@@ -39,6 +43,8 @@ Sam. L. Rogers, Religious Bodies: 1916, Part 1 Summary and General Tables (Washi
 W. M. Steuart, Religious Bodies: 1926, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1930), 10-12.
 
 J. C. CAPT, Religious Bodies: 1936, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1941), 11-16.
+
+---
 
 <h3 id="003">Populated places listed in the 1926 Census of Religious Bodies</h3>
 
