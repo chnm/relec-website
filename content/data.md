@@ -29,6 +29,15 @@ This dataset contains the membership data for denominations (or other religious 
 - link TK
 - link TK
 
+
+E. Dana Durand, Religious Bodies: 1906, Part 1 Summary and General Tables (Washington: Government Printing Office, 1910), 16-18.
+
+Sam. L. Rogers, Religious Bodies: 1916, Part 1 Summary and General Tables (Washington: Government Printing Office, 1919), 15-17.
+
+W. M. Steuart, Religious Bodies: 1926, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1930), 10-12.
+
+J. C. CAPT, Religious Bodies: 1936, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1941), 11-16.
+
 <h3 id="003">Populated places listed in the 1926 Census of Religious Bodies</h3>
 
 This dataset contains a list of populated places suitable for use with the city-level data published by the U.S. Census Bureau in the 1926 Census of Religious Bodies. The Census Bureau defined a city as a place that had a population greater than or equal to 25,000 people in the 1920 decennial population census, and additional information is available for those cities.
@@ -38,3 +47,12 @@ This dataset contains a list of populated places suitable for use with the city-
 - link TK
 - link TK
 - link TK
+
+
+E. Dana Durand, Religious Bodies: 1906, Part 1 Summary and General Tables (Washington: Government Printing Office, 1910), 374, table 5.
+
+Sam. L. Rogers, Religious Bodies: 1916, Part 1 Summary and General Tables (Washington: Government Printing Office, 1919), 330, table 64.
+
+W. M. Steuart, Religious Bodies: 1926, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1930), 348, table 30.
+
+J. C. CAPT, Religious Bodies: 1936, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1941), 424, table 30.
