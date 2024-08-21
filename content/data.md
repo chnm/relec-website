@@ -16,9 +16,9 @@ DOI: 10.31835/relec.data.001
 
 #### Download
 
-- [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/csv/denominations.csv)
-- [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/csv/denominations.csv)
-- [Read the codebook](https://github.com/chnm/relec-website)
+- [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/denominations/relec_denominations.csv)
+- [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/denominations/relec_denominations.csv)
+- [Read the codebook](https://github.com/chnm/relec-website/blob/main/exports/denominations/denominations-codebook.txt)
 
 ---
 
@@ -30,9 +30,9 @@ DOI: 10.31835/relec.data.002
 
 #### Download
 
-- [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/csv/denominations.csv)
-- [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/csv/denominations.csv)
-- [Read the codebook](https://github.com/chnm/relec-website)
+- [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/city-membership/relec_city_membership.csv)
+- [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/city-membership/relec_city_membership.csv)
+- [Read the codebook](https://github.com/chnm/relec-website/blob/main/exports/city-membership/city-membership-codebook.txt)
 
 #### References
 
@@ -54,9 +54,9 @@ DOI: 10.31835/relec.data.003
 
 #### Download
 
-- [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/csv/denominations.csv)
-- [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/csv/denominations.csv)
-- [Read the codebook](https://github.com/chnm/relec-website)
+- [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/populated-places/relec_populated_places.csv)
+- [Direct download](https://raw.github.com/chnm/relec-website/blob/main/exports/populated-places/relec_populated_places.csv)
+- [Read the codebook](https://raw.github.com/chnm/relec-website/blob/main/exports/populated-places/populated-places-codebook.txt)
 
 #### References
 

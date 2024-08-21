@@ -1,0 +1,29 @@
+Dataset title: Populated places listed in the 1926 Census of Religious Bodies
+Source: American Religious Ecologies <https://religiousecologies.org>
+Creator: Roy Rosenzweig Center for History and New Media <https:rrchnm.org>
+Date released: 2024
+DOI: TK
+
+Description: This dataset contains a list of populated places suitable for use with the city-level data published by the U.S. Census Bureau in the 1926 Census of Religious Bodies. The Census Bureau defined a city as a place that had a population greater than or equal to 25,000 people in the 1920 decennial population census, and additional information is available for those cities.
+
+Fields:
+
+- place_id (integer): The ID for that place provided by the USGS. Suitable for use as a primary key. Connects to federal geographic data.
+- place (text): The name of the populated place.
+- county (text): The county in which the populated place was located in 1926.
+- state (text): The state in which the populated place was located in 1926.
+- county_ahcb (categorical): A foreign key to the county identifiers in the Atlas of Historical County Boundaries <https://digital.newberry.org/ahcb/>. Identifies the county in which the populated place was located in 1926.
+- population_1920: If available, the population of that place in the 1920 decennial population census.
+- population_1930: If available, the population of that place in the 1930 decennial population census.
+- elevation (integer): The elevation of the populated place in TK.
+- lat (double): The latitude of the populated place in WGS84 coordinates (Spatial Reference System ID 4326).
+- lon (double): The longitude of the populated place in WGS84 coordinates (Spatial Reference System ID 4326).
+
+Other information: 
+- Missing data is represented by an `NA`.
+
+Citations: 
+
+TK (population data)
+
+TK (populated place data from the USGS)
