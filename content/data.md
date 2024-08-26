@@ -55,8 +55,8 @@ DOI: 10.31835/relec.data.003
 #### Download
 
 - [View data on GitHub](https://github.com/chnm/relec-website/blob/main/exports/populated-places/relec_populated_places.csv)
-- [Direct download](https://raw.github.com/chnm/relec-website/blob/main/exports/populated-places/relec_populated_places.csv)
-- [Read the codebook](https://raw.github.com/chnm/relec-website/blob/main/exports/populated-places/populated-places-codebook.txt)
+- [Direct download](https://raw.githubusercontent.com/chnm/relec-website/main/exports/populated-places/relec_populated_places.csv)
+- [Read the codebook](https://github.com/chnm/relec-website/blob/main/exports/populated-places/populated-places-codebook.txt)
 
 #### References
 
