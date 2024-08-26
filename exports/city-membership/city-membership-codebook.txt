@@ -2,7 +2,7 @@ Dataset title: City-level membership data by denomination from the U.S. Censuses
 Source: American Religious Ecologies <https://religiousecologies.org>
 Creator: Roy Rosenzweig Center for History and New Media <https:rrchnm.org>
 Date released: 2024
-DOI: TK
+DOI: 10.31835/relec.data.002
 
 Description: This dataset contains the membership data for denominations (or other religious groupings) grouped by city. Included are the cities data listed in the 1906, 1916, 1926, and 1936 censuses. Note that in addition to the number of congregations and total membership, the census bureau in some years reported membership data broken down by age (over or under 13 years old) and in other years by sex (male and female).
 
@@ -26,4 +26,8 @@ Other information:
 
 Citations: 
 
-TK (pages in published records where the cities data is listed)
+- E. Dana Durand, Religious Bodies: 1906, Part 1 Summary and General Tables (Washington: Government Printing Office, 1910), 16-18.
+- Sam. L. Rogers, Religious Bodies: 1916, Part 1 Summary and General Tables (Washington: Government Printing Office, 1919), 15-17.
+- W. M. Steuart, Religious Bodies: 1926, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1930), 10-12.
+- J. C. CAPT, Religious Bodies: 1936, Volume 1 Summary and Detailed Tables (Washington: Government Printing Office, 1941), 11-16.
+
