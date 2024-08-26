@@ -1,0 +1,861 @@
+"year","denomination_id","name","short_name","family_census","family_arda","family_relec","id"
+1906,,"Advent Christian Church","Advent Christian Church","Adventist","Adventist","Adventist",1069
+1906,,"African Methodist Episcopal Church","African Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",1070
+1906,,"African Methodist Episcopal Zion Church","African Methodist Episcopal Zion Church","Methodist","Methodist/Pietist","Methodist",1071
+1906,,"African Union Methodist Protestant Church","African Union Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",1072
+1906,,"Amana Society","Amana Society","Communistic Societies","Communal","Communitarian Societies",1199
+1906,,"American Salvation Army","American Salvation Army","Salvationists","Holiness","Holiness",1073
+1906,,"Amish Mennonite Church","Amish Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1227
+1906,,"Apostolic Christian Church","Apostolic Christian Church","Evangelistic Associations","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",1209
+1906,,"Apostolic Faith Movement","Apostolic Faith Movement","Evangelistic associations","Pentecostal","Pentecostal",1074
+1906,,"Apostolic Lutheran Church (Finnish)","Apostolic Lutheran Church (Finnish)","Lutheran","Lutheran","Lutheran",1223
+1906,,"Armenian Church","Armenian Church","Armenian Church","Eastern Liturgical Family (Orthodox)","Orthodox",1075
+1906,,"Associate Reformed Synod of the South","Associate Reformed Synod of the South","Presbyterian","Reformed/Presbyterian","Presbyterian",1243
+1906,,"Associate Synod of North America (Associate Presbyterian Church)","Associate Synod of North America (Associate Presbyterian Church)","Presbyterian","Methodist/Pietist","Moravian",1242
+1906,,"Brethren in Christ","Brethren in Christ","Brethren (River)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",1192
+1906,,"Brethren (Plymouth) - I ","Brethren (Plymouth) - I ","Brethren (Plymouth)","Independent Fundamentalist","Plymouth Brethren",1079
+1906,,"Brethren (Plymouth) - II","Brethren (Plymouth) - II","Brethren (Plymouth)","Independent Fundamentalist","Plymouth Brethren",1080
+1906,,"Brethren (Plymouth) - III","Brethren (Plymouth) - III","Brethren (Plymouth)","Independent Fundamentalist","Plymouth Brethren",1081
+1906,,"Brethren (Plymouth) - IV","Brethren (Plymouth) - IV","Brethren (Plymouth)","Independent Fundamentalist","Plymouth Brethren",1082
+1906,,"Bruederhoef Mennonite Church","Bruederhoef Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1226
+1906,,"Catholic Apostolic Church","Catholic Apostolic Church","Catholic Apostolic Churches","Other groups","Catholic",1083
+1906,,"Central Illinois Conference of Mennonites","Central Illinois Conference of Mennonites","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1235
+1906,,"Chinese Temples","Chinese Temples","Buddhists","Other groups","Buddhists",1195
+1906,,"Christadelphians","Christadelphians","Christadelphians","Other groups","Restoration",1196
+1906,,"Christian Catholic Church in Zion","Christian Catholic Church in Zion","Christian Catholic Church in Zion","Other groups","Restorationist",1084
+1906,,"Christian Congregation","Christian Congregation","Evangelistic Associations","Congregationalist","Restorationist",1210
+1906,,"Christian Israelite Church","Christian Israelite Church","Christian Israelite Church","Other groups ","Other groups ",1197
+1906,,"Christian Reformed Church","Christian Reformed Church","Reformed Bodies","Presbyterian/Reformed","Reformed",1085
+1906,,"Christians (Christian Connection)","Christians (Christian Connection)","Christians (Christian Connection)",,"Restorationist",1086
+1906,,"Christian Union","Christian Union","Christian Union","Other groups","Restoration",1198
+1906,,"Churches of Christ","Churches of Christ","Disciples or Christians","Restoration","Restorationist",1087
+1906,,"Churches of God (Adventist), Unattached Congregations","Churches of God (Adventist), Unattached Congregations","Adventist","Adventist","Adventist",1179
+1906,,"Churches of God in Christ Jesus","Churches of God in Christ Jesus","Adventist","Adventist","Adventist",1181
+1906,,"Churches of God in North America, General Eldership of the","Churches of God in North America, General Eldership of the","Churches of God in North America, General Eldership of the","Presbyterian/Reformed","Restorationist",1088
+1906,,"Church of Christ in God","Church of Christ in God","Churches of the Living God (Colored)","Pentecostal","Holiness",1089
+1906,,"Church of Christ, Scientist","Church of Christ, Scientist","Church of Christ, Scientist","Christian Science","Christian Science ",1090
+1906,,"Church of Daniel's Band","Church of Daniel's Band","Evangelistic Associations","Methodist/Pietst","Holiness",1212
+1906,,"Church of God (Adventist)","Church of God (Adventist)","Adventist","Adventist","Adventist",1178
+1906,,"Church of God and Saints of Christ (Colored)","Church of God and Saints of Christ (Colored)","Church of God and Saints of Christ (Colored)","Other groups","Other groups",1091
+1906,,"Church of God in Christ (Mennonite)","Church of God in Christ (Mennonite)","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1230
+1906,,"Church of Jesus Christ of Latter-day Saints","Church of Jesus Christ of Latter-day Saints","Latter-day Saints","Latter-day Saints","Latter Day Saints",1092
+1906,,"Church of the Living God (Christian Workers for Friendship)","Church of the Living God (Christian Workers for Friendship)","Churches of the Living God (Colored)","Holiness","Pentecostal",1093
+1906,,"Church of the Lutheran Brethren of America (Norwegian)","Church of the Lutheran Brethren of America (Norwegian)","Lutheran","Lutheran","Lutheran",1224
+1906,,"Church of the United Brethren in Christ","Church of the United Brethren in Christ","United Brethren bodies","Methodist/Pietist","United Brethren",1094
+1906,,"Church of the United Brethren in Christ (Old Constitution)","Church of the United Brethren in Christ (Old Constitution)","United Brethren bodies","Methodist/Pietist","United Brethren",1252
+1906,,"Colored Cumberland Presbyterian Church","Colored Cumberland Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",1095
+1906,,"Colored Methodist Episcopal Church","Colored Methodist Episcopal Church","Methodist ","Methodist/Pietist","Methodist",1096
+1906,,"Colored Primitive Baptists in America","Colored Primitive Baptists in America","Baptists","Baptist","Baptist",1097
+1906,,"Congregationalists","Congregationalists","Congregationalists","Congregationalists","Congregational",1098
+1906,,"Congregational Methodist Church","Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",1237
+1906,,"Cumberland Presbyterian Church","Cumberland Presbyterian Church","Presbyterian ","Reformed/Presbyterian","Presbyterian",1099
+1906,,"Danish Evangelical Lutheran Church in America","Danish Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",1100
+1906,,"Defenceless Mennonites","Defenceless Mennonites","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1232
+1906,,"Disciples of Christ","Disciples of Christ","Disciples or Christians","Restoration","Restorationist",1101
+1906,,"Duck River and Kindred Assocations of Baptists (Baptist Church of Christ)","Duck River and Kindred Assocations of Baptists (Baptist Church of Christ)","Baptists","Baptist","Baptist",1188
+1906,,"Evangelical Adventists","Evangelical Adventists","Adventist","Adventist","Adventist",1177
+1906,,"Evangelical Association","Evangelical Association","Evangelistic associations ","Methodist/Pietist","Methodist",1102
+1906,,"Evangelical Lutheran Church in America, Eielsen's Synod","Evangelical Lutheran Church in America, Eielsen's Synod","Lutheran","Lutheran","Lutheran",1219
+1906,,"Evangelical Lutheran Jehovah Conference","Evangelical Lutheran Jehovah Conference","Lutheran","Lutheran","Lutheran",1103
+1906,,"Evangelical Lutheran Joint Synod of Ohio and Other States","Evangelical Lutheran Joint Synod of Ohio and Other States","Lutheran","Lutheran","Lutheran",1104
+1906,,"Evangelical Lutheran Synodical Conference of America","Evangelical Lutheran Synodical Conference of America","Lutheran","Lutheran","Lutheran",1105
+1906,,"Evangelical Lutheran Synod of Iowa and Other States","Evangelical Lutheran Synod of Iowa and Other States","Lutheran","Lutheran","Lutheran",1106
+1906,,"Evangelical Lutheran Synod of Michigan and Other States","Evangelical Lutheran Synod of Michigan and Other States","Lutheran","Lutheran","Lutheran",1107
+1906,,"Evangelical Union of Bohemian and Moravian Brethren in North America","Evangelical Union of Bohemian and Moravian Brethren in North America","Moravian","Methodist/Pietist","Moravian",1241
+1906,,"Finnish Evangelical Lutheran Church, or Suomi Synod","Finnish Evangelical Lutheran Church, or Suomi Synod","Lutheran","Lutheran","Lutheran",1108
+1906,,"Finnish Evangelical Lutheran National Church ","Finnish Evangelical Lutheran National Church ","Lutheran","Lutheran","Lutheran",1222
+1906,,"Free Baptists","Free Baptists","Baptists","Baptist","Baptist",1109
+1906,,"Free Christian Zion Church of Christ (Colored)","Free Christian Zion Church of Christ (Colored)","Free Christian ZIon Church of Christ (Colored)","Methodist/Pietist","Holiness ",1216
+1906,,"Free Methodist Church of North America","Free Methodist Church of North America","Methodist","Methodist/Pietist","Methodist",1110
+1906,,"Freewill Baptists","Freewill Baptists","Baptists","Baptist","Baptist",1184
+1906,,"Freewill Baptists (Bullockites)","Freewill Baptists (Bullockites)","Baptists","Baptist","Baptist",1190
+1906,,"Friends (Primitive)","Friends (Primitive)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",1111
+1906,,"General Baptists","General Baptists","Baptists","Baptist","Baptist",1185
+1906,,"General Church of the New Jerusalem","General Church of the New Jerusalem","Churches of the New Jerusalem","Spiritualist","Swedenborgian",1112
+1906,,"General Conference of Mennonites of North America","General Conference of Mennonites of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonites",1113
+1906,,"General Convention of the New Jerusalem in the United States of America","General Convention of the New Jerusalem in the United States of America","Churches of the New Jerusalem","Spiritualist ","Swedenborgian",1114
+1906,,"General Council of the Evangelical Lutheran Church in North America","General Council of the Evangelical Lutheran Church in North America","Lutheran","Lutheran","Lutheran",1115
+1906,,"General Six Principle Baptists","General Six Principle Baptists","Baptists","Baptist","Baptist",1182
+1906,,"General Synod of the Evangelical Lutheran Church in the United States of America","General Synod of the Evangelical Lutheran Church in the United States of America","Lutheran","Lutheran","Lutheran",1116
+1906,,"German Baptist Brethren Church (Conservative)","German Baptist Brethren Church (Conservative)","Dunkers or German Baptist Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",1117
+1906,,"German Evangelical Lutheran Synod of Texas","German Evangelical Lutheran Synod of Texas","Lutheran","Lutheran","Lutheran",1220
+1906,,"German Evangelical Protestant Ministers' Association","German Evangelical Protestant Ministers' Association","German Evangelical Protestant",,"Other groups",1118
+1906,,"German Evangelical Protestant Ministers' Conference","German Evangelical Protestant Ministers' Conference","German Evangelical Protestant",,"Other groups",1119
+1906,,"German Evangelical Synod of North America","German Evangelical Synod of North America","German Evangelical Synod of North America",,"Reformed",1120
+1906,,"German Seventh-day Baptists","German Seventh-day Baptists","Dunkers or German Baptist Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists ",1202
+1906,,"Gospel Mission","Gospel Mission","Evangelistic Associations","Holiness","Holiness",1211
+1906,,"Greek Orthodox Church","Greek Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",1121
+1906,,"Hauge's Norwegian Evangelical Lutheran Synod","Hauge's Norwegian Evangelical Lutheran Synod","Lutheran","Lutheran","Lutheran",1122
+1906,,"Heavenly Recruit Church","Heavenly Recruit Church","Evangelistic Associations","Holiness","Holiness",1208
+1906,,"Hephzibah Faith Missionary Association","Hephzibah Faith Missionary Association","Evangelistic Associations","Other grouos","Holiness ",1205
+1906,,"Hungarian Reformed Church in America","Hungarian Reformed Church in America","Reformed Bodies","Reformed/Presbyterian","Reformed",1123
+1906,,"Icelandic Evangelical Lutheran Synod in North America","Icelandic Evangelical Lutheran Synod in North America","Lutheran","Lutheran","Lutheran",1221
+1906,,"Immanuel Synod of the Evangelical Lutheran Church of North America","Immanuel Synod of the Evangelical Lutheran Church of North America","Lutheran","Lutheran","Lutheran",1124
+1906,,"Independent Churches","Independent Churches","Independent Churches","Other groups","Other groups",1125
+1906,,"International Apostolic Holiness Union","International Apostolic Holiness Union","International Apostolic Holiness Union","Holiness","Holiness",1218
+1906,,"Japanese Temples","Japanese Temples","Buddhists","Other groups","Buddhist",1126
+1906,,"Jewish congregations","Jewish congregations","Jewish congregations","Judaism","Jewish",1127
+1906,,"Krimmer Brueder-Gemeinde","Krimmer Brueder-Gemeinde","Bundes Conferenz der Mennoniten Brueder-Gemeinde","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1233
+1906,,"Life and Advent Union","Life and Advent Union","Adventist","Adventist","Adventist",1180
+1906,,"Lumber River Mission","Lumber River Mission","Evangelistic Associations","Holiness","Holiness",1213
+1906,,"Lutheran Synod of Buffalo","Lutheran Synod of Buffalo","Lutheran","Lutheran","Lutheran",1128
+1906,,"Mennonite Brethren in Christ","Mennonite Brethren in Christ","Mennonite","Holiness","Mennonite ",1129
+1906,,"Mennonite Church","Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1225
+1906,,"Methodist Episcopal Church","Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",1130
+1906,,"Methodist Episcopal Church, South","Methodist Episcopal Church, South","Methodist","Methodist/Pietist","Methodist",1131
+1906,,"Methodist Protestant Church","Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",1132
+1906,,"Metropolitan Church Assocation","Metropolitan Church Assocation","Evangelistic Associations","Holiness","Holiness ",1204
+1906,,"Missionary Church Association","Missionary Church Association","Evangelistic Associations","Holiness","Holiness ",1206
+1906,,"Moravian Church (Unitas Fratrum)","Moravian Church (Unitas Fratrum)","Moravian","Methodist/Pietist","Moravian",1133
+1906,,"National Baptist Convention (Colored)","National Baptist Convention (Colored)","Baptists","Baptist","Baptist",1077
+1906,,"Nebraska and Minnesota Conference of Mennonites ","Nebraska and Minnesota Conference of Mennonites ","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1236
+1906,,"New Apostolic Church","New Apostolic Church","Catholic Apostolic Churches","Restoration","Restorationist",1134
+1906,,"New Congregational Methodist Church","New Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",1238
+1906,,"Nonsectarian Churches of Bible Faith","Nonsectarian Churches of Bible Faith","Nonsectarian Churches of Bible Faith","Restoration","Restorationist",1135
+1906,,"Northern Baptist Convention","Northern Baptist Convention","Baptists","Baptist","Baptist",1076
+1906,,"Norwegian Lutheran Free Church","Norwegian Lutheran Free Church","Lutheran","Lutheran","Lutheran",1136
+1906,,"Old Amish Mennonite Church","Old Amish Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1228
+1906,,"Old Order German Baptist Brethren","Old Order German Baptist Brethren","Dunkers or German Baptist Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists ",1201
+1906,,"Old (Wisler) Mennonite Church","Old (Wisler) Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1231
+1906,,"Orthodox Conservative Friends (Wilburite)","Orthodox Conservative Friends (Wilburite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",1217
+1906,,"Peniel Missions","Peniel Missions","Evangelistic Associations","Holiness","Holiness ",1203
+1906,,"Pentecostal Church of the Nazarene","Pentecostal Church of the Nazarene","Pentecostal Church of the Nazarene","Pentecostal","Pentecostal",1137
+1906,,"Pentecostal Union Church","Pentecostal Union Church","Evangelistic Associations",,"Holiness",1214
+1906,,"Pentecost Bands of the World","Pentecost Bands of the World","Evangelistic Associations","Methodist/Pietist","Holiness ",1207
+1906,,"Polish National Church of America","Polish National Church of America","Polish National Church of America","Western Liturgical (Catholicism)","Other groups",1138
+1906,,"Presbyterian Church in the United States","Presbyterian Church in the United States","Presbyterian","Reformed/Presbyterian","Presbyterian",1139
+1906,,"Presbyterian Church in the United States of America","Presbyterian Church in the United States of America","Presbyterian","Reformed/Presbyterian","Presbyterian",1140
+1906,,"Primitive Baptists","Primitive Baptists","Baptists","Baptist","Baptist",1141
+1906,,"Primitive Methodist Church in the United States of America","Primitive Methodist Church in the United States of America","Methodists","Methodist/Pietist","Methodist ",1142
+1906,,"Protestant Episcopal Church","Protestant Episcopal Church","Protestant Episcopal Church","Anglican","Episcopalian",1143
+1906,,"Reformed Catholic Church","Reformed Catholic Church","Reformed Catholic Church","Other groups","Other groups",1144
+1906,,"Reformed Church in America","Reformed Church in America","Reformed Bodies","Reformed/Presbyterian","Reformed",1145
+1906,,"Reformed Church in the United States","Reformed Church in the United States","Reformed Bodies","Reformed/Presbyterian","Reformed",1146
+1906,,"Reformed Episcopal Church","Reformed Episcopal Church","Reformed Episcopal Church","Anglican","Episcopalian",1147
+1906,,"Reformed Mennonite Church","Reformed Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1229
+1906,,"Reformed Methodist Union Episocal Church (Colored)","Reformed Methodist Union Episocal Church (Colored)","Methodist","Methodist/Pietist","Methodist",1240
+1906,,"Reformed Presbyterian Church (Covenanted)","Reformed Presbyterian Church (Covenanted)","Presbyterian","Reformed/Presbyterian","Presbyterian",1244
+1906,,"Reformed Presbyterian Church in North America, General Synod","Reformed Presbyterian Church in North America, General Synod","Presbyterian","Reformed/Presbyterian","Presbyterian",1148
+1906,,"Reformed Presbyterian Church in the United States and Canada ","Reformed Presbyterian Church in the United States and Canada ","Presbyterian","Reformed/Presbyterian","Presbyterian",1245
+1906,,"Reformed Zion Union Apostolic Church (Colored)","Reformed Zion Union Apostolic Church (Colored)","Methodist","Methodist/Pietist","Methodist",1239
+1906,,"Religious Society of Friends (Hicksite)","Religious Society of Friends (Hicksite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",1149
+1906,,"Reorganized Church of Jesus Christ of Latter-day Saints","Reorganized Church of Jesus Christ of Latter-day Saints","Latter-day Saints","Latter-day Saints","Latter Day Saints",1150
+1906,,"Roman Catholic Church","Roman Catholic Church","Roman Catholic Church","Western Liturgical (Catholicism)","Catholic",1151
+1906,,"Russian Orthodox Church","Russian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",1152
+1906,,"Salvation Army","Salvation Army","Salvationists","Holiness","Holiness",1153
+1906,,"Schellenburger Brueder-Gemeinde","Schellenburger Brueder-Gemeinde","Bundes Conferenz der Mennoniten Brueder-Gemeinde","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1234
+1906,,"Schwenkfelders","Schwenkfelders","Schwenkfelders","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Other groups",1246
+1906,,"Separate Baptists","Separate Baptists","Baptists","Baptist","Baptist",1186
+1906,,"Servian Orthodox Church","Servian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",1154
+1906,,"Seventh-day Adventist Denomination","Seventh-day Adventist Denomination","Adventist","Adventist","Adventist",1155
+1906,,"Seventh-day Baptists","Seventh-day Baptists","Baptists","Baptist","Baptist",1183
+1906,,"Slovak Evangelical Lutheran Synod of America","Slovak Evangelical Lutheran Synod of America","Lutheran","Lutheran","Lutheran",1156
+1906,,"Social Brethren","Social Brethren","Social Brethren","Other groups","Other groups",1247
+1906,,"Society for Ethical Culture","Society for Ethical Culture","Society for Ethical Culture","Liberal","Other groups",1157
+1906,,"Society of Friends (Orthodox)","Society of Friends (Orthodox)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish) ","Friends",1158
+1906,,"Southern Baptist Convention","Southern Baptist Convention","Baptists","Baptist","Baptist",1078
+1906,,"Spiritualists","Spiritualists","Spiritualists","Spiritualist","Spiritualist",1159
+1906,,"Swedish Evangelical Free Mission","Swedish Evangelical Free Mission","Swedish Evangelical bodies","Methodist/Pietist","Pietist",1160
+1906,,"Swedish Evangelical Mission Covenant of America","Swedish Evangelical Mission Covenant of America","Swedish Evangelical bodies","Methodist/Pietist","Pietist",1161
+1906,,"Synod for the Norwegian Evangelical Lutheran Church in America","Synod for the Norwegian Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",1162
+1906,,"Synod of the Reformed Presbyterian Church of North America","Synod of the Reformed Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",1163
+1906,,"Syrian Orthodox Church","Syrian Orthodox Church","Eastern Orthodox","Eastern Liturgical (Orthodox)","Orthodox",1164
+1906,,"Temple Society in the United States (Friends of the Temple)","Temple Society in the United States (Friends of the Temple)","Temple Society in the United States (Friends of the Temple)","Communal ","Other groups",1248
+1906,,"The Brethren Church (Progressive Dunkers)","The Brethren Church (Progressive Dunkers)","Dunkers or German Baptist Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish) ","Anabaptists",1165
+1906,,"Theosophical Society, American Section","Theosophical Society, American Section","Theosophical societies","Other groups","Theosophical",1166
+1906,,"Theosophical Society in America","Theosophical Society in America","Theosophical societies","Other groups","Theosophical societies",1249
+1906,,"Theosophical Society, New York","Theosophical Society, New York","Theosophical societies","Other groups","Theosophical societies",1250
+1906,,"Two-Seed-in-the-Spirit Predestinarian Baptists","Two-Seed-in-the-Spirit Predestinarian Baptists","Baptists","Baptist","Baptist",1189
+1906,,"Union American Methodist Episcopal Church (Colored)","Union American Methodist Episcopal Church (Colored)","Methodist","Methodist/Pietist","Methodist",1167
+1906,,"Unitarians","Unitarians","Unitarians","Liberal","Other groups",1168
+1906,,"United American Freewill Baptists (Colored)","United American Freewill Baptists (Colored)","Baptists","Baptist","Baptist",1191
+1906,,"United Baptists","United Baptists","Baptists","Baptist","Baptist",1187
+1906,,"United Danish Evangelical Lutheran Church in America","United Danish Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",1169
+1906,,"United Evangelical Church","United Evangelical Church","Evangelical","Methodist/Pietist","Methodist",1170
+1906,,"United Norwegian Lutheran Church in America","United Norwegian Lutheran Church in America","Lutheran","Lutheran","Lutheran",1171
+1906,,"United Presbyterian Church of North America","United Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",1172
+1906,,"United Society of Believers (Shakers)","United Society of Believers (Shakers)","Communistic Societies","Communal","Communitarian Societies",1200
+1906,,"United Synod of the Evangelical Lutheran Church in the South","United Synod of the Evangelical Lutheran Church in the South","Lutheran","Lutheran","Lutheran",1173
+1906,,"United Zion's Children","United Zion's Children","Brethren (River)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",1194
+1906,,"Universal Brotherhood and Theosophical Society","Universal Brotherhood and Theosophical Society","Theosophical societies","Other groups","Theosophical societies",1251
+1906,,"Universalists","Universalists","United Synod of the Evangelical Lutheran Church in the South","Liberal","Other groups",1174
+1906,,"Vedanta Society","Vedanta Society","Vedanta Society","Other groups","Other groups",1253
+1906,,"Voluntary Missionary Society in America (Colored)","Voluntary Missionary Society in America (Colored)","Evangelistic Associations",,"Other groups",1215
+1906,,"Volunteers of America","Volunteers of America","Volunteers of America","Holiness","Other groups",1254
+1906,,"Welsh Calvinistic Methodist Church","Welsh Calvinistic Methodist Church","Presbyterian","Reformed/Presbyterian","Presbyterian",1175
+1906,,"Wesleyan Methodist Connection of America","Wesleyan Methodist Connection of America","Methodist","Methodist/Pietist","Methodist",1176
+1906,,"Yorker, or Old Order, Brethren","Yorker, or Old Order, Brethren","Brethren (River)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",1193
+1916,,"Advent Christian Church","Advent Christian Church","Adventist","Adventist","Adventist",837
+1916,,"African American Methodist Episcopal Church","African American Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",838
+1916,,"African Methodist Episcopal Church","African Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",839
+1916,,"African Methodist Episcopal Zion Church","African Methodist Episcopal Zion Church","Methodist","Methodist/Pietist","Methodist",840
+1916,,"African Union Methodist Protestant Church","African Union Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",841
+1916,,"Albanian Orthodox Church","Albanian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",842
+1916,,"Amana Society","Amana Society","Communistic societies","Communal","Communitarian Societies",996
+1916,,"American Catholic Church","American Catholic Church","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",843
+1916,,"American Rescue Workers","American Rescue Workers","American Rescue Workers","Holiness","Holiness",844
+1916,,"Apostolic Christian Church","Apostolic Christian Church","Evangelistic associations","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",845
+1916,,"Apostolic Church","Apostolic Church","Evangelistic associations",,"Restorationist",998
+1916,,"Apostolic Faith Movement","Apostolic Faith Movement","Evangelistic associations","Pentecostal","Pentecostal",846
+1916,,"Apostolic Lutheran Church (Finnish)","Apostolic Lutheran Church (Finnish)","Lutheran","Lutheran","Lutheran",847
+1916,,"Armenian Church ","Armenian Church ","Armenian Church","Eastern Liturgical (Orthodox)","Orthodox",848
+1916,,"Assemblies of God, General Council","Assemblies of God, General Council","Assemblies of God, General Council","Pentecostal","Pentecostal",849
+1916,,"Associate Reformed Presbyterian Church","Associate Reformed Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",850
+1916,,"Associate Synod of North America (Associate Presbyterian Church)","Associate Synod of North America (Associate Presbyterian Church)","Presbyterian","Reformed/Presbyterian","Presbyterian",1033
+1916,,"Baha'is","Baha'is","Bahais","Other Groups","Other Groups",851
+1916,,"Brethren in Christ","Brethren in Christ","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",876
+1916,,"Brethren in Christ","Brethren in Christ","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",852
+1916,,"Brethren, Plymouth I","Brethren, Plymouth I","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",853
+1916,,"Brethren, Plymouth II","Brethren, Plymouth II","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",854
+1916,,"Brethren, Plymouth III","Brethren, Plymouth III","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",855
+1916,,"Brethren, Plymouth IV","Brethren, Plymouth IV","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",856
+1916,,"Brethren, Plymouth V","Brethren, Plymouth V","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",857
+1916,,"Brethren, Plymouth VI","Brethren, Plymouth VI","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",858
+1916,,"Bulgarian Orthodox Church","Bulgarian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",859
+1916,,"Catholic Apostolic Church","Catholic Apostolic Church","Catholic Apostolic Church","Other Groups","Catholic ",860
+1916,,"Catholic Church of North America","Catholic Church of North America","Old Catholic Churches in America","Western Liturgical (Catholicism)","Catholic ",861
+1916,,"Central Conference of Mennonites","Central Conference of Mennonites","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1025
+1916,,"Chinese temples","Chinese temples","Buddhists","Other Groups","Buddhist",993
+1916,,"Christadelphians","Christadelphians","Christadelphians","Other Groups","Restorationist",862
+1916,,"Christian and Missionary Alliance","Christian and Missionary Alliance","Christian and Missionary Alliance","Holiness","Holiness",863
+1916,,"Christian Church (American Christian Convention)","Christian Church (American Christian Convention)","Christian Church (American Christian Convention)","Restoration","Restorationist",864
+1916,,"Christian Congregation","Christian Congregation","Evangelistic associations","Congregationalists (UCC)","Restorationist",999
+1916,,"Christian Reformed Church","Christian Reformed Church","Reformed ","Reformed/Presbyterian","Reformed",865
+1916,,"Christian Union","Christian Union","Christian Union","Other Groups","Restorationist",866
+1916,,"Churches of Christ","Churches of Christ","Church of Christ","Restoration","Restorationist",871
+1916,,"Churches of Christ","Churches of Christ","Churches of Christ","Restoration","Restorationist",867
+1916,,"Churches of God, General Assembly","Churches of God, General Assembly","Churches of God, General Assembly","Other Groups","Holiness",868
+1916,,"Churches of God in Christ Jesus","Churches of God in Christ Jesus","Adventist","Adventist","Adventist",869
+1916,,"Churches of God in North America, General Eldership of the","Churches of God in North America, General Eldership of the","Churches of God in North America, General Eldership of the","Reformed/Presbyterian","Restorationist",870
+1916,,"Church of Daniel's Band","Church of Daniel's Band","Evangelistic associations","Methodist/Pietist","Holiness",1000
+1916,,"Church of God (Adventist)","Church of God (Adventist)","Adventist","Adventist","Adventist",982
+1916,,"Church of God and Saints of Christ","Church of God and Saints of Christ","Church of God and Saints of Christ","Other Groups","Other Groups",872
+1916,,"Church of God as Organized by Christ","Church of God as Organized by Christ","Evangelistic associations","Other Groups","Other Groups",1001
+1916,,"Church of God in Christ (Mennonite)","Church of God in Christ (Mennonite)","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1018
+1916,,"Church of God (New Dunkers)","Church of God (New Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",990
+1916,,"Church of Jesus Christ of Latter Day Saints","Church of Jesus Christ of Latter Day Saints","Latter Day Saints","Latter-day Saints (Mormonism)","Latter Day Saints",873
+1916,,"Church of the Brethren (Conservative Dunkers)","Church of the Brethren (Conservative Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",875
+1916,,"Church of the Living God","Church of the Living God","Churches of the Living God","Pentecostal","Pentecostal",877
+1916,,"Church of the Living God, Christian Workers for Fellowship","Church of the Living God, Christian Workers for Fellowship","Churches of the Living God","Holiness","Pentecostal",878
+1916,,"Church of the Living God, General Assembly","Church of the Living God, General Assembly","Churches of the Living God",,"Pentecostal",994
+1916,,"Church of the Living God, General Assembly","Church of the Living God, General Assembly","Churches of the Living God","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",874
+1916,,"Church of the Lutheran Brethren of America (Norwegian)","Church of the Lutheran Brethren of America (Norwegian)","Lutheran","Lutheran","Lutheran",1014
+1916,,"Church of the United Brethren in Christ","Church of the United Brethren in Christ","United Brethren","Methodist/Pietist","United Brethren",879
+1916,,"Church of the United Brethren in Christ (Old Constitution)","Church of the United Brethren in Christ (Old Constitution)","United Brethren","Methodist/Pietist","United Brethren",1038
+1916,,"Church of the Universal Messianic Message","Church of the Universal Messianic Message","Church of the Universal Messianic Message","?","Other Groups",880
+1916,,"Church Transcendent","Church Transcendent","Evangelistic associations",,"Other Groups",1002
+1916,,"Colored Cumberland Presbyterian Church","Colored Cumberland Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",881
+1916,,"Colored Methodist Episcopal Church","Colored Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",882
+1916,,"Colored Methodist Protestant Church","Colored Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",883
+1916,,"Colored Primitive Baptists","Colored Primitive Baptists","Baptist","Baptist","Baptist",884
+1916,,"Conference of the Defenseless Mennonites of North America","Conference of the Defenseless Mennonites of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1026
+1916,,"Congregational Churches","Congregational Churches","Congregational Churches","Congregationalists (UCC)","Congregational",885
+1916,,"Congregational Methodist Church","Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",1028
+1916,,"Conservative Amish Mennonite Church","Conservative Amish Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1016
+1916,,"Cumberland Presbyterian Church","Cumberland Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",886
+1916,,"Danish Evangelical Lutheran Church in America","Danish Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",887
+1916,,"Defenseless Mennonites","Defenseless Mennonites","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1021
+1916,,"Disciples of Christ","Disciples of Christ","Disciples of Christ","Restoration","Restorationist",888
+1916,,"Duck River and Kindred Associations of Baptists (Baptist Church of Christ)","Duck River and Kindred Associations of Baptists (Baptist Church of Christ)","Baptist","Baptist","Baptist",987
+1916,,"Evangelical Association","Evangelical Association","Evangelical Association","?","Methodist",889
+1916,,"Evangelical Lutheran Church in America, Eielsen's Synod","Evangelical Lutheran Church in America, Eielsen's Synod","Lutheran","Lutheran","Lutheran",1012
+1916,,"Evangelical Lutheran Jehovah Conference","Evangelical Lutheran Jehovah Conference","Lutheran","Lutheran","Lutheran",890
+1916,,"Evangelical Lutheran Joint Synod of Ohio and Other States","Evangelical Lutheran Joint Synod of Ohio and Other States","Lutheran","Lutheran","Lutheran",891
+1916,,"Evangelical Lutheran Synodical Conference of America","Evangelical Lutheran Synodical Conference of America","Lutheran","Lutheran","Lutheran",892
+1916,,"Evangelical Lutheran Synod of Iowa and Other States","Evangelical Lutheran Synod of Iowa and Other States","Lutheran","Lutheran","Lutheran",893
+1916,,"Evangelical Protestant Church of North America","Evangelical Protestant Church of North America","Evangelical Protestant Church of North America","?","Other Groups",894
+1916,,"Evangelical Union of Bohemian and Moravian Brethren in North America","Evangelical Union of Bohemian and Moravian Brethren in North America","Moravian","Methodist/Pietist","Moravian",1030
+1916,,"Finnish Evangelical Lutheran Church of America, or Suomi Synod","Finnish Evangelical Lutheran Church of America, or Suomi Synod","Lutheran","Lutheran","Lutheran",895
+1916,,"Finnish Evangelical Lutheran National Church","Finnish Evangelical Lutheran National Church","Lutheran","Lutheran","Lutheran",896
+1916,,"Free Baptists","Free Baptists","Baptist","Baptist","Baptist",897
+1916,,"Free Christian Zion Church of Christ","Free Christian Zion Church of Christ","Free Christian Zion Church of Christ","Methodist/Pietist","Holiness",1009
+1916,,"Free Methodist Church of North America","Free Methodist Church of North America","Methodist","Methodist","Methodist",898
+1916,,"Free Will Baptists","Free Will Baptists","Baptist","Baptist","Baptist",899
+1916,,"Friends (Primitive)","Friends (Primitive)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",1010
+1916,,"General Baptists","General Baptists","Baptist","Baptist","Baptist",900
+1916,,"General Church of the New Jerusalem","General Church of the New Jerusalem","Churches of the New Jerusalem","Spiritualist","Swedenborgian",995
+1916,,"General Conference of Mennonites of North America","General Conference of Mennonites of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",901
+1916,,"General Convention of the New Jerusalem in the United States of America","General Convention of the New Jerusalem in the United States of America","Churches of the New Jerusalem","Spiritualist","Swedenborgian",902
+1916,,"General Council of the Evangelical Lutheran Church in North America","General Council of the Evangelical Lutheran Church in North America","Lutheran","Lutheran","Lutheran",903
+1916,,"General Six Principle Baptists","General Six Principle Baptists","Baptist","Baptist","Baptist",983
+1916,,"General Synod of the Evangelical Lutheran Church in the United States of America","General Synod of the Evangelical Lutheran Church in the United States of America","Lutheran","Lutheran","Lutheran",904
+1916,,"German Evangelical Synod of North America","German Evangelical Synod of North America","German Evangelical Synod of North America","?","Other Groups",905
+1916,,"German Seventh Day Baptists","German Seventh Day Baptists","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",989
+1916,,"Greek Orthodox Church (Hellenic)","Greek Orthodox Church (Hellenic)","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",906
+1916,,"Hauge's Norwegian Evangelical Lutheran Synod","Hauge's Norwegian Evangelical Lutheran Synod","Lutheran (Norwegian Lutheran Church of America)","Lutheran","Lutheran",907
+1916,,"Hephzibah Faith Missionary Association","Hephzibah Faith Missionary Association","Evangelistic associations","Other Groups","Holiness",1003
+1916,,"Holiness Church","Holiness Church","Holiness Church","Holiness","Holiness",1011
+1916,,"Hungarian Reformed Church in America","Hungarian Reformed Church in America","Reformed ","Reformed/Presbyterian","Reformed",908
+1916,,"Hutterian Brethren","Hutterian Brethren","Mennonite","Communal","Mennonite",1015
+1916,,"Icelandic Evangelical Lutheran Synod in North America","Icelandic Evangelical Lutheran Synod in North America","Lutheran","Lutheran","Lutheran",1013
+1916,,"Immanuel Synod of the Evangelical Lutheran Church in North America","Immanuel Synod of the Evangelical Lutheran Church in North America","Lutheran","Lutheran","Lutheran",909
+1916,,"Independent Bohemian and Moravian Brethren Churches","Independent Bohemian and Moravian Brethren Churches","Moravian","Methodist/Pietist","Moravian",1031
+1916,,"Independent churches","Independent churches","Independent churches","Other Groups","Other Groups",910
+1916,,"International Apostolic Holiness Church","International Apostolic Holiness Church","International Apostolic Holiness Church",,"Holiness",911
+1916,,"Jacobite Church (Assyrian)","Jacobite Church (Assyrian)","Jacobite Church (Assyrian)",,"Orthodox",912
+1916,,"Japanese Temples","Japanese Temples","Buddhists","Other Groups","Buddhist",913
+1916,,"Jewish congregations","Jewish congregations","Jewish congregations","Judaism","Jewish",914
+1916,,"Kleine Gemeinde","Kleine Gemeinde","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1024
+1916,,"Krimmer Brueder-Gemeinde","Krimmer Brueder-Gemeinde","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1023
+1916,,"Life and Advent Union","Life and Advent Union","Adventist","Adventist","Adventist",915
+1916,,"Lithuanian National Catholic Church","Lithuanian National Catholic Church","Lithuanian National Catholic Church","Western Liturgical (Catholicism)","Other Groups",916
+1916,,"Lumber River Mission","Lumber River Mission","Evangelistic associations","Holiness","Holiness",1004
+1916,,"Lutheran Free Church (Norwegian)","Lutheran Free Church (Norwegian)","Lutheran","Lutheran","Lutheran",917
+1916,,"Lutheran Synod of Buffalo","Lutheran Synod of Buffalo","Lutheran","Lutheran","Lutheran",918
+1916,,"Mennonite Brethren Church of North America","Mennonite Brethren Church of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1022
+1916,,"Mennonite Brethren in Christ","Mennonite Brethren in Christ","Mennonite","Holiness","Mennonite",919
+1916,,"Mennonite Church","Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",920
+1916,,"Methodist Episcopal Church","Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",921
+1916,,"Methodist Episcopal Church, South","Methodist Episcopal Church, South","Methodist","Methodist/Pietist","Methodist",922
+1916,,"Methodist Protestant Church","Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",923
+1916,,"Metropolitan Church Association","Metropolitan Church Association","Evangelistic associations","Holiness","Holiness",1005
+1916,,"Missionary Church Association","Missionary Church Association","Evangelistic associations","Holiness","Holiness",924
+1916,,"Moravian Church (Unitas Fratrum)","Moravian Church (Unitas Fratrum)","Moravian","Methodist/Pietist","Moravian",925
+1916,,"National Baptist Convention","National Baptist Convention","Baptist","Baptist","Baptist",926
+1916,,"New Apostolic Church","New Apostolic Church","New Apostolic Church",,"Restorationist",927
+1916,,"New Congregational Methodist Church","New Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",1029
+1916,,"Nonsectarian Churches of Bible Faith","Nonsectarian Churches of Bible Faith","Nonsectarian Churches of Bible Faith","Other Groups","Restorationist",1032
+1916,,"Northern Baptist Convention","Northern Baptist Convention","Baptist","Baptist","Baptist",928
+1916,,"Norwegian-Danish Free Church","Norwegian-Danish Free Church","Scandinavian Evangelical","Methodist/Pietist","Pietist",929
+1916,,"Old Order Amish Mennonite Church","Old Order Amish Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1017
+1916,,"Old Order German Baptist Brethren","Old Order German Baptist Brethren","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",930
+1916,,"Old Order Mennonite Church (Wisler)","Old Order Mennonite Church (Wisler)","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1019
+1916,,"Old Order or Yorker Brethren","Old Order or Yorker Brethren","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",991
+1916,,"Old Roman Catholic Church","Old Roman Catholic Church","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",931
+1916,,"Orthodox Conservative Friends (Wilburite)","Orthodox Conservative Friends (Wilburite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",949
+1916,,"Peniel Missions","Peniel Missions","Evangelistic associations","Holiness","Holiness",1006
+1916,,"Pentecostal Church of the Nazarene","Pentecostal Church of the Nazarene","Pentecostal Church of the Nazarene","Pentecostal","Pentecostal",932
+1916,,"Pentecostal Holiness Church","Pentecostal Holiness Church","Pentecostal Holiness Church","Pentecostal","Pentecostal",933
+1916,,"Pentecost Bands of the World","Pentecost Bands of the World","Evangelistic associations","Methodist/Pietist","Holiness",1007
+1916,,"Pillar of Fire","Pillar of Fire","Evangelistic associations","Holiness","Holiness",934
+1916,,"Polish National Catholic Church of America","Polish National Catholic Church of America","Polish National Catholic Church of Amerca","Western Liturgical (Catholicism)","Other Groups",935
+1916,,"Presbyterian Church in the United States","Presbyterian Church in the United States","Presbyterian","Reformed/Presbyterian","Presbyterian",936
+1916,,"Presbyterian Church in the United States of America","Presbyterian Church in the United States of America","Presbyterian","Reformed/Presbyterian","Presbyterian",937
+1916,,"Primitive Baptists","Primitive Baptists","Baptist","Baptist","Baptist",938
+1916,,"Primitive Methodist Church in the United States of America","Primitive Methodist Church in the United States of America","Methodist","Methodist/Pietist","Methodist",939
+1916,,"Progressive Spiritual Church","Progressive Spiritual Church","Spiritualists","Spiritualist","Spiritualist",940
+1916,,"Protestant Episcopal Church","Protestant Episcopal Church","Protestant Episcopal Church","Anglicanism","Episcopalian",941
+1916,,"Reformed Church in America","Reformed Church in America","Reformed ","Reformed/Presbyterian","Reformed",942
+1916,,"Reformed Church in the United States","Reformed Church in the United States","Reformed ","Reformed/Presbyterian","Reformed",943
+1916,,"Reformed Episcopal Church","Reformed Episcopal Church","Reformed Episcopal Church","Anglicanism","Episcopalian",944
+1916,,"Reformed Mennonite Church","Reformed Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1020
+1916,,"Reformed Methodist Union Episcopal Church","Reformed Methodist Union Episcopal Church","Methodist","Methodist/Pietist","Methodist",945
+1916,,"Reformed Presbyterian Church in North America, General Synod","Reformed Presbyterian Church in North America, General Synod","Presbyterian","Reformed/Presbyterian","Presbyterian",946
+1916,,"Reformed Zion Union Apostolic Church","Reformed Zion Union Apostolic Church","Methodist","Methodist/Pietist","Methodist",947
+1916,,"Regular Baptists","Regular Baptists","Baptist","Baptist","Baptist",985
+1916,,"Religious Society of Friends (Hicksite)","Religious Society of Friends (Hicksite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",948
+1916,,"Reorganized Church of Jesus Christ of Latter Day Saints","Reorganized Church of Jesus Christ of Latter Day Saints","Latter Day Saints","Latter-day Saints (Mormonism)","Latter Day Saints",950
+1916,,"Roman Catholic Church","Roman Catholic Church","Roman Catholic Church","Western Liturgical (Catholicism)","Catholic",951
+1916,,"Rumanian Orthodox Church","Rumanian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",952
+1916,,"Russian Orthodox Church","Russian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",953
+1916,,"Salvation Army","Salvation Army","Salvation Army","Holiness","Holiness",954
+1916,,"Schwenkfelders","Schwenkfelders","Schwenkfelders","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Other Groups",955
+1916,,"Separate Baptists","Separate Baptists","Baptist","Baptist","Baptist",984
+1916,,"Serbian Orthodox Church","Serbian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",956
+1916,,"Seventh-day Adventist","Seventh-day Adventist","Adventist","Adventist","Adventist",957
+1916,,"Seventh Day Baptists","Seventh Day Baptists","Baptist","Baptist","Baptist",958
+1916,,"Social Brethren","Social Brethren","Social Brethren","Other Groups","Other Groups",1034
+1916,,"Society for Ethical Culture","Society for Ethical Culture","Society for Ethical Culture","Liberal ","Other Groups",959
+1916,,"Society of Friends (Orthodox)","Society of Friends (Orthodox)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",960
+1916,,"Southern Baptist Convention","Southern Baptist Convention","Baptist","Baptist","Baptist",961
+1916,,"Spiritualists (National Spirtualists' Association)","Spiritualists (National Spirtualists' Association)","Spiritualists","Spiritualist","Spiritualist",962
+1916,,"Stauffer Mennonites","Stauffer Mennonites","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",1027
+1916,,"Swedish Evangelical Free Church","Swedish Evangelical Free Church","Scandinavian Evangelical","Methodist/Pietist","Pietist",963
+1916,,"Swedish Evangelical Mission Covenant of America","Swedish Evangelical Mission Covenant of America","Scandinavian Evangelical","Methodist/Pietist","Pietist",964
+1916,,"Synod for the Norwegian Evangelical Lutheran Church of America","Synod for the Norwegian Evangelical Lutheran Church of America","Lutheran (Norwegian Lutheran Church of America)","Lutheran","Lutheran",965
+1916,,"Synod of the Reformed Presbyterian Church of North America","Synod of the Reformed Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",966
+1916,,"Syrian Orthodox Church","Syrian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",967
+1916,,"Temple Society in the United States (Friends of the Temple)","Temple Society in the United States (Friends of the Temple)","Temple Society in the United States (Friends of the Temple)","Communal","Other Groups",968
+1916,,"The Brethren Church (Progressive Dunkers)","The Brethren Church (Progressive Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",969
+1916,,"Theosophical Society","Theosophical Society","Theosophical societies","Other Groups","Theosophical societies",1035
+1916,,"Theosophical Society, American Section","Theosophical Society, American Section","Theosophical societies","Other Groups","Theosophical",970
+1916,,"Theosophical Society, New York","Theosophical Society, New York","Theosophical societies","Other Groups","Theosophical societies",1036
+1916,,"Two-Seed-in-the-Spirit Predestinarian Baptists","Two-Seed-in-the-Spirit Predestinarian Baptists","Baptist","Baptist","Baptist",988
+1916,,"Union American Methodist Episcopal Church","Union American Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",971
+1916,,"Unitarians","Unitarians","Unitarians","Liberal ","Other Groups",972
+1916,,"United Baptists","United Baptists","Baptist","Baptist","Baptist",986
+1916,,"United Danish Evangelical Lutheran Church in America","United Danish Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",973
+1916,,"United Evangelical Church","United Evangelical Church","United Evangelical Church",,"Methodist",974
+1916,,"United Norwegian Lutheran Church in America","United Norwegian Lutheran Church in America","Lutheran (Norwegian Lutheran Church of America)","Lutheran","Lutheran",975
+1916,,"United Presbyterian Church of North America","United Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",976
+1916,,"United Society of Believers (Shakers)","United Society of Believers (Shakers)","Communistic societies","Communal","Communitarian Societies",997
+1916,,"United Synod of the Evangelical Lutheran Church in the South","United Synod of the Evangelical Lutheran Church in the South","Lutheran","Lutheran","Lutheran",977
+1916,,"United Zion's Children","United Zion's Children","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",992
+1916,,"Universal Brotherhood and Theosophical Society","Universal Brotherhood and Theosophical Society","Theosophical societies","Other Groups","Theosophical societies",1037
+1916,,"Universalists","Universalists","Universalists","Liberal ","Other Groups",978
+1916,,"Vedanta Society","Vedanta Society","Vedanta Society","Other Groups","Other Groups",1039
+1916,,"Voluntary Missionary Society in America","Voluntary Missionary Society in America","Evangelistic associations",,"Other Groups",1008
+1916,,"Volunteers of America","Volunteers of America","Volunteers of America","Holiness","Other Groups",979
+1916,,"Welsh Calvinistic Methodist Church","Welsh Calvinistic Methodist Church","Presbyterian","Reformed/Presbyterian","Presbyterian",980
+1916,,"Wesleyan Methodist Connection of America","Wesleyan Methodist Connection of America","Methodist","Methodist/Pietist","Methodist",981
+1926,"0-0-0","Advent Christian Church","Advent Christian Church","Adventist bodies","Adventist","Adventist",1
+1926,"1-4-2","African Methodist Episcopal Church","African Methodist Episcopal Church","Methodist bodies","Methodist/Pietist","Methodist",157
+1926,"1-4-3","African Methodist Episcopal Zion Church","African Methodist Episcopal Zion Church","Methodist bodies","Methodist/Pietist","Methodist",158
+1926,"2-0-0","African Orthodox Church","African Orthodox Church",,"Eastern Liturgical Family (Orthodox)","Other groups",6
+1926,,"African Orthodox Church of New York","African Orthodox Church of New York",,,"Other groups",7
+1926,"1-4-6","African Union Methodist Protestant Church","African Union Methodist Protestant Church","Methodist bodies","Methodist/Pietist","Methodist",161
+1926,"0-6-1","Albanian Orthodox Church","Albanian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",72
+1926,"0-5-7","Amana Society","Amana Society","Communistic societies","Communal","Communitarian Societies",66
+1926,,"American Baptist Association","American Baptist Association","Baptist bodies","Baptist","Baptist",31
+1926,"1-5-7","American Catholic Church","American Catholic Church","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",170
+1926,"1-8-5","American Ethical Union","American Ethical Union",,"Liberal","Other groups",8
+1926,"0-0-5","American Rescue Workers","American Rescue Workers",,"Holiness","Holiness",9
+1926,"1-9-1","American Theosophical Society","American Theosophical Society","Theosophical societies","Other Groups","Theosophical",204
+1926,"0-7-1","Apostolic Christian Church","Apostolic Christian Church","Evangelistic associations","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",82
+1926,"0-7-2","Apostolic Faith Mission","Apostolic Faith Mission","Evangelistic associations","Pentecostal","Pentecostal",83
+1926,"2-2-5","Apostolic Overcoming Holy Church of God","Apostolic Overcoming Holy Church of God",,"Pentecostal","Pentecostal",10
+1926,"0-0-7","Assemblies of God, General Council","Assemblies of God, General Council",,"Pentecostal","Pentecostal",11
+1926,"1-6-9","Associate Reformed Presbyterian Church","Associate Reformed Presbyterian Church","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",184
+1926,"1-6-8","Associate Synod of North America (Associate Presbyterian Church)","Associate Presbyterian Church","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",183
+1926,"0-9-4","Assyrian Jacobite Apostolic Church","Assyrian Jacobite Apostolic Church",,,"Orthodox",12
+1926,"0-0-8","Baha’is","Baha’is",,"Miscellaneous","Other groups",13
+1926,"1-5-3","Bohemian and Moravian Brethren Churches","Bohemian and Moravian Brethren Churches","Moravian bodies","Methodist/Pietist","Moravian",168
+1926,"0-3-7","Brethren in Christ","Brethren in Christ","River Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",43
+1926,"0-6-2","Bulgarian Orthodox Church","Bulgarian Orthodox Church","Eastern Orthodox Churches",,"Orthodox",73
+1926,"0-4-2","Catholic Apostolic Church","Catholic Apostolic Church",,"Other Groups","Restorationist",46
+1926,"1-3-1","Central Conference of Mennonites","Central Conference of Mennonites","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",143
+1926,"0-4-3","Christadelphians","Christadelphians",,"Other Groups","Restorationist",47
+1926,"0-4-4","Christian and Missionary Alliance","Christian and Missionary Alliance",,"Holiness","Holiness",48
+1926,"0-4-5","Christian Church (General Convention of the Christian Church)","Christian Church",,,"Restorationist",49
+1926,"0-7-3","Christian Congregation","Christian Congregation","Evangelistic associations",,"Restorationist",84
+1926,"1-7-5","Christian Reformed Church","Christian Reformed Church","Reformed bodies"," Presbyterian-Reformed","Reformed",190
+1926,"2-1-9","Christian Science Parent Church","Christian Science Parent Church",,,"Christian Science",50
+1926,"0-4-6","Christian Union","Christian Union",,"Holiness","Restorationist",51
+1926,"0-4-9","Churches of Christ","Churches of Christ",,"Restorationist","Restorationist",59
+1926,"2-4-3","Churches of God, Holiness","Churches of God, Holiness",,"Holiness","Holiness",60
+1926,"0-5-1","Churches of God in North America (General Eldership)","Churches of God in North America",,"Presbyterian-Reformed","Restorationist",61
+1926,"0-0-6","Church of Armenia in America","Church of Armenia in America",,"Eastern Liturgical (Orthodox)","Orthodox",52
+1926,,"Church of Christ (Holiness) U.S.A.","Church of Christ (Holiness) U.S.A.",,"Holiness","Holiness",53
+1926,"2-0-6","Church of Christ, Scientist","Church of Christ, Scientist",,"Christian Science","Christian Science",54
+1926,"0-7-4","Church of Daniel's Band","Church of Daniel’s Band","Evangelistic associations","Methodist/Pietist","Holiness",85
+1926,"0-5-0","Church of God","Church of God",,,"Pentecostal",214
+1926,"0-0-2","Church of God (Adventist)","Church of God (Adventist)","Adventist bodies","Adventist","Adventist",3
+1926,"0-4-7","Church of God and Saints of Christ","Church of God and Saints of Christ",,"Judaism","Other groups",56
+1926,"2-2-0","Church of God (Apostolic)","Church of God (Apostolic)","Evangelistic associations","Pentecostal","Pentecostal",92
+1926,"0-7-5","Church of God as Organized by Christ","Church of God as Organized by Christ","Evangelistic associations","Other Groups","Other groups",86
+1926,"2-0-5","Church of God (Headquarters, Anderson, Ind.)","Church of God (Anderson, Ind.)",,"Holiness","Holiness",55
+1926,"2-3-4","Church of God in Christ","Church of God in Christ",,"Pentecostal","Pentecostal",57
+1926,"0-0-4","Church of God in Christ Jesus (Adventist)","Church of God in Christ Jesus (Adventist)","Adventist bodies",,"Adventist",5
+1926,"1-2-2","Church of God in Christ (Mennonite)","Church of God in Christ (Mennonite)","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",134
+1926,"0-3-0","Church of God (New Dunkers)","Church of God (New Dunkers)","German Baptist Brethren (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",36
+1926,"0-9-6","Church of Jesus Christ of Latter-day Saints","Church of Jesus Christ of Latter-day Saints","Latter-day Saints","Latter-day Saints (Mormonism)","Latter Day Saints",103
+1926,"0-2-6","Church of the Brethren (Conservative Dunkers)","Church of the Brethren (Conservative Dunkers)","German Baptist Brethren (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",32
+1926,"0-5-3","Church of the Living God, Christian Workers for Fellowship","Church of the Living God, Christian Workers for Fellowship","Churches of the Living God","Pentecostal","Pentecostal",62
+1926,"0-5-2","Church of the Living God, “The Pillar and Ground of Truth”","Church of the Living God, “The Pillar and Ground of Truth”","Churches of the Living God","Pentecostal","Pentecostal",63
+1926,"1-0-7","Church of the Lutheran Brethren of America","Church of the Lutheran Brethren of America","Lutherans","Lutheran","Lutheran",126
+1926,"1-5-9","Church of the Nazarene","Church of the Nazarene",,"Holiness","Holiness",58
+1926,"1-9-4","Church of the United Brethren in Christ","Church of the United Brethren in Christ","United Brethren bodies","Methodist/Pietist","United Brethren",208
+1926,"1-9-5","Church of the United Brethren in Christ (Old Constitution)","Church of the United Brethren in Christ (Old Constitution)","United Brethren bodies","Methodist/Pietist","United Brethren",209
+1926,"1-6-4","Colored Cumberland Presbyterian Church","Colored Cumberland Presbyterian Church","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",180
+1926,"1-4-7","Colored Methodist Episcopal Church","Colored Methodist Episcopal Church","Methodist bodies","Methodist/Pietist","Methodist",162
+1926,"1-4-4","Colored Methodist Protestant Church","Colored Methodist Protestant Church","Methodist bodies","Methodist/Pietist","Methodist",159
+1926,"0-2-4","Colored Primitive Baptists","Colored Primitive Baptists","Baptist bodies","Baptist","Baptist",28
+1926,"1-3-2","Conference of the Defenseless Mennonites of North America","Conference of the Defenseless Mennonites of North America","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",144
+1926,"0-5-9","Congregational Churches","Congregational Churches",,"Congregationalists","Congregational",68
+1926,"2-3-0","Congregational Holiness Church","Congregational Holiness Church",,"Pentecostal","Pentecostal",69
+1926,"1-3-9","Congregational Methodist Church","Congregational Methodist Church","Methodist bodies","Methodist/Pietist","Methodist",152
+1926,"1-2-0","Conservative American Mennonite Church","Conservative American Mennonite Church","Mennonite bodies",,"Mennonite",132
+1926,"1-6-3","Cumberland Presbyterian Church","Cumberland Presbyterian Church","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",179
+1926,"1-0-9","Danish Evangelical Lutheran Church in America","Danish Evangelical Lutheran Church in America","Lutherans","Lutheran","Lutheran",119
+1926,"1-2-6","Defenseless Mennonites","Defenseless Mennonites","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",138
+1926,"0-6-0","Disciples of Christ","Disciples of Christ",,"Restorationist","Restorationist",70
+1926,"2-3-2","Divine Science Church","Divine Science Church",,"Christian Science","New Thought",71
+1926,"0-2-2","Duck River and Kindred Associations of Baptists (Baptist Church of Christ)","Duck River and Kindred Associations of Baptists","Baptist bodies","Baptist","Baptist",26
+1926,"0-6-8","Evangelical Church","Evangelical Church",,"Methodist/Pietist","Methodist",79
+1926,"1-9-6","Evangelical Congregational Church","Evangelical Congregational Church",,"Methodist/Pietist","Methodist",80
+1926,"1-0-3","Evangelical Lutheran Augustana Synod of North America","Evangelical Lutheran Augustana Synod","Lutherans","Lutheran","Lutheran",109
+1926,"1-0-6","Evangelical Lutheran Church in America (Eielsen Synod)","Evangelical Lutheran Church in America (Eielsen Synod)","Lutherans","Lutheran","Lutheran",117
+1926,"2-1-6","Evangelical Lutheran Jehovah Conference","Evangelical Lutheran Jehovah Conference","Lutherans",,"Lutheran",127
+1926,"1-0-0","Evangelical Lutheran Joint Synod of Ohio and Other States","Evangelical Lutheran Joint Synod of Ohio and Other States","Lutherans","Lutheran","Lutheran",115
+1926,"1-1-5","Evangelical Lutheran Synodical Conference of America: Evangelical Lutheran Joint Synod of Wisconsin and Other States","Evangelical Lutheran Joint Synod of Wisconsin and Other States","Lutherans","Lutheran","Lutheran",111
+1926,"1-1-4","Evangelical Lutheran Synodical Conference of America: Evangelical Lutheran Synod of Missouri, Ohio, and Other States","Evangelical Lutheran Synod of Missouri, Ohio, and Other States","Lutherans","Lutheran","Lutheran",110
+1926,"1-1-7","Evangelical Lutheran Synodical Conference of America: Norwegian Synod of the American Evangelical Lutheran Church","Norwegian Synod of the American Evangelical Lutheran Church","Lutherans","Lutheran","Lutheran",113
+1926,"1-1-6","Evangelical Lutheran Synodical Conference of America: Slovak Evangelical Lutheran Synod of the United States of America","Slovak Evangelical Lutheran Synod of the United States","Lutherans","Lutheran","Lutheran",112
+1926,"1-0-1","Evangelical Lutheran Synod of Iowa and Other States","Evangelical Lutheran Synod of Iowa and Other States","Lutherans","Lutheran","Lutheran",118
+1926,"0-9-0","Evangelical Synod of North America","Evangelical Synod of North America",,"Reformed/Presbyterian","Reformed",81
+1926,"1-5-2","Evangelical Unity of Bohemian and Moravian Brethren in North America","Evangelical Unity of Bohemian and Moravian Brethren","Moravian bodies","Methodist/Pietist","Moravian",167
+1926,"2-2-4","Federated Churches","Federated Churches",,"Other Groups","Other groups",93
+1926,"1-1-3","Finnish Apostolic Lutheran Church","Finnish Apostolic Lutheran Church","Lutherans","Lutheran","Lutheran",125
+1926,"1-1-1","Finnish Evangelical Lutheran Church of America, or Suomi Synod","Finnish Evangelical Lutheran Church of America","Lutherans","Lutheran","Lutheran",121
+1926,"1-1-2","Finnish Evangelical Lutheran National Church of America","Finnish Evangelical Lutheran National Church of America","Lutherans","Lutheran","Lutheran",124
+1926,"0-8-5","Free Christian Zion Church of Christ","Free Christian Zion Church of Christ",,"Methodist/Pietist","Holiness",94
+1926,"2-4-2","Free Church of God in Christ","Free Church of God in Christ",,"Pentecostal","Pentecostal",95
+1926,"1-7-6","Free Magyar Reformed Church in America","Free Magyar Reformed Church in America","Reformed bodies"," Presbyterian-Reformed","Reformed",191
+1926,"1-4-0","Free Methodist Church of North America","Free Methodist Church of North America","Methodist bodies","Holiness","Methodist",153
+1926,"0-1-5","Free Will Baptists","Free Will Baptists","Baptist bodies","Baptist","Baptist",19
+1926,"0-1-7","Free Will Baptists (Bullockites)","Free Will Baptists (Bullockites)","Baptist bodies","Baptist","Baptist",21
+1926,"0-8-9","Friends (Primitive)","Friends (Primitive)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",99
+1926,"0-1-8","General Baptists","General Baptists","Baptist bodies","Baptist","Baptist",22
+1926,"0-5-6","General Church of the New Jerusalem","General Church of the New Jerusalem","Churches of the New Jerusalem"," Spiritualist","Swedenborgian",65
+1926,"1-2-5","General Conference of the Mennonite Church of North America","General Conference of the Mennonite Church of North America","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",137
+1926,"0-5-5","General Convention of the New Jerusalem in the United States of America","General Convention of the New Jerusalem in the United States","Churches of the New Jerusalem"," Spiritualist","Swedenborgian",64
+1926,"0-1-2","General Six Principle Baptists","General Six Principle Baptists","Baptist bodies","Baptist","Baptist",17
+1926,"0-6-3","Greek Orthodox Church (Hellenic)","Greek Orthodox Church (Hellenic)","Eastern Orthodox Churches","Eastern Liturgical Family (Orthodox)","Orthodox",74
+1926,"0-7-7","Hephzibah Faith Missionary Association","Hephzibah Faith Missionary Association","Evangelistic associations","Other Groups","Holiness",87
+1926,"0-9-1","Holiness Church","Holiness Church",,,"Holiness",100
+1926,"0-7-8","Holiness Methodist Church","Holiness Methodist Church","Methodist bodies","Holiness","Methodist",155
+1926,"1-1-9","Hutterian Brethren, Mennonites","Hutterian Brethren, Mennonites","Mennonite bodies","Communal","Mennonite",131
+1926,,"Icelandic Evangelical Lutheran Synod in North America","Icelandic Evangelical Lutheran Synod in North America","Lutherans","Lutheran","Lutheran",120
+1926,"2-2-8","Independent African Methodist Episcopal Church","Independent African Methodist Episcopal Church","Methodist bodies",,"Methodist",165
+1926,,"Independent Baptist Church of America","Independent Baptist Church of America","Baptist bodies","Baptist","Baptist",30
+1926,"0-9-2","Independent Churches","Independent Churches",,,"Other groups",101
+1926,"2-0-1","Independent Lutheran Congregations","Independent Lutheran Congregations","Lutherans",,"Lutheran",128
+1926,,"Jewish Congregations","Jewish Congregations",,"Judaism","Jewish",102
+1926,"1-2-9","Krimmer Brueder-Gemeinde","Krimmer Brueder-Gemeinde","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",141
+1926,"2-2-6","Liberal Catholic Church","Liberal Catholic Church",,"Other Groups","Other groups",105
+1926,"2-1-3","Liberal Church of America","Liberal Church of America",,"Other Groups","Other groups",106
+1926,"0-0-3","Life and Advent Union","Life and Advent Union","Adventist bodies","Adventist","Adventist",4
+1926,"0-9-8","Lithuanian National Catholic Church of America","Lithuanian National Catholic Church of America",,"Western Liturgical (Catholicism)","Other groups",107
+1926,"1-0-5","Lutheran Free Church","Lutheran Free Church","Lutherans","Lutheran","Lutheran",122
+1926,"1-0-2","Lutheran Synod of Buffalo","Lutheran Synod of Buffalo","Lutherans","Lutheran","Lutheran",116
+1926,"1-2-8","Mennonite Brethren Church of North America","Mennonite Brethren Church of North America","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",140
+1926,"1-2-7","Mennonite Brethren in Christ","Mennonite Brethren in Christ","Mennonite bodies","Holiness","Mennonite",139
+1926,"1-1-8","Mennonite Church","Mennonite Church","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",130
+1926,"1-3-0","Mennonite Kleine Gemeinde","Mennonite Kleine Gemeinde","Mennonite bodies",,"Mennonite",142
+1926,"1-3-4","Methodist Episcopal Church","Methodist Episcopal Church","Methodist bodies","Methodist/Pietist","Methodist",147
+1926,"1-3-8","Methodist Episcopal Church, South","Methodist Episcopal Church, South","Methodist bodies","Methodist/Pietist","Methodist",151
+1926,"1-3-5","Methodist Protestant Church","Methodist Protestant Church","Methodist bodies","Methodist/Pietist","Methodist",148
+1926,"0-7-9","Metropolitan Church Association","Metropolitan Church Association","Evangelistic associations","Holiness","Holiness",88
+1926,"0-8-2","Missionary Bands of the World","Missionary Bands of the World","Evangelistic associations","Methodist/Pietist","Holiness",90
+1926,"0-8-0","Missionary Church Association","Missionary Church Association","Evangelistic associations","Holiness","Holiness",89
+1926,"1-5-1","Moravian Church in America","Moravian Church in America","Moravian bodies","Methodist/Pietist","Moravian",166
+1926,"2-3-7","National Spiritual Alliance of the United States of America","National Spiritual Alliance of the United States","Spiritualists","Spiritualist","Spiritualist",202
+1926,"1-8-6","National Spiritualist Association","National Spiritualist Association","Spiritualists","Spiritualist","Spiritualist",200
+1926,"0-1-1-A","Negro Baptists","Negro Baptists","Baptist bodies",,"Baptist",16
+1926,"2-0-4","Negro Mission of the Synodical Conference","Negro Mission of the Synodical Conference",,"Lutheran","Lutheran",129
+1926,"1-5-4","New Apostolic Church","New Apostolic Church",,,"Restorationist",169
+1926,"1-4-1","New Congregational Methodist Church","New Congregational Methodist Church","Methodist bodies","Methodist/Pietist","Methodist",154
+1926,"2-3-5","North American Old Roman Catholic Church","North American Old Roman Catholic Church","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",172
+1926,"0-0-9","Northern Baptist Convention","Northern Baptist Convention","Baptist bodies","Baptist","Baptist",14
+1926,"1-8-2","Norwegian and Danish Evangelical Free Church Association of North America","Norwegian and Danish Evangelical Free Church Association","Scandanavian Evangelical Bodies","Methodist/Pietist","Pietist",197
+1926,"1-0-4","Norwegian Lutheran Church of America","Norwegian Lutheran Church of America","Lutherans","Lutheran","Lutheran",114
+1926,"1-5-6","Old Catholic Church in America","Old Catholic Church in America","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",171
+1926,"0-2-7","Old German Baptist Brethren","Old German Baptist Brethren","German Baptist Brethren (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",33
+1926,"1-2-1","Old Order Amish Mennonite Church","Old Order Amish Mennonite Church","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",133
+1926,"1-2-3","Old Order Mennonite Church (Wisler)","Old Order Mennonite Church (Wisler)","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",135
+1926,"0-3-8","Old Order or Yorker Brethren","Old Order or Yorker Brethren","River Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",44
+1926,"0-8-8","Orthodox Conservative Friends (Wilburite)","Orthodox Conservative Friends (Wilburite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",98
+1926,"2-2-9","Pentecostal Assemblies of the World","Pentecostal Assemblies of the World",,"Pentecostal","Pentecostal",174
+1926,"1-6-0","Pentecostal Holiness Church","Pentecostal Holiness Church",,"Pentecostal","Pentecostal",175
+1926,"0-9-3","Pilgrim Holiness Church","Pilgrim Holiness Church",,"Holiness","Holiness",176
+1926,"0-8-3","Pillar of Fire","Pillar of Fire","Evangelistic associations","Holiness","Holiness",91
+1926,"0-3-1","Plymouth Brethren I","Plymouth Brethren I","Plymouth Brethren","Independent Fundamentalist","Plymouth Brethren",37
+1926,"0-3-2","Plymouth Brethren II","Plymouth Brethren II","Plymouth Brethren","Independent Fundamentalist","Plymouth Brethren",38
+1926,"0-3-3","Plymouth Brethren III","Plymouth Brethren III","Plymouth Brethren","Independent Fundamentalist","Plymouth Brethren",39
+1926,"0-3-4","Plymouth Brethren IV","Plymouth Brethren IV","Plymouth Brethren","Independent Fundamentalist","Plymouth Brethren",40
+1926,"0-3-5","Plymouth Brethren V","Plymouth Brethren V","Plymouth Brethren","Independent Fundamentalist","Plymouth Brethren",41
+1926,"0-3-6","Plymouth Brethren VI","Plymouth Brethren VI","Plymouth Brethren","Independent Fundamentalist","Plymouth Brethren",42
+1926,"1-6-1","Polish National Catholic Church of America","Polish National Catholic Church of America",,"Western Liturgical (Catholicism)","Other groups",177
+1926,"1-6-7","Presbyterian Church in the United States","Presbyterian Church in the United States","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",182
+1926,"1-6-2","Presbyterian Church in the United States of America","Presbyterian Church U.S.A.","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",178
+1926,"0-2-3","Primitive Baptists","Primitive Baptists","Baptist bodies","Baptist","Baptist",27
+1926,"1-3-7","Primitive Methodist Church in the United States of America","Primitive Methodist Church in the United States","Methodist bodies","Methodist/Pietist","Methodist",150
+1926,"1-8-7","Progressive Spiritual Church","Progressive Spiritual Church","Spiritualists","Spiritualist","Spiritualist",201
+1926,"1-7-2","Protestant Episcopal Church","Protestant Episcopal Church",,"Anglican","Episcopalian",187
+1926,"1-7-3","Reformed Church in America","Reformed Church in America","Reformed bodies"," Presbyterian-Reformed","Reformed",188
+1926,"1-7-4","Reformed Church in the United States","Reformed Church in the United States","Reformed bodies"," Presbyterian-Reformed","Reformed",189
+1926,"1-7-7","Reformed Episcopal Church","Reformed Episcopal Church",,"Anglican","Episcopalian",192
+1926,"1-2-4","Reformed Mennonite Church","Reformed Mennonite Church","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",136
+1926,"2-3-6","Reformed Methodist Church","Reformed Methodist Church","Methodist bodies","Holiness","Methodist",156
+1926,"1-5-0","Reformed Methodist Union Episcopal Church","Reformed Methodist Union Episcopal Church","Methodist bodies","Methodist/Pietist","Methodist",164
+1926,"1-7-1","Reformed Presbyterian Church in North America, General Synod","Reformed Presbyterian Church in North America","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",186
+1926,"1-4-8","Reformed Zion Union Apostolic Church","Reformed Zion Union Apostolic Church","Methodist bodies","Methodist/Pietist","Methodist",163
+1926,"0-2-0","Regular Baptists","Regular Baptists","Baptist bodies","Baptist","Baptist",24
+1926,"0-8-7","Religious Society of Friends (Hicksite)","Religious Society of Friends (Hicksite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",97
+1926,"0-9-7","Reorganized Church of Jesus Christ of Latter Day Saints","Reorganized Church of Jesus Christ of Latter Day Saints","Latter-day Saints","Latter-day Saints  (Mormonism)","Latter Day Saints",104
+1926,"1-7-8","Roman Catholic Church","Roman Catholic Church",,"Western Liturgical  (Catholicism)","Catholic",193
+1926,"0-6-4","Roumanian Orthodox Church","Roumanian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical Family (Orthodox)","Orthodox",75
+1926,"0-6-5","Russian Orthodox Church","Russian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical Family (Orthodox)","Orthodox",76
+1926,"1-7-9","Salvation Army","Salvation Army",,"Holiness","Holiness",194
+1926,"1-8-3","Schwenkfelders","Schwenkfelders",,"European Free-Church (Brethren, Mennonites, Quakers, Amish)","Other groups",198
+1926,"0-1-9","Separate Baptists","Separate Baptists","Baptist bodies","Baptist","Baptist",23
+1926,"0-6-6","Serbian Orthodox Church","Serbian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical Family (Orthodox)","Orthodox",77
+1926,"0-0-1","Seventh-day Adventist","Seventh-day Adventist","Adventist bodies","Adventist","Adventist",2
+1926,"0-1-3","Seventh Day Baptists","Seventh Day Baptists","Baptist bodies","Baptist","Baptist",18
+1926,"0-2-9","Seventh Day Baptists (German, 1728)","Seventh Day Baptists (German, 1728)","German Baptist Brethren (Dunkers)","Baptist","Anabaptist",35
+1926,"1-8-4","Social Brethren","Social Brethren",,"Other Groups","Other groups",199
+1926,"0-8-6","Society of Friends (Orthodox)","Society of Friends (Orthodox)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",96
+1926,"0-1-0","Southern Baptist Convention","Southern Baptist Convention","Baptist bodies","Baptist","Baptist",15
+1926,"1-3-3","Stauffer Mennonite Church","Stauffer Mennonite Church","Mennonite bodies","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",145
+1926,"1-8-1","Swedish Evangelical Free Church of the United States of America","Swedish Evangelical Free Church of the United States","Scandanavian Evangelical Bodies","Methodist/Pietist","Pietist",196
+1926,"1-8-0","Swedish Evangelical Mission Covenant of America","Swedish Evangelical Mission Covenant of America","Scandanavian Evangelical Bodies","Methodist/Pietist","Pietist",195
+1926,"1-7-0","Synod of the Reformed Presbyterian Church of North America","Synod of the Reformed Presbyterian Church of North America","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",185
+1926,"0-6-7","Syrian Orthodox Church","Syrian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical Family (Orthodox)","Orthodox",78
+1926,"1-8-8","Temple Society of America","Temple Society of America",,"Communal","Other groups",203
+1926,"0-2-8","The Brethren Church (Progressive Dunkers)","The Brethren Church (Progressive Dunkers)","German Baptist Brethren (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",34
+1926,"2-3-1","The (Original) Church of God","The (Original) Church of God",,"Pentecostal","Pentecostal",173
+1926,"1-9-0","Theosophical Society of New York, Independent","Theosophical Society of New York, Independent","Theosophical societies",,"Theosophical",205
+1926,"0-2-5","Two-Seed-in-the-Spirit Predestinarian Baptists","Two-Seed-in-the-Spirit Predestinarian Baptists","Baptist bodies","Baptist","Baptist",29
+1926,"2-2-7","Unaffiliated Mennonite Congregations","Unaffiliated Mennonite Congregations","Mennonite bodies",,"Mennonite",146
+1926,"1-4-5","Union American Methodist Episcopal Church","Union American Methodist Episcopal Church","Methodist bodies","Methodist/Pietist","Methodist",160
+1926,"1-9-3","Unitarians","Unitarians",,"Liberal","Other groups",207
+1926,"0-1-6","United American Free Will Baptist Church (Colored)","United American Free Will Baptist Church (Colored)","Baptist bodies","Baptist","Baptist",20
+1926,"0-2-1","United Baptists","United Baptists","Baptist bodies","Baptist","Baptist",25
+1926,"2-1-7","United Christian Church","United Christian Church","United Brethren bodies","Methodist/Pietist","United Brethren",210
+1926,"1-0-8","United Danish Evangelical Lutheran Church in America","United Danish Evangelical Lutheran Church in America","Lutherans","Lutheran","Lutheran",123
+1926,"0-9-9","United Lutheran Church in America","United Lutheran Church in America","Lutherans","Lutheran","Lutheran",108
+1926,"1-6-6","United Presbyterian Church of North America","United Presbyterian Church of North America","Presbyterian bodies","Presbyterian-Reformed","Presbyterian",181
+1926,"0-5-8","United Society of Believers (Shakers)","United Society of Believers (Shakers)","Communistic societies","Communal","Communitarian Societies",67
+1926,"0-3-9","United Zion’s Children","United Zion’s Children","River Brethren","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",45
+1926,"1-9-2","Universal Brotherhood and Theosophical Society","Universal Brotherhood and Theosophical Society","Theosophical societies",,"Theosophical",206
+1926,"1-9-7","Universalist Church","Universalist Church",,"Liberal","Other groups",211
+1926,"1-9-8","Vedanta Society","Vedanta Society",,"Other Groups","Other groups",212
+1926,"1-9-9","Volunteers of America","Volunteers of America",,"Holiness","Other groups",213
+1926,"1-3-6","Wesleyan Methodist Connection (or Church) of America","Wesleyan Methodist Connection","Methodist bodies","Holiness Family","Methodist",149
+1936,,"Advent Christian Church","Advent Christian Church","Adventist","Adventist","Adventist",459
+1936,,"African Methodist Episcopal Church","African Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",460
+1936,,"African Methodist Episcopal Zion Church","African Methodist Episcopal Zion Church","Methodist","Methodist/Pietist","Methodist",461
+1936,,"African Orthodox Church","African Orthodox Church","African Orthodox Church","Eastern Liturgical (Orthodox)","Orthodox",462
+1936,,"African Union Methodist Protestant Church","African Union Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",463
+1936,,"Albanian Orthodox Church","Albanian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Eastern Orthodox",464
+1936,,"Amana Church Society","Amana Church Society","Amana Church Society","Communal ","Communitarian Societies",465
+1936,,"American Baptist Association","American Baptist Association","Baptist","Baptist","Baptist",466
+1936,,"American Catholic Church","American Catholic Church","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",467
+1936,,"American Ethical Union","American Ethical Union","American Ethical Union","Liberal","Other Groups",468
+1936,,"American Holy Orthodox Catholic Apostolic Eastern Church","American Holy Orthodox Catholic Apostolic Eastern Church","Eastern Orthodox Churches ","Eastern Liturgical (Orthodox)","Orthodox",469
+1936,,"American Lutheran Church","American Lutheran Church","Lutheran","Lutheran","Lutheran",470
+1936,,"American Old Catholic Church (Incorporated)","American Old Catholic Church (Incorporated)","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic Churches in America",471
+1936,,"American Rescue Workers","American Rescue Workers","American Rescue Workers ","Holiness","Holiness",472
+1936,,"Apostolic Christian Church","Apostolic Christian Church","Evangelistic associations","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",473
+1936,,"Apostolic Christian Church (Nazarean)","Apostolic Christian Church (Nazarean)","Evangelistic associations","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",474
+1936,,"Apostolic Episcopal Church (The Holy Eastern Catholic and Apostolic Orthodox Church)","Apostolic Episcopal Church (The Holy Eastern Catholic and Apostolic Orthodox Church)","Eastern Orthodox Churches ",,"Eastern Orthodox",475
+1936,,"Apostolic Faith Mission","Apostolic Faith Mission","Evangelistic associations","Pentecostal","Pentecostal",476
+1936,,"Apostolic Methodist Church","Apostolic Methodist Church","Methodist",,"Other Groups",477
+1936,,"Apostolic Overcoming Holy Church of God","Apostolic Overcoming Holy Church of God","Apostolic Overcoming Holy Church of God","Pentecostal","Pentecostal",478
+1936,,"Assemblies of God, General Council","Assemblies of God, General Council","Assemblies of God, General Council","Pentecostal","Pentecostal",479
+1936,,"Assyrian Jacobite Apostolic Church","Assyrian Jacobite Apostolic Church","Assyrian Jacobite Apostolic Church","Eastern Liturgical (Orthodox)","Orthodox",480
+1936,,"Baha'is","Baha'is","Baha'is","Other Groups","Other Groups",481
+1936,,"Bohemian and Moravian Brethren Churches","Bohemian and Moravian Brethren Churches","Moravian","Moravian","Moravian",482
+1936,,"Brethren in Christ","Brethren in Christ","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",483
+1936,,"Buddhist Mission of North America","Buddhist Mission of North America","Buddhist Mission of North America","Other Groups","Buddhist",484
+1936,,"Bulgarian Orthodox Church","Bulgarian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",485
+1936,,"Calvary Pentecostal Church","Calvary Pentecostal Church","Pentecostal","Pentecostal","Pentecostal",486
+1936,,"Catholic Apostolic Church","Catholic Apostolic Church","Catholic Apostolic Church","Other Groups","Catholic",487
+1936,,"Central Conference of Mennonites","Central Conference of Mennonites","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",488
+1936,,"Christadelphians","Christadelphians","Christadelphians","Other Groups","Restorationist",490
+1936,,"Christian Congregation","Christian Congregation","Evangelistic associations","Restoration","Restorationist",491
+1936,,"Christian Nation Church","Christian Nation Church","Christian Nation Church","Holiness","Holiness",492
+1936,,"Christian Reformed Church","Christian Reformed Church","Reformed","Reformed/Presbyterian","Reformed",493
+1936,,"Christian Union","Christian Union","Christian Union","Other Groups","Restorationist",494
+1936,,"Christian Unity Baptist Association","Christian Unity Baptist Association","Baptist","Baptist","Baptist",495
+1936,,"Christ's Sanctified Holy Church (Colored)","Christ's Sanctified Holy Church (Colored)","Christ's Sanctified Holy Church (Colored)","Holiness","Holiness",489
+1936,,"Churches of Christ","Churches of Christ","Churches of Christ","Restoration","Restorationists",528
+1936,,"Churches of Christ in Christian Union of Ohio","Churches of Christ in Christian Union of Ohio","Churches of Christ in Christian Union of Ohio","?","Holiness",529
+1936,,"Churches of God, Holiness","Churches of God, Holiness","Churches of God, Holiness","Holiness","Holiness",530
+1936,,"Church of Armenia in America","Church of Armenia in America","Church of Armenia in America","Eastern Liturgical (Orthodox)","Orthodox",496
+1936,,"Church of Christ (Holiness) U.S.A.","Church of Christ (Holiness) U.S.A.","Church of Christ (Holiness) U.S.A.","Holiness","Holiness",497
+1936,,"Church of Christ, Scientist","Church of Christ, Scientist","Church of Christ, Scientist","Christian Science","Christian Science ",499
+1936,,"Church of Christ (Temple Lot)","Church of Christ (Temple Lot)","Latter-day Saints","Latter-day Saints","Latter Day Saints",498
+1936,,"Church of Daniel's Band","Church of Daniel's Band","Evangelistic associations","Methodist/Pietist","Holiness",500
+1936,,"Church of Eternal Life","Church of Eternal Life","Church of Eternal Life",,"Spiritualist",501
+1936,,"Church of God","Church of God","Churches of God","?","Pentecostal",502
+1936,,"Church of God (Adventist)","Church of God (Adventist)","Adventist","Adventist","Adventist",503
+1936,,"Church of God and Saints of Christ","Church of God and Saints of Christ","Church of God and Saints of Christ","Other Groups","Other Groups",509
+1936,,"Church of God (Apostolic)","Church of God (Apostolic)","Evangelistic associations","Pentecostal","Pentecostal",504
+1936,,"Church of God as Organized by Christ","Church of God as Organized by Christ","Evangelistic associations","Other Groups","Other Groups",510
+1936,,"Church of God (Headquarters, Anderson, Ind.)","Church of God (Headquarters, Anderson, Ind.)","Churches of God","Holiness","Holiness",505
+1936,,"Church of God in Christ","Church of God in Christ","Church of God in Christ","Pentecostal","Pentecostal",511
+1936,,"Church of God in Christ (Mennonite)","Church of God in Christ (Mennonite)","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",512
+1936,,"Church of God in Christ (Pentecostal)","Church of God in Christ (Pentecostal)","Pentecostal","Pentecostal","Pentecostal",513
+1936,,"Church of God (New Dunkers)","Church of God (New Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptist",506
+1936,,"Church of God (Oregon, Ill.)","Church of God (Oregon, Ill.)","Adventist","Adventist","Adventist",507
+1936,,"Church of God (Salem, W. Va.)","Church of God (Salem, W. Va.)","Churches of God","Adventist","Adventist",508
+1936,,"Church of Jesus Christ (Bickertonites)","Church of Jesus Christ (Bickertonites)","Latter-day Saints","Latter-day Saints","Latter Day Saints",514
+1936,,"Church of Jesus Christ (Cutlerites)","Church of Jesus Christ (Cutlerites)","Latter-day Saints","Latter-day Saints","Latter Day Saints",515
+1936,,"Church of Jesus Christ of Latter-day Saints","Church of Jesus Christ of Latter-day Saints","Latter-day Saints","Latter Day Saints","Latter Day Saints",518
+1936,,"Church of Jesus Christ (Strangites)","Church of Jesus Christ (Strangites)","Latter-day Saints","Latter-day Saints","Latter Day Saints",516
+1936,,"Church of Jesus Christ (Temple Lot)","Church of Jesus Christ (Temple Lot)","Latter-day Saints","Latter-day Saints","Latter Day Saints",517
+1936,,"Church of the Brethren (Conservative Dunkers)","Church of the Brethren (Conservative Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",519
+1936,,"Church of the Full Gospel, Inc.","Church of the Full Gospel, Inc.","Church of the Full Gospel, Inc. ","Pentecostal","Pentecostal",520
+1936,,"Church of the Gospel","Church of the Gospel","Church of the Gospel","Holiness ","Holiness",521
+1936,,"Church of the Living God, Christian Workers for Fellowship","Church of the Living God, Christian Workers for Fellowship","Churches of the Living God","Holiness ","Pentecostal",522
+1936,,"Church of the Lutheran Brethren of America","Church of the Lutheran Brethren of America","Lutheran","Lutheran","Lutheran",523
+1936,,"Church of the Lutheran Brethren of Christ","Church of the Lutheran Brethren of Christ",,,"Lutheran?",524
+1936,,"Church of the Nazarene","Church of the Nazarene","Church of the Nazarene","Holiness","Holiness",525
+1936,,"Church of the United Brethren in Christ","Church of the United Brethren in Christ","United Brethren","Methodist/Pietist","United Brethren",526
+1936,,"Church of the United Brethren in Christ (Old Constitution)","Church of the United Brethren in Christ (Old Constitution)","United Brethren","Methodist/Pietist","United Brethren",527
+1936,,"Colored Cumberland Presbyterian Church","Colored Cumberland Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",531
+1936,,"Colored Methodist Episcopal Church","Colored Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",532
+1936,,"Colored Methodist Protestant Church","Colored Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",533
+1936,,"Colored Primitive Baptists","Colored Primitive Baptists","Baptist","Baptist","Baptist",534
+1936,,"Conference of the Defenseless Mennonites of North America","Conference of the Defenseless Mennonites of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",535
+1936,,"Congregational and Christian Churches","Congregational and Christian Churches","Congregational and Christian Churches","Reformed/Presbyterian","Congregational",536
+1936,,"Congregational Holiness Church","Congregational Holiness Church","Congregational Holiness Church","Pentecostal","Pentecostal",537
+1936,,"Congregational Methodist Church","Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",538
+1936,,"Conservative Amish Mennonite Church","Conservative Amish Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",539
+1936,,"Cumberland Presbyterian Church","Cumberland Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",540
+1936,,"Danish Evangelical Lutheran Church in America","Danish Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",541
+1936,,"Disciples of Christ","Disciples of Christ","Disciples of Christ ","Restoration","Restorationist",542
+1936,,"Divine Science Church","Divine Science Church","Divine Science Church","Christian Science","Christian Science",543
+1936,,"Duck River and Kindred Association of Baptists (Baptist Church of Christ)","Duck River and Kindred Association of Baptists (Baptist Church of Christ)","Baptist","Baptist","Baptist",544
+1936,,"Erieside Church","Erieside Church","Erieside Church",,"Other Groups",545
+1936,,"Evangelical and Reformed Church","Evangelical and Reformed Church","Evangelical and Reformed Church","Reformed/Presbyterian","Presbyterian",546
+1936,,"Evangelical Church","Evangelical Church","Evangelical Church","Methodist/Pietist","Methodist",547
+1936,,"Evangelical Congregational Church","Evangelical Congregational Church","Evangelical Congregational Church","Methodist/Pietist","Methodist",548
+1936,,"Evangelical Lutheran Augustana Synod of North America","Evangelical Lutheran Augustana Synod of North America","Lutheran","Lutheran","Lutheran",549
+1936,,"Evangelical Lutheran Church of America (Eielsen Synod)","Evangelical Lutheran Church of America (Eielsen Synod)","Lutheran","Lutheran","Lutheran",550
+1936,,"Evangelical Lutheran Joint Synod of Wisconsin and Other States","Evangelical Lutheran Joint Synod of Wisconsin and Other States","Lutheran","Lutheran","Lutheran",551
+1936,,"Evangelical Lutheran Synod of Missouri, Ohio, and Other States"," Evangelical Lutheran Synod of Missouri, Ohio, and Other States","Lutheran","Lutheran ","Lutheran",456
+1936,,"Evangelical Mennonite Brethren Conference","Evangelical Mennonite Brethren Conference","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",552
+1936,,"Evangelical Mission Covenant Church of America","Evangelical Mission Covenant Church of America","Scandinavian Evangelical","Methodist/Pietist","Pietist",553
+1936,,"Evangelical Unity of Bohemian and Moravian Brethren in North America","Evangelical Unity of Bohemian and Moravian Brethren in North America","Moravian","Moravian","Moravian",554
+1936,,"Faith Tabernacle","Faith Tabernacle","Faith Tabernacle",,"Pentecostal",555
+1936,,"Federated Churches","Federated Churches","Federated Churches","Other Groups","Other Groups",556
+1936,,"Finnish Apostolic Lutheran Church of America","Finnish Apostolic Lutheran Church of America","Lutheran","Lutheran","Lutheran",557
+1936,,"Finnish Evangelical Lutheran Church of America, or Suomi Synod","Finnish Evangelical Lutheran Church of America, or Suomi Synod","Lutheran","Lutheran","Lutheran",558
+1936,,"Finnish Evangelical Lutheran National Church of America","Finnish Evangelical Lutheran National Church of America","Lutheran","Lutheran","Lutheran",559
+1936,,"Fire Baptized Holiness Church of God of the Americas","Fire Baptized Holiness Church of God of the Americas","Fire Baptized Holiness Church of God of the Americas","Holiness","Pentecostal",560
+1936,,"Free Christian Zion Church of Christ","Free Christian Zion Church of Christ","Free Christian Zion Church of Christ","Methodist/Pietist","Methodist",561
+1936,,"Free Magyar Reformed Church in America","Free Magyar Reformed Church in America","Reformed","Reformed/Presbyterian","Reformed",562
+1936,,"Free Methodist Church of North America","Free Methodist Church of North America","Methodist","Methodist/Pietist","Methodist",563
+1936,,"Free Will Baptists","Free Will Baptists","Baptist","Baptist","Baptist",564
+1936,,"Friends (Primitive)","Friends (Primitive)","Friends ","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",565
+1936,,"General Assembly of Spiritualists","General Assembly of Spiritualists","Spiritualists","Spiritualist","Spiritualist",566
+1936,,"General Association of Regular Baptist Churches in the United States of America","General Association of Regular Baptist Churches in the United States of America","Baptist","Baptist","Baptist",567
+1936,,"General Baptists","General Baptists","Baptist","Baptist","Baptist",568
+1936,,"General Church of the New Jerusalem","General Church of the New Jerusalem","Churches of the New Jerusalem","Spiritualist","Swedenborgian",569
+1936,,"General Conference of the Mennonite Church of North America","General Conference of the Mennonite Church of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",570
+1936,,"General Convention of the New Jerusalem in the United States of America","General Convention of the New Jerusalem in the United States of America","Churches of the New Jerusalem","Spiritualist","Swedenborgian",571
+1936,,"General Council of the Italian Pentecostal Assemblies of God","General Council of the Italian Pentecostal Assemblies of God","Italian bodies","Pentecostal","Pentecostal",572
+1936,,"General Eldership of the Churches of God in North America","General Eldership of the Churches of God in North America","General Eldership of the Churches of God in North America",,"Pentecostal",573
+1936,,"General Six Principle Baptists","General Six Principle Baptists","Baptist","Baptist","Baptist",574
+1936,,"Greek Orthodox Church (Hellenic)","Greek Orthodox Church (Hellenic)","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",575
+1936,,"Hephzibah Faith Missionary Association","Hephzibah Faith Missionary Association","Evangelistic associations","Other Groups","Holiness",576
+1936,,"Holiness Church","Holiness Church","Holiness Church","Holiness","Holiness",577
+1936,,"Holiness Methodist Church","Holiness Methodist Church","Methodist","Holiness","Holiness",578
+1936,,"Holy Orthodox Church in America","Holy Orthodox Church in America","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",579
+1936,,"House of the Lord","House of the Lord","House of the Lord",,"Other Groups",580
+1936,,"Hutterian Brethren, Mennonites","Hutterian Brethren, Mennonites","Mennonite","Communal","Mennonite",581
+1936,,"Icelandic Evangelical Lutheran Synod in North America","Icelandic Evangelical Lutheran Synod in North America","Lutheran","Lutheran","Lutheran",582
+1936,,"Independent African Methodist Episcopal Church","Independent African Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",583
+1936,,"Independent Baptist Church of America","Independent Baptist Church of America","Baptist","Baptist","Baptist",584
+1936,,"Independent Churches","Independent Churches","Independent Churches","Other Groups","Other Groups",585
+1936,,"Independent Lutheran Congregations","Independent Lutheran Congregations","Lutheran","Lutheran","Lutheran",586
+1936,,"Independent Negro Churches","Independent Negro Churches","Independent Negro Churches","Other Groups","Other Groups",587
+1936,,"International Church of the Foursquare Gospel","International Church of the Foursquare Gospel","International Church of the Foursquare Gospel","Pentecostal","Pentecostal",588
+1936,,"International Pentecostal Assemblies","International Pentecostal Assemblies","Pentecostal","Pentecostal","Pentecostal",589
+1936,,"Jewish Congregations","Jewish Congregations","Jewish Congregations","Judiasm","Jewish",590
+1936,,"Kodesh Church of Immanuel","Kodesh Church of Immanuel","Kodesh Church of Immanuel","Holiness","Holiness",591
+1936,,"Krimmer Mennonite Brueder-Gemeinde","Krimmer Mennonite Brueder-Gemeinde","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",592
+1936,,"Liberal Catholic Church","Liberal Catholic Church","Liberal Catholic Church","Other Groups","Other Groups",593
+1936,,"Life and Advent Union","Life and Advent Union","Adventist","Adventist","Adventist",594
+1936,,"Lithuanian National Catholic Church of America","Lithuanian National Catholic Church of America","Lithuanian National Catholic Church of America","Western Liturgical (Catholicism)","Other Groups",595
+1936,,"Lutheran Free Church","Lutheran Free Church","Lutheran","Lutheran","Lutheran",596
+1936,,"Mennonite Brethren Church of North America","Mennonite Brethren Church of North America","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite ",597
+1936,,"Mennonite Brethren in Christ","Mennonite Brethren in Christ","Mennonite","Holiness","Mennonite",598
+1936,,"Mennonite Church","Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",599
+1936,,"Mennonite Kleine Gemeinde","Mennonite Kleine Gemeinde","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",600
+1936,,"Methodist Episcopal Church","Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",601
+1936,,"Methodist Episcopal Church, South","Methodist Episcopal Church, South","Methodist","Methodist/Pietist","Methodist",602
+1936,,"Methodist Protestant Church","Methodist Protestant Church","Methodist","Methodist/Pietist","Methodist",603
+1936,,"Metropolitan Church Association","Metropolitan Church Association","Evangelistic associations","Holiness","Holiness",604
+1936,,"Missionary Bands of the World","Missionary Bands of the World","Evangelistic associations","Holiness","Holiness",605
+1936,,"Missionary Church Association","Missionary Church Association","Evangelistic associations","Holiness","Holiness",606
+1936,,"Moravian Church in America","Moravian Church in America","Moravian","Methodist/Pietist","Moravian",607
+1936,,"National Baptist Evangelical Life and Soul Saving Assembly of the United States of America","National Baptist Evangelical Life and Soul Saving Assembly of the United States of America","Baptist","Baptist","Baptist",608
+1936,,"National David Spiritual Temple of Christ Church Union","National David Spiritual Temple of Christ Church Union","National David Spiritual Temple of Christ Church Union","Pentecostal","Pentecostal",609
+1936,,"National Spiritual Alliance of the United States of America","National Spiritual Alliance of the United States of America","Spiritualists","Spiritualist","Spiritualist",610
+1936,,"National Spiritualist Association","National Spiritualist Association","Spiritualists","Spiritualist","Spiritualist",611
+1936,,"Negro Baptists","Negro Baptists","Baptist","Baptist","Baptist",612
+1936,,"Negro Mission of the Synodical Conference","Negro Mission of the Synodical Conference","Lutheran","Lutheran","Lutheran",613
+1936,,"New Apostolic Church","New Apostolic Church","New Apostolic Church","Restoration","Restorationist",614
+1936,,"New Congregational Methodist Church","New Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",615
+1936,,"North American Old Roman Catholic Church","North American Old Roman Catholic Church","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",616
+1936,,"Northern Baptist Convention","Northern Baptist Convention","Baptist","Baptist","Baptist",617
+1936,,"Norwegian and Danish Evangelical Free Church Association of North America","Norwegian and Danish Evangelical Free Church Association of North America","Scandinavian Evangelical","Methodist/Pietist","Pietist",618
+1936,,"Norwegian Lutheran Church of America","Norwegian Lutheran Church of America","Lutheran","Lutheran","Lutheran",619
+1936,,"Norwegian Synod of the American Evangelical Lutheran Church"," Norwegian Synod of the American Evangelical Lutheran Church","Lutheran","Lutheran ","Lutheran",457
+1936,,"Old Catholic Church in America","Old Catholic Church in America","Old Catholic Churches in America","Western Liturgical (Catholicism)","Old Catholic",620
+1936,,"Old German Baptist Brethren (Old Order Dunkers)","Old German Baptist Brethren (Old Order Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",621
+1936,,"Old Order Amish Mennonite Church","Old Order Amish Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",622
+1936,,"Old Order Mennonite Church (Wisler)","Old Order Mennonite Church (Wisler)","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",623
+1936,,"Old Order or Yorker Brethren","Old Order or Yorker Brethren","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",624
+1936,,"Orthodox Conservative Friends (Wilburite)","Orthodox Conservative Friends (Wilburite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",625
+1936,,"Pentecostal Assemblies of Jesus Christ","Pentecostal Assemblies of Jesus Christ","Pentecostal","Pentecostal","Pentecostal",626
+1936,,"Pentecostal Assemblies of the World","Pentecostal Assemblies of the World","Pentecostal","Pentecostal","Pentecostal",627
+1936,,"Pentecostal Church of God in America, Inc","Pentecostal Church of God in America, Inc","Pentecostal","Pentecostal","Pentecostal",628
+1936,,"Pentecostal Fire-Baptized Holiness Church","Pentecostal Fire-Baptized Holiness Church","Pentecostal","Pentecostal","Pentecostal",629
+1936,,"Pentecostal Holiness Church","Pentecostal Holiness Church","Pentecostal","Pentecostal ","Pentecostal",630
+1936,,"Pilgrim Holiness Church","Pilgrim Holiness Church","Pilgrim Holiness Church","Holiness ","Holiness",631
+1936,,"Pillar of Fire","Pillar of Fire","Evangelistic associations","Holiness","Holiness",632
+1936,,"Plymouth Brethren I","Plymouth Brethren I","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",633
+1936,,"Plymouth Brethren II","Plymouth Brethren II","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",634
+1936,,"Plymouth Brethren III","Plymouth Brethren III","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",635
+1936,,"Plymouth Brethren IV","Plymouth Brethren IV","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",636
+1936,,"Plymouth Brethren V","Plymouth Brethren V","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",637
+1936,,"Plymouth Brethren VI","Plymouth Brethren VI","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",638
+1936,,"Plymouth Brethren VII","Plymouth Brethren VII","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",639
+1936,,"Plymouth Brethren VIII","Plymouth Brethren VIII","Brethren, Plymouth","Independent Fundamentalism","Plymouth Brethren",640
+1936,,"Polish National Catholic Church of America","Polish National Catholic Church of America","Polish National Catholic Church of America","Western Liturgical (Catholicism)","Other Groups",641
+1936,,"Presbyterian Church in the United States","Presbyterian Church in the United States","Presbyterian","Reformed/Presbyterian","Presbyterian",642
+1936,,"Presbyterian Church in the United States of America","Presbyterian Church in the United States of America","Presbyterian","Reformed/Presbyterian","Presbyterian",643
+1936,,"Primitive Advent Christian Church","Primitive Advent Christian Church","Adventist","Adventist","Adventist",644
+1936,,"Primitive Baptists","Primitive Baptists","Baptist","Baptist","Baptist",645
+1936,,"Primitive Methodist Church in the United States of America","Primitive Methodist Church in the United States of America","Methodist","Methodist/Pietist","Methodist",646
+1936,,"Progressive Spiritualist Church","Progressive Spiritualist Church","Spiritualists","Spiritualist","Spiritualist",647
+1936,,"Protestant Episcopal Church","Protestant Episcopal Church","Protestant Episcopal Church","Anglicanism","Episcopalian",648
+1936,,"Reformed Church in America","Reformed Church in America","Reformed","Reformed/Presbyterian","Reformed",649
+1936,,"Reformed Episcopal Church","Reformed Episcopal Church","Reformed Episcopal Church","Reformed/Presbyterian","Reformed",650
+1936,,"Reformed Mennonite Church","Reformed Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",651
+1936,,"Reformed Methodist Church","Reformed Methodist Church","Methodist","Methodist/Pietist","Methodist",652
+1936,,"Reformed Methodist Union Episcopal Church","Reformed Methodist Union Episcopal Church","Methodist","Methodist/Pietist","Methodist",653
+1936,,"Reformed New Congregational Methodist Church","Reformed New Congregational Methodist Church","Methodist","Methodist/Pietist","Methodist",654
+1936,,"Reformed Presbyterian Church in North America, General Synod","Reformed Presbyterian Church in North America, General Synod","Presbyterian","Reformed/Presbyterian","Presbyterian",655
+1936,,"Reformed Zion Union Apostolic Church","Reformed Zion Union Apostolic Church","Methodist","Methodist/Pietist","Methodist",656
+1936,,"Regular Baptists","Regular Baptists","Baptist","Baptist","Baptist",657
+1936,,"Reorganized Church of Jesus Christ of Latter-day Saints","Reorganized Church of Jesus Christ of Latter-day Saints","Latter-day Saints","Latter-day Saints","Latter Day Saints",658
+1936,,"Roman Catholic Church","Roman Catholic Church","Roman Catholic Church","Western Liturgical (Catholicism)","Catholic",659
+1936,,"Roumanian Orthodox Church","Roumanian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",660
+1936,,"Russian Orthodox Church","Russian Orthodox Church","Eastern Orthodox Churches","Eastern Liiturgical (Orthodox)","Orthodox",661
+1936,,"Salvation Army","Salvation Army","Salvation Army","Holiness","Holiness",662
+1936,,"Schwenkfelders","Schwenkfelders","Schwenkfelders","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Other Groups",663
+1936,,"Separate Baptists","Separate Baptists","Baptist","Baptist","Baptist",664
+1936,,"Serbian Orthodox Church","Serbian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",665
+1936,,"Seventh-day Adventist Denomination","Seventh-day Adventist Denomination","Adventist","Adventist","Adventist",668
+1936,,"Seventh Day Baptists","Seventh Day Baptists","Baptist","Baptist","Baptist",666
+1936,,"Seventh Day Baptists (German, 1728)","Seventh Day Baptists (German, 1728)","Baptist","Baptist","Baptist",667
+1936,,"Slovak Evangelical Lutheran Synod of the United States of America","Slovak Evangelical Lutheran Synod of the United States of America","Lutheran","Lutheran","Lutheran",669
+1936,,"Society of Friends (Hicksite)","Society of Friends (Hicksite)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",670
+1936,,"Society of Friends (Orthodox)","Society of Friends (Orthodox)","Friends","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Friends",671
+1936,,"Southern Baptist Convention","Southern Baptist Convention","Baptist","Baptist","Baptist",672
+1936,,"Stauffer Mennonite Church","Stauffer Mennonite Church","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",673
+1936,,"Synod of the Reformed Presbyterian Church of North America","Synod of the Reformed Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",674
+1936,,"Syrian Antiochian Orthodox Church","Syrian Antiochian Orthodox Church","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",675
+1936,,"The Brethren Church (Progressive Dunkers)","The Brethren Church (Progressive Dunkers)","Brethren, German Baptist (Dunkers)","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Anabaptists",677
+1936,,"The Christian and Missionary Alliance","The Christian and Missionary Alliance","The Christian and Missionary Alliance","Holiness","Holiness",678
+1936,,"The Church of Illumination","The Church of Illumination","The Church of Illumination","Other Groups","Other Groups",679
+1936,,"The Church of Revelation","The Church of Revelation","The Church of Revelation","Other Groups","Other Groups",680
+1936,,"The Evangelical Free Church of America","The Evangelical Free Church of America","Scandinavian Evangelical ","Methodist/Pietist","Pietist",681
+1936,,"The Evangelical Mission Covenant Church of America","The Evangelical Mission Covenant Church of America","Scandinavian Evangelical ","Methodist/Pietist","Pietist",682
+1936,,"The General Synod of the Associate Reformed Presbyterian Church","The General Synod of the Associate Reformed Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",683
+1936,,"The House of David","The House of David","The House of David","Adventist","Other Groups",684
+1936,,"The House of God, the Holy Church of the Living God, the Pillar and Ground of the Truth, House of Prayer for All People","The House of God, the Holy Church of the Living God, the Pillar and Ground of the Truth, House of Prayer for All People","The House of God, the Holy Church of the Living God, the Pillar and Ground of the Truth, House of Prayer for All People",,"Other Groups",685
+1936,,"The Latter House of the Lord, Apostolic Faith","The Latter House of the Lord, Apostolic Faith","The Latter House of the Lord, Apostolic Faith","Pentecostal","Pentecostal",686
+1936,,"The Mayan Temple","The Mayan Temple","The Mayan Temple","Other Groups","Other Groups",687
+1936,,"The (Original) Church of God","The (Original) Church of God","Churches of God","Pentecostal","Pentecostal",676
+1936,,"The Orthodox Presbyterian Church","The Orthodox Presbyterian Church","Presbyterian","Reformed/Presbyterian","Presbyterian",688
+1936,,"The Pentecostal Church, Inc.","The Pentecostal Church, Inc.","Pentecostal","Pentecostal","Pentecostal",689
+1936,,"The Protestant Conference (Lutheran)","The Protestant Conference (Lutheran)","Lutheran","Lutheran","Lutheran",690
+1936,,"The Synod of the Associate Presbyterian Church of North America","The Synod of the Associate Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",691
+1936,,"The Unorganized Italian Christian Churches of North America","The Unorganized Italian Christian Churches of North America","Italian bodies",,"Pentecostal",692
+1936,,"The Volunteers of America","The Volunteers of America","The Volunteers of Amerca","Holiness","Other Groups",693
+1936,,"(Tomlinson) Church of God","(Tomlinson) Church of God","Churches of God","Pentecostal","Pentecostal",458
+1936,,"Triumph the Church and Kingdom of God in Christ","Triumph the Church and Kingdom of God in Christ","Triumph the Church and Kingdom of God in Christ","Holiness","Pentecostal",694
+1936,,"Two-Seed-in-the-Spirit Predestinarian Baptists","Two-Seed-in-the-Spirit Predestinarian Baptists","Baptist","Baptist","Baptist",695
+1936,,"Ukrainian Orthodox Church of America","Ukrainian Orthodox Church of America","Eastern Orthodox Churches","Eastern Liturgical (Orthodox)","Orthodox",696
+1936,,"Unaffiliated Mennonite Congregations","Unaffiliated Mennonite Congregations","Mennonite","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Mennonite",697
+1936,,"Union American Methodist Episcopal Church","Union American Methodist Episcopal Church","Methodist","Methodist/Pietist","Methodist",698
+1936,,"Unitarians","Unitarians","Unitarians","Liberal","Other Groups",699
+1936,,"United American Free Will Baptist Church (Colored)","United American Free Will Baptist Church (Colored)","Baptist","Baptist","Baptist",700
+1936,,"United Baptists","United Baptists","Baptist","Baptist","Baptist",701
+1936,,"United Christian Church","United Christian Church","United Brethren","Methodist/Pietist","United Brethren",702
+1936,,"United Danish Evangelical Lutheran Church in America","United Danish Evangelical Lutheran Church in America","Lutheran","Lutheran","Lutheran",703
+1936,,"United Holy Church of America, Inc.","United Holy Church of America, Inc.","United Holy Church of America, Inc.","Pentecostal","Pentecostal",704
+1936,,"United Lutheran Church in America","United Lutheran Church in America","Lutheran","Lutheran","Lutheran",705
+1936,,"United Presbyterian Church of North America","United Presbyterian Church of North America","Presbyterian","Reformed/Presbyterian","Presbyterian",706
+1936,,"United Society of Believers (Shakers)","United Society of Believers (Shakers)","United Society of Believers (Shakers)","Communal","Communitarian Societies",707
+1936,,"United Zion's Children","United Zion's Children","Brethren, River","European Free-Church (Brethren, Mennonites, Quakers, Amish)","Pietist",708
+1936,,"Universal Emancipation Church","Universal Emancipation Church","Universal Emancipation Church",,"Other Groups",709
+1936,,"Universalist Church","Universalist Church","Universalist Church","Holiness","Other Groups",710
+1936,,"Vedanta Society","Vedanta Society","Vedanta Society","Other Groups","Other Groups",711
+1936,,"Wesleyan Methodist Connection (or Church) of America","Wesleyan Methodist Connection (or Church) of America","Methodist","Methodist/Pietist","Methodist",712

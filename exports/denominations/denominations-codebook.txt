@@ -1,0 +1,21 @@
+Dataset title: Denominations in the U.S. Censuses of Religious Bodies
+Source: American Religious Ecologies <https://religiousecologies.org>
+Creator: Roy Rosenzweig Center for History and New Media <https:rrchnm.org>
+Date released: 2024
+DOI: 10.31835/relec.data.001
+
+Description: This dataset contains a list of the denominations (or other religious groupings) used by the U.S. Census Bureau in the federal Census of Religious Bodies. Included are the denominations listed in the 1906, 1916, 1926, and 1936 censuses. The same denomination will appear in different census years. Not all denominations will appear in each year, because the Census Bureau changed with denominations it counted each decade, but also because denominations split, merged, were formed, or were dissolved from decade to decade. 
+
+Fields:
+
+- year (integer): The census year for which this denomination was listed.
+- denomination_id (text): A code, usually three digits, that the Census Bureau assigned to identify denominations. For example, "Primitive Baptists" are represented by `0-2-3`. This data is available for most (not all) denominations in the 1926 census, but not for other years.
+- name (text): The name of the denomination as most commonly used by the Census Bureau.
+- short_name (text): A shortened name of the denomination, suitable for display purposes.
+- family_census (categorical): A grouping of denominations into a larger family of denominations. For example, "Primitive Baptists" and "Regular Baptists," along with other denominations, comprise "Baptists bodies." This grouping was used by the Census Bureau in its published reports.
+- family_arda (categorical): A similar grouping of denominations into families, but using the categories described by the Association of Religion Data Archives <https://www.thearda.com/us-religion/group-profiles/traditions>.
+- family_relec (categorical): A similar grouping of denominations into families, but using categories determined by the American Religious Ecologies project team.
+- id (integer): An arbitrarily assigned identifier for each row in the dataset, suitable for use as a primary key.
+
+Other information: 
+- Missing data is represented by an `NA`.

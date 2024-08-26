@@ -513,3 +513,35 @@ blockquote p a {
   border: none;
   box-shadow: none;
 }
+
+// -- Data 
+.data-title {
+  border-bottom: 1px solid $medium-gray;
+  padding: 0 0 $global-padding;
+}
+
+.toc {
+  margin: 0 2px 40px;
+  border: 1px solid $medium-gray;
+  border-radius: 0.5rem;
+  padding: 0.4em;
+}
+
+.toc .details {
+  display: inline;
+  font-weight: 500;
+}
+
+.toc details summary {
+  cursor: zoom-in;
+  margin-inline-start: 20px;
+}
+
+.toc details[open] summary {
+  cursor: zoom-out;
+}
+
+.toc .inner {
+  margin: 0 20px;
+  padding: 10px 20px;
+}
