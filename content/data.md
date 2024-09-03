@@ -4,7 +4,7 @@ slug: data
 ShowToc: true
 ---
 
-The following datasets are compiled and released by the American Religious Ecologies project lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec semper metus. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+The following datasets are compiled and released by the American Religious Ecologies project.
 
 ---
 
