@@ -3,11 +3,11 @@ title: About This Project
 slug: about
 ---
 
-*American Religious Ecologies* is a project of the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) that is creating new datasets, maps and visualizations for the history of American religion. With the [generous support](https://securegrants.neh.gov/publicquery/main.aspx?f=1&gn=PW-264050-19) of the [National Endowment for the Humanities](https://neh.gov), we are currently digitizing the 1926 U.S. Census of Religious Bodies, which has individual schedules for approximately 232,000 congregations. We are also investigating denominational records and other sources of data.
+_American Religious Ecologies_ is a project of the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) that is creating new datasets, maps and visualizations for the history of American religion. With the [generous support](https://securegrants.neh.gov/publicquery/main.aspx?f=1&gn=PW-264050-19) of the [National Endowment for the Humanities](https://neh.gov), we are currently digitizing the 1926 U.S. Census of Religious Bodies, which has individual schedules for approximately 232,000 congregations. We are also investigating denominational records and other sources of data.
 
 If you use this project, we would be grateful if you would cite it. Here is a suggested citation:
 
-> *American Religious Ecologies*, Roy Rosenzweig Center for History and New Media, George Mason University (2018--): http://religiousecologies.org.
+> _American Religious Ecologies_, Roy Rosenzweig Center for History and New Media, George Mason University (2018--): http://religiousecologies.org.
 
 ## Contributors
 
@@ -47,13 +47,15 @@ Paris Frascella, undergraduate research assistant
 
 Danielle Gaita, undergraduate research assistant
 
-Caroline Greer, project manager and graduate research assistant 
+Caroline Greer, project manager and graduate research assistant
 
 Imran Haq, undergraduate research assistant
 
 Jason Heppler, senior web developer, RRCHNM
 
 Julia Hoffer, grants administrator, RRCHNM
+
+Kristin Jacobsen, graduate research assistant
 
 God's Will Katchoua, systems administrator, RRCHNM
 
@@ -88,6 +90,8 @@ Harval Reyes, undergraduate research assistant
 Jim Safley, senior software developer & metadata specialist, RRCHNM
 
 Nayomi Santos, undergraduate research assistants
+
+Savannah Scott, graduate research assistant
 
 Lydia Sigman, undergraduate research assistant
 
