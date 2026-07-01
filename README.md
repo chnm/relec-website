@@ -1,5 +1,7 @@
 # American Religious Ecologies
 
+⚠️ This project has been superseded by [relec-django](https://github.com/chnm/relec-django).
+
 This repository contains the website for the [*American Religious Ecologies*](https://religiousecologies.org) project at the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org).
 
 ## Installing
